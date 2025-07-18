@@ -13,45 +13,45 @@ interface Industry {
 
 const industries: Industry[] = [
   {
-    id: 'consumer-goods',
-    name: 'Consumer Packaged Goods',
-    description: 'Optimize supply chain efficiency and predict consumer demand patterns with advanced AI analytics that transform how you understand your customers.',
+    id: 'packeging-goods',
+    name: 'Packaging Material ',
+    description: 'B2B Demand Forecasting, Sales Alerts and Profitability Management System',
     image: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop',
     color: '#1e40af',
     accent: '#3b82f6',
     icon: <ShoppingCart className="w-8 h-8" />
   },
   {
-    id: 'alcoholic-beverages',
-    name: 'Alcoholic Beverages',
-    description: 'AI-powered data engineering and intelligent agents to navigate the changing landscape with sustainable revenue growth and market insights.',
+    id: 'oil-lubricants',
+    name: 'Oil and Lubricants',
+    description: 'Store Recommendation System for Lubricant Brand',
     image: 'https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop',
     color: '#b45309',
     accent: '#f59e0b',
     icon: <TrendingUp className="w-8 h-8" />
   },
   {
-    id: 'retail',
-    name: 'Retail',
-    description: 'Transform customer experiences with personalized recommendations, inventory optimization, and predictive analytics for the modern retail landscape.',
+    id: 'consumer-goods',
+    name: 'Consumer Goods',
+    description: 'Price Inflexion Point Study for Large FMCG Brand',
     image: 'https://images.pexels.com/photos/3184295/pexels-photo-3184295.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop',
     color: '#0f766e',
     accent: '#14b8a6',
     icon: <ShoppingCart className="w-8 h-8" />
   },
   {
-    id: 'pharmaceuticals',
-    name: 'Pharmaceuticals',
-    description: 'Accelerate drug discovery, ensure regulatory compliance, and optimize clinical trials with intelligent automation and data-driven insights.',
+    id: 'chemicals',
+    name: 'Chemicals',
+    description: 'B2B Demand Forecasting, Sales Alerts and Profitability Management System for Chemical Industry',
     image: 'https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop',
     color: '#7c2d12',
     accent: '#ea580c',
     icon: <Pill className="w-8 h-8" />
   },
   {
-    id: 'manufacturing',
-    name: 'Manufacturing',
-    description: 'Prevent overstocking and shortages with comprehensive supply chain visibility, predictive maintenance, and intelligent process optimization.',
+    id: 'FMCG',
+    name: 'FMCG',
+    description: 'Tea Price Forecasting and Procurement Insights',
     image: 'https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop',
     color: '#166534',
     accent: '#22c55e',
@@ -222,7 +222,7 @@ export default function IndustryShowcase() {
                           <button 
                             className="group px-6 py-3 bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl font-semibold text-white transition-all duration-300 hover:bg-white/30 hover:scale-105 flex items-center justify-center space-x-2"
                           >
-                            <span>Explore Solutions</span>
+                            <span>Explore Case Studies</span>
                             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                           </button>
                           

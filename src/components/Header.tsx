@@ -16,7 +16,7 @@ const Navbar = () => {
   }, []);
 
   const dropdownContent = {
-    Solutions: {
+    Products: {
       featured: {
         title: "AI Marketing Suite",
         description: "Complete AI-powered marketing automation platform",
@@ -26,31 +26,31 @@ const Navbar = () => {
       items: [
         { 
           icon: Target, 
-          title: "Predictive Analytics", 
+          title: "Explainable Forecasting Engine", 
           description: "AI-driven customer behavior prediction",
           image: "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop"
         },
         { 
           icon: Zap, 
-          title: "Campaign Automation", 
+          title: "Marketing Investment Planner", 
           description: "Smart campaign optimization & execution",
           image: "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop"
         },
         { 
           icon: BarChart3, 
-          title: "Real-time Insights", 
+          title: "Retail Growth Engine", 
           description: "Live performance tracking & analytics",
           image: "https://images.pexels.com/photos/590020/pexels-photo-590020.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop"
         },
         { 
           icon: Sparkles, 
-          title: "Content Generation", 
+          title: "Performance Marketing Optimization", 
           description: "AI-powered content creation at scale",
           image: "https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop"
         }
       ]
     },
-    Services: {
+    Industries: {
       featured: {
         title: "Enterprise AI Consulting",
         description: "Strategic AI implementation for enterprise growth",
@@ -84,7 +84,7 @@ const Navbar = () => {
         }
       ]
     },
-    Industries: {
+    CaseStudy: {
       featured: {
         title: "Retail & E-commerce",
         description: "AI solutions driving retail transformation",
@@ -236,7 +236,7 @@ const Navbar = () => {
                           <p className="text-sm text-gray-600">Explore our {item.toLowerCase()} in detail</p>
                         </div>
                         <button className="flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-blue-600/25 transition-all duration-300 group">
-                          <span>View All {item}</span>
+                          <span>Book Now</span>
                           <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
                         </button>
                       </div>
@@ -249,7 +249,7 @@ const Navbar = () => {
             {/* Additional Nav Items */}
             <div className="flex items-center space-x-2 ml-4">
               <button className="px-5 py-3 text-gray-700 hover:text-blue-600 font-medium transition-all duration-300 rounded-xl hover:bg-gray-50/80">
-                Insights
+                Blogs
               </button>
               <button className="px-5 py-3 text-gray-700 hover:text-blue-600 font-medium transition-all duration-300 rounded-xl hover:bg-gray-50/80">
                 About
@@ -264,7 +264,7 @@ const Navbar = () => {
             </button>
             <button className="relative px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl overflow-hidden group transition-all duration-300 hover:shadow-xl hover:shadow-blue-600/25 hover:scale-105">
               <span className="relative z-10 flex items-center">
-                Get Started
+                Book Consultation
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -298,7 +298,7 @@ const Navbar = () => {
             ))}
             <div className="pt-4 border-t border-gray-100 space-y-3">
               <button className="w-full px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50/80 rounded-xl transition-all duration-300 text-left">
-                Insights
+                Blogs
               </button>
               <button className="w-full px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50/80 rounded-xl transition-all duration-300 text-left">
                 About
@@ -307,7 +307,7 @@ const Navbar = () => {
                 Sign In
               </button>
               <button className="w-full px-6 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:shadow-lg transition-all duration-300">
-                Get Started
+                Book Consultation
               </button>
             </div>
           </div>
