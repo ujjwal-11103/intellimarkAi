@@ -5,7 +5,7 @@ const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentWord, setCurrentWord] = useState(0);
 
-  const dynamicWords = ['Intelligence', 'Automation', 'Innovation', 'Excellence'];
+  const dynamicWords = ['Revenue Growth', 'Operations Excellence', 'AI Innovation', 'Excellence'];
 
   useEffect(() => {
     setIsVisible(true);
@@ -18,16 +18,16 @@ const Hero = () => {
   }, []);
 
   const features = [
-    { icon: Brain, text: "Neural Analytics", color: "from-blue-500 to-cyan-500" },
-    { icon: Zap, text: "Quantum Speed", color: "from-purple-500 to-pink-500" },
-    { icon: Database, text: "Smart Data", color: "from-green-500 to-emerald-500" }
+    { icon: Brain, text: "Highly Accurate", color: "from-blue-500 to-cyan-500" },
+    { icon: Zap, text: "Growth First", color: "from-purple-500 to-pink-500" },
+    { icon: Database, text: "Prescriptive AI", color: "from-green-500 to-emerald-500" }
   ];
 
   const stats = [
     { value: '10M+', label: 'Data Points Processed', icon: Database },
-    { value: '99.9%', label: 'Accuracy Rate', icon: Target },
-    { value: '5.2x', label: 'ROI Increase', icon: TrendingUp },
-    { value: '<100ms', label: 'Response Time', icon: Zap }
+    { value: '25%', label: 'Higher Growth', icon: Target },
+    { value: '20x', label: 'ROI Increase', icon: TrendingUp },
+    { value: '10%', label: 'Efficiency Improvement', icon: Zap }
   ];
 
   return (
@@ -102,9 +102,9 @@ const Hero = () => {
           <p className={`text-xl sm:text-2xl text-gray-600 mb-12 max-w-5xl mx-auto leading-relaxed transition-all duration-1000 delay-400 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}>
-            Revolutionary AI-driven marketing intelligence that transforms raw data into 
-            <span className="text-transparent bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text font-semibold"> strategic advantage</span>. 
-            Predictive insights engineered for scale. Automation designed for conversion. 
+           Patented
+            <span className="text-transparent bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text font-semibold">  Machine Learning Engines</span>. 
+            coupled with decades of industry nuances leading to millions of dollars of growth for our clients. 
             <span className="text-blue-600 font-bold"> Results guaranteed to excel.</span>
           </p>
 
@@ -135,7 +135,7 @@ const Hero = () => {
           }`}>
             <button className="group relative px-10 py-5 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-700 text-white font-bold text-lg rounded-2xl overflow-hidden shadow-2xl hover:shadow-blue-600/30 transition-all duration-500 hover:scale-105">
               <span className="relative z-10 flex items-center">
-                Launch AI Platform
+                Talk to an Expert
                 <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-blue-600 to-purple-700 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>

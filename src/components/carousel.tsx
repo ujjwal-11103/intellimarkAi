@@ -25,7 +25,7 @@ const slides: Slide[] = [
       {
         id: 1,
         type: 'hero',
-        title: 'AI Excellence Award',
+        title: 'Marketing Investment Planner',
         subtitle: 'Dallas Innovates 2025',
         description: 'Top AI Innovator in Dallas-Fort Worth',
         image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1200',
@@ -34,7 +34,7 @@ const slides: Slide[] = [
       {
         id: 2,
         type: 'feature',
-        title: 'Neural Networks',
+        title: 'Explainable Forecasting Engine',
         subtitle: 'Advanced ML Platform',
         description: 'Deep learning infrastructure for enterprise AI',
         image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800',
@@ -43,7 +43,7 @@ const slides: Slide[] = [
       {
         id: 3,
         type: 'success',
-        title: 'TechCorp Analytics',
+        title: 'Performance Marketing Optimization',
         badge: 'Success Story',
         stats: '78% Improved Accuracy',
         description: 'ML pipeline transforming enterprise decisions',
@@ -53,7 +53,7 @@ const slides: Slide[] = [
       {
         id: 4,
         type: 'location',
-        title: 'Austin Tech Hub',
+        title: 'Retail Growth Engine',
         subtitle: 'Innovation Center',
         description: 'Where AI research meets application',
         image: 'https://images.pexels.com/photos/2422915/pexels-photo-2422915.jpeg?auto=compress&cs=tinysrgb&w=800',
@@ -67,7 +67,7 @@ const slides: Slide[] = [
       {
         id: 5,
         type: 'feature',
-        title: 'Computer Vision',
+        title: 'Explainable Forecasting Engine',
         subtitle: 'Real-time Recognition',
         description: 'Enterprise-scale object detection and analysis',
         image: 'https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&w=800',
@@ -76,7 +76,7 @@ const slides: Slide[] = [
       {
         id: 6,
         type: 'location',
-        title: 'San Francisco',
+        title: 'Marketing Investment Planner',
         subtitle: 'West Coast Operations',
         description: 'Silicon Valley innovation meets Texas execution',
         image: 'https://images.pexels.com/photos/208745/pexels-photo-208745.jpeg?auto=compress&cs=tinysrgb&w=800',
@@ -85,7 +85,7 @@ const slides: Slide[] = [
       {
         id: 7,
         type: 'success',
-        title: 'Enterprise MLOps',
+        title: 'Retail Growth Engines',
         badge: 'Webinar',
         stats: 'Fortune 500 Ready',
         description: 'Automated AI deployment pipelines',
@@ -95,7 +95,7 @@ const slides: Slide[] = [
       {
         id: 8,
         type: 'hero',
-        title: 'AI Leadership Summit',
+        title: 'Performance Marketing Optimization',
         subtitle: 'April 15, 2025',
         description: 'Industry pioneers networking event',
         image: 'https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=1200',
@@ -287,7 +287,7 @@ export default function Carousel() {
           Intellimark AI
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-          Delivering cutting-edge AI solutions and transformative business intelligence
+        Re-engineering revenue growth using cutting edge patented machine learning coupled with best of industry nuances.
         </p>
       </div>
 
