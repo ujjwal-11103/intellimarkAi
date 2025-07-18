@@ -1,191 +1,236 @@
-import React from 'react';
-import { Users, Award, Globe, Target, Heart, Zap, Crown, Star } from 'lucide-react';
+import { 
+  Brain, 
+  Users, 
+  Target, 
+  Award, 
+  Zap, 
+  Shield,
+  Mail,
+  Phone,
+  MapPin,
+  Linkedin,
+  Twitter,
+  Github
+} from 'lucide-react';
 
-const About = () => {
-  const values = [
-    {
-      icon: Target,
-      title: "Innovation Excellence",
-      description: "We push the boundaries of what's possible with AI, delivering cutting-edge solutions that transform industries."
-    },
-    {
-      icon: Heart,
-      title: "Client Success",
-      description: "Your success is our mission. We're committed to delivering measurable results and long-term value."
-    },
-    {
-      icon: Users,
-      title: "Collaborative Partnership",
-      description: "We work as an extension of your team, bringing expertise and dedication to every project."
-    },
-    {
-      icon: Zap,
-      title: "Rapid Innovation",
-      description: "Speed to market matters. We deliver enterprise-grade solutions with unprecedented velocity."
-    }
-  ];
-
-  const team = [
-    {
-      name: "Dr. Sarah Chen",
-      role: "Chief Executive Officer",
-      background: "Former VP of AI at Google, PhD in Computer Science from Stanford",
-      image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?w=300&h=300&fit=crop&crop=face"
-    },
-    {
-      name: "Michael Rodriguez",
-      role: "Chief Technology Officer",
-      background: "Ex-Microsoft Principal Architect, 15+ years in enterprise AI",
-      image: "https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?w=300&h=300&fit=crop&crop=face"
-    },
-    {
-      name: "Dr. Emily Watson",
-      role: "Head of AI Research",
-      background: "Former MIT Professor, 50+ published papers in machine learning",
-      image: "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?w=300&h=300&fit=crop&crop=face"
-    },
-    {
-      name: "David Park",
-      role: "VP of Enterprise Solutions",
-      background: "Ex-IBM Global Services Director, MBA from Wharton",
-      image: "https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?w=300&h=300&fit=crop&crop=face"
-    }
-  ];
-
-  const milestones = [
-    { year: "2018", event: "Founded with $10M Series A funding" },
-    { year: "2019", event: "First Fortune 500 client deployment" },
-    { year: "2020", event: "Reached $50M ARR milestone" },
-    { year: "2021", event: "Expanded to 25+ countries globally" },
-    { year: "2022", event: "Achieved unicorn status with $1B valuation" },
-    { year: "2023", event: "Launched next-gen AI platform" },
-    { year: "2024", event: "500+ enterprise clients worldwide" }
-  ];
-
+function AboutUs() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-stone-50 via-white to-amber-50/30 pt-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        {/* Hero Section */}
-        <div className="text-center mb-20">
-          <div className="flex justify-center items-center space-x-3 mb-6">
-            <Crown className="h-12 w-12 text-amber-600" />
-            <Users className="h-12 w-12 text-amber-600" />
-          </div>
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            <span className="text-stone-800">About</span>
-            <br />
-            <span className="bg-gradient-to-r from-amber-600 via-amber-700 to-amber-800 bg-clip-text text-transparent">
-              Intellimark
-            </span>
+    <div className="min-h-screen bg-white">
+
+      {/* Hero Section */}
+      <section className="relative h-screen flex items-center justify-center overflow-hidden mt-16">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: 'url(https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop)',
+          }}
+        >
+          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+        </div>
+        <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
+          <h1 className="text-6xl md:text-7xl font-bold mb-6">
+            About Us
           </h1>
-          <p className="text-2xl text-stone-600 max-w-4xl mx-auto leading-relaxed">
-            We're pioneering the future of enterprise AI, transforming how the world's most prestigious 
-            companies operate, innovate, and achieve unprecedented success.
+          <p className="text-xl md:text-2xl mb-8 opacity-90">
+            Pioneering AI solutions that transform businesses and empower human potential
           </p>
+          <div className="w-24 h-1 bg-purple-500 mx-auto"></div>
         </div>
+      </section>
 
-        {/* Mission Statement */}
-        <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-12 border border-stone-200/50 shadow-lg mb-20">
-          <div className="text-center">
-            <h2 className="text-4xl font-bold text-stone-800 mb-8">Our Mission</h2>
-            <p className="text-xl text-stone-600 leading-relaxed max-w-4xl mx-auto">
-              To democratize artificial intelligence for enterprise success. We believe every organization 
-              deserves access to world-class AI solutions that drive measurable results, competitive advantage, 
-              and sustainable growth in an increasingly digital world.
-            </p>
-          </div>
-        </div>
-
-        {/* Values */}
-        <div className="mb-20">
-          <h2 className="text-4xl font-bold text-stone-800 text-center mb-12">Our Values</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => {
-              const IconComponent = value.icon;
-              return (
-                <div key={index} className="group text-center">
-                  <div className="bg-white/80 backdrop-blur-sm w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-300 border border-stone-200/50 group-hover:border-amber-200 shadow-lg">
-                    <IconComponent className="h-10 w-10 text-amber-600" />
-                  </div>
-                  <h3 className="text-xl font-bold text-stone-800 mb-4 group-hover:text-amber-700 transition-colors duration-300">
-                    {value.title}
-                  </h3>
-                  <p className="text-stone-600 leading-relaxed">
-                    {value.description}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* Leadership Team */}
-        <div className="mb-20">
-          <h2 className="text-4xl font-bold text-stone-800 text-center mb-12">Leadership Team</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((member, index) => (
-              <div key={index} className="group bg-white/80 backdrop-blur-sm rounded-2xl p-8 border border-stone-200/50 hover:border-amber-200 transition-all duration-500 hover:transform hover:scale-105 shadow-lg hover:shadow-xl text-center">
-                <div className="relative mb-6">
-                  <img 
-                    src={member.image} 
-                    alt={member.name}
-                    className="w-24 h-24 rounded-full mx-auto object-cover border-2 border-stone-200 group-hover:border-amber-200 transition-all duration-300"
-                  />
-                  <div className="absolute inset-0 w-24 h-24 rounded-full mx-auto bg-gradient-to-br from-amber-100/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
-                <h3 className="text-xl font-bold text-stone-800 mb-2 group-hover:text-amber-700 transition-colors duration-300">
-                  {member.name}
-                </h3>
-                <p className="text-amber-600 font-semibold mb-4">{member.role}</p>
-                <p className="text-stone-600 text-sm leading-relaxed">{member.background}</p>
+      {/* Company Story Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <img 
+                src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
+                alt="AI Technology"
+                className="rounded-2xl shadow-2xl w-full h-96 object-cover"
+              />
+            </div>
+            <div>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">
+                We Are IntelliMark AI
+              </h2>
+              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                Founded by AI researchers and technology visionaries, we believe artificial intelligence should enhance human capability, not replace it.
+              </p>
+              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                Today, we're trusted by Fortune 500 companies worldwide to deliver intelligent solutions that drive real results.
+              </p>
+              <div className="bg-purple-50 border-l-4 border-purple-600 p-6 rounded-r-lg">
+                <p className="text-lg font-medium text-purple-900 italic">
+                  "Intelligence amplified by innovation, success defined by impact."
+                </p>
+                <p className="text-purple-700 mt-2">— Dr. Sarah Chen, CEO & Founder</p>
               </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Company Milestones */}
-        <div className="mb-20">
-          <h2 className="text-4xl font-bold text-stone-800 text-center mb-12">Our Journey</h2>
-          <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-12 border border-stone-200/50 shadow-lg">
-            <div className="space-y-8">
-              {milestones.map((milestone, index) => (
-                <div key={index} className="flex items-center group">
-                  <div className="bg-gradient-to-r from-amber-600 to-amber-700 text-white w-20 h-20 rounded-full flex items-center justify-center font-bold text-lg mr-8 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                    {milestone.year}
-                  </div>
-                  <div className="flex-1">
-                    <p className="text-xl text-stone-700 group-hover:text-amber-700 transition-colors duration-300 font-medium">
-                      {milestone.event}
-                    </p>
-                  </div>
-                </div>
-              ))}
             </div>
           </div>
         </div>
+      </section>
 
-        {/* Call to Action */}
-        <div className="text-center">
-          <div className="bg-gradient-to-br from-amber-50 to-stone-50 rounded-2xl p-12 border border-amber-200/50 shadow-lg">
-            <Crown className="h-16 w-16 text-amber-600 mx-auto mb-6" />
-            <h3 className="text-3xl font-bold text-stone-800 mb-6">Ready to Transform Your Enterprise?</h3>
-            <p className="text-xl text-stone-600 mb-8 max-w-3xl mx-auto">
-              Join the hundreds of Fortune 500 companies that trust Intellimark to deliver 
-              world-class AI solutions and drive unprecedented business results.
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
-              <button className="bg-gradient-to-r from-amber-600 to-amber-700 text-white px-12 py-4 rounded-2xl hover:from-amber-700 hover:to-amber-800 transition-all duration-300 font-bold text-lg shadow-xl hover:shadow-amber-600/30 transform hover:scale-105">
-                Start Your Journey
-              </button>
-              <button className="border-2 border-stone-300 text-stone-700 px-12 py-4 rounded-2xl hover:bg-stone-50 hover:border-amber-600 hover:text-amber-700 transition-all duration-300 font-bold text-lg">
-                Meet Our Team
-              </button>
+      {/* Stats Section */}
+      <section className="py-20 bg-purple-600 relative overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-10"
+          style={{
+            backgroundImage: 'url(https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop)',
+          }}
+        ></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+              <div className="text-4xl md:text-5xl font-bold text-white mb-2">500+</div>
+              <div className="text-purple-200">Enterprise Clients</div>
+            </div>
+            <div>
+              <div className="text-4xl md:text-5xl font-bold text-white mb-2">99.7%</div>
+              <div className="text-purple-200">Accuracy Rate</div>
+            </div>
+            <div>
+              <div className="text-4xl md:text-5xl font-bold text-white mb-2">2.4B</div>
+              <div className="text-purple-200">Data Points</div>
+            </div>
+            <div>
+              <div className="text-4xl md:text-5xl font-bold text-white mb-2">24/7</div>
+              <div className="text-purple-200">Support</div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Team Section */}
+      {/* <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Meet Our Visionaries</h2>
+            <p className="text-xl text-gray-600">The minds behind the magic</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="group">
+              <div className="relative overflow-hidden rounded-2xl mb-6">
+                <img 
+                  src="https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop"
+                  alt="Dr. Sarah Chen"
+                  className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-1">Dr. Sarah Chen</h3>
+              <p className="text-purple-600 font-medium mb-3">CEO & Founder</p>
+              <p className="text-gray-600 text-sm">MIT AI researcher, ex-Google. Turning research into reality.</p>
+            </div>
+            
+            <div className="group">
+              <div className="relative overflow-hidden rounded-2xl mb-6">
+                <img 
+                  src="https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop"
+                  alt="Michael Rodriguez"
+                  className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-1">Michael Rodriguez</h3>
+              <p className="text-purple-600 font-medium mb-3">CTO & Co-Founder</p>
+              <p className="text-gray-600 text-sm">Stanford PhD, ex-Tesla Autopilot. Building the future of AI.</p>
+            </div>
+            
+            <div className="group">
+              <div className="relative overflow-hidden rounded-2xl mb-6">
+                <img 
+                  src="https://images.pexels.com/photos/3760790/pexels-photo-3760790.jpeg?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop"
+                  alt="Dr. Aisha Johnson"
+                  className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-1">Dr. Aisha Johnson</h3>
+              <p className="text-purple-600 font-medium mb-3">Chief Data Scientist</p>
+              <p className="text-gray-600 text-sm">Harvard PhD, ex-AWS. Making AI ethical and powerful.</p>
+            </div>
+          </div>
+        </div>
+      </section> */}
+
+      {/* Values & Contact Section */}
+      <section className="py-16 bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 relative overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-5"
+          style={{
+            backgroundImage: 'url(https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop)',
+          }}
+        ></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-white mb-4">What Drives Us</h2>
+            <p className="text-xl text-purple-200">Four principles that guide everything we do</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            <div className="group text-center">
+              <div className="bg-gradient-to-br from-purple-500 to-purple-700 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                <Brain className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">Ethical AI</h3>
+              <p className="text-purple-200 text-sm">Responsible innovation for a better tomorrow</p>
+            </div>
+            
+            <div className="group text-center">
+              <div className="bg-gradient-to-br from-purple-500 to-purple-700 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                <Users className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">Human-First</h3>
+              <p className="text-purple-200 text-sm">Technology that amplifies human potential</p>
+            </div>
+            
+            <div className="group text-center">
+              <div className="bg-gradient-to-br from-purple-500 to-purple-700 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                <Award className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">Excellence</h3>
+              <p className="text-purple-200 text-sm">Uncompromising quality in everything we build</p>
+            </div>
+            
+            <div className="group text-center">
+              <div className="bg-gradient-to-br from-purple-500 to-purple-700 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                <Target className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">Innovation</h3>
+              <p className="text-purple-200 text-sm">Pushing boundaries, creating possibilities</p>
+            </div>
+          </div>
+          
+          {/* Contact CTA */}
+          <div className="text-center">
+            <h3 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Business?</h3>
+            <p className="text-xl text-purple-200 mb-8">Let's build the future together</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <div className="flex items-center text-purple-200">
+                <Mail className="h-5 w-5 mr-2" />
+                <span>hello@intellimark.ai</span>
+              </div>
+              <div className="flex items-center text-purple-200">
+                <Phone className="h-5 w-5 mr-2" />
+                <span>+1 (555) 123-4567</span>
+              </div>
+              <div className="flex items-center text-purple-200">
+                <MapPin className="h-5 w-5 mr-2" />
+                <span>San Francisco, CA</span>
+              </div>
+            </div>
+            <div className="flex justify-center space-x-6 mt-8">
+              <Linkedin className="h-8 w-8 text-purple-300 hover:text-white cursor-pointer transition-colors transform hover:scale-110" />
+              <Twitter className="h-8 w-8 text-purple-300 hover:text-white cursor-pointer transition-colors transform hover:scale-110" />
+              <Github className="h-8 w-8 text-purple-300 hover:text-white cursor-pointer transition-colors transform hover:scale-110" />
+            </div>
+          </div>
+        </div>
+      </section>
+
     </div>
   );
-};
+}
 
-export default About;
+export default AboutUs;
