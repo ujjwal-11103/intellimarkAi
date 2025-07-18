@@ -188,9 +188,9 @@ const Navbar = () => {
               <button className="px-5 py-3 text-gray-700 hover:text-blue-600 font-medium transition-all duration-300 rounded-xl hover:bg-gray-50/80">
                 Insights
               </button>
-              <button className="px-5 py-3 text-gray-700 hover:text-blue-600 font-medium transition-all duration-300 rounded-xl hover:bg-gray-50/80">
+              <Link to="/about" className="px-5 py-3 text-gray-700 hover:text-blue-600 font-medium transition-all duration-300 rounded-xl hover:bg-gray-50/80">
                 About
-              </button>
+              </Link>
             </div>
           </div>
 
@@ -204,7 +204,7 @@ const Navbar = () => {
                 Get Started
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
               </span>
-            </Link>
+            </button>
           </div>
 
           {/* Mobile */}
@@ -232,9 +232,9 @@ const Navbar = () => {
               <button className="w-full px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50/80 rounded-xl transition-all duration-300 text-left">
                 Insights
               </button>
-              <button className="w-full px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50/80 rounded-xl transition-all duration-300 text-left">
+              <Link to="/about" className="w-full block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50/80 rounded-xl transition-all duration-300 text-left">
                 About
-              </button>
+              </Link>
               <button className="w-full px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50/80 rounded-xl transition-all duration-300 text-left">
                 Sign In
               </button>
