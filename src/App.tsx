@@ -14,12 +14,14 @@ import StatsSection from './components/StatsSection';
 import UpcomingEvents from './components/UpcomingEvents';
 import ResourcesHub from './components/ResourceHub';
 
-import Solutions from './pages/Solutions';
+import Solutions from './pages/Products';
 import Industries from './pages/Industries';
 import About from './pages/About';
 import TestimonialsPage from './pages/TestimonialsPage';
 import Careers from './pages/Careers';
 import Contact from './pages/Contact';
+import CaseStudiesPage from './pages/CaseStudiesPage';
+import CaseStudyDetailsPage from './pages/CaseStudyDetailsPage';
 
 function App() {
   useEffect(() => {
@@ -59,12 +61,14 @@ function App() {
               </main>
             }
           />
-          <Route path="/solutions" element={<Solutions />} />
+          <Route path="/products" element={<Solutions />} />
           <Route path="/industries" element={<Industries />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/testimonials" element={<TestimonialsPage />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/case-studies" element={<CaseStudiesPage />} />
+          <Route path="/case-study/:id" element={<CaseStudyDetailsPage />} />
         </Routes>
         <Footer />
       </div>

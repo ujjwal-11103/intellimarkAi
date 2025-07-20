@@ -128,7 +128,7 @@ const Navbar = () => {
                     <div className="grid grid-cols-3 gap-8">
                       {/* Featured */}
                       <div className="col-span-1">
-                        <Link to={`/${item.toLowerCase()}`} className="relative group cursor-pointer block">
+                        <Link to={`/${item.toLowerCase() === 'casestudy' ? 'case-studies' : item.toLowerCase()}`} className="relative group cursor-pointer block">
                           <div className="relative overflow-hidden rounded-xl">
                             <img src={content.featured.image} alt={content.featured.title} className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
@@ -148,21 +148,35 @@ const Navbar = () => {
                       {/* Items */}
                       <div className="col-span-2 grid grid-cols-2 gap-4">
                         {content.items.map((subItem, idx) => (
-                          <Link
-                            to={subItem.path}
-                            key={idx}
-                            className="group cursor-pointer p-4 rounded-xl hover:bg-gray-50/80 transition-all duration-300 block"
-                          >
-                            <div className="flex items-start space-x-4">
-                              <div className="w-12 h-12 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                                <subItem.icon className="w-6 h-6 text-blue-600" />
+                          'path' in subItem ? (
+                            <Link
+                              to={subItem.path}
+                              key={idx}
+                              className="group cursor-pointer p-4 rounded-xl hover:bg-gray-50/80 transition-all duration-300 block"
+                            >
+                              <div className="flex items-start space-x-4">
+                                <div className="w-12 h-12 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                  <subItem.icon className="w-6 h-6 text-blue-600" />
+                                </div>
+                                <div className="flex-1 min-w-0">
+                                  <h4 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors duration-200 mb-1">{subItem.title}</h4>
+                                  <p className="text-sm text-gray-600 leading-relaxed">{subItem.description}</p>
+                                </div>
                               </div>
-                              <div className="flex-1 min-w-0">
-                                <h4 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors duration-200 mb-1">{subItem.title}</h4>
-                                <p className="text-sm text-gray-600 leading-relaxed">{subItem.description}</p>
+                            </Link>
+                          ) : (
+                            <span key={idx} className="group cursor-pointer p-4 rounded-xl block">
+                              <div className="flex items-start space-x-4">
+                                <div className="w-12 h-12 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                  <subItem.icon className="w-6 h-6 text-blue-600" />
+                                </div>
+                                <div className="flex-1 min-w-0">
+                                  <h4 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors duration-200 mb-1">{subItem.title}</h4>
+                                  <p className="text-sm text-gray-600 leading-relaxed">{subItem.description}</p>
+                                </div>
                               </div>
-                            </div>
-                          </Link>
+                            </span>
+                          )
                         ))}
                       </div>
                     </div>
@@ -175,8 +189,10 @@ const Navbar = () => {
                           <p className="text-sm text-gray-600">Explore our {item.toLowerCase()} in detail</p>
                         </div>
                         <button className="flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-blue-600/25 transition-all duration-300 group">
-                          <span>View All {item}</span>
-                          <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
+                          <Link to={item.toLowerCase() === 'casestudy' ? '/case-studies' : `/${item.toLowerCase()}`} className="flex items-center">
+                            <span>View All {item}</span>
+                            <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
+                          </Link>
                         </button>
                       </div>
                     </div>
