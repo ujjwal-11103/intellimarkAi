@@ -64,10 +64,10 @@ const Navbar = () => {
         badge: "Premium"
       },
       items: [
-        { icon: Users, title: "AI Strategy Consulting", description: "Custom AI roadmap development", path: "/services/strategy-consulting" },
-        { icon: Shield, title: "Implementation Support", description: "End-to-end AI deployment assistance", path: "/services/implementation-support" },
-        { icon: TrendingUp, title: "Performance Optimization", description: "Continuous AI model improvement", path: "/services/performance-optimization" },
-        { icon: Lightbulb, title: "Innovation Labs", description: "Cutting-edge AI research & development", path: "/services/innovation-labs" }
+        { icon: Users, title: "FMGC", description: "Custom AI roadmap development", path: "/industry-details/fmgc" },
+        { icon: Shield, title: "Alcohol", description: "End-to-end AI deployment assistance", path: "/industry-details/alcohol" },
+        { icon: TrendingUp, title: "Oil and Lubricants", description: "Continuous AI model improvement", path: "/industry-details/oil-and-lubricants" },
+        { icon: Lightbulb, title: "Chemicals", description: "Cutting-edge AI research & development", path: "/industry-details/chemicals" }
       ]
     },
     CaseStudy: {

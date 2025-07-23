@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import AboutUs from './pages/About';
-
+import IndustryDetailPage from './pages/IndustryDetails';
 import Hero from './components/Hero';
 import Carousel from './components/carousel';
 import CompanyMarquee from './components/marquee';
@@ -70,6 +70,7 @@ function App() {
           <Route path="/case-studies" element={<CaseStudiesPage />} />
           <Route path="/case-study/:id" element={<CaseStudyDetailsPage />} />
           <Route path="/product-detail/:productId" element={<ProductDetail />} />
+          <Route path="/industry-details/:industryId" element={<IndustryDetailPage />} />
         </Routes>
         <Footer />
       </div>

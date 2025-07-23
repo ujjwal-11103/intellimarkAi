@@ -44,7 +44,7 @@ const ProductDetail = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
               <div className="inline-flex items-center bg-purple-100/80 text-purple-700 px-3 py-1.5 rounded-full text-xs font-medium uppercase tracking-wide">
-                NEXT-GENERATION OF AI INSIGHTS
+               
               </div>
               
               <div className="space-y-6">
