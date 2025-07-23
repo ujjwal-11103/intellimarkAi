@@ -22,6 +22,7 @@ import Careers from './pages/Careers';
 import Contact from './pages/Contact';
 import CaseStudiesPage from './pages/CaseStudiesPage';
 import CaseStudyDetailsPage from './pages/CaseStudyDetailsPage';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   useEffect(() => {
@@ -43,6 +44,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen bg-white">
         <Header />
         <Routes>
