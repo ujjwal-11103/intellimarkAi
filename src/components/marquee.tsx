@@ -85,6 +85,27 @@ const CompanyMarquee: React.FC = () => {
         .animate-gradient-x {
           animation: gradient-x 3s ease infinite;
         }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+          .animate-marquee-slow {
+            animation-duration: 40s;
+          }
+          
+          .logo-container {
+            padding: 6px;
+          }
+        }
+        
+        @media (max-width: 480px) {
+          .animate-marquee-slow {
+            animation-duration: 30s;
+          }
+          
+          .logo-container {
+            padding: 4px;
+          }
+        }
       `}</style>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-black relative overflow-hidden">
