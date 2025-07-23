@@ -45,7 +45,7 @@ const FAQ = () => {
           </div>
           <h2 className="text-5xl md:text-6xl font-bold mb-6">
             <span className="text-white">Executive</span>
-            <span className="bg-gradient-to-r from-amber-400 to-yellow-400 bg-clip-text text-transparent"> Insights</span>
+            <span className="bg-gradient-to-r from-amber-400 to-yellow-400 bg-clip-text text-transparent"> Blogs</span>
           </h2>
           <p className="text-2xl text-slate-300 max-w-3xl mx-auto">
             Strategic answers to critical questions about implementing enterprise AI solutions

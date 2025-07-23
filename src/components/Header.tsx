@@ -28,31 +28,31 @@ const Navbar = () => {
       items: [
         { 
           icon: Target, 
-          title: "Predictive Analytics", 
+          title: "Explainable Forecasting Engine", 
           description: "AI-driven customer behavior prediction",
           image: "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop",
-          path: "/product-detail/predictive-analytics"
+          path: "/product-detail/explainable-forecasting-engine"
         },
         { 
           icon: Zap, 
-          title: "Campaign Automation", 
+          title: "Marketing Investment Planner", 
           description: "Smart campaign optimization & execution",
           image: "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop",
-          path: "/product-detail/campaign-automation"
+          path: "/product-detail/marketing-investment-planner"
         },
         { 
           icon: BarChart3, 
-          title: "Real-time Insights", 
+          title: "Retail Growth Engine", 
           description: "Live performance tracking & analytics",
           image: "https://images.pexels.com/photos/590020/pexels-photo-590020.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop",
-          path: "/product-detail/real-time-insights"
+          path: "/product-detail/retail-growth-engine"
         },
         { 
           icon: Sparkles, 
-          title: "Content Generation", 
+          title: "Performance Marketing Optimization", 
           description: "AI-powered content creation at scale",
           image: "https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop",
-          path: "/product-detail/content-generation"
+          path: "/product-detail/performance-marketing-optimization"
         }
       ]
     },
@@ -189,7 +189,7 @@ const Navbar = () => {
                     <div className="mt-8 pt-6 border-t border-gray-100">
                       <div className="flex items-center justify-between">
                         <div>
-                          <h4 className="font-semibold text-gray-900 mb-1">Ready to get started?</h4>
+                          <h4 className="font-semibold text-gray-900 mb-1">Ready to Book Now?</h4>
                           <p className="text-sm text-gray-600">Explore our {item.toLowerCase()} in detail</p>
                         </div>
                         <button className="flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-blue-600/25 transition-all duration-300 group">
@@ -206,7 +206,7 @@ const Navbar = () => {
             ))}
             <div className="flex items-center space-x-2 ml-4">
               <button className="px-5 py-3 text-gray-700 hover:text-blue-600 font-medium transition-all duration-300 rounded-xl hover:bg-gray-50/80">
-                Insights
+                Blogs
               </button>
               <Link to="/about" className="px-5 py-3 text-gray-700 hover:text-blue-600 font-medium transition-all duration-300 rounded-xl hover:bg-gray-50/80">
                 About
@@ -221,7 +221,7 @@ const Navbar = () => {
             </button>
             <button className="relative px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl overflow-hidden group transition-all duration-300 hover:shadow-xl hover:shadow-blue-600/25 hover:scale-105">
               <span className="relative z-10 flex items-center">
-                Get Started
+                Book Now
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
               </span>
             </button>
@@ -250,7 +250,7 @@ const Navbar = () => {
             ))}
             <div className="pt-4 border-t border-gray-100 space-y-3">
               <button className="w-full px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50/80 rounded-xl transition-all duration-300 text-left">
-                Insights
+                Blogs
               </button>
               <Link to="/about" className="w-full block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50/80 rounded-xl transition-all duration-300 text-left">
                 About
@@ -259,7 +259,7 @@ const Navbar = () => {
                 Sign In
               </button>
               <button className="w-full px-6 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:shadow-lg transition-all duration-300">
-                Get Started
+                Book Now
               </button>
             </div>
           </div>

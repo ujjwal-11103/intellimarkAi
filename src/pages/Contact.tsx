@@ -279,7 +279,7 @@ const Contact = () => {
         <div className="text-center">
           <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-12 border border-stone-200/50 shadow-lg">
             <Building className="h-16 w-16 text-amber-600 mx-auto mb-6" />
-            <h3 className="text-3xl font-bold text-stone-800 mb-6">Ready to Get Started?</h3>
+            <h3 className="text-3xl font-bold text-stone-800 mb-6">Ready to Book Now?</h3>
             <p className="text-xl text-stone-600 mb-8 max-w-3xl mx-auto">
               Schedule a consultation with our AI experts to discuss your specific needs 
               and discover how we can transform your enterprise.

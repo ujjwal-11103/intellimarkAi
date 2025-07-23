@@ -253,7 +253,7 @@ const IndustryDetailPage: React.FC = () => {
               </div>
 
               <button className="group bg-gradient-to-r from-gray-900 to-gray-800 text-white px-10 py-5 rounded-full font-light text-lg tracking-wide hover:from-purple-600 hover:to-purple-700 transition-all duration-500 transform hover:-translate-y-1">
-                Talk to our FMCG Experts
+                Book Now
               </button>
             </div>
 

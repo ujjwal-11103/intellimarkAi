@@ -20,12 +20,12 @@ const sections: Section[] = [
     videoUrl: '/videos/data-nexus.mp4'
   },
   {
-    id: 'insights-portal',
-    title: 'Insights Portal',
+    id: 'blogs-portal',
+    title: 'Blogs Portal',
     subtitle: 'Pre-trained analytics plays',
     icon: BarChart3,
     color: 'from-amber-600 to-orange-600',
-    videoUrl: '/videos/insights-portal.mp4'
+    videoUrl: '/videos/blogs-portal.mp4'
   },
   {
     id: 'agenthood-ai',
@@ -46,7 +46,7 @@ const sections: Section[] = [
 ];
 
 export const IntelliMarkPlatform = () => {
-  const [activeSection, setActiveSection] = useState<string>('insights-portal');
+  const [activeSection, setActiveSection] = useState<string>('blogs-portal');
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(2);
   const [duration, setDuration] = useState(30);

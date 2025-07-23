@@ -135,7 +135,7 @@ const Hero = () => {
           }`}>
             <button className="group relative px-10 py-5 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-700 text-white font-bold text-lg rounded-2xl overflow-hidden shadow-2xl hover:shadow-blue-600/30 transition-all duration-500 hover:scale-105">
               <span className="relative z-10 flex items-center">
-                Talk to an Expert
+                Book Now
                 <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-blue-600 to-purple-700 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
