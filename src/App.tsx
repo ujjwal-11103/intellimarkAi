@@ -13,7 +13,7 @@ import IndustryShowcase from './components/showcase';
 import StatsSection from './components/StatsSection';
 import UpcomingEvents from './components/UpcomingEvents';
 import ResourcesHub from './components/ResourceHub';
-
+import ProductDetail from './pages/ProductDetail';
 import Solutions from './pages/Products';
 import Industries from './pages/Industries';
 import About from './pages/About';
@@ -69,6 +69,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/case-studies" element={<CaseStudiesPage />} />
           <Route path="/case-study/:id" element={<CaseStudyDetailsPage />} />
+          <Route path="/product-detail/:productId" element={<ProductDetail />} />
         </Routes>
         <Footer />
       </div>

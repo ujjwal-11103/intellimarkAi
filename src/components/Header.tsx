@@ -31,28 +31,28 @@ const Navbar = () => {
           title: "Predictive Analytics", 
           description: "AI-driven customer behavior prediction",
           image: "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop",
-          path: "/products/predictive-analytics"
+          path: "/product-detail/predictive-analytics"
         },
         { 
           icon: Zap, 
           title: "Campaign Automation", 
           description: "Smart campaign optimization & execution",
           image: "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop",
-          path: "/products/campaign-automation"
+          path: "/product-detail/campaign-automation"
         },
         { 
           icon: BarChart3, 
           title: "Real-time Insights", 
           description: "Live performance tracking & analytics",
           image: "https://images.pexels.com/photos/590020/pexels-photo-590020.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop",
-          path: "/products/real-time-insights"
+          path: "/product-detail/real-time-insights"
         },
         { 
           icon: Sparkles, 
           title: "Content Generation", 
           description: "AI-powered content creation at scale",
           image: "https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop",
-          path: "/products/content-generation"
+          path: "/product-detail/content-generation"
         }
       ]
     },
