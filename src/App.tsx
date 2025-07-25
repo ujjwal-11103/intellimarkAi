@@ -1,5 +1,4 @@
 // App.jsx
-import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -23,14 +22,15 @@ import Contact from './pages/Contact';
 import CaseStudiesPage from './pages/CaseStudiesPage';
 import CaseStudyDetailsPage from './pages/CaseStudyDetailsPage';
 import ScrollToTop from './components/ScrollToTop';
+import { useEffect } from 'react';
 
 function App() {
   useEffect(() => {
-    const handleSmoothScroll = (e) => {
-      const target = e.target;
+    const handleSmoothScroll = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
       if (target.getAttribute?.('href')?.startsWith('#')) {
         e.preventDefault();
-        const targetId = target.getAttribute('href').substring(1);
+        const targetId = target.getAttribute('href')!.substring(1);
         const targetElement = document.getElementById(targetId);
         if (targetElement) {
           targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -69,6 +69,7 @@ function App() {
           <Route path="/testimonials" element={<TestimonialsPage />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
           <Route path="/case-studies" element={<CaseStudiesPage />} />
           <Route path="/case-study/:id" element={<CaseStudyDetailsPage />} />
           <Route path="/product-detail/:productId" element={<ProductDetail />} />

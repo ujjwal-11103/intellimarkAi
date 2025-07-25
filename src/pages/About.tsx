@@ -2,9 +2,7 @@ import {
   Brain, 
   Users, 
   Target, 
-  Award, 
-  Zap, 
-  Shield,
+  Award,
   Mail,
   Phone,
   MapPin,
@@ -72,12 +70,7 @@ function AboutUs() {
 
       {/* Stats Section */}
       <section className="py-20 bg-purple-600 relative overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center opacity-10"
-          style={{
-            backgroundImage: 'url(https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop)',
-          }}
-        ></div>
+        <div className="absolute inset-0 bg-cover bg-center opacity-10"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
@@ -157,7 +150,7 @@ function AboutUs() {
       {/* Values & Contact Section */}
       <section className="py-16 bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 relative overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover bg-center opacity-5"
+          className="absolute inset-0 bg-cover bg-center opacity-10"
           style={{
             backgroundImage: 'url(https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop)',
           }}

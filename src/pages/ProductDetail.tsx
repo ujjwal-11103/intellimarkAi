@@ -1,39 +1,53 @@
 // src/components/ProductDetails.js
-import React from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
+import { productDetails } from '../data/productData';
+
 import { 
   TrendingUp, 
   Target, 
-  BarChart3, 
-  Users, 
+  BarChart3,  
   AlertTriangle, 
   CheckCircle, 
   ArrowRight,
   DollarSign,
-  Clock,
   Shield,
   Zap,
-  Award,
   TrendingDown,
   Star,
   Play,
-  ChevronRight,
-  Search,
-  Menu,
-  Bell,
-  User,
   Database,
   Brain,
   LineChart,
   PieChart,
   Activity,
   Layers,
-  Globe,
-  Smartphone,
-  Monitor,
-  Tablet
 } from 'lucide-react';
 
 const ProductDetail = () => {
+    const { productId } = useParams();
+  const navigate = useNavigate();
+  
+  // Get product data or default to a fallback for unknown products
+  type ProductKey = keyof typeof productDetails;
+  const isValidProductId = (id: string): id is ProductKey => id in productDetails;
+  const productData = productId && isValidProductId(productId)
+    ? productDetails[productId]
+    : null;
+  
+  // Redirect to 404 or products page if product not found
+  useEffect(() => {
+    if (!productData) {
+      navigate('/products');
+    }
+    
+    // Scroll to top when product page loads
+    window.scrollTo(0, 0);
+  }, [productData, navigate]);
+
+  if (!productData) {
+    return null; // Or a loading state
+  }
   return (
     <>
       {/* Hero Section */}
@@ -49,42 +63,16 @@ const ProductDetail = () => {
               
               <div className="space-y-6">
                 <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                  Imagine AI be
+                  {productData.title}
                   <br />
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">
-                    procurement platform
+                    {productData.heroSubtitle}
                   </span>
                 </h1>
                 
                 <p className="text-lg text-gray-600 leading-relaxed max-w-lg">
-                  Cost-effective solution to generate powerful AI price and 
-                  procurement insights. What will you create?
+                  {productData.heroDescription}
                 </p>
-              </div>
-
-              <div className="flex items-center space-x-3">
-                <div className="flex-1 max-w-sm">
-                  <div className="relative">
-                    <input 
-                      type="text" 
-                      placeholder="Search insight for AI forecast..."
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent text-sm"
-                    />
-                  </div>
-                </div>
-                <select className="px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-purple-500 text-sm">
-                  <option>Replicate</option>
-                </select>
-                <button className="bg-purple-600 text-white px-6 py-3 rounded-xl hover:bg-purple-700 transition-all font-medium text-sm">
-                  Generate
-                </button>
-              </div>
-
-              <div className="flex items-center space-x-4 text-xs text-gray-500">
-                <span>Popular Tags:</span>
-                <span className="bg-gray-100 px-2 py-1 rounded-full">Business</span>
-                <span className="bg-gray-100 px-2 py-1 rounded-full">Intelligence</span>
-                <span className="bg-gray-100 px-2 py-1 rounded-full">Commodities</span>
               </div>
             </div>
 
@@ -154,120 +142,20 @@ const ProductDetail = () => {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div className="bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl p-6 text-white relative overflow-hidden aspect-square">
-              <div className="relative z-10">
-                <div className="text-2xl font-bold mb-1">25%</div>
-                <div className="text-purple-100 text-sm">Cost Reduction</div>
+            {productData.stats.map((stat, index) => (
+              <div key={index} className={`bg-gradient-to-br ${stat.color} rounded-2xl p-6 text-white relative overflow-hidden aspect-square`}>
+                <div className="relative z-10">
+                  <div className="text-2xl font-bold mb-1">{stat.value}</div>
+                  <div className="text-purple-100 text-sm">{stat.label }</div>
+                </div>
+                <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-white/10 rounded-full"></div>
               </div>
-              <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-white/10 rounded-full"></div>
-            </div>
-            
-            <div className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl p-6 text-white relative overflow-hidden aspect-square">
-              <div className="relative z-10">
-                <div className="text-2xl font-bold mb-1">90%</div>
-                <div className="text-blue-100 text-sm">Forecast Accuracy</div>
-              </div>
-              <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-white/10 rounded-full"></div>
-            </div>
-            
-            <div className="bg-gradient-to-br from-green-500 to-green-600 rounded-2xl p-6 text-white relative overflow-hidden aspect-square">
-              <div className="relative z-10">
-                <div className="text-2xl font-bold mb-1">80%</div>
-                <div className="text-green-100 text-sm">Faster Decisions</div>
-              </div>
-              <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-white/10 rounded-full"></div>
-            </div>
-            
-            <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl p-6 text-white relative overflow-hidden aspect-square">
-              <div className="relative z-10">
-                <div className="text-2xl font-bold mb-1">50%</div>
-                <div className="text-orange-100 text-sm">Risk Reduction</div>
-              </div>
-              <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-white/10 rounded-full"></div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* What We Do Section - Inspired by Aine's centered layout */}
-      <section className="py-20 bg-gray-50/50">
-        <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="inline-block text-purple-600 font-semibold text-xs tracking-wide uppercase mb-3">
-              WHAT WE DO
-            </div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-              Bring your procurement to the screen
-              <br />
-              with <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">AI insights generator</span>
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed mb-6">
-              Create something that has never been seen before. Let our AI art generator be your platform. It's time to say 
-              goodbye to stock buying hunting and investing new creatives for agencies.
-            </p>
-            
-            <div className="text-center">
-              <div className="text-purple-600 font-bold text-base mb-1">John</div>
-              <div className="text-gray-500 text-sm">Creative Director</div>
-            </div>
-          </div>
-
-          {/* Features Grid - Inspired by Aine's card layout */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 text-center group hover:shadow-lg transition-all">
-              <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                <BarChart3 className="w-6 h-6 text-purple-600" />
-              </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-3">Price forecasting</h3>
-              <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                Aine AI Chat provides historical resources and challenges to users of all stages.
-              </p>
-              <button className="w-6 h-6 bg-purple-100 rounded-lg flex items-center justify-center mx-auto hover:bg-purple-200 transition-colors">
-                <ChevronRight className="w-3 h-3 text-purple-600" />
-              </button>
-            </div>
-
-            <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 text-center group hover:shadow-lg transition-all">
-              <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                <Target className="w-6 h-6 text-blue-600" />
-              </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-3">Creative tools</h3>
-              <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                Aine AI Chat provides historical resources and challenges to users of all stages.
-              </p>
-              <button className="w-6 h-6 bg-blue-100 rounded-lg flex items-center justify-center mx-auto hover:bg-blue-200 transition-colors">
-                <ChevronRight className="w-3 h-3 text-blue-600" />
-              </button>
-            </div>
-
-            <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 text-center group hover:shadow-lg transition-all">
-              <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                <Zap className="w-6 h-6 text-green-600" />
-              </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-3">Ease of access</h3>
-              <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                Aine AI Chat provides historical resources and challenges to users of all stages.
-              </p>
-              <button className="w-6 h-6 bg-green-100 rounded-lg flex items-center justify-center mx-auto hover:bg-green-200 transition-colors">
-                <ChevronRight className="w-3 h-3 text-green-600" />
-              </button>
-            </div>
-
-            <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 text-center group hover:shadow-lg transition-all">
-              <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                <Shield className="w-6 h-6 text-orange-600" />
-              </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-3">Excellent support</h3>
-              <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                Aine AI Chat provides historical resources and challenges to users of all stages.
-              </p>
-              <button className="w-6 h-6 bg-orange-100 rounded-lg flex items-center justify-center mx-auto hover:bg-orange-200 transition-colors">
-                <ChevronRight className="w-3 h-3 text-orange-600" />
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Business Problem Section - Inspired by Digital Agency layout */}
       <section className="py-20 bg-white">
@@ -275,9 +163,7 @@ const ProductDetail = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
               <div>
-                <div className="inline-block text-purple-600 font-semibold text-xs tracking-wide uppercase mb-3">
-                  STRATEGIC DIGITAL
-                </div>
+                
                 <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                   We're Strategic Digital
                   <br />
@@ -746,10 +632,10 @@ const ProductDetail = () => {
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-            Ready to Transform Your Procurement?
+            Ready to Transform Your Marketing with {productData.title}?
           </h2>
           <p className="text-lg text-purple-100 mb-8 leading-relaxed">
-            Join leading organizations using AI to optimize their procurement operations and reduce costs by up to 25%
+            Join leading organizations using our AI solutions to optimize their marketing operations and drive unprecedented growth
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-purple-600 px-6 py-3 rounded-xl hover:bg-gray-50 transition-all transform hover:scale-105 font-medium text-sm flex items-center justify-center">
