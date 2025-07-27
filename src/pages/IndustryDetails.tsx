@@ -20,14 +20,7 @@ const IndustryDetailPage: React.FC = () => {
         <div className="relative max-w-7xl mx-auto px-8 py-32">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div className="space-y-12">
-              {/* Breadcrumb */}
-              <nav className="flex items-center space-x-4 text-sm text-gray-500 font-light">
-                <a href="#" className="hover:text-purple-600 transition-colors duration-300">Home</a>
-                <ChevronRight className="h-4 w-4 opacity-50" />
-                <a href="#" className="hover:text-purple-600 transition-colors duration-300">Industries</a>
-                <ChevronRight className="h-4 w-4 opacity-50" />
-                <span className="text-purple-600 font-medium">FMCG</span>
-              </nav>
+
 
               <div className="space-y-8">
                 <h1 className="text-7xl font-extralight text-gray-900 leading-[0.9] tracking-tight">

@@ -74,13 +74,13 @@ const Hero = () => {
           </div>
 
           {/* Dynamic Main Heading */}
-          <h1 className={`text-6xl sm:text-7xl lg:text-8xl font-black mb-8 transition-all duration-1000 delay-200 ${
+          <h1 className={`text-5xl sm:text-6xl lg:text-8xl font-black mb-8 transition-all duration-1000 delay-200 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}>
             <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent block mb-4">
               The Future of
             </span>
-            <div className="relative h-24 overflow-hidden">
+            <div className="relative h-28 xs:h-24 sm:h-24 md:h-24 overflow-hidden">
               {dynamicWords.map((word, index) => (
                 <span
                   key={word}

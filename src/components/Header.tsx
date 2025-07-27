@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import {
   Brain, ChevronDown, Menu, X, ArrowRight,
   Sparkles, Zap, Target, Users, BarChart3,
   Globe, Lightbulb, TrendingUp, Shield
 } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [mobileDropdowns, setMobileDropdowns] = useState<{ [key: string]: boolean }>({});
-
+  const location = useLocation();
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll);
@@ -22,12 +22,19 @@ const Navbar = () => {
     document.body.style.overflow = isMobileMenuOpen ? 'hidden' : 'auto';
   }, [isMobileMenuOpen]);
 
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [location.pathname]);
+
   const toggleMobileDropdown = (item: string) => {
     setMobileDropdowns((prev) => ({
       ...prev,
       [item]: !prev[item]
     }));
   };
+  const closeMobileMenu = () =>{
+    setIsMobileMenuOpen(false);
+  }
 
   const dropdownContent = {
     Products: {
@@ -186,32 +193,49 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden transition-all duration-500 pt-4 space-y-4">
-            {Object.entries(dropdownContent).map(([item, content]) => (
-              <div key={item}>
-                <button onClick={() => toggleMobileDropdown(item)} className="flex items-center justify-between w-full px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50/80 rounded-xl transition-all duration-300">
-                  <span className="font-medium">{item}</span>
-                  <ChevronDown className={`h-4 w-4 transition-transform ${mobileDropdowns[item] ? 'rotate-180' : ''}`} />
-                </button>
-                {mobileDropdowns[item] && (
-                  <div className="pl-6 pt-2 space-y-2">
-                    {content.items.map((subItem, idx) => (
-                      <Link key={idx} to={subItem.path} className="block text-gray-600 hover:text-blue-600 text-sm">
-                        {subItem.title}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
-            <div className="border-t border-gray-100 pt-4 space-y-3">
-              <Link to="/blogs" className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50/80 rounded-xl">Blogs</Link>
-              <Link to="/about" className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50/80 rounded-xl">About</Link>
-              <button className="block w-full px-4 py-3 text-left text-gray-700 hover:text-blue-600 hover:bg-gray-50/80 rounded-xl">Sign In</button>
-              <button className="block w-full px-6 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:shadow-lg transition-all duration-300">Book Now</button>
+        <div className="lg:hidden transition-all duration-500 pt-4 space-y-4">
+          {Object.entries(dropdownContent).map(([item, content]) => (
+            <div key={item}>
+              <button onClick={() => toggleMobileDropdown(item)} className="flex items-center justify-between w-full px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50/80 rounded-xl transition-all duration-300">
+                <span className="font-medium">{item}</span>
+                <ChevronDown className={`h-4 w-4 transition-transform ${mobileDropdowns[item] ? 'rotate-180' : ''}`} />
+              </button>
+              {mobileDropdowns[item] && (
+                <div className="pl-6 pt-2 space-y-2">
+                  {content.items.map((subItem, idx) => (
+                    <Link 
+                      key={idx} 
+                      to={subItem.path} 
+                      className="block text-gray-600 hover:text-blue-600 text-sm"
+                      onClick={closeMobileMenu}
+                    >
+                      {subItem.title}
+                    </Link>
+                  ))}
+                </div>
+              )}
             </div>
+          ))}
+          <div className="border-t border-gray-100 pt-4 space-y-3">
+            <Link 
+              to="/blogs" 
+              className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50/80 rounded-xl"
+              onClick={closeMobileMenu}
+            >
+              Blogs
+            </Link>
+            <Link 
+              to="/about" 
+              className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50/80 rounded-xl"
+              onClick={closeMobileMenu}
+            >
+              About
+            </Link>
+            <button className="block w-full px-4 py-3 text-left text-gray-700 hover:text-blue-600 hover:bg-gray-50/80 rounded-xl">Sign In</button>
+            <button className="block w-full px-6 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:shadow-lg transition-all duration-300">Book Now</button>
           </div>
-        )}
+        </div>
+      )}
       </div>
     </nav>
   );
