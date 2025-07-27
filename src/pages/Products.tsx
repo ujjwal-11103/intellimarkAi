@@ -147,7 +147,7 @@ const Solutions = () => {
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
               <button className="bg-gradient-to-r from-amber-600 to-amber-700 text-white px-12 py-4 rounded-2xl hover:from-amber-700 hover:to-amber-800 transition-all duration-300 font-bold text-lg shadow-xl hover:shadow-amber-600/30 transform hover:scale-105">
-                Schedule Consultation
+                Book Consultation
               </button>
               <button className="border-2 border-stone-300 text-stone-700 px-12 py-4 rounded-2xl hover:bg-stone-50 hover:border-amber-600 hover:text-amber-700 transition-all duration-300 font-bold text-lg">
                 Request Demo

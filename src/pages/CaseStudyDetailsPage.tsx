@@ -94,7 +94,7 @@ const CaseStudyDetail: React.FC = () => {
         <div className="absolute top-48 right-32 w-1 h-1 bg-blue-400 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
         <div className="absolute bottom-32 left-16 w-3 h-3 bg-purple-300 rounded-full animate-pulse" style={{ animationDelay: '2s' }}></div>
         
-        <div className="relative container mx-auto px-6 py-20">
+        <div className="relative container mx-auto px-6 py-2">
           <div className="max-w-6xl mx-auto">
             {/* Breadcrumb & Meta */}
             <div className={`flex flex-wrap items-center gap-4 mb-12 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
@@ -119,7 +119,7 @@ const CaseStudyDetail: React.FC = () => {
             {/* Title & Description */}
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16">
               <div className="lg:col-span-2">
-                <h1 className={`text-6xl md:text-8xl font-black bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent mb-8 leading-tight transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+                <h1 className={`text-4xl md:text-7xl font-black bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent mb-8 leading-tight transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
                   {caseStudy.title}
                 </h1>
                 
@@ -208,7 +208,7 @@ const CaseStudyDetail: React.FC = () => {
             </div>
 
             {/* Key Metrics Dashboard */}
-            <div className={`grid grid-cols-1 md:grid-cols-4 gap-8 mb-20 transition-all duration-1000 delay-800 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <div className={`grid grid-cols-1 md:grid-cols-2 gap-8 mb-20 transition-all duration-1000 delay-800 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               <div className="group relative bg-gradient-to-br from-green-500 via-green-600 to-emerald-600 rounded-3xl p-8 text-white overflow-hidden hover:scale-105 transition-all duration-300 shadow-2xl shadow-green-500/25">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-3xl group-hover:bg-white/20 transition-all duration-300"></div>
                 <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-white/5 rounded-full blur-xl"></div>
@@ -650,7 +650,7 @@ const CaseStudyDetail: React.FC = () => {
             </button>
             <button className="text-white hover:text-purple-200 transition-colors flex items-center font-bold text-lg">
               <Users className="w-6 h-6 mr-3" />
-              Schedule Consultation
+              Book Consultation
               <ArrowRight className="w-6 h-6 ml-3" />
             </button>
           </div>

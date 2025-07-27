@@ -286,7 +286,7 @@ const ResourcesHub: React.FC = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="group inline-flex items-center justify-center space-x-2 bg-gray-900 text-white px-8 py-4 rounded-full font-semibold hover:bg-gray-800 transition-all duration-300">
-              <span>Schedule a Demo</span>
+              <span>Book a Demo</span>
               <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </button>
             

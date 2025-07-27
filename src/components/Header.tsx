@@ -101,7 +101,9 @@ const Navbar = () => {
           </Link>
 
           <div className="hidden lg:flex items-center space-x-2">
-            {Object.entries(dropdownContent).map(([item, content]) => (
+            {Object.entries(dropdownContent)
+              .filter(([item]) => item !== 'CaseStudy')
+              .map(([item, content]) => (
               <div key={item} className="relative group" onMouseEnter={() => setActiveDropdown(item)} onMouseLeave={() => setActiveDropdown(null)}>
                 <button className="flex items-center px-5 py-3 text-gray-700 hover:text-blue-600 font-medium transition-all duration-300 rounded-xl hover:bg-gray-50/80 group">
                   <span className="relative">
@@ -117,7 +119,7 @@ const Navbar = () => {
                     <div className="grid grid-cols-3 gap-8">
                       {/* Featured */}
                       <div className="col-span-1">
-                        <Link to={`/${item.toLowerCase() === 'casestudy' ? 'case-studies' : item.toLowerCase()}`} className="relative group block">
+                        <Link to={`/${item.toLowerCase()}`} className="relative group block">
                           <div className="relative overflow-hidden rounded-xl">
                             <img src={content.featured.image} alt={content.featured.title} className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
@@ -161,7 +163,7 @@ const Navbar = () => {
                           <h4 className="font-semibold text-gray-900 mb-1">Ready to Book Now?</h4>
                           <p className="text-sm text-gray-600">Explore our {item.toLowerCase()} in detail</p>
                         </div>
-                        <Link to={item.toLowerCase() === 'casestudy' ? '/case-studies' : `/${item.toLowerCase()}`} className="flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:shadow-lg group transition-all duration-300">
+                        <Link to={`/${item.toLowerCase()}`} className="flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:shadow-lg group transition-all duration-300">
                           <span>View All {item}</span>
                           <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
                         </Link>
@@ -171,6 +173,12 @@ const Navbar = () => {
                 </div>
               </div>
             ))}
+            <Link to="/case-studies" className="px-5 py-3 text-gray-700 hover:text-blue-600 font-medium transition-all rounded-xl hover:bg-gray-50/80 group">
+              <span className="relative">
+                Case Studies
+                <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center" />
+              </span>
+            </Link>
             <Link to="/blogs" className="px-5 py-3 text-gray-700 hover:text-blue-600 font-medium transition-all rounded-xl hover:bg-gray-50/80">Blogs</Link>
             <Link to="/about" className="px-5 py-3 text-gray-700 hover:text-blue-600 font-medium transition-all rounded-xl hover:bg-gray-50/80">About</Link>
           </div>
@@ -194,7 +202,9 @@ const Navbar = () => {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
         <div className="lg:hidden transition-all duration-500 pt-4 space-y-4">
-          {Object.entries(dropdownContent).map(([item, content]) => (
+          {Object.entries(dropdownContent)
+            .filter(([item]) => item !== 'CaseStudy')
+            .map(([item, content]) => (
             <div key={item}>
               <button onClick={() => toggleMobileDropdown(item)} className="flex items-center justify-between w-full px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50/80 rounded-xl transition-all duration-300">
                 <span className="font-medium">{item}</span>
@@ -217,6 +227,13 @@ const Navbar = () => {
             </div>
           ))}
           <div className="border-t border-gray-100 pt-4 space-y-3">
+            <Link 
+              to="/case-studies" 
+              className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50/80 rounded-xl"
+              onClick={closeMobileMenu}
+            >
+              Case Studies
+            </Link>
             <Link 
               to="/blogs" 
               className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50/80 rounded-xl"

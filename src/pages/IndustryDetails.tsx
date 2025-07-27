@@ -348,7 +348,7 @@ const IndustryDetailPage: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-8 justify-center">
             <button className="group bg-white text-purple-600 px-12 py-5 rounded-full font-light text-lg tracking-wide hover:bg-gray-50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl">
               <span className="flex items-center justify-center">
-                Schedule a Demo
+                Book a Demo
                 <ArrowRight className="ml-3 h-5 w-5 transition-transform duration-300 group-hover:translate-x-2" />
               </span>
             </button>

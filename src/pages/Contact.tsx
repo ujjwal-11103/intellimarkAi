@@ -281,11 +281,11 @@ const Contact = () => {
             <Building className="h-16 w-16 text-amber-600 mx-auto mb-6" />
             <h3 className="text-3xl font-bold text-stone-800 mb-6">Ready to Book Now?</h3>
             <p className="text-xl text-stone-600 mb-8 max-w-3xl mx-auto">
-              Schedule a consultation with our AI experts to discuss your specific needs 
+              Book a consultation with our AI experts to discuss your specific needs 
               and discover how we can transform your enterprise.
             </p>
             <button className="bg-gradient-to-r from-amber-600 to-amber-700 text-white px-12 py-4 rounded-2xl hover:from-amber-700 hover:to-amber-800 transition-all duration-300 font-bold text-lg shadow-xl hover:shadow-amber-600/30 transform hover:scale-105">
-              Schedule Consultation
+              Book Consultation
             </button>
           </div>
         </div>

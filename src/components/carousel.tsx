@@ -96,13 +96,8 @@ export default function Carousel() {
     };
 
     const getLayoutClasses = () => {
-      switch (card.type) {
-        case 'hero': return 'lg:col-span-2 lg:row-span-2 min-h-[300px] sm:min-h-[400px]';
-        case 'feature': return 'lg:col-span-2 min-h-[220px] sm:min-h-[200px]';
-        case 'success': return 'lg:col-span-2 lg:row-span-2 min-h-[300px] sm:min-h-[400px]';
-        case 'location': return 'lg:col-span-2 min-h-[220px] sm:min-h-[200px]';
-        default: return '';
-      }
+        // All cards will now take up lg:col-span-2 to fit 4 cards in a 4-column grid (2 per row)
+        return 'lg:col-span-2 min-h-[220px] sm:min-h-[200px]'; // Standardize height for consistent layout
     }
 
     return (
@@ -127,9 +122,9 @@ export default function Carousel() {
             </div>
           )}
           {card.stats && (
-             <div className="mt-4 bg-white/20 backdrop-blur-sm rounded-xl p-3 sm:p-4 self-start">
-               <p className="text-sm sm:text-lg font-bold">{card.stats}</p>
-             </div>
+              <div className="mt-4 bg-white/20 backdrop-blur-sm rounded-xl p-3 sm:p-4 self-start">
+                <p className="text-sm sm:text-lg font-bold">{card.stats}</p>
+              </div>
           )}
         </div>
       </div>
@@ -160,45 +155,43 @@ export default function Carousel() {
               {slides.map((slide) => (
                 <div key={slide.id} className="w-full flex-shrink-0 p-1">
                   {/* Grid for Mobile (stacked) and Desktop */}
-                  <div className="grid grid-cols-1 lg:grid-cols-4 lg:grid-rows-2 gap-4 sm:gap-6 lg:h-[500px]">
+                  <div className="grid grid-cols-1 lg:grid-cols-4 lg:grid-rows-1 gap-4 sm:gap-6 lg:h-[500px]">
                     {slide.cards.map((card) => renderCard(card))}
                   </div>
                 </div>
               ))}
             </div>
           </div>
-        </div>
-        
-        {/* Navigation */}
-        <div className="flex items-center justify-center gap-6 sm:gap-12">
+          
+          {/* Navigation */}
           <button
             onClick={prevSlide}
             disabled={isTransitioning}
-            className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-gray-300 flex items-center justify-center hover:border-gray-600 hover:bg-gray-50 transition-all duration-300 group disabled:opacity-50"
+            className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-gray-300 flex items-center justify-center hover:border-gray-600 hover:bg-gray-50 transition-all duration-300 group disabled:opacity-50 absolute left-4 top-1/2 -translate-y-1/2 z-10"
           >
             <ChevronLeft className="w-5 h-5 text-gray-600 group-hover:text-gray-800" />
           </button>
-          
-          <div className="flex gap-3 sm:gap-4">
-            {slides.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => goToSlide(index)}
-                disabled={isTransitioning}
-                className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-all duration-300 hover:scale-125 ${
-                  index === currentSlide ? 'bg-gray-800 scale-110' : 'bg-gray-300 hover:bg-gray-400'
-                }`}
-              />
-            ))}
-          </div>
-          
           <button
             onClick={nextSlide}
             disabled={isTransitioning}
-            className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-gray-300 flex items-center justify-center hover:border-gray-600 hover:bg-gray-50 transition-all duration-300 group disabled:opacity-50"
+            className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-gray-300 flex items-center justify-center hover:border-gray-600 hover:bg-gray-50 transition-all duration-300 group disabled:opacity-50 absolute right-4 top-1/2 -translate-y-1/2 z-10"
           >
             <ChevronRight className="w-5 h-5 text-gray-600 group-hover:text-gray-800" />
           </button>
+        </div>
+        
+        {/* Indicators */}
+        <div className="flex gap-3 sm:gap-4 justify-center">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => goToSlide(index)}
+              disabled={isTransitioning}
+              className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-all duration-300 hover:scale-125 ${
+                index === currentSlide ? 'bg-gray-800 scale-110' : 'bg-gray-300 hover:bg-gray-400'
+              }`}
+            />
+          ))}
         </div>
       </div>
     </section>

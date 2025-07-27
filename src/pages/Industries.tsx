@@ -181,7 +181,7 @@ const Industries = () => {
               Let's discuss how we can transform your business.
             </p>
             <button className="bg-gradient-to-r from-amber-600 to-amber-700 text-white px-12 py-4 rounded-2xl hover:from-amber-700 hover:to-amber-800 transition-all duration-300 font-bold text-lg shadow-xl hover:shadow-amber-600/30 transform hover:scale-105">
-              Schedule Industry Consultation
+              Book Industry Consultation
             </button>
           </div>
         </div>

@@ -179,15 +179,15 @@ const CaseStudiesPage: React.FC = () => {
                 </p>
 
                 {/* Key Metrics */}
-                <div className="grid grid-cols-2 gap-4 mb-6 p-6 bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl">
+                <div className="grid grid-cols-1 gap-4 mb-6 p-6 bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl">
                   <div className="text-center">
-                    <div className="text-3xl font-black bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+                    <div className="text-2xl font-black bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
                       {study.metrics.improvement}
                     </div>
                     <div className="text-xs text-gray-600 font-bold uppercase tracking-wide">Improvement</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-black bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+                    <div className="text-2xl font-black bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
                       {study.metrics.timeFrame}
                     </div>
                     <div className="text-xs text-gray-600 font-bold uppercase tracking-wide">Timeline</div>
@@ -271,7 +271,7 @@ const CaseStudiesPage: React.FC = () => {
             </button>
             <button className="text-white hover:text-purple-200 transition-colors flex items-center font-bold text-lg">
               <Users className="w-6 h-6 mr-3" />
-              Schedule Consultation
+              Book Consultation
               <ArrowRight className="w-6 h-6 ml-3" />
             </button>
           </div>
