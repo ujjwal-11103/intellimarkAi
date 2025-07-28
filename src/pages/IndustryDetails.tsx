@@ -96,7 +96,7 @@ const IndustryDetailPage: React.FC = () => {
 
             <div className="relative">
               {/* Floating highlight box */}
-              <div className="absolute top-8 left-8 bg-gradient-to-r from-purple-600 to-purple-700 text-white p-8 rounded-3xl shadow-2xl z-10 max-w-sm transform hover:scale-105 transition-all duration-500 hover:shadow-purple-500/25">
+              <div className="top-10 left-50 bg-gradient-to-r from-purple-600 to-purple-700 text-white p-8 rounded-3xl shadow-2xl z-10 max-w-sm transform hover:scale-105 transition-all duration-500 hover:shadow-purple-500/25">
                 <p className="font-light text-lg leading-relaxed">
                   Dive into customer behavior, analyzing pricing & promotions, visualizing trends, & more.
                 </p>
