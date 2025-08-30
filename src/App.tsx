@@ -55,7 +55,7 @@ function App() {
                 <Hero />
                 <Carousel />
                 <CompanyMarquee />
-                <IntelliMarkPlatform />
+                {/* <IntelliMarkPlatform /> */}
                 <IndustryShowcase />
                 <StatsSection />
                 <UpcomingEvents />

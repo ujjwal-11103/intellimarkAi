@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import { productDetails } from '../data/productData';
 
-import { 
+import {
   ArrowRight,
   Brain,
   Database,
@@ -15,18 +15,22 @@ import {
   TrendingUp,
   Zap,
 } from 'lucide-react';
+import NrmLevers from '../components/explainable/Levers';
+import { VennDiagram } from '../components/explainable/VennDiagram';
+import { ProcessFlow } from '../components/explainable/ProcessFlow';
+import { MLEngine } from '../components/explainable/MLEngine';
 
 const ProductDetail = () => {
   const { productId } = useParams();
   const navigate = useNavigate();
-  
+
   type ProductKey = keyof typeof productDetails;
   const isValidProductId = (id: string): id is ProductKey => id in productDetails;
 
-  const productData = productId && isValidProductId(productId) 
-    ? productDetails[productId] 
+  const productData = productId && isValidProductId(productId)
+    ? productDetails[productId]
     : null;
-  
+
   useEffect(() => {
     if (!productData) {
       navigate('/products'); // Redirect if product doesn't exist
@@ -83,7 +87,7 @@ const ProductDetail = () => {
                   ))}
                 </div>
               </div>
-              
+
               {/* Decorative Floating Icons */}
               <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-500 rounded-2xl flex items-center justify-center shadow-lg"><Brain className="w-8 h-8 text-white" /></div>
               <div className="absolute top-1/2 -right-8 w-12 h-12 bg-gradient-to-br from-green-400 to-green-500 rounded-xl flex items-center justify-center shadow-lg"><LineChart className="w-6 h-6 text-white" /></div>
@@ -95,7 +99,7 @@ const ProductDetail = () => {
       </section>
 
       {/* Stats Gallery Section */}
-      <section className="py-16 bg-white">
+      {/* <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {safeProductData.stats.map((stat, index) => (
@@ -109,10 +113,10 @@ const ProductDetail = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Value Proposition Section */}
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
@@ -146,10 +150,10 @@ const ProductDetail = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Process Section */}
-      <section className="py-20 bg-gradient-to-br from-purple-50/30 via-white to-blue-50/20">
+      {/* <section className="py-20 bg-gradient-to-br from-purple-50/30 via-white to-blue-50/20">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">
@@ -181,10 +185,10 @@ const ProductDetail = () => {
             })}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Features Section */}
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">Core Features & Capabilities</h2>
@@ -209,10 +213,10 @@ const ProductDetail = () => {
             })}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-gray-50/50">
+      {/* <section className="py-20 bg-gray-50/50">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">People Say About Us</h2>
@@ -248,7 +252,14 @@ const ProductDetail = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+
+      <div className="min-h-screen bg-gray-50">
+        <NrmLevers />
+        <VennDiagram />
+        <ProcessFlow />
+        <MLEngine />
+      </div>
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-purple-600 to-purple-800 relative overflow-hidden">
