@@ -94,14 +94,14 @@ function AboutUs() {
       </section>
 
       {/* Team Section */}
-      {/* <section className="py-16 bg-white">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Meet Our Visionaries</h2>
             <p className="text-xl text-gray-600">The minds behind the magic</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="group">
               <div className="relative overflow-hidden rounded-2xl mb-6">
                 <img 
@@ -111,9 +111,9 @@ function AboutUs() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-1">Dr. Sarah Chen</h3>
-              <p className="text-purple-600 font-medium mb-3">CEO & Founder</p>
-              <p className="text-gray-600 text-sm">MIT AI researcher, ex-Google. Turning research into reality.</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-1">Rahul Srivastava</h3>
+              <p className="text-purple-600 font-medium mb-3">CEO</p>
+              <p className="text-gray-600 text-sm">Ex-Marketing Analytics Lead at Unilever</p>
             </div>
             
             <div className="group">
@@ -125,9 +125,9 @@ function AboutUs() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-1">Michael Rodriguez</h3>
-              <p className="text-purple-600 font-medium mb-3">CTO & Co-Founder</p>
-              <p className="text-gray-600 text-sm">Stanford PhD, ex-Tesla Autopilot. Building the future of AI.</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-1">Vishal Bhavsar</h3>
+              <p className="text-purple-600 font-medium mb-3">Head of Supply Chain</p>
+              <p className="text-gray-600 text-sm">Ex-Lowe’s, Fractal, Unilever, Marico and Loreal. 10 Years experience in Data Science</p>
             </div>
             
             <div className="group">
@@ -139,13 +139,26 @@ function AboutUs() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-1">Dr. Aisha Johnson</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-1">Sandeep Mathew</h3>
+              <p className="text-purple-600 font-medium mb-3">Head of NRM, RGM, MMM</p>
+              <p className="text-gray-600 text-sm">16 Years in FMCG Industry, Ex-Unilever Global Director for Revenue Management.</p>
+            </div>
+            <div className="group">
+              <div className="relative overflow-hidden rounded-2xl mb-6">
+                <img 
+                  src="https://images.pexels.com/photos/3760790/pexels-photo-3760790.jpeg?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop"
+                  alt="Dr. Aisha Johnson"
+                  className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-1">Parikshit Nag</h3>
               <p className="text-purple-600 font-medium mb-3">Chief Data Scientist</p>
-              <p className="text-gray-600 text-sm">Harvard PhD, ex-AWS. Making AI ethical and powerful.</p>
+              <p className="text-gray-600 text-sm">14 Years Data Science Leader in FMCG Industry, Ex-Unilever, Patent in Forecasting</p>
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* Values & Contact Section */}
       <section className="py-16 bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 relative overflow-hidden">
