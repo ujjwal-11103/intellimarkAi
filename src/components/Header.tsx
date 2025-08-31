@@ -32,7 +32,7 @@ const Navbar = () => {
       [item]: !prev[item]
     }));
   };
-  const closeMobileMenu = () =>{
+  const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
   }
 
@@ -45,9 +45,12 @@ const Navbar = () => {
         badge: "Most Popular"
       },
       items: [
-        { icon: Target, title: "Explainable Forecasting Engine", description: "AI-driven customer behavior prediction", path: "/product-detail/explainable-forecasting-engine" },
-        { icon: Zap, title: "Marketing Investment Planner", description: "Smart campaign optimization & execution", path: "/product-detail/marketing-investment-planner" },
-        { icon: BarChart3, title: "Retail Growth Engine", description: "Live performance tracking & analytics", path: "/product-detail/retail-growth-engine" },
+        { icon: Target, title: "Explainable Forecasting Engine", description: "AI-driven customer behavior prediction", path: "/ExplainableForecastingEngine/" },
+
+        { icon: Zap, title: "Forecasting", description: "Smart campaign optimization & execution", path: "/Forecasting" },
+
+        { icon: BarChart3, title: "Recommendation", description: "Live performance tracking & analytics", path: "/Recommendation" },
+
         { icon: Sparkles, title: "Performance Marketing Optimization", description: "AI-powered content creation at scale", path: "/product-detail/performance-marketing-optimization" }
       ]
     },
@@ -104,75 +107,75 @@ const Navbar = () => {
             {Object.entries(dropdownContent)
               .filter(([item]) => item !== 'CaseStudy')
               .map(([item, content]) => (
-              <div key={item} className="relative group" onMouseEnter={() => setActiveDropdown(item)} onMouseLeave={() => setActiveDropdown(null)}>
-                <button className="flex items-center px-5 py-3 text-gray-700 hover:text-blue-600 font-medium transition-all duration-300 rounded-xl hover:bg-gray-50/80 group">
-                  <span className="relative">
-                    {item}
-                    <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center" />
-                  </span>
-                  <ChevronDown className="ml-2 h-4 w-4 group-hover:rotate-180 transition-transform duration-300" />
-                </button>
+                <div key={item} className="relative group" onMouseEnter={() => setActiveDropdown(item)} onMouseLeave={() => setActiveDropdown(null)}>
+                  <button className="flex items-center px-5 py-3 text-gray-700 hover:text-blue-600 font-medium transition-all duration-300 rounded-xl hover:bg-gray-50/80 group">
+                    <span className="relative">
+                      {item}
+                      <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center" />
+                    </span>
+                    <ChevronDown className="ml-2 h-4 w-4 group-hover:rotate-180 transition-transform duration-300" />
+                  </button>
 
-                {/* Mega Dropdown */}
-                <div className={`absolute top-full left-1/2 transform -translate-x-1/2 mt-2 transition-all duration-300 ${activeDropdown === item ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible translate-y-4 pointer-events-none'}`}>
-                  <div className="bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border p-8 w-[800px]">
-                    <div className="grid grid-cols-3 gap-8">
-                      {/* Featured */}
-                      <div className="col-span-1">
-                        <Link to={`/${item.toLowerCase()}`} className="relative group block">
-                          <div className="relative overflow-hidden rounded-xl">
-                            <img src={content.featured.image} alt={content.featured.title} className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                            <div className="absolute top-3 left-3">
-                              <span className="px-3 py-1 bg-blue-600 text-white text-xs font-semibold rounded-full">{content.featured.badge}</span>
-                            </div>
-                            <div className="absolute bottom-4 left-4 right-4">
-                              <h3 className="text-white font-bold text-lg mb-1">{content.featured.title}</h3>
-                              <p className="text-white/80 text-sm">{content.featured.description}</p>
-                            </div>
-                          </div>
-                        </Link>
-                      </div>
-
-                      {/* Items */}
-                      <div className="col-span-2 grid grid-cols-2 gap-4">
-                        {(content.items as any[]).map((subItem, idx) => (
-                          <Link
-                            to={subItem.path}
-                            key={idx}
-                            className="group p-4 rounded-xl hover:bg-gray-50/80 transition-all duration-300 block"
-                          >
-                            <div className="flex items-start space-x-4">
-                              <div className="w-12 h-12 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                                <subItem.icon className="w-6 h-6 text-blue-600" />
+                  {/* Mega Dropdown */}
+                  <div className={`absolute top-full left-1/2 transform -translate-x-1/2 mt-2 transition-all duration-300 ${activeDropdown === item ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible translate-y-4 pointer-events-none'}`}>
+                    <div className="bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border p-8 w-[800px]">
+                      <div className="grid grid-cols-3 gap-8">
+                        {/* Featured */}
+                        <div className="col-span-1">
+                          <Link to={`/${item.toLowerCase()}`} className="relative group block">
+                            <div className="relative overflow-hidden rounded-xl">
+                              <img src={content.featured.image} alt={content.featured.title} className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" />
+                              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                              <div className="absolute top-3 left-3">
+                                <span className="px-3 py-1 bg-blue-600 text-white text-xs font-semibold rounded-full">{content.featured.badge}</span>
                               </div>
-                              <div className="flex-1 min-w-0">
-                                <h4 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors duration-200 mb-1">{subItem.title}</h4>
-                                <p className="text-sm text-gray-600 leading-relaxed">{subItem.description}</p>
+                              <div className="absolute bottom-4 left-4 right-4">
+                                <h3 className="text-white font-bold text-lg mb-1">{content.featured.title}</h3>
+                                <p className="text-white/80 text-sm">{content.featured.description}</p>
                               </div>
                             </div>
                           </Link>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* CTA */}
-                    <div className="mt-8 pt-6 border-t border-gray-100">
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <h4 className="font-semibold text-gray-900 mb-1">Ready to Book Now?</h4>
-                          <p className="text-sm text-gray-600">Explore our {item.toLowerCase()} in detail</p>
                         </div>
-                        <Link to={`/${item.toLowerCase()}`} className="flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:shadow-lg group transition-all duration-300">
-                          <span>View All {item}</span>
-                          <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
-                        </Link>
+
+                        {/* Items */}
+                        <div className="col-span-2 grid grid-cols-2 gap-4">
+                          {(content.items as any[]).map((subItem, idx) => (
+                            <Link
+                              to={subItem.path}
+                              key={idx}
+                              className="group p-4 rounded-xl hover:bg-gray-50/80 transition-all duration-300 block"
+                            >
+                              <div className="flex items-start space-x-4">
+                                <div className="w-12 h-12 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                  <subItem.icon className="w-6 h-6 text-blue-600" />
+                                </div>
+                                <div className="flex-1 min-w-0">
+                                  <h4 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors duration-200 mb-1">{subItem.title}</h4>
+                                  <p className="text-sm text-gray-600 leading-relaxed">{subItem.description}</p>
+                                </div>
+                              </div>
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* CTA */}
+                      <div className="mt-8 pt-6 border-t border-gray-100">
+                        <div className="flex items-center justify-between">
+                          <div>
+                            <h4 className="font-semibold text-gray-900 mb-1">Ready to Book Now?</h4>
+                            <p className="text-sm text-gray-600">Explore our {item.toLowerCase()} in detail</p>
+                          </div>
+                          <Link to={`/${item.toLowerCase()}`} className="flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:shadow-lg group transition-all duration-300">
+                            <span>View All {item}</span>
+                            <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
+                          </Link>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
             <Link to="/case-studies" className="px-5 py-3 text-gray-700 hover:text-blue-600 font-medium transition-all rounded-xl hover:bg-gray-50/80 group">
               <span className="relative">
                 Case Studies
@@ -201,58 +204,58 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-        <div className="lg:hidden transition-all duration-500 pt-4 space-y-4">
-          {Object.entries(dropdownContent)
-            .filter(([item]) => item !== 'CaseStudy')
-            .map(([item, content]) => (
-            <div key={item}>
-              <button onClick={() => toggleMobileDropdown(item)} className="flex items-center justify-between w-full px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50/80 rounded-xl transition-all duration-300">
-                <span className="font-medium">{item}</span>
-                <ChevronDown className={`h-4 w-4 transition-transform ${mobileDropdowns[item] ? 'rotate-180' : ''}`} />
-              </button>
-              {mobileDropdowns[item] && (
-                <div className="pl-6 pt-2 space-y-2">
-                  {content.items.map((subItem, idx) => (
-                    <Link 
-                      key={idx} 
-                      to={subItem.path} 
-                      className="block text-gray-600 hover:text-blue-600 text-sm"
-                      onClick={closeMobileMenu}
-                    >
-                      {subItem.title}
-                    </Link>
-                  ))}
+          <div className="lg:hidden transition-all duration-500 pt-4 space-y-4">
+            {Object.entries(dropdownContent)
+              .filter(([item]) => item !== 'CaseStudy')
+              .map(([item, content]) => (
+                <div key={item}>
+                  <button onClick={() => toggleMobileDropdown(item)} className="flex items-center justify-between w-full px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50/80 rounded-xl transition-all duration-300">
+                    <span className="font-medium">{item}</span>
+                    <ChevronDown className={`h-4 w-4 transition-transform ${mobileDropdowns[item] ? 'rotate-180' : ''}`} />
+                  </button>
+                  {mobileDropdowns[item] && (
+                    <div className="pl-6 pt-2 space-y-2">
+                      {content.items.map((subItem, idx) => (
+                        <Link
+                          key={idx}
+                          to={subItem.path}
+                          className="block text-gray-600 hover:text-blue-600 text-sm"
+                          onClick={closeMobileMenu}
+                        >
+                          {subItem.title}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
                 </div>
-              )}
+              ))}
+            <div className="border-t border-gray-100 pt-4 space-y-3">
+              <Link
+                to="/case-studies"
+                className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50/80 rounded-xl"
+                onClick={closeMobileMenu}
+              >
+                Case Studies
+              </Link>
+              <Link
+                to="/blogs"
+                className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50/80 rounded-xl"
+                onClick={closeMobileMenu}
+              >
+                Blogs
+              </Link>
+              <Link
+                to="/about"
+                className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50/80 rounded-xl"
+                onClick={closeMobileMenu}
+              >
+                About
+              </Link>
+              <button className="block w-full px-4 py-3 text-left text-gray-700 hover:text-blue-600 hover:bg-gray-50/80 rounded-xl">Sign In</button>
+              <button className="block w-full px-6 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:shadow-lg transition-all duration-300">Book Now</button>
             </div>
-          ))}
-          <div className="border-t border-gray-100 pt-4 space-y-3">
-            <Link 
-              to="/case-studies" 
-              className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50/80 rounded-xl"
-              onClick={closeMobileMenu}
-            >
-              Case Studies
-            </Link>
-            <Link 
-              to="/blogs" 
-              className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50/80 rounded-xl"
-              onClick={closeMobileMenu}
-            >
-              Blogs
-            </Link>
-            <Link 
-              to="/about" 
-              className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50/80 rounded-xl"
-              onClick={closeMobileMenu}
-            >
-              About
-            </Link>
-            <button className="block w-full px-4 py-3 text-left text-gray-700 hover:text-blue-600 hover:bg-gray-50/80 rounded-xl">Sign In</button>
-            <button className="block w-full px-6 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:shadow-lg transition-all duration-300">Book Now</button>
           </div>
-        </div>
-      )}
+        )}
       </div>
     </nav>
   );

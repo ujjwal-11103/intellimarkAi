@@ -1,101 +1,112 @@
-// src/components/ProductDetails.js
 import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
-import { productDetails } from '../data/productData';
 
-import { 
+import {
   ArrowRight,
   Brain,
   Database,
   LineChart,
   Play,
   Shield,
-  Star,
   Target,
   TrendingUp,
   Zap,
 } from 'lucide-react';
+import NrmLevers from '../components/explainable/Levers';
+import { VennDiagram } from '../components/explainable/VennDiagram';
+import { ProcessFlow } from '../components/explainable/ProcessFlow';
+import { MLEngine } from '../components/explainable/MLEngine';
 
 const ProductDetail = () => {
-  const { productId } = useParams();
-  const navigate = useNavigate();
-  
-  type ProductKey = keyof typeof productDetails;
-  const isValidProductId = (id: string): id is ProductKey => id in productDetails;
+  // const { productId } = useParams();
+  // const navigate = useNavigate();
 
-  const productData = productId && isValidProductId(productId) 
-    ? productDetails[productId] 
-    : null;
-  
-  useEffect(() => {
-    if (!productData) {
-      navigate('/products'); // Redirect if product doesn't exist
-    }
-    window.scrollTo(0, 0); // Scroll to top on new product load
-  }, [productData, navigate]);
+  // // ✅ Only allow this productId
+  // useEffect(() => {
+  //   if (productId !== "explainable-forecasting-engine") {
+  //     navigate('/products'); // Redirect if product doesn't exist
+  //   }
+  //   window.scrollTo(0, 0);
+  // }, [productId, navigate]);
 
-  if (!productData) {
-    return null; // Or a loading spinner
-  }
+  // if (productId !== "explainable-forecasting-engine") {
+  //   return null;
+  // }
 
-  // Fallback for missing data fields to prevent crashes
-  const safeProductData = {
-    ...productData,
-    images: productData.images || {},
-    valueProposition: productData.valueProposition || { title: '', subtitle: '', description: '' },
-    process: productData.process || [],
-  };
+  // ✅ Hardcoded product data inline
+  const title = "Explainable Forecasting Engine";
+  const heroSubtitle = "AI-driven customer behavior prediction";
+  const heroDescription =
+    "Predict future buying patterns with our transparent AI engine that provides insights you can understand and trust.";
+
+  const stats = [
+    { value: "25%", label: "Cost Reduction", color: "from-purple-500 to-purple-600" },
+    { value: "94%", label: "Forecast Accuracy", color: "from-blue-500 to-blue-600" },
+    { value: "80%", label: "Faster Decisions", color: "from-green-500 to-green-600" },
+    { value: "50%", label: "Risk Reduction", color: "from-orange-500 to-orange-600" }
+  ];
 
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-purple-50/30 via-white to-blue-50/20 pt-16 pb-24">
-        <div className="max-w-7xl pt-6  mx-auto px-6 lg:px-8">
+      <section className="relative overflow-hidden bg-gradient-to-br from-purple-50/30 via-white to-blue-50/20 pt-20 pb-24">
+        <div className="max-w-7xl pt-6 mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-10">
               <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                {safeProductData.title}
+                {title}
                 <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">
-                  {safeProductData.heroSubtitle}
+                  {heroSubtitle}
                 </span>
               </h1>
               <p className="text-lg text-gray-600 leading-relaxed max-w-lg">
-                {safeProductData.heroDescription}
+                {heroDescription}
               </p>
             </div>
 
             <div className="relative">
               <div className="relative z-10 bg-white rounded-3xl shadow-2xl p-6 border border-gray-100">
                 <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-base font-semibold text-gray-900">{safeProductData.title} Dashboard</h3>
+                  <h3 className="text-base font-semibold text-gray-900">{title} Dashboard</h3>
                   <div className="flex items-center text-green-600">
                     <TrendingUp className="w-4 h-4 mr-1" />
                     <span className="text-xs font-medium">High Impact</span>
                   </div>
                 </div>
                 <div className="grid grid-cols-2 gap-4">
-                  {safeProductData.stats.slice(0, 2).map((stat, index) => (
-                    <div key={index} className={`bg-gradient-to-br ${stat.color} rounded-2xl p-4 text-white`}>
+                  {stats.slice(0, 2).map((stat, index) => (
+                    <div
+                      key={index}
+                      className={`bg-gradient-to-br ${stat.color} rounded-2xl p-4 text-white`}
+                    >
                       <div className="text-2xl font-bold">{stat.value}</div>
                       <div className="text-sm opacity-80">{stat.label}</div>
                     </div>
                   ))}
                 </div>
               </div>
-              
+
               {/* Decorative Floating Icons */}
-              <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-500 rounded-2xl flex items-center justify-center shadow-lg"><Brain className="w-8 h-8 text-white" /></div>
-              <div className="absolute top-1/2 -right-8 w-12 h-12 bg-gradient-to-br from-green-400 to-green-500 rounded-xl flex items-center justify-center shadow-lg"><LineChart className="w-6 h-6 text-white" /></div>
-              <div className="absolute -bottom-4 -left-4 w-14 h-14 bg-gradient-to-br from-blue-400 to-blue-500 rounded-xl flex items-center justify-center shadow-lg"><Target className="w-7 h-7 text-white" /></div>
-              <div className="absolute top-8 -left-6 w-10 h-10 bg-gradient-to-br from-purple-400 to-purple-500 rounded-lg flex items-center justify-center shadow-lg"><Database className="w-5 h-5 text-white" /></div>
+              <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-500 rounded-2xl flex items-center justify-center shadow-lg">
+                <Brain className="w-8 h-8 text-white" />
+              </div>
+              <div className="absolute top-1/2 -right-8 w-12 h-12 bg-gradient-to-br from-green-400 to-green-500 rounded-xl flex items-center justify-center shadow-lg">
+                <LineChart className="w-6 h-6 text-white" />
+              </div>
+              <div className="absolute -bottom-4 -left-4 w-14 h-14 bg-gradient-to-br from-blue-400 to-blue-500 rounded-xl flex items-center justify-center shadow-lg">
+                <Target className="w-7 h-7 text-white" />
+              </div>
+              <div className="absolute top-8 -left-6 w-10 h-10 bg-gradient-to-br from-purple-400 to-purple-500 rounded-lg flex items-center justify-center shadow-lg">
+                <Database className="w-5 h-5 text-white" />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Stats Gallery Section */}
-      <section className="py-16 bg-white">
+      {/* <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {safeProductData.stats.map((stat, index) => (
@@ -109,10 +120,10 @@ const ProductDetail = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Value Proposition Section */}
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
@@ -146,10 +157,10 @@ const ProductDetail = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Process Section */}
-      <section className="py-20 bg-gradient-to-br from-purple-50/30 via-white to-blue-50/20">
+      {/* <section className="py-20 bg-gradient-to-br from-purple-50/30 via-white to-blue-50/20">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">
@@ -181,10 +192,10 @@ const ProductDetail = () => {
             })}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Features Section */}
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">Core Features & Capabilities</h2>
@@ -209,10 +220,10 @@ const ProductDetail = () => {
             })}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-gray-50/50">
+      {/* <section className="py-20 bg-gray-50/50">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">People Say About Us</h2>
@@ -248,14 +259,22 @@ const ProductDetail = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+
+      {/* Explainable Components */}
+      <div className="min-h-screen bg-gray-50">
+        <NrmLevers />
+        <VennDiagram />
+        <ProcessFlow />
+        <MLEngine />
+      </div>
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-purple-600 to-purple-800 relative overflow-hidden">
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-            Ready to Transform Your Strategy with {safeProductData.title}?
+            Ready to Transform Your Strategy with {title}?
           </h2>
           <p className="text-lg text-purple-100 mb-8 leading-relaxed">
             Join leading organizations using our AI solutions to optimize operations and drive unprecedented growth.

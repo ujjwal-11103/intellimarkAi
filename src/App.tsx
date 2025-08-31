@@ -23,6 +23,8 @@ import CaseStudiesPage from './pages/CaseStudiesPage';
 import CaseStudyDetailsPage from './pages/CaseStudyDetailsPage';
 import ScrollToTop from './components/ScrollToTop';
 import { useEffect } from 'react';
+import Forecasting from './pages/Forecasting';
+import Recommendation from './pages/Recommendation';
 
 function App() {
   useEffect(() => {
@@ -55,7 +57,7 @@ function App() {
                 <Hero />
                 <Carousel />
                 <CompanyMarquee />
-                <IntelliMarkPlatform />
+                {/* <IntelliMarkPlatform /> */}
                 <IndustryShowcase />
                 <StatsSection />
                 <UpcomingEvents />
@@ -72,7 +74,11 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/case-studies" element={<CaseStudiesPage />} />
           <Route path="/case-study/:id" element={<CaseStudyDetailsPage />} />
-          <Route path="/product-detail/:productId" element={<ProductDetail />} />
+
+          <Route path="/ExplainableForecastingEngine/" element={<ProductDetail />} />
+          <Route path="/Forecasting/" element={<Forecasting />} />
+          <Route path="/Recommendation" element={<Recommendation />} />
+
           <Route path="/industry-details/:industryId" element={<IndustryDetailPage />} />
         </Routes>
         <Footer />

@@ -1,16 +1,17 @@
 import React from 'react';
-
+import anaplan from "../images/anaplan.png"
 const CompanyMarquee: React.FC = () => {
   const companies = [
-    { name: 'Virgin Pulse', logo: 'https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=300&h=120&fit=crop' },
-    { name: 'Samsung', logo: 'https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&w=300&h=120&fit=crop' },
-    { name: 'Sabra', logo: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=300&h=120&fit=crop' },
-    { name: 'Reckitt', logo: 'https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=300&h=120&fit=crop' },
-    { name: 'Panasonic', logo: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=300&h=120&fit=crop' },
-    { name: 'NewLook', logo: 'https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=300&h=120&fit=crop' },
-    { name: 'Diageo', logo: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=300&h=120&fit=crop' },
-    { name: 'Microsoft', logo: 'https://images.pexels.com/photos/4348401/pexels-photo-4348401.jpeg?auto=compress&cs=tinysrgb&w=300&h=120&fit=crop' },
+    // { name: 'AWS', logo: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg' },
+    { name: 'AWS', logo: "https://logos-world.net/wp-content/uploads/2021/08/Amazon-Web-Services-AWS-Logo.png" },
+    { name: 'Google', logo: 'https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg' },
+    { name: 'Azure', logo: anaplan },
+    { name: 'Blue Yonder', logo: 'https://vectorseek.com/wp-content/uploads/2023/08/Blue-Yonder-Logo-Vector.svg-.png' },
+    { name: 'Nielsen', logo: 'https://upload.wikimedia.org/wikipedia/commons/8/82/Nielsen_logo.svg' },
+    { name: 'Flipkart', logo: 'https://logos-world.net/wp-content/uploads/2020/11/Flipkart-Logo.png' },
+    { name: 'Zepto', logo: 'https://upload.wikimedia.org/wikipedia/en/7/7d/Logo_of_Zepto.png' },
   ];
+
 
   return (
     <>
@@ -20,7 +21,7 @@ const CompanyMarquee: React.FC = () => {
           100% { transform: translateX(-100%); }
         }
         .animate-marquee-slow {
-          animation: marquee-slow 60s linear infinite;
+          animation: marquee-slow 10s linear infinite;
         }
         @media (max-width: 768px) {
           .animate-marquee-slow {
@@ -50,7 +51,7 @@ const CompanyMarquee: React.FC = () => {
                 ✨ Trusted by Global Fortune 500 Companies
               </span>
             </div>
-            
+
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight mb-6">
               From hyperscalers to the{' '}
               <span className="relative inline-block">
@@ -60,7 +61,7 @@ const CompanyMarquee: React.FC = () => {
                 <div className="absolute -bottom-1.5 left-0 right-0 h-1 bg-gradient-to-r from-blue-400/50 to-emerald-400/50 rounded-full blur-sm"></div>
               </span>
             </h2>
-            
+
             <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Empowering organizations worldwide with cutting-edge AI solutions and strategic insights that drive unprecedented growth.
             </p>
@@ -69,18 +70,18 @@ const CompanyMarquee: React.FC = () => {
           <div className="relative w-full overflow-hidden">
             <div className="absolute left-0 top-0 w-16 sm:w-32 md:w-48 h-full bg-gradient-to-r from-slate-900 to-transparent pointer-events-none z-20"></div>
             <div className="absolute right-0 top-0 w-16 sm:w-32 md:w-48 h-full bg-gradient-to-l from-slate-900 to-transparent pointer-events-none z-20"></div>
-            
+
             <div className="flex animate-marquee-slow whitespace-nowrap py-8">
               {[...companies, ...companies].map((company, index) => (
                 <div key={index} className="flex-shrink-0 mx-6 sm:mx-8 md:mx-12">
-                  <div className="group relative">
-                    <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/20 to-emerald-500/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-80 transition-all duration-700"></div>
-                    <div className="relative bg-white/5 backdrop-blur-xl rounded-2xl sm:rounded-3xl shadow-2xl transition-all duration-700 p-6 sm:p-8 group-hover:scale-110 group-hover:-translate-y-2 border border-white/10">
+                  <div className="relative">
+                    <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/20 to-emerald-500/20 rounded-3xl blur-xl opacity-0  transition-all duration-700"></div>
+                    <div className="relative sm:rounded-3xl transition-all duration-700 p-6 sm:p-8">
                       <div className="relative w-28 h-14 sm:w-32 sm:h-16 md:w-40 md:h-20 flex items-center justify-center">
                         <img
                           src={company.logo}
                           alt={`${company.name} logo`}
-                          className="max-w-full max-h-full object-contain filter brightness-90 contrast-110 group-hover:brightness-110 transition-all duration-700 rounded-lg"
+                          className="max-w-full max-h-full object-contain filter brightness-90 contrast-110  transition-all duration-700 rounded-lg"
                         />
                       </div>
                     </div>
