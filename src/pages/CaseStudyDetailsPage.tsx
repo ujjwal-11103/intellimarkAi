@@ -74,10 +74,17 @@ const CaseStudyDetail: React.FC = () => {
     <div className="min-h-screen bg-white">
       <Header />
       <div className="container mx-auto px-6 pt-28 pb-4">
-        <div className="mb-6">
+        <div className="mb-6 flex justify-between items-center">
           <Link to="/case-studies" className="inline-flex items-center text-purple-600 hover:text-purple-700 font-semibold text-lg">
             <ArrowLeft className="w-5 h-5 mr-2" />
             Back to Cases
+          </Link>
+          {/* View Full Case Study Button */}
+          <Link
+            to={`/case-study-desc/${caseStudy.id}`}
+            className="bg-purple-600 text-white px-6 py-3 rounded-2xl font-bold hover:bg-purple-700 transition-colors shadow-lg"
+          >
+            View Full Case Study
           </Link>
         </div>
       </div>

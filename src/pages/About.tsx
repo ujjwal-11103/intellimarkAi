@@ -10,13 +10,17 @@ import {
   Twitter,
   Github
 } from 'lucide-react';
+import rahul from "../photos/rahul.png";
+import sandeep from "../photos/Sandeep.jpeg";
+import parikshit from "../photos/Parikshit Nag.jpeg"
+import vishal from "../photos/Vishal.jpeg";
 
 function AboutUs() {
   return (
     <div className="min-h-screen bg-white">
 
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden mt-16">
+      {/* <section className="relative h-screen flex items-center justify-center overflow-hidden mt-16">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
@@ -34,7 +38,7 @@ function AboutUs() {
           </p>
           <div className="w-24 h-1 bg-purple-500 mx-auto"></div>
         </div>
-      </section>
+      </section> */}
 
       {/* Company Story Section */}
       <section className="py-20 bg-white">
@@ -61,7 +65,7 @@ function AboutUs() {
                 <p className="text-lg font-medium text-purple-900 italic">
                   "Intelligence amplified by innovation, success defined by impact."
                 </p>
-                <p className="text-purple-700 mt-2">— Dr. Sarah Chen, CEO & Founder</p>
+                <p className="text-purple-700 mt-2">— Rahul Srivastava, CEO & Founder</p>
               </div>
             </div>
           </div>
@@ -105,7 +109,7 @@ function AboutUs() {
             <div className="group">
               <div className="relative overflow-hidden rounded-2xl mb-6">
                 <img 
-                  src="https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop"
+                  src={rahul}
                   alt="Dr. Sarah Chen"
                   className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -119,7 +123,7 @@ function AboutUs() {
             <div className="group">
               <div className="relative overflow-hidden rounded-2xl mb-6">
                 <img 
-                  src="https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop"
+                  src={vishal}
                   alt="Michael Rodriguez"
                   className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -133,7 +137,7 @@ function AboutUs() {
             <div className="group">
               <div className="relative overflow-hidden rounded-2xl mb-6">
                 <img 
-                  src="https://images.pexels.com/photos/3760790/pexels-photo-3760790.jpeg?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop"
+                  src={sandeep}
                   alt="Dr. Aisha Johnson"
                   className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -146,7 +150,7 @@ function AboutUs() {
             <div className="group">
               <div className="relative overflow-hidden rounded-2xl mb-6">
                 <img 
-                  src="https://images.pexels.com/photos/3760790/pexels-photo-3760790.jpeg?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop"
+                  src={parikshit}
                   alt="Dr. Aisha Johnson"
                   className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
                 />

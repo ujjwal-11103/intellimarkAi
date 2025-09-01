@@ -3,7 +3,7 @@ import { ArrowUpRight, BookOpen, FileText, TrendingUp, Users, Brain, Lightbulb, 
 
 interface ResourceCard {
   id: string;
-  type: 'BLOG' | 'EBOOK' | 'SUCCESS STORIES';
+  type: 'BLOG' | 'EBOOK' | 'CASE STUDY';
   title: string;
   description?: string;
   image: string;
@@ -19,37 +19,37 @@ const ResourcesHub: React.FC = () => {
     {
       id: '1',
       type: 'BLOG',
-      title: 'AI Enabled Price Elasticity for the win!',
-      description: 'Discover how machine learning algorithms are revolutionizing pricing strategies across industries.',
+      title: 'The Future of AI: Embracing Explainable AI',
+      description: 'Explainable AI (XAI) marks a significant evolution towards transparent, trustworthy AI systems.',
       image: 'https://images.pexels.com/photos/159888/pexels-photo-159888.jpeg?auto=compress&cs=tinysrgb&w=800',
-      readTime: '8 min read',
-      category: 'Pricing Intelligence',
+      readTime: '5 min read',
+      category: 'Artificial Intelligence',
       featured: true
     },
     {
       id: '2',
-      type: 'EBOOK',
-      title: 'Merchandising 4.0: The Needed Shift Towards Customer Centricity',
-      description: 'A comprehensive guide to modern merchandising strategies in the digital age.',
-      image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800',
-      readTime: '45 min read',
+      type: 'BLOG',
+      title: 'Unveiling AI: A Guide to XAI Technologies',
+      description: 'Exploring the forefront of Explainable AI (XAI), this blog compares leading technologies like LIME and SHAP, highlighting their innovative contributions towards making AI decisions transparent and comprehensible.',
+      image: 'https://images.pexels.com/photos/9783346/pexels-photo-9783346.jpeg',
+      readTime: '5 min read',
       category: 'Digital Transformation'
     },
     {
       id: '3',
-      type: 'SUCCESS STORIES',
-      title: 'How P., AI Chatbot Improved Sales Forecasting for a Food & Beverage Company',
+      type: 'CASE STUDY',
+      title: 'B2B Demand Forecasting, Sales Alerts and Profitability Management System',
       description: 'Real-world implementation case study showing 40% improvement in forecast accuracy.',
-      image: 'https://images.pexels.com/photos/1282169/pexels-photo-1282169.jpeg?auto=compress&cs=tinysrgb&w=800',
-      readTime: '12 min read',
+      image: 'https://images.pexels.com/photos/8353803/pexels-photo-8353803.jpeg',
+      readTime: '8 min read',
       category: 'Case Studies'
     },
     {
       id: '4',
-      type: 'EBOOK',
-      title: 'AI Leaders Playbook',
+      type: 'CASE STUDY',
+      title: 'Store Recommendation System for Lubricant Brand',
       description: 'The Agentic AI Implementation Guide - Strategic framework for enterprise AI adoption.',
-      image: 'https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: 'https://images.pexels.com/photos/13065696/pexels-photo-13065696.jpeg',
       readTime: '60 min read',
       category: 'Leadership',
       featured: true
@@ -57,9 +57,9 @@ const ResourcesHub: React.FC = () => {
     {
       id: '5',
       type: 'BLOG',
-      title: 'Everything you need to know about Agentic AI',
+      title: 'Marketing Mix Modeling: Enhancing ROI through Data-Driven Insights',
       description: 'Deep dive into autonomous AI systems and their practical applications in business.',
-      image: 'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: 'https://images.pexels.com/photos/1933900/pexels-photo-1933900.jpeg',
       readTime: '15 min read',
       category: 'AI Technology'
     }

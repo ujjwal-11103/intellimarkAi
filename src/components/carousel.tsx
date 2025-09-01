@@ -21,21 +21,21 @@ interface Slide {
 
 // Data remains the same
 const slides: Slide[] = [
-  {
-    id: 1,
-    cards: [
-      { id: 1, type: 'hero', title: 'Marketing Investment Planner', subtitle: 'Dallas Innovates 2025', description: 'Top AI Innovator in Dallas-Fort Worth', image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1200', icon: <Award className="w-5 h-5 sm:w-6 sm:h-6" /> },
-      { id: 2, type: 'feature', title: 'Explainable Forecasting Engine', subtitle: 'Advanced ML Platform', description: 'Deep learning infrastructure for enterprise AI', image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800', icon: <Brain className="w-5 h-5 sm:w-6 sm:h-6" /> },
-      { id: 3, type: 'success', title: 'Performance Marketing Optimization', badge: 'Success Story', stats: '78% Improved Accuracy', description: 'ML pipeline transforming enterprise decisions', image: 'https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800', icon: <TrendingUp className="w-5 h-5 sm:w-6 sm:h-6" /> },
-      { id: 4, type: 'location', title: 'Retail Growth Engine', subtitle: 'Innovation Center', description: 'Where AI research meets application', image: 'https://images.pexels.com/photos/2422915/pexels-photo-2422915.jpeg?auto=compress&cs=tinysrgb&w=800', icon: <MapPin className="w-5 h-5 sm:w-6 sm:h-6" /> }
-    ]
-  },
+  // {
+  //   id: 1,
+  //   cards: [
+  //     { id: 1, type: 'hero', title: 'Marketing Investment Planner', subtitle: 'Dallas Innovates 2025', description: 'Top AI Innovator in Dallas-Fort Worth', image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1200', icon: <Award className="w-5 h-5 sm:w-6 sm:h-6" /> },
+  //     { id: 2, type: 'feature', title: 'Explainable Forecasting Engine', subtitle: 'Advanced ML Platform', description: 'Deep learning infrastructure for enterprise AI', image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800', icon: <Brain className="w-5 h-5 sm:w-6 sm:h-6" /> },
+  //     { id: 3, type: 'success', title: 'Performance Marketing Optimization', badge: 'Success Story', stats: '78% Improved Accuracy', description: 'ML pipeline transforming enterprise decisions', image: 'https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800', icon: <TrendingUp className="w-5 h-5 sm:w-6 sm:h-6" /> },
+  //     { id: 4, type: 'location', title: 'Retail Growth Engine', subtitle: 'Innovation Center', description: 'Where AI research meets application', image: 'https://images.pexels.com/photos/2422915/pexels-photo-2422915.jpeg?auto=compress&cs=tinysrgb&w=800', icon: <MapPin className="w-5 h-5 sm:w-6 sm:h-6" /> }
+  //   ]
+  // },
   {
     id: 2,
     cards: [
       { id: 5, type: 'feature', title: 'Explainable Forecasting Engine', subtitle: 'Real-time Recognition', description: 'Enterprise-scale object detection and analysis', image: 'https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&w=800', icon: <Zap className="w-5 h-5 sm:w-6 sm:h-6" /> },
-      { id: 6, type: 'location', title: 'Marketing Investment Planner', subtitle: 'West Coast Operations', description: 'Silicon Valley innovation meets Texas execution', image: 'https://images.pexels.com/photos/208745/pexels-photo-208745.jpeg?auto=compress&cs=tinysrgb&w=800', icon: <MapPin className="w-5 h-5 sm:w-6 sm:h-6" /> },
-      { id: 7, type: 'success', title: 'Retail Growth Engines', badge: 'Webinar', stats: 'Fortune 500 Ready', description: 'Automated AI deployment pipelines', image: 'https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=800', icon: <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6" /> },
+      { id: 6, type: 'location', title: 'Forecasting Page', subtitle: 'Insightful Planning', description: 'Analyze trends, predict outcomes, and drive smarter decisions with clarity.', image: 'https://images.pexels.com/photos/208745/pexels-photo-208745.jpeg?auto=compress&cs=tinysrgb&w=800', icon: <MapPin className="w-5 h-5 sm:w-6 sm:h-6" /> },
+      { id: 7, type: 'success', title: 'Recommendation Page', badge: 'Webinar', stats: 'Fortune 500 Ready', description: 'Automated AI deployment pipelines', image: 'https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=800', icon: <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6" /> },
       { id: 8, type: 'hero', title: 'Performance Marketing Optimization', subtitle: 'April 15, 2025', description: 'Industry pioneers networking event', image: 'https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=1200', icon: <Users className="w-5 h-5 sm:w-6 sm:h-6" /> }
     ]
   }
@@ -133,7 +133,7 @@ export default function Carousel() {
   
 
   return (
-    <section className="bg-white py-16 sm:py-24">
+    <section className="bg-white py-16 sm:py-5">
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16">
@@ -181,7 +181,7 @@ export default function Carousel() {
         </div>
         
         {/* Indicators */}
-        <div className="flex gap-3 sm:gap-4 justify-center">
+        {/* <div className="flex gap-3 sm:gap-4 justify-center">
           {slides.map((_, index) => (
             <button
               key={index}
@@ -192,7 +192,7 @@ export default function Carousel() {
               }`}
             />
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );

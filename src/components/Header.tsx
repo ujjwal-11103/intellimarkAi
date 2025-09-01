@@ -54,20 +54,20 @@ const Navbar = () => {
         { icon: Sparkles, title: "Performance Marketing Optimization", description: "AI-powered content creation at scale", path: "/product-detail/performance-marketing-optimization" }
       ]
     },
-    Industries: {
-      featured: {
-        title: "Enterprise AI Consulting",
-        description: "Strategic AI implementation for enterprise growth",
-        image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&fit=crop",
-        badge: "Premium"
-      },
-      items: [
-        { icon: Users, title: "FMGC", description: "Custom AI roadmap development", path: "/industry-details/fmgc" },
-        { icon: Shield, title: "Alcohol", description: "End-to-end AI deployment assistance", path: "/industry-details/alcohol" },
-        { icon: TrendingUp, title: "Oil and Lubricants", description: "Continuous AI model improvement", path: "/industry-details/oil-and-lubricants" },
-        { icon: Lightbulb, title: "Chemicals", description: "Cutting-edge AI research & development", path: "/industry-details/chemicals" }
-      ]
-    },
+    // Industries: {
+    //   featured: {
+    //     title: "Enterprise AI Consulting",
+    //     description: "Strategic AI implementation for enterprise growth",
+    //     image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&fit=crop",
+    //     badge: "Premium"
+    //   },
+    //   items: [
+    //     { icon: Users, title: "FMGC", description: "Custom AI roadmap development", path: "/industry-details/fmgc" },
+    //     { icon: Shield, title: "Alcohol", description: "End-to-end AI deployment assistance", path: "/industry-details/alcohol" },
+    //     { icon: TrendingUp, title: "Oil and Lubricants", description: "Continuous AI model improvement", path: "/industry-details/oil-and-lubricants" },
+    //     { icon: Lightbulb, title: "Chemicals", description: "Cutting-edge AI research & development", path: "/industry-details/chemicals" }
+    //   ]
+    // },
     CaseStudy: {
       featured: {
         title: "Retail & E-commerce",
@@ -122,7 +122,7 @@ const Navbar = () => {
                       <div className="grid grid-cols-3 gap-8">
                         {/* Featured */}
                         <div className="col-span-1">
-                          <Link to={`/${item.toLowerCase()}`} className="relative group block">
+                          <div className="relative group block">
                             <div className="relative overflow-hidden rounded-xl">
                               <img src={content.featured.image} alt={content.featured.title} className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" />
                               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
@@ -134,7 +134,7 @@ const Navbar = () => {
                                 <p className="text-white/80 text-sm">{content.featured.description}</p>
                               </div>
                             </div>
-                          </Link>
+                          </div>
                         </div>
 
                         {/* Items */}

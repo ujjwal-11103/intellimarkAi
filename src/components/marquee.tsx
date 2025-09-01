@@ -53,17 +53,17 @@ const CompanyMarquee: React.FC = () => {
             </div>
 
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight mb-6">
-              From hyperscalers to the{' '}
+              External data + SOTA Algorithms +{' '}
               <span className="relative inline-block">
                 <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-emerald-400 bg-clip-text text-transparent animate-gradient-x">
-                  fortune 1000s
+                  Bolt-on Agents
                 </span>
                 <div className="absolute -bottom-1.5 left-0 right-0 h-1 bg-gradient-to-r from-blue-400/50 to-emerald-400/50 rounded-full blur-sm"></div>
               </span>
             </h2>
 
             <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Empowering organizations worldwide with cutting-edge AI solutions and strategic insights that drive unprecedented growth.
+              We are not a SaaS, we take data and sit on top of your existing platforms to give maximum ROI for minimum investment.
             </p>
           </div>
 

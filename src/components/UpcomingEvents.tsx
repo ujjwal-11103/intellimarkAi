@@ -13,10 +13,8 @@ interface CarouselItem {
 }
 
 const items: CarouselItem[] = [
-    { id: 1, title: "AI Revolution Summit 2025", subtitle: "The Future of Artificial Intelligence", description: "Join industry leaders as we explore groundbreaking AI technologies and their transformative impact on business and society.", date: "March 15, 2025", location: "San Francisco, CA", image: "https://images.pexels.com/photos/2833684/pexels-photo-2833684.jpeg?auto=compress&cs=tinysrgb&w=1200", category: "Conference" },
-    { id: 2, title: "Machine Learning Workshop", subtitle: "Advanced Neural Networks", description: "A hands-on workshop covering cutting-edge ML techniques, deep learning architectures, and practical implementation strategies.", date: "March 22, 2025", location: "IntelliMark HQ - Virtual", image: "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1200", category: "Workshop" },
-    { id: 3, title: "AI Ethics & Governance", subtitle: "Responsible AI Development", description: "Critical discussions on ethical AI development, regulatory frameworks, and the future of responsible artificial intelligence.", date: "April 5, 2025", location: "Stanford University", image: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1200", category: "Panel" },
-    { id: 4, title: "Startup AI Pitch Night", subtitle: "Innovation Showcase", description: "Emerging AI startups present groundbreaking solutions to investors, industry experts, and technology enthusiasts.", date: "April 18, 2025", location: "Tech Hub, Austin, TX", image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200", category: "Networking" }
+    { id: 1, title: "Gartner List Inclusion", subtitle: "Global Industry Recognition", description: "Intellimark's Profitpulse made it to the prestigious list of Gartner's Recommended Products for Consumer Goods Company.", date: "March 15, 2025", location: "San Francisco, CA", image: "https://www.genesys.com/media/pr-genesys-named-a-leader-in-the-2024-gartner-magic-quadrant-thumbnail.png", category: "Recognition" },
+    { id: 2, title: "Welcome Sandeep Mathews.", subtitle: "RGM Legend joins the Intellimark Board", description: "We welcome the legend Sandeep Mathew to Intellimark's Advisory board. 18 years in RGM expertise is being used to evolve Intellimark products.", date: "March 22, 2025", location: "IntelliMark HQ - Virtual", image: "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1200", category: "Inclusion" }
 ];
 
 const UpcomingEvents: React.FC = () => {
@@ -66,10 +64,10 @@ const UpcomingEvents: React.FC = () => {
                     <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">{item.title}</h3>
                     <p className="text-lg text-gray-600 font-medium mb-4">{item.subtitle}</p>
                     <p className="text-gray-700 leading-relaxed mb-6">{item.description}</p>
-                    <div className="space-y-3 text-sm text-gray-600">
+                    {/* <div className="space-y-3 text-sm text-gray-600">
                       <div className="flex items-center gap-3"><Calendar className="w-4 h-4" /><span>{item.date}</span></div>
                       <div className="flex items-center gap-3"><MapPin className="w-4 h-4" /><span>{item.location}</span></div>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>

@@ -25,9 +25,9 @@ const Hero = () => {
 
   const stats = [
     { value: '10M+', label: 'Data Points Processed', icon: Database },
-    { value: '25%', label: 'Higher Growth', icon: Target },
-    { value: '20x', label: 'ROI Increase', icon: TrendingUp },
-    { value: '10%', label: 'Efficiency Improvement', icon: Zap }
+    { value: '20%', label: 'Higher Growth', icon: Target },
+    { value: '5x', label: 'ROI Increase', icon: TrendingUp },
+    { value: '50M+', label: 'Dollars Unlocked', icon: Zap }
   ];
 
   return (
