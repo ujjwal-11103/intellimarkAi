@@ -14,7 +14,8 @@ export const caseStudies: CaseStudy[] = [
       metric: 'Misdiagnosis Rate',
       timeframe: '6 months'
     },
-    tags: ['Machine Learning', 'Diagnosis', 'Patient Care']
+  tags: ['Machine Learning', 'Diagnosis', 'Patient Care'],
+  topics: ['Forecasting', 'Packaging Material']
   },
   {
     id: '2',
@@ -29,7 +30,8 @@ export const caseStudies: CaseStudy[] = [
       metric: 'Research Speed',
       timeframe: '12 months'
     },
-    tags: ['Drug Discovery', 'AI Research', 'Pharmaceuticals']
+  tags: ['Drug Discovery', 'AI Research', 'Pharmaceuticals'],
+  topics: ['Recommendation Systems', 'Oil & Lubricants', 'Chemicals']
   },
   {
     id: '3',
@@ -44,7 +46,8 @@ export const caseStudies: CaseStudy[] = [
       metric: 'Care Quality',
       timeframe: '9 months'
     },
-    tags: ['Telemedicine', 'Remote Care', 'Virtual Assistant']
+  tags: ['Telemedicine', 'Remote Care', 'Virtual Assistant'],
+  topics: ['Revenue Growth Management', 'FMCG', 'CPG']
   },
   {
     id: '4',
@@ -59,7 +62,8 @@ export const caseStudies: CaseStudy[] = [
       metric: 'Portfolio Returns',
       timeframe: '18 months'
     },
-    tags: ['Algorithmic Trading', 'Portfolio Management', 'Market Analysis']
+  tags: ['Algorithmic Trading', 'Portfolio Management', 'Market Analysis'],
+  topics: ['Revenue Growth Management', 'Adhesives', 'Chemicals']
   },
   {
     id: '5',
@@ -74,7 +78,8 @@ export const caseStudies: CaseStudy[] = [
       metric: 'Fraud Prevention',
       timeframe: '12 months'
     },
-    tags: ['Fraud Detection', 'Security', 'Risk Management']
+  tags: ['Fraud Detection', 'Security', 'Risk Management'],
+  topics: ['Forecasting', 'FMCG', 'CPG']
   },
   {
     id: '6',
@@ -89,7 +94,8 @@ export const caseStudies: CaseStudy[] = [
       metric: 'Approval Accuracy',
       timeframe: '15 months'
     },
-    tags: ['Credit Assessment', 'Risk Analysis', 'Lending']
+  tags: ['Credit Assessment', 'Risk Analysis', 'Lending'],
+  topics: ['Forecasting', 'Services']
   },
   {
     id: '7',
@@ -104,7 +110,8 @@ export const caseStudies: CaseStudy[] = [
       metric: 'Sales Revenue',
       timeframe: '8 months'
     },
-    tags: ['Personalization', 'Recommendations', 'Customer Experience']
+  tags: ['Personalization', 'Recommendations', 'Customer Experience'],
+  topics: ['Forecasting', 'Electronics']
   },
   {
     id: '8',
@@ -119,7 +126,8 @@ export const caseStudies: CaseStudy[] = [
       metric: 'Revenue Growth',
       timeframe: '10 months'
     },
-    tags: ['Dynamic Pricing', 'Revenue Optimization', 'Market Analysis']
+  tags: ['Dynamic Pricing', 'Revenue Optimization', 'Market Analysis'],
+  topics: ['Forecasting', 'Revenue Growth Management', 'Beauty & Wellbeing', 'CPG']
   },
   {
     id: '9',
@@ -134,7 +142,8 @@ export const caseStudies: CaseStudy[] = [
       metric: 'Delivery Time',
       timeframe: '14 months'
     },
-    tags: ['Supply Chain', 'Logistics', 'Inventory Management']
+  tags: ['Supply Chain', 'Logistics', 'Inventory Management'],
+  topics: ['Revenue Growth Management', 'Alcohol', 'CPG']
   },
   {
     id: '10',
@@ -149,7 +158,8 @@ export const caseStudies: CaseStudy[] = [
       metric: 'Equipment Downtime',
       timeframe: '11 months'
     },
-    tags: ['Predictive Maintenance', 'IoT Integration', 'Equipment Monitoring']
+  tags: ['Predictive Maintenance', 'IoT Integration', 'Equipment Monitoring'],
+  topics: ['Revenue Growth Management', 'CPG']
   },
   {
     id: '11',
@@ -164,7 +174,8 @@ export const caseStudies: CaseStudy[] = [
       metric: 'Quality Standards',
       timeframe: '7 months'
     },
-    tags: ['Quality Control', 'Computer Vision', 'Defect Detection']
+  tags: ['Quality Control', 'Computer Vision', 'Defect Detection'],
+  topics: ['Recommendation Systems', 'FMCG', 'CPG']
   },
   {
     id: '12',
@@ -179,6 +190,7 @@ export const caseStudies: CaseStudy[] = [
       metric: 'Production Efficiency',
       timeframe: '13 months'
     },
-    tags: ['Production Planning', 'Resource Optimization', 'Energy Efficiency']
+  tags: ['Production Planning', 'Resource Optimization', 'Energy Efficiency'],
+  topics: ['Forecasting', 'Revenue Growth Management', 'Packaging Material']
   }
 ];

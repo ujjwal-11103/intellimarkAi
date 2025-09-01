@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import { Filter, ArrowRight, Brain, Building, ShoppingCart, Factory, Users, TrendingUp, Shield, Zap, Star, Award, ChevronDown, Play, ArrowUpRight, Target, CheckCircle, Clock, BarChart3, Sparkles, Globe } from 'lucide-react';
+import { ArrowRight, Users, ArrowUpRight, Target, CheckCircle, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { caseStudiesData } from '../data/caseStudiesData';
 import Header from '../components/Header';
 
-const industries = [
-  { id: 'all', name: 'All Industries', icon: Building, count: 12, color: 'from-gray-500 to-gray-600' },
-  { id: 'healthcare', name: 'Healthcare', icon: Shield, count: 3, color: 'from-emerald-500 to-emerald-600' },
-  { id: 'finance', name: 'Finance', icon: TrendingUp, count: 3, color: 'from-blue-500 to-blue-600' },
-  { id: 'ecommerce', name: 'E-commerce', icon: ShoppingCart, count: 3, color: 'from-orange-500 to-orange-600' },
-  { id: 'manufacturing', name: 'Manufacturing', icon: Factory, count: 3, color: 'from-purple-500 to-purple-600' },
-];
+
+// Collect all unique topics from the data
+const allTopicsSet = new Set<string>();
+caseStudiesData.forEach(study => {
+  if (Array.isArray(study.topics)) {
+    study.topics.forEach(topic => allTopicsSet.add(topic));
+  }
+});
+const allTopics = Array.from(allTopicsSet).sort();
 
 const testimonials = [
   {
@@ -30,21 +32,20 @@ const testimonials = [
 ];
 
 const CaseStudiesPage: React.FC = () => {
-  const [activeFilter, setActiveFilter] = useState('all');
+  const [selectedTopics, setSelectedTopics] = useState<string[]>([]);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  // Removed unused currentTestimonial state
 
   useEffect(() => {
     setIsLoaded(true);
-    const interval = setInterval(() => {
-      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-    }, 5000);
-    return () => clearInterval(interval);
   }, []);
 
-  const filteredCaseStudies = activeFilter === 'all' 
-    ? caseStudiesData 
-    : caseStudiesData.filter((study: any) => study.industry === activeFilter);
+  // Filter case studies by selected topics (must match all selected)
+  const filteredCaseStudies = selectedTopics.length === 0
+    ? caseStudiesData
+    : caseStudiesData.filter((study: any) =>
+        Array.isArray(study.topics) && selectedTopics.every(topic => study.topics.includes(topic))
+      );
 
   return (
     <div className="min-h-screen bg-white">
@@ -84,35 +85,31 @@ const CaseStudiesPage: React.FC = () => {
           <div className="flex flex-col lg:flex-row items-center justify-between mb-8">
             <div>
               <h2 className="text-3xl font-black text-gray-900 mb-2">Success Stories</h2>
-              <p className="text-gray-600 text-lg">Filter by industry to discover relevant transformations</p>
+              <p className="text-gray-600 text-lg">Filter by topic to discover relevant transformations</p>
             </div>
             <div className="text-sm text-gray-500 mt-4 lg:mt-0 bg-gray-50 px-4 py-2 rounded-xl">
               <strong>{filteredCaseStudies.length}</strong> of <strong>{caseStudiesData.length}</strong> case studies
             </div>
           </div>
 
-          <div className="flex flex-wrap gap-4">
-            {industries.map((industry) => {
-              const IconComponent = industry.icon;
+          <div className="flex flex-wrap gap-2">
+            {allTopics.map(topic => {
+              const isActive = selectedTopics.includes(topic);
               return (
                 <button
-                  key={industry.id}
-                  onClick={() => setActiveFilter(industry.id)}
-                  className={`group flex items-center px-8 py-4 rounded-2xl text-sm font-bold transition-all duration-300 ${
-                    activeFilter === industry.id
-                      ? `bg-gradient-to-r ${industry.color} text-white shadow-2xl scale-105`
-                      : 'bg-white text-gray-700 hover:bg-gray-50 hover:shadow-lg border-2 border-gray-200 hover:border-purple-200'
+                  key={topic}
+                  onClick={() => {
+                    setSelectedTopics(prev =>
+                      isActive ? prev.filter(t => t !== topic) : [...prev, topic]
+                    );
+                  }}
+                  className={`px-5 py-2 rounded-xl text-sm font-bold border-2 transition-all duration-200 ${
+                    isActive
+                      ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white border-purple-600 scale-105 shadow-lg'
+                      : 'bg-white text-gray-700 border-gray-200 hover:bg-purple-50 hover:border-purple-300'
                   }`}
                 >
-                  <IconComponent className="w-5 h-5 mr-3" />
-                  {industry.name}
-                  <span className={`ml-3 px-3 py-1 rounded-full text-xs font-bold ${
-                    activeFilter === industry.id 
-                      ? 'bg-white/20 text-white' 
-                      : 'bg-gray-100 text-gray-600 group-hover:bg-purple-100 group-hover:text-purple-700'
-                  }`}>
-                    {industry.count}
-                  </span>
+                  {topic}
                 </button>
               );
             })}

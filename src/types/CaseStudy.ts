@@ -14,4 +14,5 @@ export interface CaseStudy {
     timeframe: string;
   };
   tags: string[];
+  topics?: string[];
 }

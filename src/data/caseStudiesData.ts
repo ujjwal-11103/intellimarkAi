@@ -20,6 +20,7 @@ export interface CaseStudy {
     position: string;
     company: string;
   };
+  topics?: string[];
 }
 
 export const caseStudiesData: CaseStudy[] = [
@@ -56,7 +57,8 @@ export const caseStudiesData: CaseStudy[] = [
         'Improved Profitability: Data-driven bidding and prioritization increased ROI, improved bid success rates, and delivered sustainable growth.'
       ],
       technologies: ['Machine Learning', 'Time-series Models', 'Tableau', 'Power BI'],
-      testimonial: { quote: '', author: '', position: '', company: '' }
+      testimonial: { quote: '', author: '', position: '', company: '' },
+      topics: ['Forecasting', 'Packaging Material']
   },
   {
       id: '2',
@@ -91,7 +93,8 @@ export const caseStudiesData: CaseStudy[] = [
         'Reduced promotional wastage: Alignment of offers with store-level demand patterns reduced inefficiencies.'
       ],
       technologies: ['AI-powered analytics platform', 'Machine Learning', 'Uplift Modeling'],
-      testimonial: { quote: '', author: '', position: '', company: '' }
+      testimonial: { quote: '', author: '', position: '', company: '' },
+      topics: ['Recommendation Systems', 'Oil & Lubricants', 'Chemicals']
   },
   {
     id: '3',
@@ -128,7 +131,8 @@ export const caseStudiesData: CaseStudy[] = [
       'Enhanced Pricing Agility through real-time tracking, competitor monitoring, and scenario simulations.'
     ],
     technologies: ['Marketing Mix Modelling (MMM)', 'Competitive Price Tracker', 'War Game Simulations'],
-    testimonial: { quote: '', author: '', position: '', company: '' }
+    testimonial: { quote: '', author: '', position: '', company: '' },
+    topics: ['Revenue Growth Management', 'FMCG', 'CPG']
   },
   {
     id: '4',
@@ -162,7 +166,8 @@ export const caseStudiesData: CaseStudy[] = [
       'Targeted Strategy: Improved allocation of incentives across diverse channels and store sizes, boosting retailer engagement and ROI.'
     ],
     technologies: ['Promo Analytics Module', 'Data-driven Incentive Design', 'Elasticity Analysis'],
-    testimonial: { quote: '', author: '', position: '', company: '' }
+    testimonial: { quote: '', author: '', position: '', company: '' },
+    topics: ['Revenue Growth Management', 'Adhesives', 'Chemicals']
   },
   {
     id: '5',
@@ -196,7 +201,8 @@ export const caseStudiesData: CaseStudy[] = [
     'Demand Forecast: better projections by incorporating commodity-price-driven uplift.'
   ],
   technologies: ['Ensemble ML', 'Temporal Feature Engineering', 'AccuWeather Data'],
-  testimonial: { quote: '', author: '', position: '', company: '' }
+  testimonial: { quote: '', author: '', position: '', company: '' },
+  topics: ['Forecasting', 'FMCG', 'CPG']
   },
   {
       id: '6',
@@ -231,7 +237,8 @@ export const caseStudiesData: CaseStudy[] = [
       'Improved operational responsiveness to changing weather.'
     ],
     technologies: ['Intellimark Feature Engineering Engine', 'Weather Data Fusion', 'Forecast Dashboards'],
-    testimonial: { quote: '', author: '', position: '', company: '' }
+    testimonial: { quote: '', author: '', position: '', company: '' },
+    topics: ['Forecasting', 'Services']
   },
   {
     id: '7',
@@ -266,7 +273,8 @@ export const caseStudiesData: CaseStudy[] = [
     '300 product×market combinations removed.'
   ],
   technologies: ['Intellimark Feature Engineering Engine', 'Granular City×Product Forecasting', 'Variant Optimization'],
-  testimonial: { quote: '', author: '', position: '', company: '' }
+  testimonial: { quote: '', author: '', position: '', company: '' },
+  topics: ['Forecasting', 'Electronics']
   },
   {
     id: '8',
@@ -301,7 +309,8 @@ export const caseStudiesData: CaseStudy[] = [
     '50% reduction in out-of-stock issues.'
   ],
   technologies: ['Intellimark Teresa Forecasting Engine', 'E-commerce Scraping (Amazon)', 'Price/Rank/Media Fusion'],
-  testimonial: { quote: '', author: '', position: '', company: '' }
+  testimonial: { quote: '', author: '', position: '', company: '' },
+  topics: ['Forecasting', 'Revenue Growth Management', 'Beauty & Wellbeing', 'CPG']
   },
   {
     id: '9',
@@ -336,7 +345,8 @@ export const caseStudiesData: CaseStudy[] = [
     'Improved ROI: redirected spends to high-potential stores, reduced wastage.'
   ],
   technologies: ['AI-powered analytics platform', 'Uplift Modeling', 'Trade Promotion Optimization'],
-  testimonial: { quote: '', author: '', position: '', company: '' }
+  testimonial: { quote: '', author: '', position: '', company: '' },
+  topics: ['Recommendation Systems', 'FMCG', 'CPG']
   },
   {
     id: '10',
@@ -374,7 +384,8 @@ export const caseStudiesData: CaseStudy[] = [
     'Hybrid pricing mechanism recommended.'
   ],
   technologies: ['Net Revenue Management (NRM)', 'Nielsen Data Analysis', 'Elasticity Modeling'],
-  testimonial: { quote: '', author: '', position: '', company: '' }
+  testimonial: { quote: '', author: '', position: '', company: '' },
+  topics: ['Forecasting', 'Revenue Growth Management', 'Packaging Material']
   },
   {
     id: '11',
@@ -409,6 +420,7 @@ export const caseStudiesData: CaseStudy[] = [
     '50% reduction in out-of-stock issues.'
   ],
   technologies: ['Intellimark Teresa Forecasting Engine', 'E-commerce Scraping', 'Ad Spend + Ranking Data Integration'],
-  testimonial: { quote: '', author: '', position: '', company: '' }
+  testimonial: { quote: '', author: '', position: '', company: '' },
+  topics: ['Revenue Growth Management', 'CPG']
   }
 ];
