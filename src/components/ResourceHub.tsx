@@ -69,9 +69,7 @@ const ResourcesHub: React.FC = () => {
     switch (type) {
       case 'BLOG':
         return <FileText className="w-4 h-4" />;
-      case 'EBOOK':
-        return <BookOpen className="w-4 h-4" />;
-      case 'SUCCESS STORIES':
+      case 'CASE STUDIES':
         return <TrendingUp className="w-4 h-4" />;
       default:
         return <FileText className="w-4 h-4" />;
@@ -82,9 +80,7 @@ const ResourcesHub: React.FC = () => {
     switch (type) {
       case 'BLOG':
         return 'text-blue-600 bg-blue-50 border-blue-200';
-      case 'EBOOK':
-        return 'text-purple-600 bg-purple-50 border-purple-200';
-      case 'SUCCESS STORIES':
+      case 'cASE STUDIES':
         return 'text-emerald-600 bg-emerald-50 border-emerald-200';
       default:
         return 'text-gray-600 bg-gray-50 border-gray-200';
@@ -116,7 +112,7 @@ const ResourcesHub: React.FC = () => {
 
             {/* Filter Tabs */}
             <div className="flex flex-wrap justify-center gap-3 mb-16">
-              {['All Resources', 'Blogs', 'Ebooks', 'Case Studies'].map((filter) => (
+              {['All Resources', 'Blogs', 'Case Studies'].map((filter) => (
                 <button
                   key={filter}
                   className={`px-6 py-3 rounded-full font-medium transition-all ${
@@ -285,15 +281,23 @@ const ResourcesHub: React.FC = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="group inline-flex items-center justify-center space-x-2 bg-gray-900 text-white px-8 py-4 rounded-full font-semibold hover:bg-gray-800 transition-all duration-300">
+            <a
+              href="https://outlook.office.com/bookwithme/user/e8ee839cd0224fb7bbc88d3de0f0e74a@intellimark.ai/meetingtype/X5VsiCFLD0O0S7V9WOBTyQ2?anonymous&ismsaljsauthenabled&ep=mLinkFromTile"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center justify-center space-x-2 bg-gray-900 text-white px-8 py-4 rounded-full font-semibold hover:bg-gray-800 transition-all duration-300"
+            >
               <span>Book a Demo</span>
               <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </button>
+            </a>
             
-            <button className="inline-flex items-center justify-center space-x-2 border border-gray-300 text-gray-700 px-8 py-4 rounded-full font-semibold hover:border-gray-400 hover:bg-gray-50 transition-all duration-300">
+            <a
+              href="/case-studies"
+              className="inline-flex items-center justify-center space-x-2 border border-gray-300 text-gray-700 px-8 py-4 rounded-full font-semibold hover:border-gray-400 hover:bg-gray-50 transition-all duration-300"
+            >
               <span>View All Resources</span>
               <ArrowUpRight className="w-4 h-4" />
-            </button>
+            </a>
           </div>
         </div>
       </section>

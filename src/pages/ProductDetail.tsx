@@ -34,14 +34,14 @@ const ProductDetail = () => {
   // }
 
   // ✅ Hardcoded product data inline
-  const title = "Explainable Forecasting Engine";
-  const heroSubtitle = "AI-driven customer behavior prediction";
+  const title = "Revenue Growth Management";
+  const heroSubtitle = "Re-engineered with Artificial Intelligence";
   const heroDescription =
-    "Predict future buying patterns with our transparent AI engine that provides insights you can understand and trust.";
+    "Ready to deploy AI to unlock growth, profitability and sales efficiency across price, promotions, media and supply chain";
 
   const stats = [
-    { value: "25%", label: "Cost Reduction", color: "from-purple-500 to-purple-600" },
-    { value: "94%", label: "Forecast Accuracy", color: "from-blue-500 to-blue-600" },
+    { value: "60%", label: "ROI Increase", color: "from-purple-500 to-purple-600" },
+    { value: "50M+", label: "Dollars Unlocked", color: "from-blue-500 to-blue-600" },
     { value: "80%", label: "Faster Decisions", color: "from-green-500 to-green-600" },
     { value: "50%", label: "Risk Reduction", color: "from-orange-500 to-orange-600" }
   ];

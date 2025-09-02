@@ -31,24 +31,31 @@ export const ProcessFlow = () => {
 
   const processSteps = [
     {
-      phase: "CONNECT",
+      phase: "Brand portfolio pricing",
       title: "Data Integration",
-      description: "Mapping and preparation for micro-market segments",
-      details: ["Multi-source data integration", "Segment identification", "Quality validation"],
+      description: "Offer right price for our brands - in each price tier, geo & channel",
+      details: ["Completion pricing analysis","Inflation point study", "Uplift models", "Cross category analysis"],
       color: "bg-purple-600"
     },
     {
-      phase: "ANALYZE",
+      phase: "Pack price architecture",
       title: "Advanced Analytics",
-      description: "ML-driven insights and impact modeling",
-      details: ["S-Curve Analysis", "Incentive Impact", "Price Elasticity", "Causal Attribution"],
+      description: "Provide right format, pack, right price for each occasion, shopper mission",
+      details: ["S-Curve Analysis", "White space analysis", "Gain - Loss analysis", "Incentive Curve"],
       color: "bg-purple-700"
     },
     {
-      phase: "ACT",
+      phase: "Active mix management",
       title: "Strategic Execution",
-      description: "Actionable recommendations and optimization",
-      details: ["Growth pocket identification", "Price optimization", "Portfolio recommendations"],
+      description: "Drive mix at pack and SKU level – proactively",
+      details: ["Channel Strategy", "ROI analysis", "Margin impact analysis","Job to be done analysis"],
+      color: "bg-purple-800"
+    },
+    {
+      phase: "Promotion management",
+      title: "Strategic Execution",
+      description: "Invest CPP where the value and growth lies - by channel, customer",
+      details: ["Scheme and slab design", "Attribute models", "Promo impact study","Promo ROI study"],
       color: "bg-purple-800"
     }
   ];
@@ -56,20 +63,25 @@ export const ProcessFlow = () => {
   const outcomes = [
     {
       icon: <Target className="w-5 h-5" />,
-      title: "High Growth Pockets",
-      description: "Identify untapped revenue opportunities",
+      title: "Pricing Strategy",
       metrics: ["15-25% revenue uplift", "Market expansion"]
     },
     {
       icon: <Zap className="w-5 h-5" />,
-      title: "Pricing Strategy",
-      description: "Data-driven product development",
+      title: "High Growth Pockets",
+      // description: "Data-driven product development",
       metrics: ["Maximize growth", "Simulate against competitive prices"]
     },
     {
       icon: <BarChart3 className="w-5 h-5" />,
+      title: "Channel Strategy",
+      // description: "Scalable business constraints",
+      metrics: ["Find the right schemes and slabs", "Optimize straight spends"]
+    },
+    {
+      icon: <BarChart3 className="w-5 h-5" />,
       title: "Promo Strategy",
-      description: "Scalable business constraints",
+      // description: "Scalable business constraints",
       metrics: ["Find the right schemes and slabs", "Optimize straight spends"]
     }
   ];
@@ -90,7 +102,7 @@ export const ProcessFlow = () => {
         <div className="grid grid-cols-12 gap-6 items-start mb-12">
           {/* Input Categories */}
           <div className="col-span-3 space-y-3">
-            <h3 className="font-semibold text-gray-800 text-sm mb-4 text-center">Data Inputs</h3>
+            <h3 className="font-semibold text-gray-800 text-sm mb-4 text-center">NRM Analysis</h3>
             {inputCategories.map((category, index) => (
               <div key={index} className={`${category.color} rounded-lg p-3 border transition-all hover:shadow-md`}>
                 <div className="flex items-center mb-2">
@@ -109,7 +121,7 @@ export const ProcessFlow = () => {
           </div>
 
           {/* Process Steps */}
-          <div className="col-span-6 space-y-4">
+          <div className="col-span-6 space-y-5">
             <h3 className="font-semibold text-gray-800 text-sm mb-4 text-center">ML Process Pipeline</h3>
             {processSteps.map((step, index) => (
               <div key={index} className="relative">
@@ -131,11 +143,11 @@ export const ProcessFlow = () => {
                     </div>
                   </div>
                 </div>
-                {index < processSteps.length - 1 && (
+                {/* {index < processSteps.length - 1 && (
                   <div className="flex justify-center mt-2 mb-2">
                     <ArrowRight className="w-4 h-4 text-purple-400" />
                   </div>
-                )}
+                )} */}
               </div>
             ))}
           </div>
@@ -144,12 +156,12 @@ export const ProcessFlow = () => {
           <div className="col-span-3 space-y-3">
             <h3 className="font-semibold text-gray-800 text-sm mb-4 text-center">Strategic Outcomes</h3>
             {outcomes.map((outcome, index) => (
-              <div key={index} className="bg-gradient-to-br from-purple-600 to-purple-700 rounded-lg p-4 text-white shadow-lg">
+              <div key={index} className="bg-gradient-to-br from-purple-600 to-purple-700 rounded-lg p-10 text-white shadow-lg">
                 <div className="flex items-center mb-2">
                   {outcome.icon}
                   <h4 className="font-semibold text-sm ml-2">{outcome.title}</h4>
                 </div>
-                <p className="text-xs text-purple-100 mb-3">{outcome.description}</p>
+                {/* <p className="text-xs text-purple-100 mb-3">{outcome.description}</p> */}
                 <div className="space-y-1">
                   {outcome.metrics.map((metric, metricIndex) => (
                     <div key={metricIndex} className="text-xs bg-white/20 rounded px-2 py-1">

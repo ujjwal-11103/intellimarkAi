@@ -46,7 +46,7 @@ function AboutUs() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <img 
-                src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
+                src="https://images.pexels.com/photos/7581119/pexels-photo-7581119.jpeg"
                 alt="AI Technology"
                 className="rounded-2xl shadow-2xl w-full h-96 object-cover"
               />
@@ -78,20 +78,20 @@ function AboutUs() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl md:text-5xl font-bold text-white mb-2">500+</div>
-              <div className="text-purple-200">Enterprise Clients</div>
+              <div className="text-4xl md:text-5xl font-bold text-white mb-2">10M+</div>
+              <div className="text-purple-200">Data Points Processed</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold text-white mb-2">99.7%</div>
-              <div className="text-purple-200">Accuracy Rate</div>
+              <div className="text-4xl md:text-5xl font-bold text-white mb-2">20%</div>
+              <div className="text-purple-200">Higher Growth</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold text-white mb-2">2.4B</div>
-              <div className="text-purple-200">Data Points</div>
+              <div className="text-4xl md:text-5xl font-bold text-white mb-2">5x</div>
+              <div className="text-purple-200">ROI Increase</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold text-white mb-2">24/7</div>
-              <div className="text-purple-200">Support</div>
+              <div className="text-4xl md:text-5xl font-bold text-white mb-2">50M+</div>
+              <div className="text-purple-200">Dollars Unlocked</div>
             </div>
           </div>
         </div>

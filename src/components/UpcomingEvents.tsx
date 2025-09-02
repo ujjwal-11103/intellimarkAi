@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Play, Calendar, MapPin } from 'lucide-react';
+import gartner from '../photos/Gartner.jpeg'
+import sandeepup from '../photos/Sandeep-upcoming events.jpeg'
 
 interface CarouselItem {
   id: number;
@@ -13,8 +15,8 @@ interface CarouselItem {
 }
 
 const items: CarouselItem[] = [
-    { id: 1, title: "Gartner List Inclusion", subtitle: "Global Industry Recognition", description: "Intellimark's Profitpulse made it to the prestigious list of Gartner's Recommended Products for Consumer Goods Company.", date: "March 15, 2025", location: "San Francisco, CA", image: "https://www.genesys.com/media/pr-genesys-named-a-leader-in-the-2024-gartner-magic-quadrant-thumbnail.png", category: "Recognition" },
-    { id: 2, title: "Welcome Sandeep Mathews.", subtitle: "RGM Legend joins the Intellimark Board", description: "We welcome the legend Sandeep Mathew to Intellimark's Advisory board. 18 years in RGM expertise is being used to evolve Intellimark products.", date: "March 22, 2025", location: "IntelliMark HQ - Virtual", image: "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1200", category: "Inclusion" }
+    { id: 1, title: "Gartner List Inclusion", subtitle: "Global Industry Recognition", description: "Intellimark's Profitpulse made it to the prestigious list of Gartner's Recommended Products for Consumer Goods Company.", date: "March 15, 2025", location: "San Francisco, CA", image: gartner, category: "Recognition" },
+    { id: 2, title: "Welcome Sandeep Mathews.", subtitle: "RGM Legend joins the Intellimark Board", description: "We welcome the legend Sandeep Mathew to Intellimark's Advisory board. 18 years in RGM expertise is being used to evolve Intellimark products.", date: "March 22, 2025", location: "IntelliMark HQ - Virtual", image: sandeepup , category: "Inclusion" }
 ];
 
 const UpcomingEvents: React.FC = () => {
@@ -56,7 +58,16 @@ const UpcomingEvents: React.FC = () => {
               >
                 <div className="grid grid-cols-1 lg:grid-cols-2 h-full bg-white">
                   <div className="relative h-64 lg:h-full">
-                    <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
+                    {item.id === 1 ? (
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="w-full h-full object-contain rounded-xl shadow-lg"
+                        style={{ maxWidth: '100%', maxHeight: '100%' }}
+                      />
+                    ) : (
+                      <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
+                    )}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-transparent lg:bg-gradient-to-r lg:from-black/20 lg:to-transparent"></div>
                   </div>
                   <div className="p-6 sm:p-8 lg:p-12 flex flex-col justify-center">

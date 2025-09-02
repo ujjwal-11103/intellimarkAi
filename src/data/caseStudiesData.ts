@@ -58,7 +58,7 @@ export const caseStudiesData: CaseStudy[] = [
       ],
       technologies: ['Machine Learning', 'Time-series Models', 'Tableau', 'Power BI'],
       testimonial: { quote: '', author: '', position: '', company: '' },
-      topics: ['Forecasting', 'Packaging Material']
+      topics: ['Forecasting']
   },
   {
       id: '2',
@@ -94,7 +94,7 @@ export const caseStudiesData: CaseStudy[] = [
       ],
       technologies: ['AI-powered analytics platform', 'Machine Learning', 'Uplift Modeling'],
       testimonial: { quote: '', author: '', position: '', company: '' },
-      topics: ['Recommendation Systems', 'Oil & Lubricants', 'Chemicals']
+      topics: ['Recommendation Systems', 'Chemicals']
   },
   {
     id: '3',
@@ -132,7 +132,7 @@ export const caseStudiesData: CaseStudy[] = [
     ],
     technologies: ['Marketing Mix Modelling (MMM)', 'Competitive Price Tracker', 'War Game Simulations'],
     testimonial: { quote: '', author: '', position: '', company: '' },
-    topics: ['Revenue Growth Management', 'FMCG', 'CPG']
+    topics: ['Revenue Growth Management', 'CPG']
   },
   {
     id: '4',
@@ -167,7 +167,7 @@ export const caseStudiesData: CaseStudy[] = [
     ],
     technologies: ['Promo Analytics Module', 'Data-driven Incentive Design', 'Elasticity Analysis'],
     testimonial: { quote: '', author: '', position: '', company: '' },
-    topics: ['Revenue Growth Management', 'Adhesives', 'Chemicals']
+    topics: ['Revenue Growth Management','Chemicals']
   },
   {
     id: '5',
@@ -202,7 +202,7 @@ export const caseStudiesData: CaseStudy[] = [
   ],
   technologies: ['Ensemble ML', 'Temporal Feature Engineering', 'AccuWeather Data'],
   testimonial: { quote: '', author: '', position: '', company: '' },
-  topics: ['Forecasting', 'FMCG', 'CPG']
+  topics: ['Forecasting', 'CPG']
   },
   {
       id: '6',
@@ -346,7 +346,7 @@ export const caseStudiesData: CaseStudy[] = [
   ],
   technologies: ['AI-powered analytics platform', 'Uplift Modeling', 'Trade Promotion Optimization'],
   testimonial: { quote: '', author: '', position: '', company: '' },
-  topics: ['Recommendation Systems', 'FMCG', 'CPG']
+  topics: ['Recommendation Systems', 'CPG']
   },
   {
     id: '10',
@@ -385,7 +385,7 @@ export const caseStudiesData: CaseStudy[] = [
   ],
   technologies: ['Net Revenue Management (NRM)', 'Nielsen Data Analysis', 'Elasticity Modeling'],
   testimonial: { quote: '', author: '', position: '', company: '' },
-  topics: ['Forecasting', 'Revenue Growth Management', 'Packaging Material']
+  topics: ['Forecasting', 'Revenue Growth Management']
   },
   {
     id: '11',

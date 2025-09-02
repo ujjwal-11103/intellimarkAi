@@ -39,19 +39,19 @@ const Navbar = () => {
   const dropdownContent = {
     Products: {
       featured: {
-        title: "AI Marketing Suite",
-        description: "Complete AI-powered marketing automation platform",
+        title: "Read case Studies",
+        description: "How we maximized revenue for world's biggest company",
         image: "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&fit=crop",
         badge: "Most Popular"
       },
       items: [
-        { icon: Target, title: "Explainable Forecasting Engine", description: "AI-driven customer behavior prediction", path: "/ExplainableForecastingEngine/" },
+        { icon: Target, title: "Explainable Forecasting Engine", description: "Highly accurate demand forecasting and sensing", path: "/ExplainableForecastingEngine/" },
 
-        { icon: Zap, title: "Forecasting", description: "Smart campaign optimization & execution", path: "/Forecasting" },
+        { icon: Zap, title: "Revenue Growth Management", description: "Ready to deploy AI to unlock growth, profitability and sales", path: "/Forecasting" },
 
-        { icon: BarChart3, title: "Recommendation", description: "Live performance tracking & analytics", path: "/Recommendation" },
+        { icon: BarChart3, title: "AI led Recommendation engines", description: "Up-selling and cross-selling at scale", path: "/Recommendation" }
 
-        { icon: Sparkles, title: "Performance Marketing Optimization", description: "AI-powered content creation at scale", path: "/product-detail/performance-marketing-optimization" }
+        // { icon: Sparkles, title: "Performance Marketing Optimization", description: "AI-powered content creation at scale", path: "/product-detail/performance-marketing-optimization" }
       ]
     },
     // Industries: {
@@ -166,10 +166,15 @@ const Navbar = () => {
                             <h4 className="font-semibold text-gray-900 mb-1">Ready to Book Now?</h4>
                             <p className="text-sm text-gray-600">Explore our {item.toLowerCase()} in detail</p>
                           </div>
-                          <Link to={`/${item.toLowerCase()}`} className="flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:shadow-lg group transition-all duration-300">
-                            <span>View All {item}</span>
-                            <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
-                          </Link>
+                            <a
+                              href="https://outlook.office.com/bookwithme/user/e8ee839cd0224fb7bbc88d3de0f0e74a@intellimark.ai/meetingtype/X5VsiCFLD0O0S7V9WOBTyQ2?anonymous&ismsaljsauthenabled&ep=mLinkFromTile"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:shadow-lg group transition-all duration-300"
+                            >
+                              <span>Talk to an Expert</span>
+                              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
+                            </a>
                         </div>
                       </div>
                     </div>
@@ -188,10 +193,14 @@ const Navbar = () => {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center space-x-4">
-            <button className="px-5 py-3 text-gray-700 hover:text-blue-600 font-medium transition-all rounded-xl hover:bg-gray-50/80">Sign In</button>
-            <button className="relative px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl overflow-hidden group transition-all duration-300 hover:shadow-xl hover:scale-105">
+            <a
+              href="https://outlook.office.com/bookwithme/user/e8ee839cd0224fb7bbc88d3de0f0e74a@intellimark.ai/meetingtype/X5VsiCFLD0O0S7V9WOBTyQ2?anonymous&ismsaljsauthenabled&ep=mLinkFromTile"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl overflow-hidden group transition-all duration-300 hover:shadow-xl hover:scale-105"
+            >
               <span className="relative z-10 flex items-center">Book Now <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" /></span>
-            </button>
+            </a>
           </div>
 
           {/* Mobile Toggle */}
@@ -251,7 +260,6 @@ const Navbar = () => {
               >
                 About
               </Link>
-              <button className="block w-full px-4 py-3 text-left text-gray-700 hover:text-blue-600 hover:bg-gray-50/80 rounded-xl">Sign In</button>
               <button className="block w-full px-6 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:shadow-lg transition-all duration-300">Book Now</button>
             </div>
           </div>
