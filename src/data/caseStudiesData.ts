@@ -26,7 +26,7 @@ export interface CaseStudy {
 export const caseStudiesData: CaseStudy[] = [
   
   {
-    id: '1',
+    id: 'b2b-demand-forecasting',
       title: 'B2B Demand Forecasting, Sales Alerts and Profitability Management System',
       description:
         'AI-powered analytics platform leveraging machine learning to optimize inventory, forecast revenue, identify sales gaps, and improve margins through SKU-level forecasting and proactive sales interventions.',
@@ -61,7 +61,65 @@ export const caseStudiesData: CaseStudy[] = [
       topics: ['Forecasting']
   },
   {
-      id: '2',
+    id: 'impact-pricing-skincare',
+    title: 'Impact of Pricing and Same Page RPI for Popular Skincare Brand',
+    description: 'Evaluating pricing strategies and RPI impact for a popular skincare brand.',
+    industry: 'skincare',
+    industryLabel: 'Skincare',
+    metrics: {
+      improvement: 'Increased revenue and market share',
+      timeFrame: '6 months'
+    },
+    problem: 'The brand needed to understand the impact of pricing and RPI on sales and market share.',
+    solution: 'Implemented advanced analytics to evaluate pricing strategies and RPI effects.',
+    approach: [
+      'Analyzed historical sales and pricing data.',
+      'Modeled RPI impact on consumer behavior.',
+      'Developed dashboards for ongoing monitoring.'
+    ],
+    challenges: [
+      'Complex pricing environment.',
+      'Rapidly changing market trends.'
+    ],
+    results: [
+      'Optimized pricing strategies.',
+      'Improved market share and revenue.'
+    ],
+    technologies: ['Analytics', 'Dashboarding'],
+    testimonial: { quote: '', author: '', position: '', company: '' },
+    topics: ['Revenue Growth Management', 'Skincare']
+  },
+  {
+    id: 'lever-1-5-dairy-tuna-seaa',
+    title: 'Lever 1 to 5 – Large Dairy and Tuna Brands in SEAA',
+    description: 'Lever analysis for large dairy and tuna brands in Southeast Asia.',
+    industry: 'dairy_tuna',
+    industryLabel: 'Dairy & Tuna',
+    metrics: {
+      improvement: 'Lever optimization across 5 categories',
+      timeFrame: '1 year'
+    },
+    problem: 'Brands needed to optimize multiple levers for growth in SEAA markets.',
+    solution: 'Comprehensive lever analysis and strategy development.',
+    approach: [
+      'Identified key growth levers.',
+      'Analyzed market data and trends.',
+      'Developed actionable strategies for each lever.'
+    ],
+    challenges: [
+      'Diverse market conditions.',
+      'Multiple product categories.'
+    ],
+    results: [
+      'Optimized lever strategies.',
+      'Growth across dairy and tuna categories.'
+    ],
+    technologies: ['Market Analysis', 'Strategy Development'],
+    testimonial: { quote: '', author: '', position: '', company: '' },
+    topics: ['Revenue Growth Management', 'Dairy', 'Tuna']
+  },
+  {
+      id: 'store-recommendation-lubricant',
       title: 'Store Recommendation System for Lubricant Brand',
       description:
         'AI-powered analytics platform integrating diverse data sources and advanced models to drive store-level inventory recommendations, upselling, cross-selling, and incentive optimization.',
@@ -97,7 +155,7 @@ export const caseStudiesData: CaseStudy[] = [
       topics: ['Recommendation Systems', 'Chemicals']
   },
   {
-    id: '3',
+    id: 'price-inflexion-point-fmcg',
     title: 'Price Inflexion Point Study for Large FMCG Brand',
     description:
       'A non-linear Marketing Mix Modelling (MMM) engine was used to identify optimal price adjustments, minimize market share erosion, and enhance pricing agility amid rising input costs.',
@@ -135,7 +193,7 @@ export const caseStudiesData: CaseStudy[] = [
     topics: ['Revenue Growth Management', 'CPG']
   },
   {
-    id: '4',
+    id: 'trade-promotion-adhesive',
     title: 'Trade Promotion Scheme Design for Large Adhesive Brand',
     description:
       'Designed a data-driven trade promotion scheme for a large adhesive brand, optimizing incentive slabs and improving budget efficiency across 500,000+ stores with diverse channels and retailer sizes.',
@@ -170,8 +228,8 @@ export const caseStudiesData: CaseStudy[] = [
     topics: ['Revenue Growth Management','Chemicals']
   },
   {
-    id: '5',
-  title: 'Tea Price Forecasting and Procurement Insights',
+    id: 'tea-price-forecasting',
+    title: 'Tea Price Forecasting and Procurement Insights',
   description:
     'Ensemble machine learning–based tea price forecasting with external weather signals to improve procurement timing and pricing strategy.',
   industry: 'fmcg',
@@ -205,8 +263,8 @@ export const caseStudiesData: CaseStudy[] = [
   topics: ['Forecasting', 'CPG']
   },
   {
-      id: '6',
-    title: '40% Forecasting Accuracy for US Car Wash Company using Weather-based Seasonal Patterns',
+      id: 'car-wash-forecasting-us',
+      title: '40% Forecasting Accuracy for US Car Wash Company using Weather-based Seasonal Patterns',
     description:
       'Feature Engineering Engine incorporating 14 weather datasets to boost 90-day demand forecast accuracy and unlock working capital.',
     industry: 'services',
@@ -241,8 +299,8 @@ export const caseStudiesData: CaseStudy[] = [
     topics: ['Forecasting', 'Services']
   },
   {
-    id: '7',
-  title: 'Forecasting Improvement for Fortune 500 Consumer Appliances Company',
+    id: 'fortune500-appliances-forecasting',
+    title: 'Forecasting Improvement for Fortune 500 Consumer Appliances Company',
   description:
     'City×Product-level forecasting and dynamic distributor norms to cut unsold inventory and rationalize product–market variants.',
   industry: 'consumer_electronics',
@@ -277,8 +335,8 @@ export const caseStudiesData: CaseStudy[] = [
   topics: ['Forecasting', 'Electronics']
   },
   {
-    id: '8',
-  title: 'Forecasting Accuracy and Impact of Pricing and Ad Spends for Popular Skincare Brand',
+    id: 'skincare-pricing-adspend-forecasting',
+    title: 'Forecasting Accuracy and Impact of Pricing and Ad Spends for Popular Skincare Brand',
   description:
     'Teresa Forecasting Engine combining e-commerce scrape (Amazon), ad-spend, competitor prices, and category rankings to stabilize forecasts and cut OOS.',
   industry: 'beauty_wellbeing',

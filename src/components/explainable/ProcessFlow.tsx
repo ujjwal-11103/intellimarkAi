@@ -148,6 +148,12 @@ export const ProcessFlow = () => {
                     <ArrowRight className="w-4 h-4 text-purple-400" />
                   </div>
                 )} */}
+                {/* Connector Line (only if not last item) */}
+                {index < processSteps.length - 1 && (
+                  <div className="absolute left-0 right-0 -bottom-5 h-10 flex items-center z-20">
+                    <div className="mx-auto w-2 h-full border-l-4 border-dotted border-purple-600 opacity-80"></div>
+                  </div>
+                )}
               </div>
             ))}
           </div>

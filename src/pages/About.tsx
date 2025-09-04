@@ -146,7 +146,7 @@ function AboutUs() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-1">Sandeep Mathew</h3>
-              <p className="text-purple-600 font-medium mb-3">Head of RGM</p>
+              <p className="text-purple-600 font-medium mb-3">Advisor - Revenue Growth Management</p>
               <p className="text-gray-600 text-sm">16 Years in FMCG Industry, Ex-Unilever Global Director for Revenue Management.</p>
             </div>
             <div className="group">
@@ -159,7 +159,7 @@ function AboutUs() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-1">Parikshit Nag</h3>
-              <p className="text-purple-600 font-medium mb-3">Advisor - Data Scientist</p>
+              <p className="text-purple-600 font-medium mb-3">Advisor - AI Research</p>
               <p className="text-gray-600 text-sm">14 Years Data Science Leader in FMCG Industry, Ex-Unilever, Patent in Forecasting</p>
             </div>
 

@@ -4,6 +4,7 @@ import { ProcessFlow } from '../components/recommendation/ProcessFlow'
 import { RecommendationEngine } from '../components/recommendation/RecommendationEngine'
 import { PerformanceAnalysis } from '../components/recommendation/PerformanceAnalysis'
 import StudyCard from '../components/StudyCard'
+import ReccStudyCard from '../components/recommendation/ReccStudyCard'
 
 const Recommendation = () => {
     return (
@@ -13,7 +14,7 @@ const Recommendation = () => {
                 <ProcessFlow />
                 <RecommendationEngine />
                 <PerformanceAnalysis />
-                <StudyCard />
+                <ReccStudyCard />
             </div>
         </div>
     )

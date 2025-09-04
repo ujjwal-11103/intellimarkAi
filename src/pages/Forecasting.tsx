@@ -4,6 +4,7 @@ import NowcastSystem from '../components/forecasting/NowcastSystem'
 import FeatureEngineering from '../components/forecasting/FeatureEngineering'
 import ComparisonSection from "../components/forecasting/ComparisonSection"
 import StudyCard from '../components/StudyCard'
+import ForecastingStudyCard from '../components/forecasting/ForecastingStudyCard';
 
 const Forecasting = () => {
     return (
@@ -21,7 +22,7 @@ const Forecasting = () => {
                 <FeatureEngineering />
             </div>
             <div id="cards">
-                <StudyCard />
+                <ForecastingStudyCard />
             </div>
 
         </div>
