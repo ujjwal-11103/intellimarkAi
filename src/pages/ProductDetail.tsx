@@ -16,6 +16,7 @@ import NrmLevers from '../components/explainable/Levers';
 import { VennDiagram } from '../components/explainable/VennDiagram';
 import { ProcessFlow } from '../components/explainable/ProcessFlow';
 import { MLEngine } from '../components/explainable/MLEngine';
+import StudyCard from '../components/StudyCard';
 
 const ProductDetail = () => {
   // const { productId } = useParams();
@@ -267,6 +268,7 @@ const ProductDetail = () => {
         <VennDiagram />
         <ProcessFlow />
         <MLEngine />
+        <StudyCard />
       </div>
 
       {/* CTA Section */}

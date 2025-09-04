@@ -3,6 +3,7 @@ import { HeroSection } from '../components/recommendation/HeroSection'
 import { ProcessFlow } from '../components/recommendation/ProcessFlow'
 import { RecommendationEngine } from '../components/recommendation/RecommendationEngine'
 import { PerformanceAnalysis } from '../components/recommendation/PerformanceAnalysis'
+import StudyCard from '../components/StudyCard'
 
 const Recommendation = () => {
     return (
@@ -12,6 +13,7 @@ const Recommendation = () => {
                 <ProcessFlow />
                 <RecommendationEngine />
                 <PerformanceAnalysis />
+                <StudyCard />
             </div>
         </div>
     )
