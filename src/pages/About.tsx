@@ -14,6 +14,8 @@ import rahul from "../photos/rahul.png";
 import sandeep from "../photos/Sandeep.jpeg";
 import parikshit from "../photos/Parikshit Nag.jpeg"
 import vishal from "../photos/Vishal.jpeg";
+import zaid from "../photos/Zaid.jpeg";
+import mainImage from "../photos/About us image.jpeg";
 
 function AboutUs() {
   return (
@@ -46,7 +48,7 @@ function AboutUs() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <img 
-                src="https://images.pexels.com/photos/7581119/pexels-photo-7581119.jpeg"
+                src={mainImage}
                 alt="AI Technology"
                 className="rounded-2xl shadow-2xl w-full h-96 object-cover"
               />
@@ -59,7 +61,7 @@ function AboutUs() {
                 Founded by AI researchers and technology visionaries, we believe artificial intelligence should enhance human capability, not replace it.
               </p>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Today, we're trusted by Fortune 500 companies worldwide to deliver intelligent solutions that drive real results.
+                Today, we're trusted by World's biggest brands to deliver intelligent solutions that drive real results.
               </p>
               <div className="bg-purple-50 border-l-4 border-purple-600 p-6 rounded-r-lg">
                 <p className="text-lg font-medium text-purple-900 italic">
@@ -105,7 +107,7 @@ function AboutUs() {
             <p className="text-xl text-gray-600">The minds behind the magic</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
             <div className="group">
               <div className="relative overflow-hidden rounded-2xl mb-6">
                 <img 
@@ -144,7 +146,7 @@ function AboutUs() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-1">Sandeep Mathew</h3>
-              <p className="text-purple-600 font-medium mb-3">Head of NRM, RGM, MMM</p>
+              <p className="text-purple-600 font-medium mb-3">Head of RGM</p>
               <p className="text-gray-600 text-sm">16 Years in FMCG Industry, Ex-Unilever Global Director for Revenue Management.</p>
             </div>
             <div className="group">
@@ -157,8 +159,22 @@ function AboutUs() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-1">Parikshit Nag</h3>
-              <p className="text-purple-600 font-medium mb-3">Chief Data Scientist</p>
+              <p className="text-purple-600 font-medium mb-3">Advisor - Data Scientist</p>
               <p className="text-gray-600 text-sm">14 Years Data Science Leader in FMCG Industry, Ex-Unilever, Patent in Forecasting</p>
+            </div>
+
+            <div className="group">
+              <div className="relative overflow-hidden rounded-2xl mb-6">
+                <img 
+                  src={zaid}
+                  alt="Mhd Zaid"
+                  className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-1">Mhd Zaid</h3>
+              <p className="text-purple-600 font-medium mb-3">Data Science Lead</p>
+              <p className="text-gray-600 text-sm">Responsible for research, development and delivery of next generation models.</p>
             </div>
           </div>
         </div>

@@ -280,14 +280,19 @@ const ProductDetail = () => {
             Join leading organizations using our AI solutions to optimize operations and drive unprecedented growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-purple-600 px-6 py-3 rounded-xl hover:bg-gray-50 transition-all transform hover:scale-105 font-medium flex items-center justify-center">
-              Start Free Trial
+            <a
+              href="https://outlook.office.com/bookwithme/user/e8ee839cd0224fb7bbc88d3de0f0e74a@intellimark.ai/meetingtype/X5VsiCFLD0O0S7V9WOBTyQ2?anonymous&ismsaljsauthenabled&ep=mLinkFromTile"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white text-purple-600 px-6 py-3 rounded-xl hover:bg-gray-50 transition-all transform hover:scale-105 font-medium flex items-center justify-center"
+            >
+              Talk to an Expert
               <ArrowRight className="w-4 h-4 ml-2" />
-            </button>
-            <button className="border-2 border-purple-300 text-white px-6 py-3 rounded-xl hover:bg-purple-700 transition-colors font-medium flex items-center justify-center">
+            </a>
+            {/* <button className="border-2 border-purple-300 text-white px-6 py-3 rounded-xl hover:bg-purple-700 transition-colors font-medium flex items-center justify-center">
               <Play className="w-4 h-4 mr-2" />
               Watch Demo
-            </button>
+            </button> */}
           </div>
         </div>
         <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-white/10 rounded-full"></div>

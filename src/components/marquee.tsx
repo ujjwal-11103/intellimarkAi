@@ -48,7 +48,7 @@ const CompanyMarquee: React.FC = () => {
           <div className="text-center mb-16 sm:mb-20 px-4">
             <div className="inline-block mb-6">
               <span className="px-5 py-2.5 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-emerald-500/10 text-blue-300 text-xs sm:text-sm font-semibold rounded-full border border-blue-400/20 backdrop-blur-xl shadow-2xl">
-                ✨ Trusted by Global Fortune 500 Companies
+                ✨ Trusted by World's biggest brands.
               </span>
             </div>
 

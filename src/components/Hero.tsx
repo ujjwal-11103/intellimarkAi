@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Sparkles, Zap, Target, Play, ChevronRight, Brain, Cpu, Database, TrendingUp } from 'lucide-react';
 
 const Hero = () => {
@@ -69,7 +70,9 @@ const Hero = () => {
           }`}>
             <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mr-3 animate-pulse"></div>
             <Sparkles className="w-4 h-4 mr-2" />
-            Next-Generation AI Marketing Platform
+            <Link to="/Forecasting" className="hover:underline hover:text-blue-900 transition-colors duration-200">
+              Next-Gen Revenue Growth Management Platform.
+            </Link>
             <ChevronRight className="w-4 h-4 ml-2" />
           </div>
 

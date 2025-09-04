@@ -32,34 +32,34 @@ const TeresaSystem = () => {
   );
 
   return (
-    <div className="bg-gradient-to-br from-purple-50 via-white to-violet-50 p-12">
+    <div className="bg-gradient-to-br from-purple-50 via-white to-violet-50 p-4 sm:p-12">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+        <div className="text-center mb-8 sm:mb-16">
+          <h1 className="text-2xl sm:text-4xl font-bold text-gray-900 mb-2 sm:mb-4">
             Teresa
           </h1>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+          <p className="text-base sm:text-xl text-gray-600 max-w-4xl mx-auto">
             Integrated Multi-granularity Forecasting Engine
           </p>
         </div>
 
         {/* Flex row on large screens, stack on mobile */}
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-6">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-4 sm:gap-6">
 
           {/* Data Sources */}
-          <div className="group w-80 flex-none">
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-              <div className="text-center mb-6">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-violet-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Database className="w-8 h-8 text-white" />
+          <div className="group w-full sm:w-80 flex-none mb-4 sm:mb-0">
+            <div className="bg-white rounded-2xl p-4 sm:p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="text-center mb-4 sm:mb-6">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-purple-600 to-violet-600 rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-4">
+                  <Database className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900">Data Sources</h3>
+                <h3 className="text-base sm:text-xl font-bold text-gray-900">Data Sources</h3>
               </div>
-              <div className="space-y-4">
+              <div className="space-y-2 sm:space-y-4">
                 {dataTypes.map((data, index) => (
-                  <div key={index} className="flex items-center space-x-3 p-3 rounded-lg hover:bg-purple-50 transition-colors">
+                  <div key={index} className="flex items-center space-x-2 sm:space-x-3 p-2 sm:p-3 rounded-lg hover:bg-purple-50 transition-colors">
                     <div className="text-purple-600">{data.icon}</div>
-                    <span className="text-gray-700 font-medium">{data.name}</span>
+                    <span className="text-xs sm:text-base text-gray-700 font-medium">{data.name}</span>
                   </div>
                 ))}
               </div>
@@ -67,29 +67,29 @@ const TeresaSystem = () => {
           </div>
 
           {/* Arrow */}
-          <Connector />
+          <div className="hidden lg:flex"><Connector /></div>
 
           {/* AI Engine */}
-          <div className="group w-80 flex-none">
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-              <div className="text-center mb-6">
-                <div className="w-16 h-16 bg-gradient-to-r from-violet-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Brain className="w-8 h-8 text-white" />
+          <div className="group w-full sm:w-80 flex-none mb-4 sm:mb-0">
+            <div className="bg-white rounded-2xl p-4 sm:p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="text-center mb-4 sm:mb-6">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-violet-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-4">
+                  <Brain className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900">AI Engine</h3>
+                <h3 className="text-base sm:text-xl font-bold text-gray-900">AI Engine</h3>
               </div>
 
               <div className="relative">
-                <div className="grid grid-cols-2 gap-3 mb-6">
+                <div className="grid grid-cols-2 gap-2 sm:gap-3 mb-4 sm:mb-6">
                   {['Feature', 'Forecast', 'Simulate', 'Optimize'].map((step, index) => (
-                    <div key={index} className="bg-gradient-to-r from-purple-100 to-violet-100 rounded-lg p-3 text-center border border-purple-200">
-                      <span className="text-sm font-semibold text-purple-800">{step}</span>
+                    <div key={index} className="bg-gradient-to-r from-purple-100 to-violet-100 rounded-lg p-2 sm:p-3 text-center border border-purple-200">
+                      <span className="text-xs sm:text-sm font-semibold text-purple-800">{step}</span>
                     </div>
                   ))}
                 </div>
 
-                <div className="text-center p-4 bg-gradient-to-r from-purple-50 to-violet-50 rounded-lg border border-purple-200">
-                  <h4 className="font-bold text-purple-900 mb-2">Explainable AI</h4>
+                <div className="text-center p-2 sm:p-4 bg-gradient-to-r from-purple-50 to-violet-50 rounded-lg border border-purple-200">
+                  <h4 className="font-bold text-purple-900 mb-1 sm:mb-2 text-xs sm:text-base">Explainable AI</h4>
                   <p className="text-xs text-purple-700">
                     Causal impact attribution for external factors
                   </p>
@@ -99,34 +99,34 @@ const TeresaSystem = () => {
           </div>
 
           {/* Arrow */}
-          <Connector />
+          <div className="hidden lg:flex"><Connector /></div>
 
           {/* Outputs */}
-          <div className="group w-80 flex-none">
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-              <div className="text-center mb-6">
-                <div className="w-16 h-16 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Target className="w-8 h-8 text-white" />
+          <div className="group w-full sm:w-80 flex-none">
+            <div className="bg-white rounded-2xl p-4 sm:p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="text-center mb-4 sm:mb-6">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-4">
+                  <Target className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900">Multi-dimensional Forecasts</h3>
+                <h3 className="text-base sm:text-xl font-bold text-gray-900">Multi-dimensional Forecasts</h3>
               </div>
 
-              <div className="space-y-4 mb-6">
+              <div className="space-y-2 sm:space-y-4 mb-4 sm:mb-6">
                 {forecastTypes.map((forecast, index) => (
-                  <div key={index} className={`p-4 rounded-lg border-2 ${forecast.color} hover:scale-105 transition-transform`}>
-                    <div className="font-semibold text-gray-900 text-sm">{forecast.title}</div>
+                  <div key={index} className={`p-2 sm:p-4 rounded-lg border-2 ${forecast.color} hover:scale-105 transition-transform`}>
+                    <div className="font-semibold text-xs sm:text-sm text-gray-900">{forecast.title}</div>
                     <div className="text-xs text-gray-600 font-medium">{forecast.subtitle}</div>
                   </div>
                 ))}
               </div>
 
-              <div className="border-t pt-4">
-                <h4 className="font-bold text-gray-900 mb-3">Key Benefits</h4>
-                <div className="space-y-2">
+              <div className="border-t pt-2 sm:pt-4">
+                <h4 className="font-bold text-xs sm:text-base text-gray-900 mb-2 sm:mb-3">Key Benefits</h4>
+                <div className="space-y-1 sm:space-y-2">
                   {benefits.map((benefit, index) => (
-                    <div key={index} className="flex items-center space-x-2">
+                    <div key={index} className="flex items-center space-x-1 sm:space-x-2">
                       <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                      <span className="text-sm text-gray-700">{benefit}</span>
+                      <span className="text-xs sm:text-sm text-gray-700">{benefit}</span>
                     </div>
                   ))}
                 </div>

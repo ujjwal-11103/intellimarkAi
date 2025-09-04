@@ -61,7 +61,7 @@ const CaseStudiesPage: React.FC = () => {
           <div className="max-w-5xl mx-auto text-center mb-20">
             <div className={`inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-100 to-blue-100 text-purple-700 rounded-full text-sm font-semibold mb-8 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               <Sparkles className="w-4 h-4 mr-2" />
-              Trusted by Fortune 500 companies worldwide
+              Trusted by World's biggest brands.
             </div>
             
             <h1 className={`text-6xl md:text-8xl font-black text-gray-900 mb-8 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
@@ -228,11 +228,16 @@ const CaseStudiesPage: React.FC = () => {
               <Target className="w-6 h-6 mr-3 inline" />
               Start Your Project
             </button>
-            <button className="text-white hover:text-purple-200 transition-colors flex items-center font-bold text-lg">
+            <a
+              href="https://outlook.office.com/bookwithme/user/e8ee839cd0224fb7bbc88d3de0f0e74a@intellimark.ai/meetingtype/X5VsiCFLD0O0S7V9WOBTyQ2?anonymous&ismsaljsauthenabled&ep=mLinkFromTile"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-purple-200 transition-colors flex items-center font-bold text-lg"
+            >
               <Users className="w-6 h-6 mr-3" />
-              Book Consultation
+              Talk to an Expert
               <ArrowRight className="w-6 h-6 ml-3" />
-            </button>
+            </a>
           </div>
         </div>
       </div>

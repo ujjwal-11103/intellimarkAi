@@ -39,7 +39,7 @@ const UpcomingEvents: React.FC = () => {
         <div className="text-center mb-12 sm:mb-16">
           <div className="inline-flex items-center gap-2 bg-white border border-gray-200 px-4 py-2 rounded-full mb-4">
             <Calendar className="w-4 h-4 text-gray-600" />
-            <span className="text-sm font-medium text-gray-700 uppercase tracking-wide">Upcoming Events</span>
+            <span className="text-sm font-medium text-gray-700 uppercase tracking-wide">Recent Events</span>
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             Join the Conversation

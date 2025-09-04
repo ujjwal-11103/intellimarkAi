@@ -75,7 +75,7 @@ function App() {
           <Route path="/case-studies" element={<CaseStudiesPage />} />
           <Route path="/case-study/:id" element={<CaseStudyDetailsPage />} />
 
-          <Route path="/ExplainableForecastingEngine/" element={<ProductDetail />} />
+          <Route path="/RevenueGrowthManagement/" element={<ProductDetail />} />
           <Route path="/Forecasting/" element={<Forecasting />} />
           <Route path="/Recommendation" element={<Recommendation />} />
 

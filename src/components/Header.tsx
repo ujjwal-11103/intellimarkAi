@@ -45,9 +45,9 @@ const Navbar = () => {
         badge: "Most Popular"
       },
       items: [
-        { icon: Target, title: "Explainable Forecasting Engine", description: "Highly accurate demand forecasting and sensing", path: "/ExplainableForecastingEngine/" },
+        { icon: Target, title: "Revenue Growth Management", description: "Ready to deploy AI to unlock growth, profitability and sales", path: "/RevenueGrowthManagement/" },
 
-        { icon: Zap, title: "Revenue Growth Management", description: "Ready to deploy AI to unlock growth, profitability and sales", path: "/Forecasting" },
+        { icon: Zap, title: "Forecasting Page", description: "Highly accurate demand forecasting and sensing", path: "/Forecasting" },
 
         { icon: BarChart3, title: "AI led Recommendation engines", description: "Up-selling and cross-selling at scale", path: "/Recommendation" }
 

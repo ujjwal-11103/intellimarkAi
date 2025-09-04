@@ -14,7 +14,7 @@ const StatsCard = ({ number, label, delay, gradient, accentColor }: any) => (
 
 const stats = [
   { number: '10%', label: 'Average forecasting improvement', gradient: 'bg-gradient-to-br from-blue-500 to-cyan-600', accentColor: 'bg-blue-500' },
-  { number: '20M+', label: 'Value unlocked via RGM', gradient: 'bg-gradient-to-br from-emerald-500 to-teal-600', accentColor: 'bg-emerald-500' },
+  { number: '50M+', label: 'Value unlocked via RGM', gradient: 'bg-gradient-to-br from-emerald-500 to-teal-600', accentColor: 'bg-emerald-500' },
   { number: '$5B', label: 'Dollar brands served', gradient: 'bg-gradient-to-br from-purple-500 to-indigo-600', accentColor: 'bg-purple-500' },
   { number: '90%', label: 'Client retention rate', gradient: 'bg-gradient-to-br from-orange-500 to-red-600', accentColor: 'bg-orange-500' },
 ];

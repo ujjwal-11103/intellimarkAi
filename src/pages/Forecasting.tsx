@@ -3,6 +3,7 @@ import TeresaSystem from '../components/forecasting/TeresaSystem'
 import NowcastSystem from '../components/forecasting/NowcastSystem'
 import FeatureEngineering from '../components/forecasting/FeatureEngineering'
 import ComparisonSection from "../components/forecasting/ComparisonSection"
+import StudyCard from '../components/StudyCard'
 
 const Forecasting = () => {
     return (
@@ -18,6 +19,9 @@ const Forecasting = () => {
             <ComparisonSection />
             <div id="features">
                 <FeatureEngineering />
+            </div>
+            <div id="cards">
+                <StudyCard />
             </div>
 
         </div>
