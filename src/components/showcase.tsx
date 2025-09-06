@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronRight, ChevronLeft, ArrowRight, ShoppingCart, TrendingUp, Pill, Factory } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 // Interfaces and data remain the same
 interface Industry {
@@ -104,13 +105,13 @@ export default function IndustryShowcase() {
                       <div className="flex-1 flex flex-col justify-end text-white">
                         <h3 className="font-bold text-3xl mb-4">{industry.name}</h3>
                         <p className="text-white/90 mb-6">{industry.description}</p>
-                        <a
-                          href="/case-studies"
+                        <Link
+                          to="/case-studies"
                           className="group self-start flex items-center gap-2 px-5 py-2.5 bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl font-semibold transition-all duration-300 hover:bg-white/30"
                         >
                           <span>Explore Case Study</span>
                           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                        </a>
+                        </Link>
                       </div>
                     )}
                   </div>
@@ -131,13 +132,13 @@ export default function IndustryShowcase() {
                   <div className="relative z-10 h-full flex flex-col justify-end p-6 text-white">
                     <h3 className="font-bold text-3xl mb-4">{industry.name}</h3>
                     <p className="text-white/90 mb-6">{industry.description}</p>
-                    <a
-                      href="/case-studies"
+                    <Link
+                      to="/case-studies"
                       className="group self-start flex items-center gap-2 px-5 py-2.5 bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl font-semibold transition-all duration-300 hover:bg-white/30"
                     >
                       <span>Explore Case Study</span>
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
