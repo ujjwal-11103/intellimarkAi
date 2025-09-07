@@ -18,11 +18,19 @@ export const MLEngine = () => {
     { name: 'Tracking and Feedback', angle: 330 }
   ];
 
-  const outcomes = [
-    'High Growth Room Pockets Identification',
-    'Growth Principles and Constraints',
-    'Budget Constraints'
-  ];
+  const radius = 180; // must match your outer element radius
+  const centerX = 300; // SVG center
+  const centerY = 200;
+
+  // Convert outer elements into coordinates for the line
+  const polygonPoints = outerElements
+    .map((el) => {
+      const angle = (el.angle - 90) * (Math.PI / 180); // rotate so 0° is top
+      const x = centerX + Math.cos(angle) * radius;
+      const y = centerY + Math.sin(angle) * radius;
+      return `${x},${y}`;
+    })
+    .join(' ');
 
   return (
     <section className="py-20 bg-white">
@@ -34,18 +42,32 @@ export const MLEngine = () => {
         </div>
 
         <div className="relative flex justify-center items-center h-96">
+          {/* SVG Perforated Circle/Polygon */}
+          <svg
+            className="absolute w-full h-full"
+            viewBox="0 0 600 400"
+          >
+            <polygon
+              points={polygonPoints}
+              fill="none"
+              stroke="gray"
+              strokeDasharray="6,6"  // makes it perforated
+              strokeWidth="2"
+            />
+          </svg>
+
           {/* Central Revenue Hub */}
           <div className="relative z-20 w-24 h-24 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center text-white shadow-lg">
             <span className="font-bold text-sm">Revenue</span>
           </div>
 
           {/* Inner Circle Elements */}
-          {centerElements.map((element, index) => {
-            const angle = (element.angle) * (Math.PI / 180);
-            const radius = 80;
-            const x = Math.cos(angle - Math.PI/2) * radius;
-            const y = Math.sin(angle - Math.PI/2) * radius;
-            
+          {centerElements.map((element) => {
+            const angle = element.angle * (Math.PI / 180);
+            const innerRadius = 80;
+            const x = Math.cos(angle - Math.PI / 2) * innerRadius;
+            const y = Math.sin(angle - Math.PI / 2) * innerRadius;
+
             return (
               <div
                 key={element.name}
@@ -63,11 +85,11 @@ export const MLEngine = () => {
 
           {/* Yellow Arrows */}
           {centerElements.map((element, index) => {
-            const angle = (element.angle) * (Math.PI / 180);
-            const radius = 52;
-            const x = Math.cos(angle - Math.PI/2) * radius;
-            const y = Math.sin(angle - Math.PI/2) * radius;
-            
+            const angle = element.angle * (Math.PI / 180);
+            const arrowRadius = 52;
+            const x = Math.cos(angle - Math.PI / 2) * arrowRadius;
+            const y = Math.sin(angle - Math.PI / 2) * arrowRadius;
+
             return (
               <div
                 key={`arrow-${index}`}
@@ -83,12 +105,11 @@ export const MLEngine = () => {
           })}
 
           {/* Outer Elements */}
-          {outerElements.map((element, index) => {
-            const angle = (element.angle) * (Math.PI / 180);
-            const radius = 180;
-            const x = Math.cos(angle - Math.PI/2) * radius;
-            const y = Math.sin(angle - Math.PI/2) * radius;
-            
+          {outerElements.map((element) => {
+            const angle = element.angle * (Math.PI / 180);
+            const x = Math.cos(angle - Math.PI / 2) * radius;
+            const y = Math.sin(angle - Math.PI / 2) * radius;
+
             return (
               <div
                 key={element.name}
@@ -104,18 +125,6 @@ export const MLEngine = () => {
             );
           })}
         </div>
-
-        {/* Outcomes */}
-        {/* <div className="flex justify-center space-x-8 mt-16">
-          {outcomes.map((outcome, index) => (
-            <div key={index} className="bg-gradient-to-br from-purple-600 to-purple-700 rounded-lg p-6 text-white shadow-lg max-w-xs">
-              <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center mb-4">
-                <div className="w-6 h-6 bg-purple-600 rounded-full"></div>
-              </div>
-              <h3 className="font-semibold text-sm">{outcome}</h3>
-            </div>
-          ))}
-        </div> */}
       </div>
     </section>
   );
