@@ -232,20 +232,7 @@ function AboutUs() {
           <div className="text-center">
             <h3 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Business?</h3>
             <p className="text-xl text-purple-200 mb-8">Let's build the future together</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <div className="flex items-center text-purple-200">
-                <Mail className="h-5 w-5 mr-2" />
-                <span>hello@intellimark.ai</span>
-              </div>
-              <div className="flex items-center text-purple-200">
-                <Phone className="h-5 w-5 mr-2" />
-                <span>+1 (555) 123-4567</span>
-              </div>
-              <div className="flex items-center text-purple-200">
-                <MapPin className="h-5 w-5 mr-2" />
-                <span>San Francisco, CA</span>
-              </div>
-            </div>
+            
             <div className="flex justify-center space-x-6 mt-8">
               <Linkedin className="h-8 w-8 text-purple-300 hover:text-white cursor-pointer transition-colors transform hover:scale-110" />
               <Twitter className="h-8 w-8 text-purple-300 hover:text-white cursor-pointer transition-colors transform hover:scale-110" />
