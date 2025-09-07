@@ -11,6 +11,7 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [mobileDropdowns, setMobileDropdowns] = useState<{ [key: string]: boolean }>({});
+  const closeDropdownTimeout = React.useRef<ReturnType<typeof setTimeout> | null>(null);
   const location = useLocation();
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -107,7 +108,22 @@ const Navbar = () => {
             {Object.entries(dropdownContent)
               .filter(([item]) => item !== 'CaseStudy')
               .map(([item, content]) => (
-                <div key={item} className="relative group" onMouseEnter={() => setActiveDropdown(item)} onMouseLeave={() => setActiveDropdown(null)}>
+                <div
+                  key={item}
+                  className="relative group"
+                  onMouseEnter={() => {
+                    if (closeDropdownTimeout.current) {
+                      clearTimeout(closeDropdownTimeout.current);
+                      closeDropdownTimeout.current = null;
+                    }
+                    setActiveDropdown(item);
+                  }}
+                  onMouseLeave={() => {
+                    closeDropdownTimeout.current = setTimeout(() => {
+                      setActiveDropdown(null);
+                    }, 200); // 200ms delay
+                  }}
+                >
                   <button className="flex items-center px-5 py-3 text-gray-700 hover:text-blue-600 font-medium transition-all duration-300 rounded-xl hover:bg-gray-50/80 group">
                     <span className="relative">
                       {item}
@@ -117,7 +133,21 @@ const Navbar = () => {
                   </button>
 
                   {/* Mega Dropdown */}
-                  <div className={`absolute top-full left-1/2 transform -translate-x-1/2 mt-2 transition-all duration-300 ${activeDropdown === item ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible translate-y-4 pointer-events-none'}`}>
+                  <div
+                    className={`absolute top-full left-1/2 transform -translate-x-1/2 mt-2 transition-all duration-300 ${activeDropdown === item ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible translate-y-4 pointer-events-none'}`}
+                    onMouseEnter={() => {
+                      if (closeDropdownTimeout.current) {
+                        clearTimeout(closeDropdownTimeout.current);
+                        closeDropdownTimeout.current = null;
+                      }
+                      setActiveDropdown(item);
+                    }}
+                    onMouseLeave={() => {
+                      closeDropdownTimeout.current = setTimeout(() => {
+                        setActiveDropdown(null);
+                      }, 200);
+                    }}
+                  >
                     <div className="bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border p-8 w-[800px]">
                       <div className="grid grid-cols-3 gap-8">
                         {/* Featured */}
