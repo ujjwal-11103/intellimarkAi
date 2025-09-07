@@ -51,10 +51,26 @@ const Footer = () => {
             <ul className="space-y-1 sm:space-y-2">
               <li>
                 <a 
-                  href="#" 
+                  href="/RevenueGrowthManagement" 
                   className="text-sm sm:text-base text-gray-300 hover:text-purple-400 transition-colors duration-200 underline"
                 >
-                  Explainable Forecasting Engine
+                  Revenue Growth Management
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="/Forecasting" 
+                  className="text-sm sm:text-base text-gray-300 hover:text-purple-400 transition-colors duration-200 underline"
+                >
+                  Forecasting Page
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="/Recommendation" 
+                  className="text-sm sm:text-base text-gray-300 hover:text-purple-400 transition-colors duration-200 underline"
+                >
+                  AI led Reccomendation Engines
                 </a>
               </li>
               <li>
@@ -62,23 +78,7 @@ const Footer = () => {
                   href="#" 
                   className="text-sm sm:text-base text-gray-300 hover:text-purple-400 transition-colors duration-200 underline"
                 >
-                  Marketing Investment Planner
-                </a>
-              </li>
-              <li>
-                <a 
-                  href="#" 
-                  className="text-sm sm:text-base text-gray-300 hover:text-purple-400 transition-colors duration-200 underline"
-                >
-                  Retail Growth Engine
-                </a>
-              </li>
-              <li>
-                <a 
-                  href="#" 
-                  className="text-sm sm:text-base text-gray-300 hover:text-purple-400 transition-colors duration-200 underline"
-                >
-                  Performance Marketing Optimization
+                  
                 </a>
               </li>
             </ul>
