@@ -32,14 +32,14 @@ function getTypeIcon(type: string) {
 const StudyCard: React.FC = () => {
   const resources: Study[] = [
     {
-      id: '3',
+      id: 'price-inflexion-point-fmcg',
       type: 'CASE STUDY',
       title: 'Price Inflexion Point Study for Large FMCG Brand',
       description: 'Analysis of price inflexion points for a major FMCG brand to optimize revenue growth.',
       image: 'https://images.pexels.com/photos/7567222/pexels-photo-7567222.jpeg?auto=compress&cs=tinysrgb&w=800',
     },
     {
-      id: '4',
+      id: 'trade-promotion-adhesive',
       type: 'CASE STUDY',
       title: 'Trade Promotion Scheme Design for Large Adhesive Brand',
       description: 'Designing effective trade promotion schemes for a leading adhesive brand.',
