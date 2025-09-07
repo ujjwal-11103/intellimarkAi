@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight, Brain, Zap, TrendingUp, Users, Award, MapPin, ArrowRight } from 'lucide-react';
-
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 // Interfaces remain the same
 interface Card {
   id: number;
@@ -12,6 +13,7 @@ interface Card {
   badge?: string;
   stats?: string;
   icon?: React.ReactNode;
+  link?: string;
 }
 
 interface Slide {
@@ -33,10 +35,10 @@ const slides: Slide[] = [
   {
     id: 2,
     cards: [
-      { id: 5, type: 'feature', title: 'Revenue Growth Management', subtitle: 'Real-time Recognition', description: 'Ready to deploy AI to unlock growth, profitability and sales efficiency', image: 'https://images.pexels.com/photos/7947758/pexels-photo-7947758.jpeg?auto=compress&cs=tinysrgb&w=800', icon: <Zap className="w-5 h-5 sm:w-6 sm:h-6" /> },
-      { id: 6, type: 'location', title: 'Forecasting Page', subtitle: 'Insightful Planning', description: 'Analyze trends, predict outcomes, and drive smarter decisions with clarity.', image: 'https://images.pexels.com/photos/7054417/pexels-photo-7054417.jpeg?auto=compress&cs=tinysrgb&w=800', icon: <MapPin className="w-5 h-5 sm:w-6 sm:h-6" /> },
-      { id: 7, type: 'success', title: 'Recommendation Page', stats: 'World\'s biggest brands Ready', description: 'Automated AI deployment pipelines', image: 'https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=800', icon: <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6" /> },
-      { id: 8, type: 'hero', title: 'Explore our Case Studies', description: 'Dive in to see how we turn ideas into real-world solutions.', image: 'https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=1200'}
+  { id: 5, type: 'feature', title: 'Revenue Growth Management', subtitle: 'Real-time Recognition', description: 'Ready to deploy AI to unlock growth, profitability and sales efficiency', image: 'https://images.pexels.com/photos/7947758/pexels-photo-7947758.jpeg?auto=compress&cs=tinysrgb&w=800', icon: <Zap className="w-5 h-5 sm:w-6 sm:h-6" /> , link: '/RevenueGrowthManagement'},
+  { id: 6, type: 'location', title: 'Forecasting Page', subtitle: 'Insightful Planning', description: 'Analyze trends, predict outcomes, and drive smarter decisions with clarity.', image: 'https://images.pexels.com/photos/7054417/pexels-photo-7054417.jpeg?auto=compress&cs=tinysrgb&w=800', icon: <MapPin className="w-5 h-5 sm:w-6 sm:h-6" />, link: '/forecasting' },
+  { id: 7, type: 'success', title: 'Recommendation Page', stats: 'World\'s biggest brands Ready', description: 'Automated AI deployment pipelines', image: 'https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=800', icon: <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6" />, link: '/recommendation' },
+  { id: 8, type: 'hero', title: 'Explore our Case Studies', description: 'Dive in to see how we turn ideas into real-world solutions.', image: 'https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=1200', link: '/case-studies' }
     ]
   }
 ];
@@ -47,6 +49,7 @@ export default function Carousel() {
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (isAutoPlaying) {
@@ -101,7 +104,11 @@ export default function Carousel() {
     }
 
     return (
-      <div className={`${baseClasses} ${getLayoutClasses()}`}>
+      <div
+        className={`${baseClasses} ${getLayoutClasses()}`}
+        onClick={card.link ? () => navigate(card.link!) : undefined}
+        style={card.link ? { cursor: 'pointer' } : undefined}
+      >
         <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style={{ backgroundImage: `url(${card.image})` }} />
         <div className={`absolute inset-0 ${overlayMap[card.type]}`} />
         <div className="relative h-full p-6 sm:p-8 flex flex-col justify-between">
