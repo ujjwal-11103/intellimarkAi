@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, Shield, BarChart3, Zap } from "lucide-react";
+import { ArrowLeft, Shield, BarChart3} from "lucide-react";
 
 const UnveilingAI = () => {
     return (
