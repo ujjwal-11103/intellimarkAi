@@ -136,15 +136,19 @@ const Hero = () => {
           <div className={`flex flex-col sm:flex-row items-center justify-center gap-6 mb-20 transition-all duration-1000 delay-800 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}>
-            <button className="group relative px-10 py-5 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-700 text-white font-bold text-lg rounded-2xl overflow-hidden shadow-2xl hover:shadow-blue-600/30 transition-all duration-500 hover:scale-105">
+            <a
+              href="https://outlook.office.com/bookwithme/user/e8ee839cd0224fb7bbc88d3de0f0e74a@intellimark.ai/meetingtype/X5VsiCFLD0O0S7V9WOBTyQ2?anonymous&ismsaljsauthenabled&ep=mLinkFromTile"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative px-10 py-5 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-700 text-white font-bold text-lg rounded-2xl overflow-hidden shadow-2xl hover:shadow-blue-600/30 transition-all duration-500 hover:scale-105"
+            >
               <span className="relative z-10 flex items-center">
                 Talk to an Expert
                 <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-blue-600 to-purple-700 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 skew-x-12"></div>
-            </button>
-
+            </a>
             {/* <button className="group flex items-center px-10 py-5 bg-white/90 backdrop-blur-xl text-gray-800 font-bold text-lg rounded-2xl border border-gray-200/50 hover:border-blue-300 hover:text-blue-600 transition-all duration-500 hover:shadow-xl hover:scale-105">
               <div className="w-12 h-12 bg-gradient-to-r from-blue-100 to-purple-100 rounded-xl flex items-center justify-center mr-4 group-hover:bg-gradient-to-r group-hover:from-blue-200 group-hover:to-purple-200 transition-all duration-300">
                 <Play className="w-6 h-6 text-blue-600 ml-1" />
