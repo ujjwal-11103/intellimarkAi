@@ -151,21 +151,30 @@ const Navbar = () => {
                     <div className="bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border p-8 w-[800px]">
                       <div className="grid grid-cols-3 gap-8">
                         {/* Featured */}
-                        <div className="col-span-1">
-                          <div className="relative group block">
-                            <div className="relative overflow-hidden rounded-xl">
-                              <img src={content.featured.image} alt={content.featured.title} className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" />
-                              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                              <div className="absolute top-3 left-3">
-                                <span className="px-3 py-1 bg-blue-600 text-white text-xs font-semibold rounded-full">{content.featured.badge}</span>
-                              </div>
-                              <div className="absolute bottom-4 left-4 right-4">
-                                <h3 className="text-white font-bold text-lg mb-1">{content.featured.title}</h3>
-                                <p className="text-white/80 text-sm">{content.featured.description}</p>
-                              </div>
+                        <Link to="/case-studies" className="relative group block">
+                          <div className="relative overflow-hidden rounded-xl">
+                            <img
+                              src={content.featured.image}
+                              alt={content.featured.title}
+                              className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                            <div className="absolute top-3 left-3">
+                              <span className="px-3 py-1 bg-blue-600 text-white text-xs font-semibold rounded-full">
+                                {content.featured.badge}
+                              </span>
+                            </div>
+                            <div className="absolute bottom-4 left-4 right-4">
+                              <h3 className="text-white font-bold text-lg mb-1">
+                                {content.featured.title}
+                              </h3>
+                              <p className="text-white/80 text-sm">
+                                {content.featured.description}
+                              </p>
                             </div>
                           </div>
-                        </div>
+                        </Link>
+
 
                         {/* Items */}
                         <div className="col-span-2 grid grid-cols-2 gap-4">
@@ -196,15 +205,15 @@ const Navbar = () => {
                             <h4 className="font-semibold text-gray-900 mb-1">Ready to Book Now?</h4>
                             <p className="text-sm text-gray-600">Explore our {item.toLowerCase()} in detail</p>
                           </div>
-                            <a
-                              href="https://outlook.office.com/bookwithme/user/e8ee839cd0224fb7bbc88d3de0f0e74a@intellimark.ai/meetingtype/X5VsiCFLD0O0S7V9WOBTyQ2?anonymous&ismsaljsauthenabled&ep=mLinkFromTile"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:shadow-lg group transition-all duration-300"
-                            >
-                              <span>Talk to an Expert</span>
-                              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
-                            </a>
+                          <a
+                            href="https://outlook.office.com/bookwithme/user/e8ee839cd0224fb7bbc88d3de0f0e74a@intellimark.ai/meetingtype/X5VsiCFLD0O0S7V9WOBTyQ2?anonymous&ismsaljsauthenabled&ep=mLinkFromTile"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:shadow-lg group transition-all duration-300"
+                          >
+                            <span>Talk to an Expert</span>
+                            <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
+                          </a>
                         </div>
                       </div>
                     </div>

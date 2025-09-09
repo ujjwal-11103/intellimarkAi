@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { ArrowUpRight, BookOpen, FileText, TrendingUp, Users, Brain, Lightbulb, ChevronRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+
 
 interface ResourceCard {
   id: string;
@@ -14,6 +16,23 @@ interface ResourceCard {
 
 const ResourcesHub: React.FC = () => {
   const [hoveredCard, setHoveredCard] = useState<string | null>(null);
+  const navigate = useNavigate();
+
+  const handleNavigation = (filter: string) => {
+    switch (filter) {
+      case 'All Resources':
+        navigate('/');
+        break;
+      case 'Blogs':
+        navigate('/blogs');
+        break;
+      case 'Case Studies':
+        navigate('/case-studies');
+        break;
+      default:
+        navigate('/');
+    }
+  };
 
   const resources: ResourceCard[] = [
     {
@@ -98,14 +117,14 @@ const ResourcesHub: React.FC = () => {
               <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
               <span className="text-sm font-medium text-gray-700">Latest insights & resources</span>
             </div> */}
-            
+
             <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 tracking-tight leading-none">
               Resources
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
                 Hub
               </span>
             </h1>
-            
+
             <p className="text-xl text-gray-600 mb-12 leading-relaxed max-w-2xl mx-auto">
               Explore expert insights, implementation guides, and success stories to accelerate your AI transformation journey.
             </p>
@@ -115,11 +134,11 @@ const ResourcesHub: React.FC = () => {
               {['All Resources', 'Blogs', 'Case Studies'].map((filter) => (
                 <button
                   key={filter}
-                  className={`px-6 py-3 rounded-full font-medium transition-all ${
-                    filter === 'All Resources'
-                      ? 'bg-gray-900 text-white shadow-lg'
-                      : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                  }`}
+                  onClick={() => handleNavigation(filter)}
+                  className={`px-6 py-3 rounded-full font-medium transition-all ${filter === 'All Resources'
+                    ? 'bg-gray-900 text-white shadow-lg'
+                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                    }`}
                 >
                   {filter}
                 </button>
@@ -142,8 +161,8 @@ const ResourcesHub: React.FC = () => {
                 onMouseLeave={() => setHoveredCard(null)}
               >
                 <div className="absolute inset-0">
-                  <img 
-                    src={resources[0].image} 
+                  <img
+                    src={resources[0].image}
                     alt={resources[0].title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
@@ -177,39 +196,39 @@ const ResourcesHub: React.FC = () => {
             {/* Side Articles */}
             <div className="lg:col-span-4 space-y-6">
               {resources.slice(1, 3).map((resource) => (
-                  <a
-                    key={resource.id}
-                    href={resource.type === 'CASE STUDY' ? '/case-studies' : resource.type === 'BLOG' ? '/blogs' : '#'}
-                    className="group relative h-[235px] rounded-2xl overflow-hidden cursor-pointer block focus:outline-none focus:ring-2 focus:ring-blue-500 active:scale-95 transition-transform duration-150"
-                    onMouseEnter={() => setHoveredCard(resource.id)}
-                    onMouseLeave={() => setHoveredCard(null)}
-                    tabIndex={0}
-                    aria-label={resource.title}
-                  >
-                    <div className="absolute inset-0">
-                      <img 
-                        src={resource.image} 
-                        alt={resource.title}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                <a
+                  key={resource.id}
+                  href={resource.type === 'CASE STUDY' ? '/case-studies' : resource.type === 'BLOG' ? '/blogs' : '#'}
+                  className="group relative h-[235px] rounded-2xl overflow-hidden cursor-pointer block focus:outline-none focus:ring-2 focus:ring-blue-500 active:scale-95 transition-transform duration-150"
+                  onMouseEnter={() => setHoveredCard(resource.id)}
+                  onMouseLeave={() => setHoveredCard(null)}
+                  tabIndex={0}
+                  aria-label={resource.title}
+                >
+                  <div className="absolute inset-0">
+                    <img
+                      src={resource.image}
+                      alt={resource.title}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                  </div>
+                  <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                    <div className={`inline-flex items-center space-x-2 px-2.5 py-1 rounded-full border text-xs font-medium mb-3 w-fit ${getTypeColor(resource.type)}`}>
+                      {getTypeIcon(resource.type)}
+                      <span>{resource.type}</span>
                     </div>
-                    <div className="absolute inset-0 p-6 flex flex-col justify-end">
-                      <div className={`inline-flex items-center space-x-2 px-2.5 py-1 rounded-full border text-xs font-medium mb-3 w-fit ${getTypeColor(resource.type)}`}>
-                        {getTypeIcon(resource.type)}
-                        <span>{resource.type}</span>
-                      </div>
-                      <h3 className="text-lg font-bold text-white mb-2 leading-tight line-clamp-2">
-                        {resource.title}
-                      </h3>
-                      <div className="flex items-center justify-between">
-                        <div className="w-8 h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-white/30 transition-all duration-300">
-                          <ArrowUpRight className="w-4 h-4 text-white" />
-                        </div>
+                    <h3 className="text-lg font-bold text-white mb-2 leading-tight line-clamp-2">
+                      {resource.title}
+                    </h3>
+                    <div className="flex items-center justify-between">
+                      <div className="w-8 h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-white/30 transition-all duration-300">
+                        <ArrowUpRight className="w-4 h-4 text-white" />
                       </div>
                     </div>
-                  </a>
-                ))}
+                  </div>
+                </a>
+              ))}
             </div>
           </div>
 
@@ -226,8 +245,8 @@ const ResourcesHub: React.FC = () => {
                 aria-label={resource.title}
               >
                 <div className="absolute inset-0">
-                  <img 
-                    src={resource.image} 
+                  <img
+                    src={resource.image}
                     alt={resource.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
@@ -268,7 +287,7 @@ const ResourcesHub: React.FC = () => {
           <p className="text-xl text-gray-600 mb-10 leading-relaxed">
             Join thousands of companies already leveraging IntelliMark's AI solutions to drive growth and innovation.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="https://outlook.office.com/bookwithme/user/e8ee839cd0224fb7bbc88d3de0f0e74a@intellimark.ai/meetingtype/X5VsiCFLD0O0S7V9WOBTyQ2?anonymous&ismsaljsauthenabled&ep=mLinkFromTile"
@@ -279,7 +298,7 @@ const ResourcesHub: React.FC = () => {
               <span>Talk to an Expert</span>
               <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>
-            
+
             <a
               href="/case-studies"
               className="inline-flex items-center justify-center space-x-2 border border-gray-300 text-gray-700 px-8 py-4 rounded-full font-semibold hover:border-gray-400 hover:bg-gray-50 transition-all duration-300"
@@ -291,7 +310,7 @@ const ResourcesHub: React.FC = () => {
         </div>
       </section>
 
-      
+
     </div>
   );
 };
