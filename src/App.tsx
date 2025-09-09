@@ -25,6 +25,14 @@ import ScrollToTop from './components/ScrollToTop';
 import { useEffect } from 'react';
 import Forecasting from './pages/Forecasting';
 import Recommendation from './pages/Recommendation';
+import Blogs from './pages/Blogs';
+import DecodingAI from './pages/blogs/DecodingAI';
+import StrategicPricing from './pages/blogs/StrategicPricing';
+import IlluminatingPath from './pages/blogs/IlluminatingPath';
+import IntegratingGenAI from './pages/blogs/IntegratingGenAI';
+import MarketingMixModeling from './pages/blogs/MarketingMixModeling';
+import FutureOfAI from './pages/blogs/FutureOfAI';
+import UnveilingAI from './pages/blogs/UnveilingAI';
 
 function App() {
   useEffect(() => {
@@ -80,6 +88,15 @@ function App() {
           <Route path="/Recommendation" element={<Recommendation />} />
 
           <Route path="/industry-details/:industryId" element={<IndustryDetailPage />} />
+
+          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/Decoding-the-Mysteries-of-AI" element={<DecodingAI />} />
+          <Route path="/Harnessing-AI-for-Strategic-Pricing-in-Consumer-Goods" element={<StrategicPricing />} />
+          <Route path="/Illuminating-the-Path-Forward" element={<IlluminatingPath />} />
+          <Route path="/Integrating-GenAI-with-Traditional-Data-Science" element={<IntegratingGenAI />} />
+          <Route path="/Marketing-Mix-Modeling" element={<MarketingMixModeling />} />
+          <Route path="/The-Future-of-AI" element={<FutureOfAI />} />
+          <Route path="/Unveiling-AI" element={<UnveilingAI />} />
         </Routes>
         <Footer />
       </div>
