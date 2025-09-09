@@ -48,9 +48,9 @@ const Navbar = () => {
       items: [
         { icon: Target, title: "Revenue Growth Management", description: "Ready to deploy AI to unlock growth, profitability and sales", path: "/RevenueGrowthManagement/" },
 
-        { icon: Zap, title: "Forecasting Page", description: "Highly accurate demand forecasting and sensing", path: "/Forecasting" },
+        { icon: Zap, title: "Advanced Forecasting and Planning", description: "Highly accurate demand forecasting and sensing", path: "/Forecasting" },
 
-        { icon: BarChart3, title: "AI led Recommendation engines", description: "Up-selling and cross-selling at scale", path: "/Recommendation" }
+        { icon: BarChart3, title: "Assortment Recommendation engines", description: "Up-selling and cross-selling at scale", path: "/Recommendation" }
 
         // { icon: Sparkles, title: "Performance Marketing Optimization", description: "AI-powered content creation at scale", path: "/product-detail/performance-marketing-optimization" }
       ]

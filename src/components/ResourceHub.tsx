@@ -177,37 +177,39 @@ const ResourcesHub: React.FC = () => {
             {/* Side Articles */}
             <div className="lg:col-span-4 space-y-6">
               {resources.slice(1, 3).map((resource) => (
-                <a
-                  key={resource.id}
-                  href={resource.type.toUpperCase() === 'CASE STUDY' ? '/case-studies' : resource.type.toUpperCase() === 'BLOG' ? '/blogs' : '#'}
-                  className="group relative h-[235px] rounded-2xl overflow-hidden cursor-pointer block"
-                  onMouseEnter={() => setHoveredCard(resource.id)}
-                  onMouseLeave={() => setHoveredCard(null)}
-                >
-                  <div className="absolute inset-0">
-                    <img 
-                      src={resource.image} 
-                      alt={resource.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                  </div>
-                  <div className="absolute inset-0 p-6 flex flex-col justify-end">
-                    <div className={`inline-flex items-center space-x-2 px-2.5 py-1 rounded-full border text-xs font-medium mb-3 w-fit ${getTypeColor(resource.type)}`}>
-                      {getTypeIcon(resource.type)}
-                      <span>{resource.type}</span>
+                  <a
+                    key={resource.id}
+                    href={resource.type === 'CASE STUDY' ? '/case-studies' : resource.type === 'BLOG' ? '/blogs' : '#'}
+                    className="group relative h-[235px] rounded-2xl overflow-hidden cursor-pointer block focus:outline-none focus:ring-2 focus:ring-blue-500 active:scale-95 transition-transform duration-150"
+                    onMouseEnter={() => setHoveredCard(resource.id)}
+                    onMouseLeave={() => setHoveredCard(null)}
+                    tabIndex={0}
+                    aria-label={resource.title}
+                  >
+                    <div className="absolute inset-0">
+                      <img 
+                        src={resource.image} 
+                        alt={resource.title}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                     </div>
-                    <h3 className="text-lg font-bold text-white mb-2 leading-tight line-clamp-2">
-                      {resource.title}
-                    </h3>
-                    <div className="flex items-center justify-between">
-                      <div className="w-8 h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-white/30 transition-all duration-300">
-                        <ArrowUpRight className="w-4 h-4 text-white" />
+                    <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                      <div className={`inline-flex items-center space-x-2 px-2.5 py-1 rounded-full border text-xs font-medium mb-3 w-fit ${getTypeColor(resource.type)}`}>
+                        {getTypeIcon(resource.type)}
+                        <span>{resource.type}</span>
+                      </div>
+                      <h3 className="text-lg font-bold text-white mb-2 leading-tight line-clamp-2">
+                        {resource.title}
+                      </h3>
+                      <div className="flex items-center justify-between">
+                        <div className="w-8 h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-white/30 transition-all duration-300">
+                          <ArrowUpRight className="w-4 h-4 text-white" />
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </a>
-              ))}
+                  </a>
+                ))}
             </div>
           </div>
 
@@ -216,10 +218,12 @@ const ResourcesHub: React.FC = () => {
             {resources.slice(3).map((resource) => (
               <a
                 key={resource.id}
-                href={resource.type.toUpperCase() === 'CASE STUDY' ? '/case-studies' : resource.type.toUpperCase() === 'BLOG' ? '/blogs' : '#'}
-                className="group relative h-[320px] rounded-2xl overflow-hidden cursor-pointer block"
+                href={resource.type === 'CASE STUDY' ? '/case-studies' : resource.type === 'BLOG' ? '/blogs' : '#'}
+                className="group relative h-[320px] rounded-2xl overflow-hidden cursor-pointer block focus:outline-none focus:ring-2 focus:ring-blue-500 active:scale-95 transition-transform duration-150"
                 onMouseEnter={() => setHoveredCard(resource.id)}
                 onMouseLeave={() => setHoveredCard(null)}
+                tabIndex={0}
+                aria-label={resource.title}
               >
                 <div className="absolute inset-0">
                   <img 
