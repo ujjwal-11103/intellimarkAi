@@ -8,7 +8,8 @@ import {
   MapPin,
   Linkedin,
   Twitter,
-  Github
+  Github,
+  ArrowRight
 } from 'lucide-react';
 import rahul from "../photos/rahul.png";
 import sandeep from "../photos/Sandeep.jpeg";
@@ -235,8 +236,18 @@ function AboutUs() {
             
             <div className="flex justify-center space-x-6 mt-8">
               <Linkedin className="h-8 w-8 text-purple-300 hover:text-white cursor-pointer transition-colors transform hover:scale-110" />
-              <Twitter className="h-8 w-8 text-purple-300 hover:text-white cursor-pointer transition-colors transform hover:scale-110" />
-              <Github className="h-8 w-8 text-purple-300 hover:text-white cursor-pointer transition-colors transform hover:scale-110" />
+              {/* <Twitter className="h-8 w-8 text-purple-300 hover:text-white cursor-pointer transition-colors transform hover:scale-110" />
+              <Github className="h-8 w-8 text-purple-300 hover:text-white cursor-pointer transition-colors transform hover:scale-110" /> */}
+            </div>
+            <div className="flex justify-center mt-6">
+              <a
+                            href="https://outlook.office.com/bookwithme/user/e8ee839cd0224fb7bbc88d3de0f0e74a@intellimark.ai/meetingtype/X5VsiCFLD0O0S7V9WOBTyQ2?anonymous&ismsaljsauthenabled&ep=mLinkFromTile"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="relative px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl overflow-hidden group transition-all duration-300 hover:shadow-xl hover:scale-105"
+                          >
+                            <span className="relative z-10 flex items-center">Talk to an Expert <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" /></span>
+              </a>
             </div>
           </div>
         </div>

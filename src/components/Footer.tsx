@@ -89,41 +89,43 @@ const Footer = () => {
             <div className="mb-6">
               <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Company</h3>
               <ul className="space-y-1 sm:space-y-2">
-                <li>
-                  <a 
-                    href="#" 
-                    className="text-sm sm:text-base text-gray-300 hover:text-purple-400 transition-colors duration-200"
-                  >
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <a 
-                    href="#" 
-                    className="text-sm sm:text-base text-gray-300 hover:text-purple-400 transition-colors duration-200"
-                  >
-                    About Us
-                  </a>
-                </li>
-                <li>
-                  <a 
-                    href="#" 
-                    className="text-sm sm:text-base text-gray-300 hover:text-purple-400 transition-colors duration-200"
-                  >
-                    Products
-                  </a>
-                </li>
+                  <li>
+                    <a 
+                      href="/" 
+                      className="text-sm sm:text-base text-gray-300 hover:text-purple-400 transition-colors duration-200"
+                    >
+                      Home
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="/About" 
+                      className="text-sm sm:text-base text-gray-300 hover:text-purple-400 transition-colors duration-200"
+                    >
+                      About Us
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="/Products" 
+                      className="text-sm sm:text-base text-gray-300 hover:text-purple-400 transition-colors duration-200"
+                    >
+                      Products
+                    </a>
+                  </li>
               </ul>
             </div>
 
             <div>
               <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-purple-400">Get In Touch</h3>
-              <a 
-                href="#" 
-                className="inline-flex items-center justify-center w-8 h-8 bg-purple-600 hover:bg-purple-700 rounded transition-colors duration-200"
-              >
-                <Linkedin className="w-4 h-4 text-white" />
-              </a>
+                <a 
+                  href="https://www.linkedin.com/company/intellimark-analytics/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="inline-flex items-center justify-center w-8 h-8 bg-purple-600 hover:bg-purple-700 rounded transition-colors duration-200"
+                >
+                  <Linkedin className="w-4 h-4 text-white" />
+                </a>
             </div>
           </div>
         </div>
@@ -133,7 +135,7 @@ const Footer = () => {
       <div className="border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4">
           <p className="text-gray-400 text-xs sm:text-sm text-center sm:text-left">
-            © 2024 Intellimark Analytics private limited. All rights reserved.
+            © 2025 Intellimark Analytics private limited. All rights reserved.
           </p>
         </div>
       </div>

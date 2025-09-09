@@ -224,10 +224,10 @@ const CaseStudiesPage: React.FC = () => {
             <span className="text-white font-bold">Your transformation starts here.</span>
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8">
-            <button className="bg-white text-purple-600 px-10 py-5 rounded-2xl font-black text-lg hover:bg-gray-50 transition-colors shadow-2xl hover:scale-105">
+            {/* <button className="bg-white text-purple-600 px-10 py-5 rounded-2xl font-black text-lg hover:bg-gray-50 transition-colors shadow-2xl hover:scale-105">
               <Target className="w-6 h-6 mr-3 inline" />
               Start Your Project
-            </button>
+            </button> */}
             <a
               href="https://outlook.office.com/bookwithme/user/e8ee839cd0224fb7bbc88d3de0f0e74a@intellimark.ai/meetingtype/X5VsiCFLD0O0S7V9WOBTyQ2?anonymous&ismsaljsauthenabled&ep=mLinkFromTile"
               target="_blank"

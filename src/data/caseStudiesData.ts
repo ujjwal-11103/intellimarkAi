@@ -96,7 +96,7 @@ export const caseStudiesData: CaseStudy[] = [
     industry: 'dairy_tuna',
     industryLabel: 'Dairy & Tuna',
     metrics: {
-      improvement: 'Lever optimization across 5 categories',
+      improvement: '$10M unlocked in revenue growth.',
       timeFrame: '1 year'
     },
     problem: 'Brands needed to optimize multiple levers for growth in SEAA markets.',
@@ -235,7 +235,7 @@ export const caseStudiesData: CaseStudy[] = [
   industry: 'fmcg',
   industryLabel: 'FMCG',
   metrics: {
-    improvement: '≥90% price forecast accuracy (1 quarter out)',
+    improvement: '≥90% price forecast accuracy',
     timeFrame: '12-month horizon; quarterly updates'
   },
   problem:
@@ -414,7 +414,7 @@ export const caseStudiesData: CaseStudy[] = [
   industry: 'consumer_goods',
   industryLabel: 'Consumer Goods',
   metrics: {
-    improvement: '80% recall, 50% precision, 30% increase in hit rate, 10% increase in lines per store',
+    improvement: '80% recall, 50% precision, 85% coverage, 50% precision, 10% lines increase',
     timeFrame: '—'
   },
   problem:

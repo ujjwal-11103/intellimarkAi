@@ -36,8 +36,8 @@ const slides: Slide[] = [
     id: 2,
     cards: [
   { id: 5, type: 'feature', title: 'Revenue Growth Management', subtitle: 'Real-time Recognition', description: 'Ready to deploy AI to unlock growth, profitability and sales efficiency', image: 'https://images.pexels.com/photos/7947758/pexels-photo-7947758.jpeg?auto=compress&cs=tinysrgb&w=800', icon: <Zap className="w-5 h-5 sm:w-6 sm:h-6" /> , link: '/RevenueGrowthManagement'},
-  { id: 6, type: 'location', title: 'Forecasting Page', subtitle: 'Insightful Planning', description: 'Analyze trends, predict outcomes, and drive smarter decisions with clarity.', image: 'https://images.pexels.com/photos/7054417/pexels-photo-7054417.jpeg?auto=compress&cs=tinysrgb&w=800', icon: <MapPin className="w-5 h-5 sm:w-6 sm:h-6" />, link: '/forecasting' },
-  { id: 7, type: 'success', title: 'Recommendation Page', stats: 'World\'s biggest brands Ready', description: 'Automated AI deployment pipelines', image: 'https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=800', icon: <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6" />, link: '/recommendation' },
+  { id: 6, type: 'location', title: 'Forecasting Page', subtitle: 'Insightful Planning', description: 'Advanced forecasting engine. 30% higher forecast, 20% lesser inventory holding.', image: 'https://images.pexels.com/photos/7054417/pexels-photo-7054417.jpeg?auto=compress&cs=tinysrgb&w=800', icon: <MapPin className="w-5 h-5 sm:w-6 sm:h-6" />, link: '/forecasting' },
+  { id: 7, type: 'success', title: 'Recommendation Page', stats: 'World\'s biggest brands Ready', description: 'Assortment Recommendation Engine. Deployed over 5,00,000 stores.', image: 'https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=800', icon: <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6" />, link: '/recommendation' },
   { id: 8, type: 'hero', title: 'Explore our Case Studies', description: 'Dive in to see how we turn ideas into real-world solutions.', image: 'https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=1200', link: '/case-studies' }
     ]
   }

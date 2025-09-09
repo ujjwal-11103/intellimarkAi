@@ -21,11 +21,11 @@ const CompanyMarquee: React.FC = () => {
           100% { transform: translateX(-100%); }
         }
         .animate-marquee-slow {
-          animation: marquee-slow 60s linear infinite;
+          animation: marquee-slow 30s linear infinite;
         }
         @media (max-width: 768px) {
           .animate-marquee-slow {
-            animation-duration: 40s;
+            animation-duration: 30s;
           }
         }
         @keyframes gradient-x {

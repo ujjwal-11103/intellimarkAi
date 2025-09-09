@@ -26,8 +26,8 @@ const Hero = () => {
 
   const stats = [
     { value: '10M+', label: 'Data Points Processed', icon: Database },
-    { value: '20%', label: 'Higher Growth', icon: Target },
-    { value: '5x', label: 'ROI Increase', icon: TrendingUp },
+    { value: '30%', label: 'Higher Growth', icon: Target },
+    { value: '5x', label: 'Project ROI', icon: TrendingUp },
     { value: '50M+', label: 'Dollars Unlocked', icon: Zap }
   ];
 
@@ -70,7 +70,7 @@ const Hero = () => {
           }`}>
             <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mr-3 animate-pulse"></div>
             <Sparkles className="w-4 h-4 mr-2" />
-            <Link to="/Forecasting" className="hover:underline hover:text-blue-900 transition-colors duration-200">
+            <Link to="/RevenueGrowthManagement" className="hover:underline hover:text-blue-900 transition-colors duration-200">
               Next-Gen Revenue Growth Management Platform.
             </Link>
             <ChevronRight className="w-4 h-4 ml-2" />
@@ -138,7 +138,7 @@ const Hero = () => {
           }`}>
             <button className="group relative px-10 py-5 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-700 text-white font-bold text-lg rounded-2xl overflow-hidden shadow-2xl hover:shadow-blue-600/30 transition-all duration-500 hover:scale-105">
               <span className="relative z-10 flex items-center">
-                Book Now
+                Talk to an Expert
                 <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-blue-600 to-purple-700 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
