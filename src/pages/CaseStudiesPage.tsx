@@ -154,12 +154,12 @@ const CaseStudiesPage: React.FC = () => {
                     </div>
                     <div className="text-xs text-gray-600 font-bold uppercase tracking-wide">Improvement</div>
                   </div>
-                  <div className="text-center">
+                  {/* <div className="text-center">
                     <div className="text-2xl font-black bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
                       {study.metrics.timeFrame}
                     </div>
                     <div className="text-xs text-gray-600 font-bold uppercase tracking-wide">Timeline</div>
-                  </div>
+                  </div> */}
                 </div>
 
                 {/* Technology Tags */}

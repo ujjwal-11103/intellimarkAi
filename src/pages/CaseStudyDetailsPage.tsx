@@ -81,17 +81,17 @@ const CaseStudyDetail: React.FC = () => {
         </AnimatedSection>
 
         {/* Key Metrics */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-1 gap-6 mb-16">
           <StatCard
             icon={<TrendingUp className="w-5 h-5" />}
             value={caseStudy.metrics.improvement}
             label="Improvement"
           />
-          <StatCard
+          {/* <StatCard
             icon={<Users className="w-5 h-5" />}
             value={caseStudy.metrics.timeFrame}
             label="Time Frame"
-          />
+          /> */}
         </div>
 
         <div className="space-y-12">

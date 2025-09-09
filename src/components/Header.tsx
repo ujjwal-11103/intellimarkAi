@@ -100,7 +100,7 @@ const Navbar = () => {
               <span className="text-2xl font-bold bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
                 IntelliMark
               </span>
-              <span className="text-xs font-medium text-blue-600 -mt-1">AI</span>
+              {/* <span className="text-xs font-medium text-blue-600 -mt-1">AI</span> */}
             </div>
           </Link>
 

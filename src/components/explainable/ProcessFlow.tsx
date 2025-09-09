@@ -87,25 +87,25 @@ export const ProcessFlow = () => {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-br from-gray-50 to-purple-50">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-3">
+    <section className="py-10 sm:py-16 bg-gradient-to-br from-gray-50 to-purple-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2 sm:mb-3">
             NRM Principles: Business-First ML Process Flow
           </h2>
-          <p className="text-gray-600 max-w-3xl mx-auto">
+          <p className="text-gray-600 max-w-3xl mx-auto text-sm sm:text-base">
             Integrating traditional NRM expertise with next-generation machine learning for actionable revenue optimization
           </p>
         </div>
 
         {/* Main Process Flow */}
-        <div className="grid grid-cols-12 gap-6 items-start mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-12 gap-6 items-start mb-8 sm:mb-12">
           {/* Input Categories */}
-          <div className="col-span-3 space-y-3">
-            <h3 className="font-semibold text-gray-800 text-sm mb-4 text-center">NRM Analysis</h3>
+          <div className="sm:col-span-3 space-y-3">
+            <h3 className="font-semibold text-gray-800 text-xs sm:text-sm mb-2 sm:mb-4 text-center">NRM Analysis</h3>
             {inputCategories.map((category, index) => (
-              <div key={index} className={`${category.color} rounded-lg p-3 border transition-all hover:shadow-md`}>
-                <div className="flex items-center mb-2">
+              <div key={index} className={`${category.color} rounded-lg p-2 sm:p-3 border transition-all hover:shadow-md`}>
+                <div className="flex items-center mb-1 sm:mb-2">
                   <div className="text-gray-700 mr-2">{category.icon}</div>
                   <h4 className="font-medium text-gray-800 text-xs">{category.title}</h4>
                 </div>
@@ -121,20 +121,20 @@ export const ProcessFlow = () => {
           </div>
 
           {/* Process Steps */}
-          <div className="col-span-6 space-y-5">
-            <h3 className="font-semibold text-gray-800 text-sm mb-4 text-center">ML Process Pipeline</h3>
+          <div className="sm:col-span-6 space-y-4 sm:space-y-5">
+            <h3 className="font-semibold text-gray-800 text-xs sm:text-sm mb-2 sm:mb-4 text-center">ML Process Pipeline</h3>
             {processSteps.map((step, index) => (
               <div key={index} className="relative">
                 <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
-                  <div className={`${step.color} text-white px-4 py-2`}>
+                  <div className={`${step.color} text-white px-3 sm:px-4 py-2`}>
                     <div className="flex items-center justify-between">
-                      <span className="font-bold text-sm">{step.phase}</span>
+                      <span className="font-bold text-xs sm:text-sm">{step.phase}</span>
                       <span className="text-xs opacity-90">{step.title}</span>
                     </div>
                   </div>
-                  <div className="p-4">
-                    <p className="text-sm text-gray-700 mb-3">{step.description}</p>
-                    <div className="grid grid-cols-2 gap-2">
+                  <div className="p-3 sm:p-4">
+                    <p className="text-xs sm:text-sm text-gray-700 mb-2 sm:mb-3">{step.description}</p>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                       {step.details.map((detail, detailIndex) => (
                         <div key={detailIndex} className="text-xs text-gray-600 bg-gray-50 rounded px-2 py-1">
                           {detail}
@@ -143,15 +143,10 @@ export const ProcessFlow = () => {
                     </div>
                   </div>
                 </div>
-                {/* {index < processSteps.length - 1 && (
-                  <div className="flex justify-center mt-2 mb-2">
-                    <ArrowRight className="w-4 h-4 text-purple-400" />
-                  </div>
-                )} */}
                 {/* Connector Line (only if not last item) */}
                 {index < processSteps.length - 1 && (
-                  <div className="absolute left-0 right-0 -bottom-5 h-10 flex items-center z-20">
-                    <div className="mx-auto w-2 h-full border-l-4 border-dotted border-purple-600 opacity-80"></div>
+                  <div className="absolute left-0 right-0 -bottom-5 h-8 sm:h-10 flex items-center z-20">
+                    <div className="mx-auto w-1 sm:w-2 h-full border-l-2 sm:border-l-4 border-dotted border-purple-600 opacity-80"></div>
                   </div>
                 )}
               </div>
@@ -159,15 +154,14 @@ export const ProcessFlow = () => {
           </div>
 
           {/* Outcomes */}
-          <div className="col-span-3 space-y-3">
-            <h3 className="font-semibold text-gray-800 text-sm mb-4 text-center">Strategic Outcomes</h3>
+          <div className="sm:col-span-3 space-y-3">
+            <h3 className="font-semibold text-gray-800 text-xs sm:text-sm mb-2 sm:mb-4 text-center">Strategic Outcomes</h3>
             {outcomes.map((outcome, index) => (
-              <div key={index} className="bg-gradient-to-br from-purple-600 to-purple-700 rounded-lg p-10 text-white shadow-lg">
-                <div className="flex items-center mb-2">
+              <div key={index} className="bg-gradient-to-br from-purple-600 to-purple-700 rounded-lg p-6 sm:p-10 text-white shadow-lg">
+                <div className="flex items-center mb-1 sm:mb-2">
                   {outcome.icon}
-                  <h4 className="font-semibold text-sm ml-2">{outcome.title}</h4>
+                  <h4 className="font-semibold text-xs sm:text-sm ml-2">{outcome.title}</h4>
                 </div>
-                {/* <p className="text-xs text-purple-100 mb-3">{outcome.description}</p> */}
                 <div className="space-y-1">
                   {outcome.metrics.map((metric, metricIndex) => (
                     <div key={metricIndex} className="text-xs bg-white/20 rounded px-2 py-1">

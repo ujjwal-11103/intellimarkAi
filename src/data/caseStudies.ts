@@ -192,5 +192,21 @@ export const caseStudies: CaseStudy[] = [
     },
   tags: ['Production Planning', 'Resource Optimization', 'Energy Efficiency'],
   topics: ['Forecasting', 'Revenue Growth Management', 'Packaging Material']
-  }
+  },
+  {
+  id: '13',
+  title: 'Driving Growth for a Major FMCG Brand in India',
+  company: 'Leading FMCG Brand',
+  industry: 'manufacturing',
+  description: 'AI-powered analytics platform optimized retail operations, inventory management, and promotional strategies, boosting recall, precision, and sales performance across India’s diverse markets.',
+  image: 'https://images.pexels.com/photos/373564/pexels-photo-373564.jpeg?auto=compress&cs=tinysrgb&w=500',
+  readTime: 9,
+  results: {
+    improvement: '30% increase in hit rate, 10% increase in lines per store',
+    metric: 'Sales Performance & SKU Retention',
+    timeframe: '—'
+  },
+  tags: ['AI Analytics', 'Retail Optimization', 'FMCG Growth'],
+  topics: ['Forecasting', 'Inventory Management', 'Sales Growth']
+}
 ];

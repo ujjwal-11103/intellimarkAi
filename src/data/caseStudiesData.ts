@@ -58,7 +58,7 @@ export const caseStudiesData: CaseStudy[] = [
       ],
       technologies: ['Machine Learning', 'Time-series Models', 'Tableau', 'Power BI'],
       testimonial: { quote: '', author: '', position: '', company: '' },
-      topics: ['Forecasting']
+      topics: ['Forecasting','Planning','B2B']
   },
   {
     id: 'impact-pricing-skincare',
@@ -87,7 +87,7 @@ export const caseStudiesData: CaseStudy[] = [
     ],
     technologies: ['Analytics', 'Dashboarding'],
     testimonial: { quote: '', author: '', position: '', company: '' },
-    topics: ['Revenue Growth Management', 'Skincare']
+    topics: ['Revenue Growth Management','CPG']
   },
   {
     id: 'lever-1-5-dairy-tuna-seaa',
@@ -116,7 +116,7 @@ export const caseStudiesData: CaseStudy[] = [
     ],
     technologies: ['Market Analysis', 'Strategy Development'],
     testimonial: { quote: '', author: '', position: '', company: '' },
-    topics: ['Revenue Growth Management', 'Dairy', 'Tuna']
+    topics: ['Revenue Growth Management','CPG']
   },
   {
       id: 'store-recommendation-lubricant',
@@ -296,7 +296,7 @@ export const caseStudiesData: CaseStudy[] = [
     ],
     technologies: ['Intellimark Feature Engineering Engine', 'Weather Data Fusion', 'Forecast Dashboards'],
     testimonial: { quote: '', author: '', position: '', company: '' },
-    topics: ['Forecasting', 'Services']
+    topics: ['Forecasting','B2B']
   },
   {
     id: 'fortune500-appliances-forecasting',
@@ -332,7 +332,7 @@ export const caseStudiesData: CaseStudy[] = [
   ],
   technologies: ['Intellimark Feature Engineering Engine', 'Granular City×Product Forecasting', 'Variant Optimization'],
   testimonial: { quote: '', author: '', position: '', company: '' },
-  topics: ['Forecasting', 'Electronics']
+  topics: ['Forecasting','Electronics']
   },
   {
     id: 'skincare-pricing-adspend-forecasting',
@@ -368,7 +368,7 @@ export const caseStudiesData: CaseStudy[] = [
   ],
   technologies: ['Intellimark Teresa Forecasting Engine', 'E-commerce Scraping (Amazon)', 'Price/Rank/Media Fusion'],
   testimonial: { quote: '', author: '', position: '', company: '' },
-  topics: ['Forecasting', 'Revenue Growth Management', 'Beauty & Wellbeing', 'CPG']
+  topics: ['Forecasting', 'Revenue Growth Management','CPG']
   },
   {
     id: '9',
@@ -404,81 +404,45 @@ export const caseStudiesData: CaseStudy[] = [
   ],
   technologies: ['AI-powered analytics platform', 'Uplift Modeling', 'Trade Promotion Optimization'],
   testimonial: { quote: '', author: '', position: '', company: '' },
-  topics: ['Recommendation Systems', 'CPG']
+  topics: ['Recommendation Systems', 'Alcohol']
   },
   {
-    id: '10',
-  title: 'Lever 1 to 5 – Large Dairy and Tuna Brands in SEAA',
+  id: 'driving-growth-fmcg-india',
+  title: 'Driving Growth for a Major FMCG Brand in India',
   description:
-    'Net Revenue Management (NRM) strategy leveraging Nielsen data to set optimal price points, identify whitespace SKU opportunities, and define SPI ranges for profitability.',
+    'AI-powered analytics platform optimized retail operations, inventory management, and promotional strategies, boosting recall, precision, and sales performance across India’s diverse markets.',
   industry: 'consumer_goods',
   industryLabel: 'Consumer Goods',
   metrics: {
-    improvement: 'Recommended SPI ranges and new SKU launches',
+    improvement: '80% recall, 50% precision, 30% increase in hit rate, 10% increase in lines per store',
     timeFrame: '—'
   },
   problem:
-    'A leading milk brand in South Asia faced margin pressures from rising costs. Needed to set optimal pricing, benchmark competitors, identify whitespace opportunities, and establish SPI ranges for SKUs.',
+    'A leading FMCG brand in India needed to increase lines per store sales and retain consistently selling SKUs while optimizing promotional spending across 500,000 retail outlets.',
   challenges: [
-    'Determine optimal price points without losing share.',
-    'Benchmark against competitors to maintain positioning.',
-    'Explore whitespace for new SKUs by size/variant.',
-    'Set SPI ranges by SKU to guide pricing decisions.',
-    'Optimize between discount-based vs. absolute price drop mechanisms.'
+    'Boost incremental sales by increasing the number of product lines per store.',
+    'Ensure consistent availability of high-performing SKUs to strengthen loyalty.',
+    'Optimize incentive schemes and payouts to reduce promotional wastage.',
+    'Segment stores effectively across diverse Indian markets (urban vs rural, kirana vs supermarkets).',
+    'Aggregate store-level forecasts into regional/state-level targets aligned with growth objectives.'
   ],
   solution:
-    'Implemented comprehensive NRM strategy combining SKU mapping, whitespace analysis, SPI range setting, and pricing mechanism optimization using Nielsen and finance insights.',
+    'Deployed an AI-powered analytics platform integrating predictive modeling, store-level inventory optimization, incentive scheme uplift modeling, and targeted forecasting for growth alignment.',
   approach: [
-    'Competitive SKU Mapping: mapped brand SKUs vs. competitors; used elasticity to assess demand sensitivity.',
-    'Relative Price Strategy: positioned SKUs at 95–105% of competitor SKUs for balance.',
-    'Whitespace Analysis: analyzed Nielsen data to find gaps (e.g., 250ml flavored SKU, 1.5L family pack).',
-    'SPI Range Development: recommended SPI ranges (e.g., 90–110 for standard SKUs, 105–120 premium).',
-    'Pricing Mechanism Optimization: tested discount vs. absolute drops; recommended hybrid approach.'
+    'Store-Level Inventory Recommendations: forecasted demand at SKU level for high-margin products like shampoos, detergents, and packaged foods.',
+    'Upselling Opportunities: identified cross-sell and upsell SKUs using historical trade and sales data.',
+    'Store Segmentation: categorized outlets by sales growth, geography, and consumer behavior patterns.',
+    'Incentive Scheme Optimization: used uplift modeling to evaluate scheme impact and reduce promotional overspend.',
+    'Final Target Setting: rolled up store-level forecasts to regional and state levels for strategic alignment.'
   ],
   results: [
-    'Tailored pricing strategy balancing affordability and profitability.',
-    'New SKUs launched to address unmet demand in urban/semi-urban markets.',
-    'SPI ranges set to maintain competitiveness and profitability.',
-    'Hybrid pricing mechanism recommended.'
+    '500,000 outlets optimized across India with sales recommendations for 200+ FMCG products.',
+    'Increased hit rate by 30%, ensuring stronger performance of targeted SKUs.',
+    'Increased lines per store by ~10%, driving higher product diversity and sales.',
+    'Reduced promotional wastage by aligning offers with true demand patterns.'
   ],
-  technologies: ['Net Revenue Management (NRM)', 'Nielsen Data Analysis', 'Elasticity Modeling'],
+  technologies: ['AI-Powered Analytics Platform', 'Predictive Modeling', 'Uplift Modeling', 'Retail Data Integration'],
   testimonial: { quote: '', author: '', position: '', company: '' },
-  topics: ['Forecasting', 'Revenue Growth Management']
-  },
-  {
-    id: '11',
-  title: 'Impact of Pricing and Same Page RPI for Popular Skincare Brand',
-  description:
-    'Teresa Forecasting Engine scraping e-commerce + ad spend + rankings to improve pricing, visibility, and reduce out-of-stocks for skincare brand.',
-  industry: 'beauty_wellbeing',
-  industryLabel: 'Beauty and Wellbeing',
-  metrics: {
-    improvement: '25% e-commerce forecast accuracy improvement',
-    timeFrame: '—'
-  },
-  problem:
-    'Volatile e-commerce sales driven by ad spend fluctuations, competitive pricing, and category rankings caused inaccurate forecasts and stockouts. Limited external data worsened visibility and decision-making.',
-  challenges: [
-    'Unpredictable e-commerce sales.',
-    'Dependence on ad spend and competitor pricing.',
-    'Category rankings strongly impacting visibility/sales.',
-    'Limited external integration for forecasting.'
-  ],
-  solution:
-    'Scraped Amazon pricing for brand + competitors, integrated ad spend + rankings, and built forecasting model with these external inputs.',
-  approach: [
-    'Scraping: gathered competitor + brand real-time prices from Amazon.',
-    'Media Integration: added ad spend data to model media impact.',
-    'Ranking Integration: factored category ranking into demand forecasts.',
-    'Forecasting: robust ML model fusing external signals.'
-  ],
-  results: [
-    '25% improvement in e-commerce forecast accuracy.',
-    '200 pricing and media insights generated.',
-    '50% reduction in out-of-stock issues.'
-  ],
-  technologies: ['Intellimark Teresa Forecasting Engine', 'E-commerce Scraping', 'Ad Spend + Ranking Data Integration'],
-  testimonial: { quote: '', author: '', position: '', company: '' },
-  topics: ['Revenue Growth Management', 'CPG']
-  }
+  topics: ['Forecasting']
+}
 ];

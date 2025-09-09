@@ -44,6 +44,13 @@ const StudyCard: React.FC = () => {
       title: 'Store Recommendation and Incentive for Large Indian Beer Brand',
       description: 'AI-powered store recommendation and incentive optimization to improve market share, trade promotion effectiveness, and inventory planning for a leading Indian beer brand.',
       image: 'https://images.pexels.com/photos/1089932/pexels-photo-1089932.jpeg?auto=compress&cs=tinysrgb&w=800',
+    },
+    {
+      id: 'driving-growth-fmcg-india',
+      type: 'CASE STUDY',
+      title: 'Driving Growth for a Major FMCG Brand in India',
+      description: 'AI-powered analytics platform optimized retail operations, inventory management, and promotional strategies, boosting recall, precision, and sales performance across 500,000+ outlets in India.',
+      image: 'https://images.pexels.com/photos/1366594/pexels-photo-1366594.jpeg?auto=compress&cs=tinysrgb&w=800',
     }
   ];
 
