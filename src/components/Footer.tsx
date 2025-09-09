@@ -73,14 +73,7 @@ const Footer = () => {
                   AI led Reccomendation Engines
                 </a>
               </li>
-              <li>
-                <a 
-                  href="#" 
-                  className="text-sm sm:text-base text-gray-300 hover:text-purple-400 transition-colors duration-200 underline"
-                >
-                  
-                </a>
-              </li>
+                {/* Remove empty product link */}
             </ul>
           </div>
 
@@ -107,7 +100,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a 
-                      href="/Products" 
+                      href="#" 
                       className="text-sm sm:text-base text-gray-300 hover:text-purple-400 transition-colors duration-200"
                     >
                       Products

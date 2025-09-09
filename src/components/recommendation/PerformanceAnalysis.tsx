@@ -4,29 +4,29 @@ import { BarChart3, TrendingUp, MapPin } from 'lucide-react';
 const metrics = [
   {
     id: 'outlet-performance',
-    title: 'Outlet Performance',
-    description: 'Track individual outlet metrics',
+    title: 'Outlet Coverage',
+    description: '% of business covered by recommendation',
     icon: BarChart3,
-    value: '95%',
-    change: '+12%',
+    value: '85%',
+    change: '+15%',
     trend: 'up'
   },
   {
     id: 'success-tracking',
-    title: 'Success Tracking',
-    description: 'Monitor recommendation success',
+    title: 'Hit Rate',
+    description: '% of business from from recommendations',
     icon: TrendingUp,
-    value: '87%',
-    change: '+8%',
+    value: '65%',
+    change: '+30%',
     trend: 'up'
   },
   {
     id: 'territory-analysis',
-    title: 'Territory Analysis',
-    description: 'Geographic performance insights',
+    title: 'Unique Lines',
+    description: 'Increase in assortment per store',
     icon: MapPin,
-    value: '72%',
-    change: '+15%',
+    value: '15%',
+    change: '+5%',
     trend: 'up'
   }
 ];

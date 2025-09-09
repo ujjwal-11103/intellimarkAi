@@ -34,19 +34,16 @@ const NrmLevers = () => {
             Strategic levers for sustainable growth
           </p>
         </div>
-      {/* Header Triangle */}
+      {/* Header Rectangle */}
       <div className="relative mb-8 sm:mb-12">
         <div className="mx-auto w-full max-w-4xl px-2">
-          {/* Triangle shape */}
           <div 
-            className="relative bg-gradient-to-b from-purple-100 to-purple-50 mx-auto"
+            className="relative bg-gradient-to-b from-purple-100 to-purple-50 mx-auto rounded-xl shadow"
             style={{
-              clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)',
               height: '120px',
               width: '100%'
             }}
           >
-            {/* Content inside triangle */}
             <div className="absolute inset-0 flex items-center justify-center pt-4 sm:pt-8">
               <div className="text-center">
                 <h2 className="text-lg sm:text-2xl md:text-3xl font-bold text-gray-800 leading-tight">
