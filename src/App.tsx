@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from "@vercel/speed-insights/react"
 import Header from './components/Header';
 import Footer from './components/Footer';
 import AboutUs from './pages/About';
@@ -62,7 +63,7 @@ function App() {
 
           <Route path="/case-studies" element={<CaseStudiesPage />} />
           <Route path="/case-study/:id" element={<CaseStudyDetailsPage />} />
-          
+
           <Route path="/RevenueGrowthManagement" element={<ProductDetail />} />
           <Route path="/Forecasting" element={<Forecasting />} />
           <Route path="/Recommendation" element={<Recommendation />} />
@@ -81,6 +82,7 @@ function App() {
         <Footer />
       </div>
       <Analytics />
+      <SpeedInsights />
     </Router>
   );
 }
