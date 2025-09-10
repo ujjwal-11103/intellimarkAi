@@ -9,7 +9,7 @@ import ResourcesHub from '../components/ResourceHub';
 
 
 const HomePage = () => {
-    const title = "Intellimark AI - AI Powered Solutions";
+    const title = "Intellimark AI - Revenue growth management and forecasting solutions using explainable ai";
     const description =
         "Discover how Intellimark AI helps businesses transform their marketing strategy with advanced AI-driven insights, intelligent recommendations, and real-time analytics.";
 
