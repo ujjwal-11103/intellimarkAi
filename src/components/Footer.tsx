@@ -26,8 +26,8 @@ const Footer = () => {
             <div className="space-y-2 sm:space-y-3">
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-purple-400" />
-                <a 
-                  href="mailto:rahul@intellimark.ai" 
+                <a
+                  href="mailto:rahul@intellimark.ai"
                   className="text-sm sm:text-base text-gray-300 hover:text-purple-400 transition-colors duration-200 break-all"
                 >
                   rahul@intellimark.ai
@@ -35,8 +35,8 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-purple-400" />
-                <a 
-                  href="tel:+919140929770" 
+                <a
+                  href="tel:+919140929770"
                   className="text-sm sm:text-base text-gray-300 hover:text-purple-400 transition-colors duration-200"
                 >
                   +91 9140929770
@@ -45,80 +45,49 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Products */}
-          <div>
-            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Products</h3>
-            <ul className="space-y-1 sm:space-y-2">
-              <li>
-                <a 
-                  href="/RevenueGrowthManagement" 
-                  className="text-sm sm:text-base text-gray-300 hover:text-purple-400 transition-colors duration-200 underline"
-                >
-                  Revenue Growth Management
-                </a>
-              </li>
-              <li>
-                <a 
-                  href="/Forecasting" 
-                  className="text-sm sm:text-base text-gray-300 hover:text-purple-400 transition-colors duration-200 underline"
-                >
-                  Forecasting Page
-                </a>
-              </li>
-              <li>
-                <a 
-                  href="/Recommendation" 
-                  className="text-sm sm:text-base text-gray-300 hover:text-purple-400 transition-colors duration-200 underline"
-                >
-                  AI led Reccomendation Engines
-                </a>
-              </li>
-                {/* Remove empty product link */}
-            </ul>
-          </div>
 
           {/* Company & Get In Touch */}
           <div>
             <div className="mb-6">
               <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Company</h3>
               <ul className="space-y-1 sm:space-y-2">
-                  <li>
-                    <a 
-                      href="/" 
-                      className="text-sm sm:text-base text-gray-300 hover:text-purple-400 transition-colors duration-200"
-                    >
-                      Home
-                    </a>
-                  </li>
-                  <li>
-                    <a 
-                      href="/About" 
-                      className="text-sm sm:text-base text-gray-300 hover:text-purple-400 transition-colors duration-200"
-                    >
-                      About Us
-                    </a>
-                  </li>
-                  <li>
-                    <a 
-                      href="#" 
-                      className="text-sm sm:text-base text-gray-300 hover:text-purple-400 transition-colors duration-200"
-                    >
-                      Products
-                    </a>
-                  </li>
+                <li>
+                  <a
+                    href="/"
+                    className="text-sm sm:text-base text-gray-300 hover:text-purple-400 transition-colors duration-200"
+                  >
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/About"
+                    className="text-sm sm:text-base text-gray-300 hover:text-purple-400 transition-colors duration-200"
+                  >
+                    About Us
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-sm sm:text-base text-gray-300 hover:text-purple-400 transition-colors duration-200"
+                  >
+                    Products
+                  </a>
+                </li>
               </ul>
             </div>
 
             <div>
               <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-purple-400">Get In Touch</h3>
-                <a 
-                  href="https://www.linkedin.com/company/intellimark-analytics/" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="inline-flex items-center justify-center w-8 h-8 bg-purple-600 hover:bg-purple-700 rounded transition-colors duration-200"
-                >
-                  <Linkedin className="w-4 h-4 text-white" />
-                </a>
+              <a
+                href="https://www.linkedin.com/company/intellimark-analytics/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center w-8 h-8 bg-purple-600 hover:bg-purple-700 rounded transition-colors duration-200"
+              >
+                <Linkedin className="w-4 h-4 text-white" />
+              </a>
             </div>
           </div>
         </div>
