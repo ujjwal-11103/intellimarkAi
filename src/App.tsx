@@ -1,21 +1,12 @@
-// App.jsx
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import AboutUs from './pages/About';
 import IndustryDetailPage from './pages/IndustryDetails';
-import Hero from './components/Hero';
-import Carousel from './components/carousel';
-import CompanyMarquee from './components/marquee';
-// import { IntelliMarkPlatform } from './components/platform';
-import IndustryShowcase from './components/showcase';
-import StatsSection from './components/StatsSection';
-import UpcomingEvents from './components/UpcomingEvents';
-import ResourcesHub from './components/ResourceHub';
 import ProductDetail from './pages/ProductDetail';
 import Solutions from './pages/Products';
 import Industries from './pages/Industries';
-import About from './pages/About';
 import TestimonialsPage from './pages/TestimonialsPage';
 import Careers from './pages/Careers';
 import Contact from './pages/Contact';
@@ -50,9 +41,9 @@ function App() {
     };
 
     document.addEventListener('click', handleSmoothScroll);
+
     return () => document.removeEventListener('click', handleSmoothScroll);
   }, []);
-
 
 
   return (
@@ -61,21 +52,6 @@ function App() {
       <div className="min-h-screen bg-white">
         <Header />
         <Routes>
-          {/* <Route
-            path="/"
-            element={
-              <main>
-                <Hero />
-                <Carousel />
-                <CompanyMarquee />
-                <IntelliMarkPlatform />
-                <IndustryShowcase />
-                <StatsSection />
-                <UpcomingEvents />
-                <ResourcesHub />
-              </main>
-            }
-          /> */}
           <Route path="/" element={<HomePage />} />
           <Route path="/products" element={<Solutions />} />
           <Route path="/industries" element={<Industries />} />
@@ -83,14 +59,13 @@ function App() {
           <Route path="/testimonials" element={<TestimonialsPage />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/about" element={<About />} />
+
           <Route path="/case-studies" element={<CaseStudiesPage />} />
           <Route path="/case-study/:id" element={<CaseStudyDetailsPage />} />
-
+          
           <Route path="/RevenueGrowthManagement" element={<ProductDetail />} />
-          <Route path="/Forecasting/" element={<Forecasting />} />
+          <Route path="/Forecasting" element={<Forecasting />} />
           <Route path="/Recommendation" element={<Recommendation />} />
-
           <Route path="/industry-details/:industryId" element={<IndustryDetailPage />} />
 
           <Route path="/blogs" element={<Blogs />} />
@@ -101,9 +76,11 @@ function App() {
           <Route path="/Marketing-Mix-Modeling" element={<MarketingMixModeling />} />
           <Route path="/The-Future-of-AI" element={<FutureOfAI />} />
           <Route path="/Unveiling-AI" element={<UnveilingAI />} />
+
         </Routes>
         <Footer />
       </div>
+      <Analytics />
     </Router>
   );
 }
