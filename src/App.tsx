@@ -7,7 +7,7 @@ import IndustryDetailPage from './pages/IndustryDetails';
 import Hero from './components/Hero';
 import Carousel from './components/carousel';
 import CompanyMarquee from './components/marquee';
-import { IntelliMarkPlatform } from './components/platform';
+// import { IntelliMarkPlatform } from './components/platform';
 import IndustryShowcase from './components/showcase';
 import StatsSection from './components/StatsSection';
 import UpcomingEvents from './components/UpcomingEvents';
@@ -33,6 +33,7 @@ import IntegratingGenAI from './pages/blogs/IntegratingGenAI';
 import MarketingMixModeling from './pages/blogs/MarketingMixModeling';
 import FutureOfAI from './pages/blogs/FutureOfAI';
 import UnveilingAI from './pages/blogs/UnveilingAI';
+import HomePage from './pages/HomePage';
 
 function App() {
   useEffect(() => {
@@ -52,27 +53,30 @@ function App() {
     return () => document.removeEventListener('click', handleSmoothScroll);
   }, []);
 
+
+
   return (
     <Router>
       <ScrollToTop />
       <div className="min-h-screen bg-white">
         <Header />
         <Routes>
-          <Route
+          {/* <Route
             path="/"
             element={
               <main>
                 <Hero />
                 <Carousel />
                 <CompanyMarquee />
-                {/* <IntelliMarkPlatform /> */}
+                <IntelliMarkPlatform />
                 <IndustryShowcase />
                 <StatsSection />
                 <UpcomingEvents />
                 <ResourcesHub />
               </main>
             }
-          />
+          /> */}
+          <Route path="/" element={<HomePage />} />
           <Route path="/products" element={<Solutions />} />
           <Route path="/industries" element={<Industries />} />
           <Route path="/about" element={<AboutUs />} />

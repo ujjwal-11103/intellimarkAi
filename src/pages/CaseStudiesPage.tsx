@@ -3,6 +3,7 @@ import { ArrowRight, Users, ArrowUpRight, Target, CheckCircle, Sparkles } from '
 import { Link } from 'react-router-dom';
 import { caseStudiesData } from '../data/caseStudiesData';
 import Header from '../components/Header';
+import { Helmet } from 'react-helmet';
 
 
 // Collect all unique topics from the data
@@ -38,17 +39,26 @@ const CaseStudiesPage: React.FC = () => {
 
   useEffect(() => {
     setIsLoaded(true);
-  }, []);
 
+  }, []);
   // Filter case studies by selected topics (must match all selected)
   const filteredCaseStudies = selectedTopics.length === 0
     ? caseStudiesData
     : caseStudiesData.filter((study: any) =>
-        Array.isArray(study.topics) && selectedTopics.every(topic => study.topics.includes(topic))
-      );
+      Array.isArray(study.topics) && selectedTopics.every(topic => study.topics.includes(topic))
+    );
 
   return (
     <div className="min-h-screen bg-white">
+
+      {/* Dynamic SEO meta tags */}
+      <Helmet>
+        <title>Case Studies - Intellimark AI</title>
+        <meta name="description" content="Discover how Intellimark AI empowers businesses through real-world case studies showcasing innovative AI-driven marketing solutions." />
+        <meta property="og:title" content="Case Studies - Intellimark AI" />
+        <meta property="og:description" content="Explore success stories where Intellimark AI helped businesses transform their marketing strategies with data-driven insights." />
+      </Helmet>
+
       <Header />
 
       {/* Hero Section */}
@@ -56,23 +66,23 @@ const CaseStudiesPage: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-purple-50/50 via-white to-blue-50/30"></div>
         <div className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-br from-purple-200/30 to-blue-200/30 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-br from-blue-200/20 to-purple-200/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        
+
         <div className="relative container mx-auto px-6 py-20">
           <div className="max-w-5xl mx-auto text-center mb-20">
             <div className={`inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-100 to-blue-100 text-purple-700 rounded-full text-sm font-semibold mb-8 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               <Sparkles className="w-4 h-4 mr-2" />
               Trusted by World's biggest brands.
             </div>
-            
+
             <h1 className={`text-6xl md:text-8xl font-black text-gray-900 mb-8 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               AI Success
               <span className="block bg-gradient-to-r from-purple-600 via-purple-700 to-blue-600 bg-clip-text text-transparent">
                 Stories
               </span>
             </h1>
-            
+
             <p className={`text-2xl text-gray-600 leading-relaxed mb-12 max-w-4xl mx-auto transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-              Discover how industry leaders achieve extraordinary results with our cutting-edge AI solutions. 
+              Discover how industry leaders achieve extraordinary results with our cutting-edge AI solutions.
               <span className="text-purple-600 font-semibold">Real impact, measurable outcomes.</span>
             </p>
           </div>
@@ -103,11 +113,10 @@ const CaseStudiesPage: React.FC = () => {
                       isActive ? prev.filter(t => t !== topic) : [...prev, topic]
                     );
                   }}
-                  className={`px-5 py-2 rounded-xl text-sm font-bold border-2 transition-all duration-200 ${
-                    isActive
-                      ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white border-purple-600 scale-105 shadow-lg'
-                      : 'bg-white text-gray-700 border-gray-200 hover:bg-purple-50 hover:border-purple-300'
-                  }`}
+                  className={`px-5 py-2 rounded-xl text-sm font-bold border-2 transition-all duration-200 ${isActive
+                    ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white border-purple-600 scale-105 shadow-lg'
+                    : 'bg-white text-gray-700 border-gray-200 hover:bg-purple-50 hover:border-purple-300'
+                    }`}
                 >
                   {topic}
                 </button>
@@ -128,7 +137,7 @@ const CaseStudiesPage: React.FC = () => {
             >
               <div className="relative p-8 pb-6">
                 <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-purple-600 to-blue-600"></div>
-                
+
                 <div className="flex items-start justify-between mb-6">
                   <div className="inline-flex items-center px-4 py-2 rounded-xl text-xs font-bold bg-gradient-to-r from-purple-100 to-purple-200 text-purple-700">
                     {study.industryLabel}
@@ -211,7 +220,7 @@ const CaseStudiesPage: React.FC = () => {
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-72 h-72 bg-white/5 rounded-full blur-3xl"></div>
-        
+
         <div className="relative container mx-auto px-6 py-24 text-center">
           <h2 className="text-5xl md:text-6xl font-black text-white mb-8">
             Ready to Write Your
@@ -220,7 +229,7 @@ const CaseStudiesPage: React.FC = () => {
             </span>
           </h2>
           <p className="text-2xl text-purple-100 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Join the ranks of industry leaders who've transformed their business with our AI solutions. 
+            Join the ranks of industry leaders who've transformed their business with our AI solutions.
             <span className="text-white font-bold">Your transformation starts here.</span>
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8">

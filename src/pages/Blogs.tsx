@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet"
 import { Link } from "react-router-dom"
 
 const blogData = [
@@ -47,6 +48,14 @@ const blogData = [
 function Blogs() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-gray-100 py-16 px-4 sm:px-6 lg:px-8 mt-14">
+
+      <Helmet>
+        <title>Blogs - Intellimark AI</title>
+        <meta name="description" content="Read the latest articles and insights from Intellimark AI on marketing, AI technology, and industry trends." />
+        <meta property="og:title" content="Blogs - Intellimark AI" />
+        <meta property="og:description" content="Stay updated with Intellimark AI’s expert insights on AI-driven marketing strategies and industry innovations." />
+      </Helmet>
+
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">

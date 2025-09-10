@@ -1,7 +1,7 @@
-import { 
-  Brain, 
-  Users, 
-  Target, 
+import {
+  Brain,
+  Users,
+  Target,
   Award,
   Mail,
   Phone,
@@ -17,10 +17,21 @@ import parikshit from "../photos/Parikshit Nag.jpeg"
 import vishal from "../photos/Vishal.jpeg";
 import zaid from "../photos/Zaid.jpeg";
 import mainImage from "../photos/About us image.jpeg";
+import { Helmet } from 'react-helmet';
+
+
 
 function AboutUs() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white mt-8">
+
+      <Helmet>
+        <title>About Us - Intellimark AI</title>
+        <meta name="description" content="Learn about Intellimark AI – our team, mission, and how we use AI to empower smarter marketing decisions." />
+        <meta property="og:title" content="About Us - Intellimark AI" />
+        <meta property="og:description" content="Meet the talented team behind Intellimark AI, providing innovative AI solutions for smarter marketing." />
+      </Helmet>
+
 
       {/* Hero Section */}
       {/* <section className="relative h-screen flex items-center justify-center overflow-hidden mt-16">
@@ -48,7 +59,7 @@ function AboutUs() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <img 
+              <img
                 src={mainImage}
                 alt="AI Technology"
                 className="rounded-2xl shadow-2xl w-full h-96 object-cover"
@@ -107,11 +118,11 @@ function AboutUs() {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Meet Our Visionaries</h2>
             <p className="text-xl text-gray-600">The minds behind the magic</p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
             <div className="group">
               <div className="relative overflow-hidden rounded-2xl mb-6">
-                <img 
+                <img
                   src={rahul}
                   alt="Dr. Sarah Chen"
                   className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
@@ -122,10 +133,10 @@ function AboutUs() {
               <p className="text-purple-600 font-medium mb-3">CEO</p>
               <p className="text-gray-600 text-sm">Ex-Marketing Analytics Lead at Unilever</p>
             </div>
-            
+
             <div className="group">
               <div className="relative overflow-hidden rounded-2xl mb-6">
-                <img 
+                <img
                   src={vishal}
                   alt="Michael Rodriguez"
                   className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
@@ -136,10 +147,10 @@ function AboutUs() {
               <p className="text-purple-600 font-medium mb-3">Head of Supply Chain</p>
               <p className="text-gray-600 text-sm">Ex-Lowe’s, Fractal, Unilever, Marico and Loreal. 10 Years experience in Data Science</p>
             </div>
-            
+
             <div className="group">
               <div className="relative overflow-hidden rounded-2xl mb-6">
-                <img 
+                <img
                   src={sandeep}
                   alt="Dr. Aisha Johnson"
                   className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
@@ -152,7 +163,7 @@ function AboutUs() {
             </div>
             <div className="group">
               <div className="relative overflow-hidden rounded-2xl mb-6">
-                <img 
+                <img
                   src={parikshit}
                   alt="Dr. Aisha Johnson"
                   className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
@@ -166,7 +177,7 @@ function AboutUs() {
 
             <div className="group">
               <div className="relative overflow-hidden rounded-2xl mb-6">
-                <img 
+                <img
                   src={zaid}
                   alt="Mhd Zaid"
                   className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
@@ -183,7 +194,7 @@ function AboutUs() {
 
       {/* Values & Contact Section */}
       <section className="py-16 bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 relative overflow-hidden">
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center opacity-10"
           style={{
             backgroundImage: 'url(https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop)',
@@ -194,7 +205,7 @@ function AboutUs() {
             <h2 className="text-4xl font-bold text-white mb-4">What Drives Us</h2>
             <p className="text-xl text-purple-200">Four principles that guide everything we do</p>
           </div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             <div className="group text-center">
               <div className="bg-gradient-to-br from-purple-500 to-purple-700 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -203,7 +214,7 @@ function AboutUs() {
               <h3 className="text-xl font-bold text-white mb-2">Ethical AI</h3>
               <p className="text-purple-200 text-sm">Responsible innovation for a better tomorrow</p>
             </div>
-            
+
             <div className="group text-center">
               <div className="bg-gradient-to-br from-purple-500 to-purple-700 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                 <Users className="h-8 w-8 text-white" />
@@ -211,7 +222,7 @@ function AboutUs() {
               <h3 className="text-xl font-bold text-white mb-2">Human-First</h3>
               <p className="text-purple-200 text-sm">Technology that amplifies human potential</p>
             </div>
-            
+
             <div className="group text-center">
               <div className="bg-gradient-to-br from-purple-500 to-purple-700 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                 <Award className="h-8 w-8 text-white" />
@@ -219,7 +230,7 @@ function AboutUs() {
               <h3 className="text-xl font-bold text-white mb-2">Excellence</h3>
               <p className="text-purple-200 text-sm">Uncompromising quality in everything we build</p>
             </div>
-            
+
             <div className="group text-center">
               <div className="bg-gradient-to-br from-purple-500 to-purple-700 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                 <Target className="h-8 w-8 text-white" />
@@ -228,12 +239,12 @@ function AboutUs() {
               <p className="text-purple-200 text-sm">Pushing boundaries, creating possibilities</p>
             </div>
           </div>
-          
+
           {/* Contact CTA */}
           <div className="text-center">
             <h3 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Business?</h3>
             <p className="text-xl text-purple-200 mb-8">Let's build the future together</p>
-            
+
             <div className="flex justify-center space-x-6 mt-8">
               <Linkedin className="h-8 w-8 text-purple-300 hover:text-white cursor-pointer transition-colors transform hover:scale-110" />
               {/* <Twitter className="h-8 w-8 text-purple-300 hover:text-white cursor-pointer transition-colors transform hover:scale-110" />
@@ -241,12 +252,12 @@ function AboutUs() {
             </div>
             <div className="flex justify-center mt-6">
               <a
-                            href="https://outlook.office.com/bookwithme/user/e8ee839cd0224fb7bbc88d3de0f0e74a@intellimark.ai/meetingtype/X5VsiCFLD0O0S7V9WOBTyQ2?anonymous&ismsaljsauthenabled&ep=mLinkFromTile"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="relative px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl overflow-hidden group transition-all duration-300 hover:shadow-xl hover:scale-105"
-                          >
-                            <span className="relative z-10 flex items-center">Talk to an Expert <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" /></span>
+                href="https://outlook.office.com/bookwithme/user/e8ee839cd0224fb7bbc88d3de0f0e74a@intellimark.ai/meetingtype/X5VsiCFLD0O0S7V9WOBTyQ2?anonymous&ismsaljsauthenabled&ep=mLinkFromTile"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl overflow-hidden group transition-all duration-300 hover:shadow-xl hover:scale-105"
+              >
+                <span className="relative z-10 flex items-center">Talk to an Expert <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" /></span>
               </a>
             </div>
           </div>

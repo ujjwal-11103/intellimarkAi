@@ -1,6 +1,4 @@
-import { useParams, useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
-
+import { Helmet } from 'react-helmet';
 import {
   ArrowRight,
   Brain,
@@ -10,8 +8,9 @@ import {
   Shield,
   Target,
   TrendingUp,
-  Zap,
+  Zap
 } from 'lucide-react';
+
 import NrmLevers from '../components/explainable/Levers';
 import { VennDiagram } from '../components/explainable/VennDiagram';
 import { ProcessFlow } from '../components/explainable/ProcessFlow';
@@ -20,22 +19,6 @@ import StudyCard from '../components/StudyCard';
 import RGMStudyCard from '../components/explainable/RGMStudyCard';
 
 const ProductDetail = () => {
-  // const { productId } = useParams();
-  // const navigate = useNavigate();
-
-  // // ✅ Only allow this productId
-  // useEffect(() => {
-  //   if (productId !== "explainable-forecasting-engine") {
-  //     navigate('/products'); // Redirect if product doesn't exist
-  //   }
-  //   window.scrollTo(0, 0);
-  // }, [productId, navigate]);
-
-  // if (productId !== "explainable-forecasting-engine") {
-  //   return null;
-  // }
-
-  // ✅ Hardcoded product data inline
   const title = "Revenue Growth Management";
   const heroSubtitle = "Re-engineered with Artificial Intelligence";
   const heroDescription =
@@ -50,6 +33,14 @@ const ProductDetail = () => {
 
   return (
     <div className="bg-white">
+
+      {/* Dynamic SEO meta tags */}
+      <Helmet>
+        <title>{title} - Intellimark AI</title>
+        <meta name="description" content={heroDescription} />
+        <meta property="og:title" content={`${title} - Intellimark AI`} />
+        <meta property="og:description" content={heroDescription} />
+      </Helmet>
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-purple-50/30 via-white to-blue-50/20 pt-20 pb-24">
         <div className="max-w-7xl pt-6 mx-auto px-6 lg:px-8">
