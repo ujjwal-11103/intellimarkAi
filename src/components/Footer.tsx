@@ -5,23 +5,24 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 sm:gap-8">
-          {/* Company Info */}
-          <div className="sm:col-span-2 lg:col-span-2">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 lg:gap-8">
+
+          {/* Company Info - First Column */}
+          <div className="flex flex-col items-center md:items-start">
             <div className="flex items-center space-x-3 mb-4 sm:mb-6">
               <div className="w-10 h-10 sm:w-12 sm:h-12 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
                 <Brain className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
               </div>
               <h2 className="text-lg sm:text-xl font-bold">Intellimark AI</h2>
             </div>
-            <div className="space-y-1 sm:space-y-2">
+            <div className="space-y-1 sm:space-y-2 text-center md:text-left">
               <p className="text-sm sm:text-base text-gray-300">Re-Engineering</p>
               <p className="text-sm sm:text-base text-gray-300">Revenue Management</p>
             </div>
           </div>
 
-          {/* Contact */}
-          <div className="sm:col-span-2 lg:col-span-1">
+          {/* Contact - Second Column */}
+          <div className="flex flex-col items-center md:items-start">
             <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Contact</h3>
             <div className="space-y-2 sm:space-y-3">
               <div className="flex items-center space-x-2">
@@ -45,10 +46,9 @@ const Footer = () => {
             </div>
           </div>
 
-
-          {/* Company & Get In Touch */}
-          <div>
-            <div className="mb-6">
+          {/* Company & Get In Touch - Third Column */}
+          <div className="flex flex-col items-center md:items-start">
+            <div className="mb-6 text-center md:text-left">
               <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Company</h3>
               <ul className="space-y-1 sm:space-y-2">
                 <li>
@@ -78,8 +78,10 @@ const Footer = () => {
               </ul>
             </div>
 
-            <div>
-              <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-purple-400">Get In Touch</h3>
+            <div className="text-center md:text-left">
+              <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-purple-400">
+                Get In Touch
+              </h3>
               <a
                 href="https://www.linkedin.com/company/intellimark-analytics/"
                 target="_blank"
@@ -90,13 +92,14 @@ const Footer = () => {
               </a>
             </div>
           </div>
+
         </div>
       </div>
 
       {/* Copyright */}
       <div className="border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4">
-          <p className="text-gray-400 text-xs sm:text-sm text-center sm:text-left">
+          <p className="text-gray-400 text-xs sm:text-sm text-center md:text-left">
             © 2025 Intellimark Analytics private limited. All rights reserved.
           </p>
         </div>
