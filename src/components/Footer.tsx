@@ -67,14 +67,14 @@ const Footer = () => {
                     About Us
                   </a>
                 </li>
-                <li>
+                {/* <li>
                   <a
                     href="#"
                     className="text-sm sm:text-base text-gray-300 hover:text-purple-400 transition-colors duration-200"
                   >
                     Products
                   </a>
-                </li>
+                </li> */}
               </ul>
             </div>
 
