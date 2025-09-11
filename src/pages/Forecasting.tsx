@@ -1,11 +1,12 @@
-import { Helmet } from 'react-helmet';
 import React from 'react';
-import TeresaSystem from '../components/forecasting/TeresaSystem';
-import NowcastSystem from '../components/forecasting/NowcastSystem';
-import FeatureEngineering from '../components/forecasting/FeatureEngineering';
+import { Helmet } from 'react-helmet';
 import ComparisonSection from "../components/forecasting/ComparisonSection";
-import StudyCard from '../components/StudyCard';
+import FeatureEngineering from '../components/forecasting/FeatureEngineering';
 import ForecastingStudyCard from '../components/forecasting/ForecastingStudyCard';
+import CompanyMarquee from '../components/marquee';
+import NowcastSystem from '../components/forecasting/NowcastSystem';
+import TeresaSystem from '../components/forecasting/TeresaSystem';
+import StudyCard from '../components/StudyCard';
 
 const Forecasting = () => {
     const title = "Advanced Forecasting and Planning";
@@ -14,7 +15,6 @@ const Forecasting = () => {
 
     return (
         <div className="min-h-screen bg-white pt-16 pb-24">
-
             {/* Dynamic SEO meta tags */}
             <Helmet>
                 <title>{title} - Intellimark AI</title>
@@ -23,21 +23,23 @@ const Forecasting = () => {
                 <meta property="og:description" content={description} />
             </Helmet>
 
-            {/* Main Content */}
+            {/* Main Content - sorted by section */}
             <div id="teresa">
                 <TeresaSystem />
+            </div>
+            <div id="marquee">
+                <CompanyMarquee />
             </div>
             <div id="nowcast">
                 <NowcastSystem />
             </div>
-            <ComparisonSection />
             <div id="features">
                 <FeatureEngineering />
             </div>
+            <ComparisonSection />
             <div id="cards">
                 <ForecastingStudyCard />
             </div>
-
         </div>
     )
 }
