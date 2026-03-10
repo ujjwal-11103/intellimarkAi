@@ -1,14 +1,14 @@
 import React from 'react';
 import anaplan from "../images/anaplan.png"
+
 const CompanyMarquee: React.FC = () => {
   const companies = [
-    // { name: 'AWS', logo: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg' },
-    { name: 'AWS', logo: "https://logos-world.net/wp-content/uploads/2021/08/Amazon-Web-Services-AWS-Logo.png" },
+    { name: 'AWS', logo: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg' },
     { name: 'Google', logo: 'https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg' },
-    { name: 'Azure', logo: anaplan },
+    { name: 'Anaplan', logo: anaplan },
     { name: 'Blue Yonder', logo: 'https://vectorseek.com/wp-content/uploads/2023/08/Blue-Yonder-Logo-Vector.svg-.png' },
     { name: 'Nielsen', logo: 'https://upload.wikimedia.org/wikipedia/commons/8/82/Nielsen_logo.svg' },
-    { name: 'Flipkart', logo: 'https://logos-world.net/wp-content/uploads/2020/11/Flipkart-Logo.png' },
+    { name: 'Flipkart', logo: 'https://cdn.worldvectorlogo.com/logos/flipkart.svg' },
     { name: 'Zepto', logo: 'https://upload.wikimedia.org/wikipedia/en/7/7d/Logo_of_Zepto.png' },
   ];
 
@@ -18,7 +18,7 @@ const CompanyMarquee: React.FC = () => {
       <style>{`
         @keyframes marquee-slow {
           0% { transform: translateX(0%); }
-          100% { transform: translateX(-100%); }
+          100% { transform: translateX(-50%); }
         }
         .animate-marquee-slow {
           animation: marquee-slow 30s linear infinite;

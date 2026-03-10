@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Sparkles, Zap, Target, Play, ChevronRight, Brain, Cpu, Database, TrendingUp } from 'lucide-react';
+import { ArrowRight, Sparkles, Zap, Target, ChevronRight, Brain, Database, TrendingUp } from 'lucide-react';
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -10,7 +10,7 @@ const Hero = () => {
 
   useEffect(() => {
     setIsVisible(true);
-    
+
     const interval = setInterval(() => {
       setCurrentWord((prev) => (prev + 1) % dynamicWords.length);
     }, 3000);
@@ -41,10 +41,10 @@ const Hero = () => {
           <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-gradient-to-r from-purple-400/15 to-pink-400/15 rounded-full blur-3xl animate-pulse delay-1000"></div>
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-cyan-400/10 to-blue-400/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
         </div>
-        
+
         {/* Dynamic Grid */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#8882_1px,transparent_1px),linear-gradient(to_bottom,#8882_1px,transparent_1px)] bg-[size:6rem_6rem] opacity-20 animate-pulse"></div>
-        
+
         {/* Floating Particles */}
         <div className="absolute inset-0">
           {[...Array(20)].map((_, i) => (
@@ -65,9 +65,8 @@ const Hero = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-32 pb-20">
         <div className="text-center">
           {/* Premium Badge */}
-          <div className={`inline-flex items-center px-6 py-3 bg-white/90 backdrop-blur-xl border border-blue-200/30 rounded-full text-blue-700 text-sm font-semibold mb-8 shadow-2xl shadow-blue-600/10 transition-all duration-1000 hover:scale-105 hover:shadow-blue-600/20 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-          }`}>
+          <div className={`inline-flex items-center px-6 py-3 bg-white/90 backdrop-blur-xl border border-blue-200/30 rounded-full text-blue-700 text-sm font-semibold mb-8 shadow-2xl shadow-blue-600/10 transition-all duration-1000 hover:scale-105 hover:shadow-blue-600/20 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+            }`}>
             <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mr-3 animate-pulse"></div>
             <Sparkles className="w-4 h-4 mr-2" />
             <Link to="/RevenueGrowthManagement" className="hover:underline hover:text-blue-900 transition-colors duration-200">
@@ -77,9 +76,8 @@ const Hero = () => {
           </div>
 
           {/* Dynamic Main Heading */}
-          <h1 className={`text-5xl sm:text-6xl lg:text-8xl font-black mb-8 transition-all duration-1000 delay-200 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}>
+          <h1 className={`text-5xl sm:text-6xl lg:text-8xl font-black mb-8 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}>
             <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent block mb-4">
               The Future of
             </span>
@@ -87,13 +85,12 @@ const Hero = () => {
               {dynamicWords.map((word, index) => (
                 <span
                   key={word}
-                  className={`absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent transition-all duration-1000 ${
-                    index === currentWord 
-                      ? 'opacity-100 translate-y-0' 
-                      : index < currentWord 
-                        ? 'opacity-0 -translate-y-full' 
-                        : 'opacity-0 translate-y-full'
-                  }`}
+                  className={`absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent transition-all duration-1000 ${index === currentWord
+                    ? 'opacity-100 translate-y-0'
+                    : index < currentWord
+                      ? 'opacity-0 -translate-y-full'
+                      : 'opacity-0 translate-y-full'
+                    }`}
                 >
                   {word}
                 </span>
@@ -102,19 +99,78 @@ const Hero = () => {
           </h1>
 
           {/* Enhanced Subtitle */}
-          <p className={`text-xl sm:text-2xl text-gray-600 mb-12 max-w-5xl mx-auto leading-relaxed transition-all duration-1000 delay-400 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}>
-           Patented
-            <span className="text-transparent bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text font-semibold">  Machine Learning Engines</span>. 
-            coupled with decades of industry nuances leading to millions of dollars of growth for our clients. 
+          <p className={`text-xl sm:text-2xl text-gray-600 mb-12 max-w-5xl mx-auto leading-relaxed transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}>
+            Patented
+            <span className="text-transparent bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text font-semibold">  Machine Learning Engines</span>.
+            coupled with decades of industry nuances leading to millions of dollars of growth for our clients.
             <span className="text-blue-600 font-bold"> Results guaranteed to excel.</span>
           </p>
 
+          {/* Logo Marquee Section */}
+          <div className={`mt-8 mb-16 transition-all duration-1000 delay-500 w-full overflow-hidden ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}>
+            <p className="text-sm font-semibold text-gray-400 uppercase tracking-widest mb-10">Trusted by Global Leaders</p>
+
+            <style>{`
+              @keyframes hero-marquee {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(-50%); }
+              }
+              .animate-hero-marquee {
+                animation: hero-marquee 25s linear infinite;
+              }
+              .animate-hero-marquee:hover {
+                animation-play-state: paused;
+              }
+            `}</style>
+
+            <div
+              className="relative flex w-full overflow-hidden"
+              style={{ maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)' }}
+            >
+              <div className="flex w-max animate-hero-marquee items-center">
+                {[
+                  { name: 'Unilever', logo: '/logos/unilever.svg' },
+                  { name: 'Kelloggs', logo: '/logos/kelloggs.svg', className: 'scale-[1.5]', containerClassName: 'px-6 sm:px-10' },
+                  { name: 'Godrej', logo: '/logos/godrej-consumer-products.png', className: 'scale-[1.5]', containerClassName: 'px-6 sm:px-10' },
+                  { name: 'Haleon', logo: '/logos/Haleon.svg.png' },
+                  { name: 'Century Pacific', logo: '/logos/century_pacific.svg' },
+                  { name: 'African Pride', logo: '/logos/african_pride.svg' },
+                  { name: 'Pon Pure', logo: '/logos/pon_pure.svg' },
+                  { name: 'Heineken', logo: '/logos/heineken1.svg' },
+                  { name: 'Pidilite', logo: '/logos/pidilite.svg', className: 'scale-[1.5]', containerClassName: 'px-6 sm:px-10' },
+                  { name: 'Paperboat', logo: '/logos/paperboat.svg' },
+                  /* Duplicate for seamless looping */
+                  { name: 'Unilever2', logo: '/logos/unilever.svg' },
+                  { name: 'Kelloggs2', logo: '/logos/kelloggs.svg', className: 'scale-[1.5]', containerClassName: 'px-6 sm:px-10' },
+                  { name: 'Godrej2', logo: '/logos/godrej-consumer-products.png', className: 'scale-[1.5]', containerClassName: 'px-6 sm:px-10' },
+                  { name: 'Haleon2', logo: '/logos/Haleon.svg.png' },
+                  { name: 'Century Pacific2', logo: '/logos/century_pacific.svg' },
+                  { name: 'African Pride2', logo: '/logos/african_pride.svg' },
+                  { name: 'Pon Pure2', logo: '/logos/pon_pure.svg' },
+                  { name: 'Heineken2', logo: '/logos/heineken1.svg' },
+                  { name: 'Pidilite2', logo: '/logos/pidilite.svg', className: 'scale-[1.5]', containerClassName: 'px-6 sm:px-10' },
+                  { name: 'Paperboat2', logo: '/logos/paperboat.svg' }
+                ].map((brand) => (
+                  <div key={brand.name} className={`mx-8 sm:mx-12 h-16 sm:h-20 md:h-24 flex items-center transition-all duration-500 transform hover:-translate-y-2 hover:scale-110 hover:drop-shadow-[0_10px_15px_rgba(59,130,246,0.3)] shrink-0 cursor-pointer ${brand.containerClassName || ''}`}>
+                    <img
+                      src={brand.logo}
+                      alt={brand.name}
+                      className={`max-h-full w-auto max-w-[200px] object-contain rounded-md ${brand.className || ''}`}
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).style.display = 'none';
+                      }}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
           {/* Modern Feature Pills */}
-          <div className={`flex flex-wrap justify-center gap-6 mb-16 transition-all duration-1000 delay-600 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}>
+          <div className={`flex flex-wrap justify-center gap-6 mb-16 transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}>
             {features.map((feature, index) => (
               <div
                 key={index}
@@ -133,9 +189,8 @@ const Hero = () => {
           </div>
 
           {/* Premium CTA Section */}
-          <div className={`flex flex-col sm:flex-row items-center justify-center gap-6 mb-20 transition-all duration-1000 delay-800 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}>
+          <div className={`flex flex-col sm:flex-row items-center justify-center gap-6 mb-20 transition-all duration-1000 delay-800 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}>
             <a
               href="https://outlook.office.com/bookwithme/user/e8ee839cd0224fb7bbc88d3de0f0e74a@intellimark.ai/meetingtype/X5VsiCFLD0O0S7V9WOBTyQ2?anonymous&ismsaljsauthenabled&ep=mLinkFromTile"
               target="_blank"
@@ -158,9 +213,8 @@ const Hero = () => {
           </div>
 
           {/* Advanced Stats Grid */}
-          <div className={`grid grid-cols-2 lg:grid-cols-4 gap-8 transition-all duration-1000 delay-1000 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}>
+          <div className={`grid grid-cols-2 lg:grid-cols-4 gap-8 transition-all duration-1000 delay-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}>
             {stats.map((stat, index) => (
               <div key={index} className="group relative">
                 <div className="bg-white/70 backdrop-blur-xl rounded-2xl p-8 border border-gray-200/30 hover:border-blue-300/50 transition-all duration-500 hover:shadow-xl hover:scale-105">
