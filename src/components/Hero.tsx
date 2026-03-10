@@ -1,6 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Sparkles, Zap, Target, ChevronRight, Brain, Database, TrendingUp } from 'lucide-react';
+import { ArrowRight, Sparkles, Zap, Target, ChevronRight, Brain, Database, TrendingUp, ChevronLeft } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -30,6 +31,78 @@ const Hero = () => {
     { value: '20x', label: 'Project ROI', icon: TrendingUp },
     { value: '50M+', label: 'Dollars Unlocked', icon: Zap }
   ];
+
+  const marqueeRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const slider = marqueeRef.current;
+    if (!slider) return;
+
+    let isDown = false;
+    let startX: number;
+    let scrollLeft: number;
+    let animationId: number;
+    const speed = 0.8; // slightly faster for better feel
+    let autoScrollEnabled = false;
+
+    const autoScrollTimeout = setTimeout(() => {
+      autoScrollEnabled = true;
+    }, 2000);
+
+    const handleStart = (e: MouseEvent | TouchEvent) => {
+      isDown = true;
+      slider.classList.add('active');
+      const pageX = 'touches' in e ? e.touches[0].pageX : e.pageX;
+      startX = pageX - slider.offsetLeft;
+      scrollLeft = slider.scrollLeft;
+    };
+
+    const handleEnd = () => {
+      isDown = false;
+      slider.classList.remove('active');
+    };
+
+    const handleMove = (e: MouseEvent | TouchEvent) => {
+      if (!isDown) return;
+      const pageX = 'touches' in e ? e.touches[0].pageX : e.pageX;
+      const x = pageX - slider.offsetLeft;
+      const walk = (x - startX) * 2;
+      slider.scrollLeft = scrollLeft - walk;
+    };
+
+    const step = () => {
+      const isHovering = slider.matches(':hover') || slider.parentElement?.matches(':hover');
+      if (autoScrollEnabled && !isDown && !isHovering) {
+        slider.scrollLeft += speed;
+        if (slider.scrollLeft >= slider.scrollWidth / 3) {
+          slider.scrollLeft = 0;
+        }
+      }
+      animationId = requestAnimationFrame(step);
+    };
+
+    slider.addEventListener('mousedown', handleStart);
+    slider.addEventListener('touchstart', handleStart, { passive: true });
+    slider.addEventListener('mouseleave', handleEnd);
+    slider.addEventListener('mouseup', handleEnd);
+    slider.addEventListener('touchend', handleEnd);
+    slider.addEventListener('mousemove', handleMove);
+    slider.addEventListener('touchmove', handleMove, { passive: false });
+
+    animationId = requestAnimationFrame(step);
+
+    return () => {
+      clearTimeout(autoScrollTimeout);
+      slider.removeEventListener('mousedown', handleStart);
+      slider.removeEventListener('touchstart', handleStart);
+      slider.removeEventListener('mouseleave', handleEnd);
+      slider.removeEventListener('mouseup', handleEnd);
+      slider.removeEventListener('touchend', handleEnd);
+      slider.removeEventListener('mousemove', handleMove);
+      slider.removeEventListener('touchmove', handleMove);
+      cancelAnimationFrame(animationId);
+    };
+  }, []);
 
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-white via-gray-50/30 to-blue-50/20 overflow-hidden">
@@ -107,63 +180,95 @@ const Hero = () => {
             <span className="text-blue-600 font-bold"> Results guaranteed to excel.</span>
           </p>
 
-          {/* Logo Marquee Section */}
-          <div className={`mt-8 mb-16 transition-all duration-1000 delay-500 w-full overflow-hidden ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            }`}>
+          {/* Logo Marquee Section with Manual Slider */}
+          <div className={`mt-8 mb-16 transition-all duration-1000 delay-500 w-full relative group ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <p className="text-sm font-semibold text-gray-400 uppercase tracking-widest mb-10">Trusted by Global Leaders</p>
 
-            <style>{`
-              @keyframes hero-marquee {
-                0% { transform: translateX(0); }
-                100% { transform: translateX(-50%); }
-              }
-              .animate-hero-marquee {
-                animation: hero-marquee 25s linear infinite;
-              }
-              .animate-hero-marquee:hover {
-                animation-play-state: paused;
-              }
-            `}</style>
+            <div className="relative flex items-center">
+              {/* Manual Navigation Buttons */}
+              <button
+                onClick={() => {
+                  if (marqueeRef.current) marqueeRef.current.scrollBy({ left: -400, behavior: 'smooth' });
+                }}
+                className="absolute left-0 z-20 p-3 bg-white/90 backdrop-blur-md rounded-full shadow-xl border border-blue-100 opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-blue-600 hover:text-white -translate-x-6 hover:scale-110"
+              >
+                <ChevronLeft className="w-6 h-6" />
+              </button>
 
-            <div
-              className="relative flex w-full overflow-hidden"
-              style={{ maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)' }}
-            >
-              <div className="flex w-max animate-hero-marquee items-center">
-                {[
-                  { name: 'Unilever', logo: '/logos/unilever.svg' },
-                  { name: 'Kelloggs', logo: '/logos/kelloggs.svg', className: 'scale-[1.5]', containerClassName: 'px-6 sm:px-10' },
-                  { name: 'Godrej', logo: '/logos/godrej-consumer-products.png', className: 'scale-[1.5]', containerClassName: 'px-6 sm:px-10' },
-                  { name: 'Haleon', logo: '/logos/Haleon.svg.png' },
-                  { name: 'Century Pacific', logo: '/logos/century_pacific.svg' },
-                  { name: 'African Pride', logo: '/logos/african_pride.svg' },
-                  { name: 'Pon Pure', logo: '/logos/pon_pure.svg' },
-                  { name: 'Heineken', logo: '/logos/heineken1.svg' },
-                  { name: 'Pidilite', logo: '/logos/pidilite.svg', className: 'scale-[1.5]', containerClassName: 'px-6 sm:px-10' },
-                  { name: 'Paperboat', logo: '/logos/paperboat.svg' },
-                  /* Duplicate for seamless looping */
-                  { name: 'Unilever2', logo: '/logos/unilever.svg' },
-                  { name: 'Kelloggs2', logo: '/logos/kelloggs.svg', className: 'scale-[1.5]', containerClassName: 'px-6 sm:px-10' },
-                  { name: 'Godrej2', logo: '/logos/godrej-consumer-products.png', className: 'scale-[1.5]', containerClassName: 'px-6 sm:px-10' },
-                  { name: 'Haleon2', logo: '/logos/Haleon.svg.png' },
-                  { name: 'Century Pacific2', logo: '/logos/century_pacific.svg' },
-                  { name: 'African Pride2', logo: '/logos/african_pride.svg' },
-                  { name: 'Pon Pure2', logo: '/logos/pon_pure.svg' },
-                  { name: 'Heineken2', logo: '/logos/heineken1.svg' },
-                  { name: 'Pidilite2', logo: '/logos/pidilite.svg', className: 'scale-[1.5]', containerClassName: 'px-6 sm:px-10' },
-                  { name: 'Paperboat2', logo: '/logos/paperboat.svg' }
-                ].map((brand) => (
-                  <div key={brand.name} className={`mx-8 sm:mx-12 h-16 sm:h-20 md:h-24 flex items-center transition-all duration-500 transform hover:-translate-y-2 hover:scale-110 hover:drop-shadow-[0_10px_15px_rgba(59,130,246,0.3)] shrink-0 cursor-pointer ${brand.containerClassName || ''}`}>
-                    <img
-                      src={brand.logo}
-                      alt={brand.name}
-                      className={`max-h-full w-auto max-w-[200px] object-contain rounded-md ${brand.className || ''}`}
-                      onError={(e) => {
-                        (e.target as HTMLImageElement).style.display = 'none';
-                      }}
-                    />
-                  </div>
-                ))}
+              <button
+                onClick={() => {
+                  if (marqueeRef.current) marqueeRef.current.scrollBy({ left: 400, behavior: 'smooth' });
+                }}
+                className="absolute right-0 z-20 p-3 bg-white/90 backdrop-blur-md rounded-full shadow-xl border border-blue-100 opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-blue-600 hover:text-white translate-x-6 hover:scale-110"
+              >
+                <ChevronRight className="w-6 h-6" />
+              </button>
+
+              <div
+                ref={marqueeRef}
+                className="relative flex w-full overflow-x-auto scrollbar-hide cursor-grab active:cursor-grabbing active:scale-[0.99] transition-transform duration-300 pb-4 select-none"
+                style={{
+                  maskImage: 'linear-gradient(to right, transparent, black 15%, black 85%, transparent)',
+                  msOverflowStyle: 'none',
+                  scrollbarWidth: 'none'
+                }}
+              >
+                <style>{`
+                  .scrollbar-hide::-webkit-scrollbar {
+                    display: none;
+                  }
+                `}</style>
+
+                <div className="flex w-max items-center py-4">
+                  {[
+                    { name: 'Kelloggs', logo: '/logos/kelloggs.svg', className: 'scale-[1.5]', containerClassName: 'px-6 sm:px-10' },
+                    { name: 'Unilever', logo: '/logos/unilever.svg' },
+                    { name: 'Godrej', logo: '/logos/godrej-consumer-products.png', className: 'scale-[1.5]', containerClassName: 'px-6 sm:px-10' },
+                    { name: 'Century Pacific', logo: '/logos/century_pacific.svg' },
+                    { name: 'African Pride', logo: '/logos/african_pride.svg' },
+                    { name: 'Pon Pure', logo: '/logos/pon_pure.svg' },
+                    { name: 'Heineken', logo: '/logos/heineken1.svg' },
+                    { name: 'Pidilite', logo: '/logos/pidilite.svg', className: 'scale-[1.5]', containerClassName: 'px-6 sm:px-10' },
+                    { name: 'Paperboat', logo: '/logos/paperboat.svg' }
+                  ].concat([
+                    /* Doubled and Tripled for seamless looping and manual manual sliding */
+                    { name: 'Kelloggs2', logo: '/logos/kelloggs.svg', className: 'scale-[1.5]', containerClassName: 'px-6 sm:px-10' },
+                    { name: 'Unilever2', logo: '/logos/unilever.svg' },
+                    { name: 'Godrej2', logo: '/logos/godrej-consumer-products.png', className: 'scale-[1.5]', containerClassName: 'px-6 sm:px-10' },
+                    { name: 'Century Pacific2', logo: '/logos/century_pacific.svg' },
+                    { name: 'African Pride2', logo: '/logos/african_pride.svg' },
+                    { name: 'Pon Pure2', logo: '/logos/pon_pure.svg' },
+                    { name: 'Heineken2', logo: '/logos/heineken1.svg' },
+                    { name: 'Pidilite2', logo: '/logos/pidilite.svg', className: 'scale-[1.5]', containerClassName: 'px-6 sm:px-10' },
+                    { name: 'Paperboat2', logo: '/logos/paperboat.svg' },
+                    { name: 'Unilever3', logo: '/logos/unilever.svg' },
+                    { name: 'Kelloggs3', logo: '/logos/kelloggs.svg', className: 'scale-[1.5]', containerClassName: 'px-6 sm:px-10' },
+                    { name: 'Godrej3', logo: '/logos/godrej-consumer-products.png', className: 'scale-[1.5]', containerClassName: 'px-6 sm:px-10' },
+                    { name: 'Century Pacific3', logo: '/logos/century_pacific.svg' },
+                    { name: 'African Pride3', logo: '/logos/african_pride.svg' },
+                    { name: 'Pon Pure3', logo: '/logos/pon_pure.svg' },
+                    { name: 'Heineken3', logo: '/logos/heineken1.svg' },
+                    { name: 'Pidilite3', logo: '/logos/pidilite.svg', className: 'scale-[1.5]', containerClassName: 'px-6 sm:px-10' },
+                    { name: 'Paperboat3', logo: '/logos/paperboat.svg' }
+                  ]).map((brand, idx) => (
+                    <motion.div
+                      key={`${brand.name}-${idx}`}
+                      whileHover={{ scale: 1.15, y: -8 }}
+                      className={`mx-8 sm:mx-12 h-16 sm:h-20 md:h-24 flex items-center transition-all duration-500 shrink-0 cursor-pointer ${brand.containerClassName || ''}`}
+                    >
+                      <img
+                        src={brand.logo}
+                        alt={brand.name}
+                        className={`max-h-full w-auto max-w-[200px] object-contain rounded-md filter drop-shadow-sm hover:drop-shadow-xl transition-all ${brand.className || ''}`}
+                        loading="lazy"
+                        draggable="false"
+                        onError={(e) => {
+                          (e.target as HTMLImageElement).style.display = 'none';
+                        }}
+                      />
+                    </motion.div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
