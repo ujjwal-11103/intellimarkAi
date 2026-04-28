@@ -10,9 +10,6 @@ const IntelliPlanPrivacy: React.FC = () => {
             <h1 className="mt-6 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
               INTELLIPLAN MASTER SERVICE AGREEMENT & PRIVACY POLICY
             </h1>
-            <p className="mt-4 max-w-3xl text-base text-slate-200 sm:text-lg">
-              A comprehensive agreement covering IntelliPlan's privacy practices, service terms, data security, and customer responsibilities.
-            </p>
             <div className="mt-8 grid gap-4 sm:grid-cols-3">
               <div className="rounded-3xl bg-white/10 p-4">
                 <p className="text-xs uppercase tracking-[0.24em] text-slate-300">Effective Date</p>
@@ -20,11 +17,11 @@ const IntelliPlanPrivacy: React.FC = () => {
               </div>
               <div className="rounded-3xl bg-white/10 p-4">
                 <p className="text-xs uppercase tracking-[0.24em] text-slate-300">Provider</p>
-                <p className="mt-2 text-sm font-semibold text-white">Intellimark Analytics</p>
+                <p className="mt-2 text-sm font-semibold text-white">Intellimark Analytics ("Company," "We," "Us")</p>
               </div>
               <div className="rounded-3xl bg-white/10 p-4">
                 <p className="text-xs uppercase tracking-[0.24em] text-slate-300">Product</p>
-                <p className="mt-2 text-sm font-semibold text-white">IntelliPlan</p>
+                <p className="mt-2 text-sm font-semibold text-white">IntelliPlan (the "Application")</p>
               </div>
             </div>
 
@@ -60,7 +57,7 @@ const IntelliPlanPrivacy: React.FC = () => {
                   <div className="grid gap-4 sm:grid-cols-2">
                     <div className="rounded-3xl bg-white p-5 shadow-sm">
                       <p className="text-sm font-semibold text-slate-900">Operational Data (Customer-Owned)</p>
-                      <p className="mt-2 text-slate-700">Historical sales data, inventory logs, supply chain metrics, and any business variables provided by the Customer for processing.</p>
+                      <p className="mt-2 text-slate-700">Historical sales data, inventory logs, supply chain metrics, and any other business variables provided by the Customer for processing.</p>
                     </div>
                     <div className="rounded-3xl bg-white p-5 shadow-sm">
                       <p className="text-sm font-semibold text-slate-900">Application Metadata</p>
