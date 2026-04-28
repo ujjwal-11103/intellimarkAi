@@ -31,7 +31,7 @@ const Footer = () => {
                   href="mailto:rahul@intellimark.ai"
                   className="text-sm sm:text-base text-gray-300 hover:text-purple-400 transition-colors duration-200 break-all"
                 >
-                  intelliplan@intellimark.ai
+                  rahul@intellimark.ai
                 </a>
               </div>
               <div className="flex items-center space-x-2">
