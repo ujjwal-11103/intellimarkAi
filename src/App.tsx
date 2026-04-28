@@ -26,6 +26,7 @@ import MarketingMixModeling from './pages/blogs/MarketingMixModeling';
 import FutureOfAI from './pages/blogs/FutureOfAI';
 import UnveilingAI from './pages/blogs/UnveilingAI';
 import HomePage from './pages/HomePage';
+import IntelliPlanPrivacy from './pages/IntelliPlanPrivacy';
 
 function App() {
   useEffect(() => {
@@ -50,7 +51,7 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-white pt-20">
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -77,6 +78,8 @@ function App() {
           <Route path="/Marketing-Mix-Modeling" element={<MarketingMixModeling />} />
           <Route path="/The-Future-of-AI" element={<FutureOfAI />} />
           <Route path="/Unveiling-AI" element={<UnveilingAI />} />
+
+          <Route path="/intelliplan_privacy" element={<IntelliPlanPrivacy />} />
 
         </Routes>
         <Footer />

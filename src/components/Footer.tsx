@@ -31,7 +31,7 @@ const Footer = () => {
                   href="mailto:rahul@intellimark.ai"
                   className="text-sm sm:text-base text-gray-300 hover:text-purple-400 transition-colors duration-200 break-all"
                 >
-                  rahul@intellimark.ai
+                  intelliplan@intellimark.ai
                 </a>
               </div>
               <div className="flex items-center space-x-2">
@@ -65,6 +65,14 @@ const Footer = () => {
                     className="text-sm sm:text-base text-gray-300 hover:text-purple-400 transition-colors duration-200"
                   >
                     About Us
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/intelliplan_privacy"
+                    className="text-sm sm:text-base text-gray-300 hover:text-purple-400 transition-colors duration-200"
+                  >
+                    Privacy Policy
                   </a>
                 </li>
                 {/* <li>
