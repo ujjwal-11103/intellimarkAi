@@ -151,8 +151,7 @@ const IntelliPlanPrivacy: React.FC = () => {
                   <h3 className="text-xl font-semibold text-slate-900">12. Contact Information</h3>
                   <div className="rounded-3xl bg-white p-5 shadow-sm">
                     <p className="text-slate-700">For legal inquiries or privacy-related concerns:</p>
-                    <p className="mt-3 font-semibold text-slate-900">Intellimark Analytics Legal Department</p>
-                    <a href="mailto:legal@intelliplan.ai" className="mt-1 inline-block text-blue-700 hover:text-blue-900">legal@intelliplan.ai</a>
+                    <a href="mailto:rahul@intellimark.ai" className="mt-1 inline-block text-blue-700 hover:text-blue-900">rahul@intellimark.ai</a>
                   </div>
                 </div>
               </section>
