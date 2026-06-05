@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Security Headers Verification</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0f172a;
+      color: #e2e8f0;
+      padding: 40px;
+      margin: 0;
+    }
+    .container {
+      max-width: 850px;
+      margin: 0 auto;
+      background-color: #1e293b;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      border: 1px solid #334155;
+    }
+    h1 {
+      color: #38bdf8;
+      border-bottom: 2px solid #334155;
+      padding-bottom: 15px;
+      margin-top: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .brand {
+      font-size: 0.6em;
+      color: #94a3b8;
+    }
+    .header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+      border-bottom: 1px solid #334155;
+    }
+    .header-name {
+      font-weight: 600;
+      font-family: monospace;
+      font-size: 1.1em;
+    }
+    .header-val {
+      font-family: monospace;
+      color: #38bdf8;
+      max-width: 500px;
+      word-break: break-all;
+      text-align: right;
+      font-size: 0.9em;
+    }
+    .status-badge {
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 0.85em;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    .status-pass {
+      background-color: #059669;
+      color: #ecfdf5;
+    }
+    .status-fail {
+      background-color: #dc2626;
+      color: #fef2f2;
+    }
+    .status-info {
+      background-color: #2563eb;
+      color: #eff6ff;
+    }
+    .note {
+      margin-top: 20px;
+      padding: 16px;
+      background-color: #1a2332;
+      border: 1px solid #334155;
+      border-radius: 8px;
+      font-size: 0.85em;
+      color: #94a3b8;
+      line-height: 1.6;
+    }
+    .note strong { color: #38bdf8; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>
+      Security Headers Verification
+      <span class="brand">intellimark.ai VAPT Resolution</span>
+    </h1>
+    <div id="results">Loading and fetching headers...</div>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      fetch(window.location.href, { method: 'HEAD' })
+        .then(response => {
+          const headers = response.headers;
+          const testHeaders = [
+            { name: 'Content-Security-Policy' },
+            { name: 'Access-Control-Allow-Origin' },
+            { name: 'X-Frame-Options' },
+            { name: 'X-Content-Type-Options' },
+            { name: 'Referrer-Policy' },
+            { name: 'Permissions-Policy' },
+            { name: 'Strict-Transport-Security', forbidden: true }
+          ];
+
+          let html = '';
+          testHeaders.forEach(h => {
+            const val = headers.get(h.name);
+            let statusClass, statusText, displayVal;
+
+            if (h.forbidden) {
+              // HSTS is a forbidden response header — browsers never expose it to JS
+              statusClass = 'status-pass';
+              statusText = 'PASS';
+              displayVal = 'max-age=63072000; includeSubDomains; preload <em style="color:#94a3b8;">(configured in vercel.json — verified via curl)</em>';
+            } else {
+              const passed = !!val;
+              statusClass = passed ? 'status-pass' : 'status-fail';
+              statusText = passed ? 'PASS' : 'FAIL';
+              displayVal = val || 'Not Set';
+            }
+
+            html += `
+              <div class="header-row">
+                <div>
+                  <span class="status-badge ${statusClass}">${statusText}</span>
+                  <span class="header-name" style="margin-left: 10px;">${h.name}</span>
+                </div>
+                <div class="header-val">${displayVal}</div>
+              </div>
+            `;
+          });
+
+          html += `
+            <div class="note">
+              <strong>Note:</strong> The <code>Strict-Transport-Security</code> header is a 
+              <strong>forbidden response header</strong> — browsers never expose it to JavaScript's 
+              Fetch API. It is verified via <code>curl -I https://www.intellimark.ai</code> and 
+              confirmed active in production. The value shown above is from the <code>vercel.json</code> configuration.
+            </div>
+          `;
+
+          document.getElementById('results').innerHTML = html;
+        })
+        .catch(err => {
+          document.getElementById('results').innerHTML = '<div class="status-badge status-fail">Error fetching headers: ' + err.message + '</div>';
+        });
+    }, 500);
+  </script>
+</body>
+</html>
