@@ -16,7 +16,8 @@
   <!-- <meta property="og:image" content="https://yourdomain.com/og-image.png" /> -->
 
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2V02R4ZW3R" integrity="sha384-Vd67Z/i/LUY+AMAqBB+r1WG5uQzqzQK1uZmvPSoHqGDLE+FOf03Ds9mEmC14w6jZ" crossorigin="anonymous"></script>
+  <!-- Note: SRI integrity hash is NOT used for GTM because Google dynamically recompiles this script. Security is enforced via strict CSP script-src instead. -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2V02R4ZW3R" crossorigin="anonymous"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
