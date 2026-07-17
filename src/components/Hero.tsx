@@ -221,45 +221,51 @@ const Hero = () => {
 
                 <div className="flex w-max items-center py-4">
                   {[
-                    { name: 'Kelloggs', logo: '/logos/kelloggs.svg', className: 'scale-[1.5]', containerClassName: 'px-6 sm:px-10' },
+                    { name: 'Kelloggs', logo: '/logos/kelloggs.svg', className: 'scale-[1.4]' },
                     { name: 'Unilever', logo: '/logos/unilever.svg' },
-                    { name: 'Godrej', logo: '/logos/godrej-consumer-products.png', className: 'scale-[1.5]', containerClassName: 'px-6 sm:px-10' },
+                    { name: 'Godrej', logo: '/logos/godrej-consumer-products.png', className: 'scale-[1.4]' },
                     { name: 'Century Pacific', logo: '/logos/century_pacific.svg' },
-                    { name: 'African Pride', logo: '/logos/african_pride.svg' },
+                    { name: 'African Pride', logo: '/logos/african_pride.svg', className: 'scale-[1.8]' },
                     { name: 'Pon Pure', logo: '/logos/pon_pure.svg' },
-                    { name: 'Heineken', logo: '/logos/heineken1.svg' },
-                    { name: 'Pidilite', logo: '/logos/pidilite.svg', className: 'scale-[1.5]', containerClassName: 'px-6 sm:px-10' },
-                    { name: 'Paperboat', logo: '/logos/paperboat.svg' }
+                    { name: 'Heineken', logo: '/logos/heineken1.svg', className: 'scale-[1.4]' },
+                    { name: 'RR Kabel', logo: '/logos/rr_kabel.png' },
+                    { name: 'Tata Consumers', logo: '/logos/tata_consumers.png', className: 'scale-[1.8]' },
+                    { name: 'Castrol', logo: '/logos/castrol.png', className: 'scale-[1.8]' },
+                    { name: 'Haleon', logo: '/logos/haleon_logo.png' }
                   ].concat([
-                    /* Doubled and Tripled for seamless looping and manual manual sliding */
-                    { name: 'Kelloggs2', logo: '/logos/kelloggs.svg', className: 'scale-[1.5]', containerClassName: 'px-6 sm:px-10' },
+                    /* Doubled and Tripled for seamless looping */
+                    { name: 'Kelloggs2', logo: '/logos/kelloggs.svg', className: 'scale-[1.4]' },
                     { name: 'Unilever2', logo: '/logos/unilever.svg' },
-                    { name: 'Godrej2', logo: '/logos/godrej-consumer-products.png', className: 'scale-[1.5]', containerClassName: 'px-6 sm:px-10' },
+                    { name: 'Godrej2', logo: '/logos/godrej-consumer-products.png', className: 'scale-[1.4]' },
                     { name: 'Century Pacific2', logo: '/logos/century_pacific.svg' },
-                    { name: 'African Pride2', logo: '/logos/african_pride.svg' },
+                    { name: 'African Pride2', logo: '/logos/african_pride.svg', className: 'scale-[1.8]' },
                     { name: 'Pon Pure2', logo: '/logos/pon_pure.svg' },
-                    { name: 'Heineken2', logo: '/logos/heineken1.svg' },
-                    { name: 'Pidilite2', logo: '/logos/pidilite.svg', className: 'scale-[1.5]', containerClassName: 'px-6 sm:px-10' },
-                    { name: 'Paperboat2', logo: '/logos/paperboat.svg' },
+                    { name: 'Heineken2', logo: '/logos/heineken1.svg', className: 'scale-[1.4]' },
+                    { name: 'RR Kabel2', logo: '/logos/rr_kabel.png' },
+                    { name: 'Tata Consumers2', logo: '/logos/tata_consumers.png', className: 'scale-[1.8]' },
+                    { name: 'Castrol2', logo: '/logos/castrol.png', className: 'scale-[1.8]' },
+                    { name: 'Haleon2', logo: '/logos/haleon_logo.png' },
                     { name: 'Unilever3', logo: '/logos/unilever.svg' },
-                    { name: 'Kelloggs3', logo: '/logos/kelloggs.svg', className: 'scale-[1.5]', containerClassName: 'px-6 sm:px-10' },
-                    { name: 'Godrej3', logo: '/logos/godrej-consumer-products.png', className: 'scale-[1.5]', containerClassName: 'px-6 sm:px-10' },
+                    { name: 'Kelloggs3', logo: '/logos/kelloggs.svg', className: 'scale-[1.4]' },
+                    { name: 'Godrej3', logo: '/logos/godrej-consumer-products.png', className: 'scale-[1.4]' },
                     { name: 'Century Pacific3', logo: '/logos/century_pacific.svg' },
-                    { name: 'African Pride3', logo: '/logos/african_pride.svg' },
+                    { name: 'African Pride3', logo: '/logos/african_pride.svg', className: 'scale-[1.8]' },
                     { name: 'Pon Pure3', logo: '/logos/pon_pure.svg' },
-                    { name: 'Heineken3', logo: '/logos/heineken1.svg' },
-                    { name: 'Pidilite3', logo: '/logos/pidilite.svg', className: 'scale-[1.5]', containerClassName: 'px-6 sm:px-10' },
-                    { name: 'Paperboat3', logo: '/logos/paperboat.svg' }
+                    { name: 'Heineken3', logo: '/logos/heineken1.svg', className: 'scale-[1.4]' },
+                    { name: 'RR Kabel3', logo: '/logos/rr_kabel.png' },
+                    { name: 'Tata Consumers3', logo: '/logos/tata_consumers.png', className: 'scale-[1.8]' },
+                    { name: 'Castrol3', logo: '/logos/castrol.png', className: 'scale-[1.8]' },
+                    { name: 'Haleon3', logo: '/logos/haleon_logo.png' }
                   ]).map((brand, idx) => (
                     <motion.div
                       key={`${brand.name}-${idx}`}
                       whileHover={{ scale: 1.15, y: -8 }}
-                      className={`mx-8 sm:mx-12 h-16 sm:h-20 md:h-24 flex items-center transition-all duration-500 shrink-0 cursor-pointer ${brand.containerClassName || ''}`}
+                      className="mx-8 sm:mx-12 h-20 sm:h-24 md:h-28 flex items-center justify-center shrink-0 cursor-pointer px-4 sm:px-6"
                     >
                       <img
                         src={brand.logo}
                         alt={brand.name}
-                        className={`max-h-full w-auto max-w-[200px] object-contain rounded-md filter drop-shadow-sm hover:drop-shadow-xl transition-all ${brand.className || ''}`}
+                        className={`h-16 sm:h-20 md:h-24 w-auto max-w-[180px] sm:max-w-[220px] object-contain rounded-md filter drop-shadow-sm hover:drop-shadow-xl transition-all ${(brand as any).className || ''}`}
                         loading="lazy"
                         draggable="false"
                         onError={(e) => {
