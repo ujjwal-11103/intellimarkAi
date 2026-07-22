@@ -224,38 +224,38 @@ const Hero = () => {
                     { name: 'Kelloggs', logo: '/logos/kelloggs.svg', className: 'scale-[1.4]' },
                     { name: 'Unilever', logo: '/logos/unilever.svg' },
                     { name: 'Godrej', logo: '/logos/godrej-consumer-products.png', className: 'scale-[1.4]' },
+                    { name: 'Tata Consumers', logo: '/logos/tata_consumers.png', className: 'scale-[1.8]' },
+                    { name: 'Haleon', logo: '/logos/haleon_logo.png' },
                     { name: 'Century Pacific', logo: '/logos/century_pacific.svg' },
                     { name: 'African Pride', logo: '/logos/african_pride.svg', className: 'scale-[1.8]' },
                     { name: 'Pon Pure', logo: '/logos/pon_pure.svg' },
                     { name: 'Heineken', logo: '/logos/heineken1.svg', className: 'scale-[1.4]' },
                     { name: 'RR Kabel', logo: '/logos/rr_kabel.png' },
-                    { name: 'Tata Consumers', logo: '/logos/tata_consumers.png', className: 'scale-[1.8]' },
-                    { name: 'Castrol', logo: '/logos/castrol.png', className: 'scale-[1.8]' },
-                    { name: 'Haleon', logo: '/logos/haleon_logo.png' }
+                    { name: 'Castrol', logo: '/logos/castrol.png', className: 'scale-[1.8]' }
                   ].concat([
                     /* Doubled and Tripled for seamless looping */
                     { name: 'Kelloggs2', logo: '/logos/kelloggs.svg', className: 'scale-[1.4]' },
                     { name: 'Unilever2', logo: '/logos/unilever.svg' },
                     { name: 'Godrej2', logo: '/logos/godrej-consumer-products.png', className: 'scale-[1.4]' },
+                    { name: 'Tata Consumers2', logo: '/logos/tata_consumers.png', className: 'scale-[1.8]' },
+                    { name: 'Haleon2', logo: '/logos/haleon_logo.png' },
                     { name: 'Century Pacific2', logo: '/logos/century_pacific.svg' },
                     { name: 'African Pride2', logo: '/logos/african_pride.svg', className: 'scale-[1.8]' },
                     { name: 'Pon Pure2', logo: '/logos/pon_pure.svg' },
                     { name: 'Heineken2', logo: '/logos/heineken1.svg', className: 'scale-[1.4]' },
                     { name: 'RR Kabel2', logo: '/logos/rr_kabel.png' },
-                    { name: 'Tata Consumers2', logo: '/logos/tata_consumers.png', className: 'scale-[1.8]' },
                     { name: 'Castrol2', logo: '/logos/castrol.png', className: 'scale-[1.8]' },
-                    { name: 'Haleon2', logo: '/logos/haleon_logo.png' },
                     { name: 'Unilever3', logo: '/logos/unilever.svg' },
                     { name: 'Kelloggs3', logo: '/logos/kelloggs.svg', className: 'scale-[1.4]' },
                     { name: 'Godrej3', logo: '/logos/godrej-consumer-products.png', className: 'scale-[1.4]' },
+                    { name: 'Tata Consumers3', logo: '/logos/tata_consumers.png', className: 'scale-[1.8]' },
+                    { name: 'Haleon3', logo: '/logos/haleon_logo.png' },
                     { name: 'Century Pacific3', logo: '/logos/century_pacific.svg' },
                     { name: 'African Pride3', logo: '/logos/african_pride.svg', className: 'scale-[1.8]' },
                     { name: 'Pon Pure3', logo: '/logos/pon_pure.svg' },
                     { name: 'Heineken3', logo: '/logos/heineken1.svg', className: 'scale-[1.4]' },
                     { name: 'RR Kabel3', logo: '/logos/rr_kabel.png' },
-                    { name: 'Tata Consumers3', logo: '/logos/tata_consumers.png', className: 'scale-[1.8]' },
-                    { name: 'Castrol3', logo: '/logos/castrol.png', className: 'scale-[1.8]' },
-                    { name: 'Haleon3', logo: '/logos/haleon_logo.png' }
+                    { name: 'Castrol3', logo: '/logos/castrol.png', className: 'scale-[1.8]' }
                   ]).map((brand, idx) => (
                     <motion.div
                       key={`${brand.name}-${idx}`}
