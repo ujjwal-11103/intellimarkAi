@@ -1,0 +1,13 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Disallow private or internal test endpoints
+Disallow: /intelliplan_privacy
+Disallow: /security-test.html
+Disallow: /vapt_resolution_report.html
+Disallow: /live_site_screenshot.png
+Disallow: /security_test_screenshot.png
+
+# Sitemap location
+Sitemap: https://www.intellimark.ai/sitemap.xml

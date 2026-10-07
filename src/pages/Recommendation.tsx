@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet';
+import SEO from '../components/SEO';
 import React from 'react';
 import { HeroSection } from '../components/recommendation/HeroSection';
 import { ProcessFlow } from '../components/recommendation/ProcessFlow';
@@ -7,21 +7,23 @@ import { PerformanceAnalysis } from '../components/recommendation/PerformanceAna
 import ReccStudyCard from '../components/recommendation/ReccStudyCard';
 
 const Recommendation = () => {
-    const title = "Intelligent Recommendation Analytics Platform";
+    const title = "Intelligent AI Recommendation & Retail Analytics Platform | Intellimark AI";
     const description =
-        "Transform your business with data-driven insights, smart recommendations, and comprehensive performance tracking across all channels.";
+        "Transform retail execution and sales velocity with store-level AI recommendations, personalized promotions, upselling algorithms, and incentive scheme optimization.";
+    const canonicalUrl = "https://www.intellimark.ai/Recommendation";
+    const keywords = "AI recommendation engine, store recommendation algorithm, retail incentive optimization, upselling and cross-selling AI, FMCG store recommendations";
 
     return (
         <div>
             <div className="min-h-screen bg-white pt-16 pb-24">
-
                 {/* Dynamic SEO meta tags */}
-                <Helmet>
-                    <title>{title} - Intellimark AI</title>
-                    <meta name="description" content={description} />
-                    <meta property="og:title" content={`${title} - Intellimark AI`} />
-                    <meta property="og:description" content={description} />
-                </Helmet>
+                <SEO
+                    title={title}
+                    description={description}
+                    canonicalUrl={canonicalUrl}
+                    keywords={keywords}
+                    ogType="website"
+                />
                 <HeroSection />
                 <ProcessFlow />
                 <RecommendationEngine />

@@ -9,6 +9,7 @@ import {
   Users,
 } from "lucide-react";
 import { caseStudiesData } from "../data/caseStudiesData";
+import SEO from "../components/SEO";
 
 const AnimatedSection: React.FC<{
   children: React.ReactNode;
@@ -44,13 +45,67 @@ const CaseStudyDetail: React.FC = () => {
   if (!caseStudy) {
     return (
       <div className="min-h-screen flex items-center justify-center text-xl text-gray-600">
+        <SEO
+          title="Case Study Not Found | Intellimark AI"
+          description="The requested case study could not be found."
+          noindex={true}
+        />
         Case Study Not Found
       </div>
     );
   }
 
+  const canonicalUrl = `https://www.intellimark.ai/case-study/${caseStudy.id}`;
+  const schemaData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": caseStudy.title,
+      "description": caseStudy.description,
+      "url": canonicalUrl,
+      "publisher": {
+        "@type": "Organization",
+        "name": "Intellimark AI",
+        "url": "https://www.intellimark.ai",
+        "logo": "https://www.intellimark.ai/src/images/favicon.png"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.intellimark.ai"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Case Studies",
+          "item": "https://www.intellimark.ai/case-studies"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": caseStudy.title,
+          "item": canonicalUrl
+        }
+      ]
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-purple-50">
+      <SEO
+        title={`${caseStudy.title} | Case Study`}
+        description={caseStudy.description}
+        canonicalUrl={canonicalUrl}
+        ogType="article"
+        keywords={`${caseStudy.industryLabel}, case study, ${caseStudy.topics?.join(', ') || 'revenue growth management'}`}
+        schema={schemaData}
+      />
       <div className="container mx-auto px-6 pt-28 pb-4">
         <div className=" flex justify-between items-center">
           <Link to="/case-studies" className="inline-flex items-center text-purple-600 hover:text-purple-700 font-semibold text-lg">

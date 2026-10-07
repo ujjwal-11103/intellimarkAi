@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet';
+import SEO from '../components/SEO';
 import { Link } from 'react-router-dom';
 import { TrendingUp, ArrowRight, ExternalLink } from 'lucide-react';
 import Hero from '../components/Hero';
@@ -9,20 +9,43 @@ import StatsSection from '../components/StatsSection';
 import UpcomingEvents from '../components/UpcomingEvents';
 import ResourcesHub from '../components/ResourceHub';
 
-
 const HomePage = () => {
-    const title = "Intellimark AI - Revenue growth management and forecasting solutions using explainable ai";
+    const title = "Intellimark AI | Revenue Growth Management & AI Demand Forecasting";
     const description =
-        "Discover how Intellimark AI helps businesses transform their marketing strategy with advanced AI-driven insights, intelligent recommendations, and real-time analytics.";
+        "Intellimark AI empowers enterprise FMCG and retail leaders with explainable AI for revenue growth management (RGM), demand forecasting, and predictive recommendation systems.";
+    const canonicalUrl = "https://www.intellimark.ai/";
+    const keywords = "revenue growth management, AI demand forecasting, trade promotion optimization, RGM AI, explainable AI, FMCG analytics, supply chain forecasting, retail AI";
+
+    const schemaData = [
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Intellimark AI",
+            "url": "https://www.intellimark.ai",
+            "logo": "https://www.intellimark.ai/src/images/favicon.png",
+            "description": description,
+            "sameAs": [
+                "https://www.linkedin.com/company/intellimark-ai"
+            ]
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Intellimark AI",
+            "url": "https://www.intellimark.ai"
+        }
+    ];
 
     return (
         <main>
-            <Helmet>
-                <title>{title}</title>
-                <meta name="description" content={description} />
-                <meta property="og:title" content={title} />
-                <meta property="og:description" content={description} />
-            </Helmet>
+            <SEO
+                title={title}
+                description={description}
+                canonicalUrl={canonicalUrl}
+                keywords={keywords}
+                ogType="website"
+                schema={schemaData}
+            />
 
             {/* Quick Link Banner Below Navbar */}
             <section className="relative overflow-hidden bg-gradient-to-r from-purple-600 via-purple-700 to-purple-800 border-b border-purple-500/30">

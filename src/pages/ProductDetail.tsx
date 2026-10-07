@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet';
+import SEO from '../components/SEO';
 import {
   ArrowRight,
   Brain,
@@ -18,10 +18,26 @@ import { MLEngine } from '../components/explainable/MLEngine';
 import RGMStudyCard from '../components/explainable/RGMStudyCard';
 
 const ProductDetail = () => {
-  const title = "Revenue Growth Management";
-  const heroSubtitle = "Re-engineered with Artificial Intelligence";
+  const title = "AI Revenue Growth Management (RGM) Platform | Intellimark AI";
   const heroDescription =
-    "Ready to deploy AI to unlock growth, profitability and sales efficiency across price, promotions, media and supply chain";
+    "Unlock revenue growth, profitability, and sales efficiency across price, promotions, media, and supply chains using Intellimark's explainable AI RGM platform.";
+  const canonicalUrl = "https://www.intellimark.ai/RevenueGrowthManagement";
+  const keywords = "revenue growth management, RGM AI platform, trade promotion optimization, price elasticity modeling, FMCG pricing strategy, pack architecture optimization";
+
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Intellimark AI Revenue Growth Management Engine",
+    "operatingSystem": "Cloud",
+    "applicationCategory": "BusinessApplication",
+    "description": heroDescription,
+    "url": canonicalUrl,
+    "provider": {
+      "@type": "Organization",
+      "name": "Intellimark AI",
+      "url": "https://www.intellimark.ai"
+    }
+  };
 
   const stats = [
     { value: "60%", label: "ROI Increase", color: "from-purple-500 to-purple-600" },
@@ -32,14 +48,15 @@ const ProductDetail = () => {
 
   return (
     <div className="bg-white">
-
       {/* Dynamic SEO meta tags */}
-      <Helmet>
-        <title>{title} - Intellimark AI</title>
-        <meta name="description" content={heroDescription} />
-        <meta property="og:title" content={`${title} - Intellimark AI`} />
-        <meta property="og:description" content={heroDescription} />
-      </Helmet>
+      <SEO
+        title={title}
+        description={heroDescription}
+        canonicalUrl={canonicalUrl}
+        keywords={keywords}
+        ogType="website"
+        schema={schemaData}
+      />
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-purple-50/30 via-white to-blue-50/20 pt-20 pb-24">
         <div className="max-w-7xl pt-6 mx-auto px-6 lg:px-8">
