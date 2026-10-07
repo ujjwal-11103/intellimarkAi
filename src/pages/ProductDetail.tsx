@@ -15,7 +15,6 @@ import NrmLevers from '../components/explainable/Levers';
 import { VennDiagram } from '../components/explainable/VennDiagram';
 import { ProcessFlow } from '../components/explainable/ProcessFlow';
 import { MLEngine } from '../components/explainable/MLEngine';
-import StudyCard from '../components/StudyCard';
 import RGMStudyCard from '../components/explainable/RGMStudyCard';
 
 const ProductDetail = () => {

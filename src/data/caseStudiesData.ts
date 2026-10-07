@@ -24,7 +24,39 @@ export interface CaseStudy {
 }
 
 export const caseStudiesData: CaseStudy[] = [
-  
+   
+  {
+    id: 'trade-promo-roi-fmcg',
+    title: '15% Increase in Trade Promo ROI for One of India\'s Largest FMCGs',
+    description: 'How Intellimark\'s Prescriptive TPO re-created trade promotion schemes across 4000 market x SKU x slabs in 4 weeks, optimizing budgets to maximize sales.',
+    industry: 'consumer_goods',
+    industryLabel: 'FMCG',
+    metrics: {
+      improvement: '15% increase in trade promotion ROI',
+      timeFrame: '4 weeks'
+    },
+    problem: 'Our client, a large multi-brand FMCG company operating across India, faced a steep cut in its trade promotion budget while still holding itself to an ambitious sales target. The question: how do you redesign 4000 slabs across rural, wholesale and direct-distribution schemes, including their slab structures, so that every rupee delivers the maximum ROI while meeting the sales target at the SKU level?',
+    challenges: [
+      'The trade budget for a large multi-brand portfolio was reduced drastically.',
+      'Redesigning 4000 slabs across rural, wholesale and direct-distribution schemes.',
+      'Delivering the maximum ROI on every rupee while meeting the sales target at the SKU level.'
+    ],
+    solution: 'Intellimark\'s Prescriptive TPO: an AI-powered model that learns how retailers respond to payouts and slabs, and creates the best-fit payout % and slab ranges within the client\'s budget, at retailer x SKU level.',
+    approach: [
+      'Retailer Response Modelling: Intellimark\'s AI TPO model studied how retailers respond to different payouts and slabs at a retailer x SKU level, compared competitors\' net rates, and then used transfer learning algorithms and LLMs to create the best-fit payout % and slab ranges within the client\'s budget constraints.',
+      'Funding Gap Flagging: It also flagged which SKUs were over- or under-funded, and how much funding should move to or from each.'
+    ],
+    results: [
+      '15% Higher ROI with the Available Budget: Schemes were designed to put the full budget to work where it lifts sales the most.',
+      'Smarter Allocation Across the Portfolio: Funds were directed to the brands that respond most strongly to schemes.',
+      'Funds Moved Across Geographies: Savings were identified in low-response geographies and redirected to those that were under-funded.',
+      'Hotspots Identified and Funded: Hotspot geographies x SKUs that respond strongly to schemes were identified and funded accordingly.',
+      'Clear Fund Movements: State-level and SKU-level fund movements were recommended.'
+    ],
+    technologies: ['AI TPO Model', 'Transfer Learning Algorithms', 'LLMs', 'Competitor Net-Rate Comparison'],
+    testimonial: { quote: '', author: '', position: '', company: '' },
+    topics: ['Revenue Growth Management', 'Trade Promotion Optimization', 'CPG']
+  },
   {
     id: 'b2b-demand-forecasting',
       title: 'B2B Demand Forecasting, Sales Alerts and Profitability Management System',

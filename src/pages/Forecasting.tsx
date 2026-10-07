@@ -6,7 +6,6 @@ import ForecastingStudyCard from '../components/forecasting/ForecastingStudyCard
 import CompanyMarquee from '../components/marquee';
 import NowcastSystem from '../components/forecasting/NowcastSystem';
 import TeresaSystem from '../components/forecasting/TeresaSystem';
-import StudyCard from '../components/StudyCard';
 
 const Forecasting = () => {
     const title = "Advanced Forecasting and Planning";

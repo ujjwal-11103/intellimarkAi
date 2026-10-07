@@ -1,9 +1,6 @@
 import React from 'react';
 import { Award, Zap, Shield } from 'lucide-react';
-// Assuming StatsCard is in a separate file, e.g., './StatsCard.tsx'
-// import StatsCard from "./StatsCard"; 
-
-// Mock StatsCard component if not provided
+// StatsCard component
 const StatsCard = ({ number, label, delay, gradient, accentColor }: any) => (
   <div style={{ animationDelay: `${delay}ms` }} className={`p-8 rounded-2xl ${gradient} text-white shadow-lg`}>
     <div className="text-5xl font-bold">{number}</div>
