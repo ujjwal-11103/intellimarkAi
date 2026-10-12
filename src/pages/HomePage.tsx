@@ -1,6 +1,8 @@
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import SEO from '../components/SEO';
 import { Link } from 'react-router-dom';
-import { TrendingUp, ArrowRight, ExternalLink } from 'lucide-react';
+import { TrendingUp, ArrowRight, BookOpen, Sparkles, Zap, Play, X, Download } from 'lucide-react';
 import Hero from '../components/Hero';
 import Carousel from '../components/carousel';
 import CompanyMarquee from '../components/marquee';
@@ -10,6 +12,17 @@ import UpcomingEvents from '../components/UpcomingEvents';
 import ResourcesHub from '../components/ResourceHub';
 
 const HomePage = () => {
+    const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+    // Close popup on Escape key
+    useEffect(() => {
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (e.key === 'Escape') setIsPopupOpen(false);
+        };
+        window.addEventListener('keydown', handleKeyDown);
+        return () => window.removeEventListener('keydown', handleKeyDown);
+    }, []);
+
     const title = "Intellimark AI | Revenue Growth Management & AI Demand Forecasting";
     const description =
         "Intellimark AI empowers enterprise FMCG and retail leaders with explainable AI for revenue growth management (RGM), demand forecasting, and predictive recommendation systems.";
@@ -47,50 +60,177 @@ const HomePage = () => {
                 schema={schemaData}
             />
 
-            {/* Quick Link Banner Below Navbar */}
-            <section className="relative overflow-hidden bg-gradient-to-r from-purple-600 via-purple-700 to-purple-800 border-b border-purple-500/30">
-              {/* Background pattern */}
-              <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.4\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 36v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 6V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")' }} />
-              
-              <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5">
-                <Link 
-                  to="/uiux-revamp-strategy"
-                  className="group flex items-center gap-3 px-3 py-2 bg-white/5 backdrop-blur-xl rounded-xl border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300"
+            {/* Quick Link Banner Below Navbar - Slim Narrow Floating Pill */}
+            <section className="relative overflow-hidden bg-gradient-to-r from-purple-950 via-purple-900 to-indigo-950 py-2 sm:py-2.5 px-3 sm:px-4 border-b border-purple-500/20">
+              {/* Subtle background grid pattern */}
+              <div 
+                className="absolute inset-0 opacity-10 pointer-events-none" 
+                style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.4\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 36v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 6V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")' }} 
+              />
+              <div className="absolute -top-12 -left-12 w-48 h-48 bg-pink-500/10 rounded-full blur-2xl pointer-events-none" />
+              <div className="absolute -bottom-12 -right-12 w-48 h-48 bg-purple-400/15 rounded-full blur-2xl pointer-events-none" />
+
+              <div className="max-w-4xl mx-auto">
+                <div
+                  onClick={() => setIsPopupOpen(true)}
+                  role="button"
+                  tabIndex={0}
+                  className="group cursor-pointer flex items-center justify-between gap-2.5 sm:gap-3 px-3 sm:px-4 py-1.5 sm:py-2 bg-white/10 hover:bg-white/15 backdrop-blur-xl rounded-full border border-white/20 hover:border-purple-300/40 shadow-sm hover:shadow-md hover:shadow-purple-900/30 transition-all duration-300"
                 >
-                  {/* Icon Badge */}
-                  <div className="relative flex-shrink-0 w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center shadow-lg shadow-purple-500/25 group-hover:scale-110 transition-transform duration-300">
-                    <ExternalLink className="w-5 h-5 text-white" />
-                    <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg opacity-0 group-hover:opacity-30 blur-lg transition-opacity duration-300" />
+                  {/* Left: New Badge + Presenter + Title */}
+                  <div className="flex items-center gap-2 sm:gap-2.5 min-w-0">
+                    <span className="flex-shrink-0 inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 text-[11px] font-bold border border-emerald-400/30">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                      NEW
+                    </span>
+
+                    <span className="hidden md:inline-flex items-center gap-1 text-[11px] font-semibold text-purple-200 bg-white/10 px-2.5 py-0.5 rounded-full border border-white/10 flex-shrink-0">
+                      <Sparkles className="w-2.5 h-2.5 text-amber-300" />
+                      Rahul Ranjan Srivastava • Intellimark AI
+                    </span>
+
+                    <p className="text-xs sm:text-sm font-semibold text-white truncate">
+                      <span className="text-purple-200 hidden sm:inline">UI/UX Revamp:</span> 45s Field Order Punching Strategy
+                    </p>
+
+                    <span className="hidden lg:inline-flex items-center gap-1 text-[11px] font-semibold text-amber-300 bg-purple-900/70 px-2 py-0.5 rounded-full border border-purple-500/30 flex-shrink-0">
+                      <Zap className="w-2.5 h-2.5" /> 45s vs 3.5m
+                    </span>
                   </div>
-                  
-                  {/* Content */}
-                  <div className="flex-1 min-w-0 text-left">
-                    <div className="flex items-center gap-2">
-                      <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-white/10 rounded-full text-xs font-semibold text-white/90">
-                        <span className="relative flex h-1 w-1">
-                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                          <span className="relative inline-flex rounded-full h-1 w-1 bg-green-500"></span>
-                        </span>
-                        New Resource
-                      </span>
-                      <span className="text-white/40 text-xs">|</span>
-                      <span className="text-white/60 text-xs font-medium">PDF + Video</span>
-                    </div>
-                    <h3 className="font-semibold text-white text-sm leading-tight group-hover:text-purple-100 transition-colors">
-                      UI/UX Revamp Strategy
-                    </h3>
+
+                  {/* Right: Quick View Trigger Button */}
+                  <div className="flex-shrink-0 flex items-center gap-1.5">
+                    <span className="inline-flex items-center gap-1 px-3 py-1 bg-white text-purple-900 text-xs font-bold rounded-full shadow-xs group-hover:bg-purple-50 group-hover:scale-105 transition-all">
+                      <Play className="w-3 h-3 fill-current text-purple-700" />
+                      Quick View
+                      <ArrowRight className="w-3 h-3 ml-0.5 group-hover:translate-x-0.5 transition-transform" />
+                    </span>
                   </div>
-                  
-                  {/* CTA Button */}
-                  <div className="flex-shrink-0">
-                    <button className="flex items-center gap-1.5 px-4 py-1.5 bg-white text-purple-700 font-semibold rounded-full shadow-lg hover:shadow-xl hover:bg-white/90 transition-all duration-300 text-sm">
-                      Explore
-                      <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
-                    </button>
-                  </div>
-                </Link>
+                </div>
               </div>
             </section>
+
+            {/* Quick View Popup Modal Right There */}
+            <AnimatePresence>
+              {isPopupOpen && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4">
+                  {/* Backdrop */}
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    onClick={() => setIsPopupOpen(false)}
+                    className="absolute inset-0 bg-black/75 backdrop-blur-sm"
+                  />
+
+                  {/* Modal Container */}
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.95, y: 15 }}
+                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                    exit={{ opacity: 0, scale: 0.95, y: 15 }}
+                    transition={{ duration: 0.2 }}
+                    className="relative w-full max-w-3xl bg-gray-900 text-white rounded-2xl border border-purple-500/30 shadow-2xl overflow-hidden z-10 max-h-[90vh] flex flex-col"
+                  >
+                    {/* Header */}
+                    <div className="flex items-center justify-between px-5 py-3.5 bg-gradient-to-r from-purple-900 via-purple-800 to-indigo-950 border-b border-purple-500/30">
+                      <div className="flex items-center gap-2.5 min-w-0">
+                        <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0">
+                          <BookOpen className="w-4 h-4 text-purple-200" />
+                        </div>
+                        <div className="min-w-0">
+                          <h3 className="text-sm sm:text-base font-bold text-white truncate">
+                            Field-Sales Order-Taking UI/UX Revamp Strategy
+                          </h3>
+                          <p className="text-xs text-purple-200 truncate">
+                            Presenter: Rahul Ranjan Srivastava • Intellimark AI
+                          </p>
+                        </div>
+                      </div>
+
+                      <button
+                        onClick={() => setIsPopupOpen(false)}
+                        className="p-1.5 rounded-lg text-purple-200 hover:text-white hover:bg-white/10 transition-colors"
+                        aria-label="Close popup"
+                      >
+                        <X className="w-5 h-5" />
+                      </button>
+                    </div>
+
+                    {/* Modal Body */}
+                    <div className="p-4 sm:p-5 overflow-y-auto space-y-4">
+                      {/* Video Embed */}
+                      <div className="relative aspect-video rounded-xl overflow-hidden bg-black border border-gray-800 shadow-inner">
+                        <iframe
+                          src="https://www.youtube-nocookie.com/embed/mF5nJ7PpQ64?autoplay=1&rel=0"
+                          title="Field Sales UI/UX Revamp Strategy Walkthrough"
+                          className="w-full h-full"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                        />
+                      </div>
+
+                      {/* Micro-metrics summary */}
+                      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-1">
+                        <div className="p-2.5 rounded-lg bg-white/5 border border-white/10 text-center">
+                          <div className="text-[10px] uppercase font-bold text-amber-300">Punch Time</div>
+                          <div className="text-lg font-black text-white">45s</div>
+                          <div className="text-[10px] text-gray-400">vs 3m 40s Kirana</div>
+                        </div>
+                        <div className="p-2.5 rounded-lg bg-white/5 border border-white/10 text-center">
+                          <div className="text-[10px] uppercase font-bold text-emerald-300">Basket SOQ</div>
+                          <div className="text-lg font-black text-white">1-Tap</div>
+                          <div className="text-[10px] text-gray-400">Prescriptive AI</div>
+                        </div>
+                        <div className="p-2.5 rounded-lg bg-white/5 border border-white/10 text-center">
+                          <div className="text-[10px] uppercase font-bold text-indigo-300">Focus Lines</div>
+                          <div className="text-lg font-black text-white">+24%</div>
+                          <div className="text-[10px] text-gray-400">Priority Sort</div>
+                        </div>
+                        <div className="p-2.5 rounded-lg bg-white/5 border border-white/10 text-center">
+                          <div className="text-[10px] uppercase font-bold text-purple-300">Net Scheme</div>
+                          <div className="text-lg font-black text-white">100%</div>
+                          <div className="text-[10px] text-gray-400">Zero Slab Math</div>
+                        </div>
+                      </div>
+
+                      {/* Brief Takeaway */}
+                      <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">
+                        Consumer e-commerce patterns fail in high-cadence field retail where reps have only 3 to 4 minutes per kirana store. This 13-slide strategy presents a single-screen canvas with one-tap SOQ and transparent net landed rates.
+                      </p>
+                    </div>
+
+                    {/* Modal Footer Actions */}
+                    <div className="px-5 py-3.5 bg-gray-950/80 border-t border-gray-800 flex flex-wrap items-center justify-between gap-3">
+                      <a
+                        href="/UIUX_Revamp_Strategy.pdf"
+                        download="UIUX_Revamp_Strategy.pdf"
+                        className="inline-flex items-center gap-1.5 text-xs text-gray-300 hover:text-white transition-colors"
+                      >
+                        <Download className="w-3.5 h-3.5" />
+                        Download PDF (13 Slides)
+                      </a>
+
+                      <div className="flex items-center gap-2">
+                        <button
+                          onClick={() => setIsPopupOpen(false)}
+                          className="px-3.5 py-1.5 rounded-lg text-xs font-semibold text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
+                        >
+                          Close
+                        </button>
+                        <Link
+                          to="/uiux-revamp-strategy"
+                          onClick={() => setIsPopupOpen(false)}
+                          className="inline-flex items-center gap-1.5 px-4 py-1.5 bg-purple-600 hover:bg-purple-700 text-white text-xs font-bold rounded-lg shadow-md transition-all"
+                        >
+                          <span>Open Full Strategy Page</span>
+                          <ArrowRight className="w-3.5 h-3.5" />
+                        </Link>
+                      </div>
+                    </div>
+                  </motion.div>
+                </div>
+              )}
+            </AnimatePresence>
 
             <Hero />
 

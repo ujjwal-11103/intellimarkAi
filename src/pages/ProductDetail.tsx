@@ -4,11 +4,8 @@ import {
   Brain,
   Database,
   LineChart,
-  Play,
-  Shield,
   Target,
-  TrendingUp,
-  Zap
+  TrendingUp
 } from 'lucide-react';
 
 import NrmLevers from '../components/explainable/Levers';
@@ -19,6 +16,7 @@ import RGMStudyCard from '../components/explainable/RGMStudyCard';
 
 const ProductDetail = () => {
   const title = "AI Revenue Growth Management (RGM) Platform | Intellimark AI";
+  const heroSubtitle = "Re-engineered with Artificial Intelligence";
   const heroDescription =
     "Unlock revenue growth, profitability, and sales efficiency across price, promotions, media, and supply chains using Intellimark's explainable AI RGM platform.";
   const canonicalUrl = "https://www.intellimark.ai/RevenueGrowthManagement";
