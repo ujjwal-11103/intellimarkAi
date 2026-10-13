@@ -72,13 +72,13 @@ const HomePage = () => {
 
               <div className="max-w-4xl mx-auto">
                 <div
-                  onClick={() => setIsPopupOpen(true)}
-                  role="button"
-                  tabIndex={0}
-                  className="group cursor-pointer flex items-center justify-between gap-2.5 sm:gap-3 px-3 sm:px-4 py-1.5 sm:py-2 bg-white/10 hover:bg-white/15 backdrop-blur-xl rounded-full border border-white/20 hover:border-purple-300/40 shadow-sm hover:shadow-md hover:shadow-purple-900/30 transition-all duration-300"
+                  className="flex items-center justify-between gap-2 sm:gap-3 px-3 sm:px-4 py-1.5 sm:py-2 bg-white/10 backdrop-blur-xl rounded-full border border-white/20 shadow-sm transition-all duration-300"
                 >
-                  {/* Left: New Badge + Presenter + Title */}
-                  <div className="flex items-center gap-2 sm:gap-2.5 min-w-0">
+                  {/* Left: New Badge + Presenter + Title (Links directly to the Strategy Page) */}
+                  <Link
+                    to="/uiux-revamp-strategy"
+                    className="flex items-center gap-2 sm:gap-2.5 min-w-0 hover:opacity-90 transition-opacity"
+                  >
                     <span className="flex-shrink-0 inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 text-[11px] font-bold border border-emerald-400/30">
                       <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
                       NEW
@@ -90,21 +90,32 @@ const HomePage = () => {
                     </span>
 
                     <p className="text-xs sm:text-sm font-semibold text-white truncate">
-                      <span className="text-purple-200 hidden sm:inline">UI/UX Revamp:</span> 45s Field Order Punching Strategy
+                      <span className="text-purple-200 hidden sm:inline">UI/UX Revamp:</span> Field Order Punching Strategy
                     </p>
+                  </Link>
 
-                    <span className="hidden lg:inline-flex items-center gap-1 text-[11px] font-semibold text-amber-300 bg-purple-900/70 px-2 py-0.5 rounded-full border border-purple-500/30 flex-shrink-0">
-                      <Zap className="w-2.5 h-2.5" /> 45s vs 3.5m
-                    </span>
-                  </div>
+                  {/* Right: Two Distinct Action Buttons (Video Modal vs Strategy Page) */}
+                  <div className="flex-shrink-0 flex items-center gap-1.5 sm:gap-2">
+                    {/* Button 1: Video */}
+                    <button
+                      type="button"
+                      onClick={() => setIsPopupOpen(true)}
+                      className="inline-flex items-center gap-1 sm:gap-1.5 px-2.5 sm:px-3 py-1 bg-white/10 hover:bg-white/20 text-purple-100 hover:text-white text-xs font-semibold rounded-full border border-white/20 hover:border-purple-300/40 transition-all cursor-pointer shadow-xs active:scale-95"
+                      title="Watch Video Walkthrough"
+                    >
+                      <Play className="w-3 h-3 fill-amber-300 text-amber-300" />
+                      <span><span className="hidden sm:inline">Watch </span>Video</span>
+                    </button>
 
-                  {/* Right: Quick View Trigger Button */}
-                  <div className="flex-shrink-0 flex items-center gap-1.5">
-                    <span className="inline-flex items-center gap-1 px-3 py-1 bg-white text-purple-900 text-xs font-bold rounded-full shadow-xs group-hover:bg-purple-50 group-hover:scale-105 transition-all">
-                      <Play className="w-3 h-3 fill-current text-purple-700" />
-                      Quick View
-                      <ArrowRight className="w-3 h-3 ml-0.5 group-hover:translate-x-0.5 transition-transform" />
-                    </span>
+                    {/* Button 2: Quick View (Page) */}
+                    <Link
+                      to="/uiux-revamp-strategy"
+                      className="inline-flex items-center gap-1 px-3 py-1 bg-white hover:bg-purple-50 text-purple-900 text-xs font-bold rounded-full shadow-xs hover:scale-105 transition-all cursor-pointer active:scale-95"
+                      title="Open Strategy Page"
+                    >
+                      <span>Quick View</span>
+                      <ArrowRight className="w-3 h-3 text-purple-700 ml-0.5" />
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -135,11 +146,11 @@ const HomePage = () => {
                     <div className="flex items-center justify-between px-5 py-3.5 bg-gradient-to-r from-purple-900 via-purple-800 to-indigo-950 border-b border-purple-500/30">
                       <div className="flex items-center gap-2.5 min-w-0">
                         <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0">
-                          <BookOpen className="w-4 h-4 text-purple-200" />
+                          <Play className="w-4 h-4 text-purple-200 fill-current" />
                         </div>
                         <div className="min-w-0">
                           <h3 className="text-sm sm:text-base font-bold text-white truncate">
-                            Field-Sales Order-Taking UI/UX Revamp Strategy
+                            Video Walkthrough: Field-Sales UI/UX Revamp Strategy
                           </h3>
                           <p className="text-xs text-purple-200 truncate">
                             Presenter: Rahul Ranjan Srivastava • Intellimark AI
@@ -172,9 +183,9 @@ const HomePage = () => {
                       {/* Micro-metrics summary */}
                       <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-1">
                         <div className="p-2.5 rounded-lg bg-white/5 border border-white/10 text-center">
-                          <div className="text-[10px] uppercase font-bold text-amber-300">Punch Time</div>
-                          <div className="text-lg font-black text-white">45s</div>
-                          <div className="text-[10px] text-gray-400">vs 3m 40s Kirana</div>
+                          <div className="text-[10px] uppercase font-bold text-amber-300">Order Punching</div>
+                          <div className="text-lg font-black text-white">&lt; 1 Min</div>
+                          <div className="text-[10px] text-gray-400">Order Velocity</div>
                         </div>
                         <div className="p-2.5 rounded-lg bg-white/5 border border-white/10 text-center">
                           <div className="text-[10px] uppercase font-bold text-emerald-300">Basket SOQ</div>
