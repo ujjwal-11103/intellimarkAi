@@ -64,6 +64,13 @@ const UIUXRevampStrategy = () => {
   const [touchStartX, setTouchStartX] = useState<number | null>(null);
   const [isPointerDown, setIsPointerDown] = useState(false);
 
+  // Scroll to top on mount
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  }, []);
+
   // Load PDF document
   useEffect(() => {
     let isMounted = true;

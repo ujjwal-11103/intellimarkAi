@@ -77,6 +77,11 @@ const HomePage = () => {
                   {/* Left: New Badge + Presenter + Title (Links directly to the Strategy Page) */}
                   <Link
                     to="/uiux-revamp-strategy"
+                    onClick={() => {
+                      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+                      document.documentElement.scrollTop = 0;
+                      document.body.scrollTop = 0;
+                    }}
                     className="flex items-center gap-2 sm:gap-2.5 min-w-0 hover:opacity-90 transition-opacity"
                   >
                     <span className="flex-shrink-0 inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 text-[11px] font-bold border border-emerald-400/30">
@@ -110,6 +115,11 @@ const HomePage = () => {
                     {/* Button 2: Quick View (Page) */}
                     <Link
                       to="/uiux-revamp-strategy"
+                      onClick={() => {
+                        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+                        document.documentElement.scrollTop = 0;
+                        document.body.scrollTop = 0;
+                      }}
                       className="inline-flex items-center gap-1 px-3 py-1 bg-white hover:bg-purple-50 text-purple-900 text-xs font-bold rounded-full shadow-xs hover:scale-105 transition-all cursor-pointer active:scale-95"
                       title="Open Strategy Page"
                     >
@@ -246,7 +256,12 @@ const HomePage = () => {
                         </button>
                         <Link
                           to="/uiux-revamp-strategy"
-                          onClick={() => setIsPopupOpen(false)}
+                          onClick={() => {
+                            setIsPopupOpen(false);
+                            window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+                            document.documentElement.scrollTop = 0;
+                            document.body.scrollTop = 0;
+                          }}
                           className="inline-flex items-center gap-1.5 px-4 py-1.5 bg-purple-600 hover:bg-purple-700 text-white text-xs font-bold rounded-lg shadow-md transition-all"
                         >
                           <span>Open Full Strategy Page</span>
