@@ -966,6 +966,41 @@ const UIUXRevampStrategy = () => {
             </div>
           </div>
 
+          {/* Recommendation System Video */}
+          <div className="mt-14 pt-10 border-t border-gray-200">
+            <div className="mb-4">
+              <h3 className="text-lg sm:text-xl font-bold text-gray-950">
+                Please see this, our recommendation system
+              </h3>
+            </div>
+
+            <div className="max-w-4xl">
+              <div className="relative rounded-2xl overflow-hidden shadow-lg border border-gray-200 bg-black aspect-video">
+                <iframe
+                  src="https://www.youtube.com/embed/vnEssZQBoOw?rel=0"
+                  title="Our Recommendation System"
+                  className="absolute inset-0 w-full h-full"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+
+              <div className="mt-3 flex items-center justify-between text-xs text-gray-500">
+                <span>Intellimark AI • Recommendation System</span>
+                <a
+                  href="https://www.youtube.com/watch?v=vnEssZQBoOw"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-purple-700 hover:text-purple-900 font-semibold inline-flex items-center gap-1"
+                >
+                  Watch on YouTube
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
 

@@ -180,6 +180,22 @@ const HomePage = () => {
                         />
                       </div>
 
+                      {/* Recommendation System Video */}
+                      <div className="pt-3 border-t border-gray-800 space-y-2">
+                        <p className="text-xs sm:text-sm font-semibold text-purple-200">
+                          Please see this, our recommendation system:
+                        </p>
+                        <div className="relative aspect-video rounded-xl overflow-hidden bg-black border border-gray-800 shadow-inner">
+                          <iframe
+                            src="https://www.youtube-nocookie.com/embed/vnEssZQBoOw?rel=0"
+                            title="Our Recommendation System"
+                            className="w-full h-full"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                          />
+                        </div>
+                      </div>
+
                       {/* Micro-metrics summary */}
                       <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-1">
                         <div className="p-2.5 rounded-lg bg-white/5 border border-white/10 text-center">
