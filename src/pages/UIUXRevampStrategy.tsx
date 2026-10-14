@@ -405,11 +405,11 @@ const UIUXRevampStrategy = () => {
               </div>
             </div>
 
-            {/* Right Column: Interactive Deck Teaser / Quick Chapter Navigator */}
+            {/*
+            Right Column: Interactive Deck Teaser / Quick Chapter Navigator
             <div className="lg:col-span-5">
               <div className="p-4 sm:p-5 rounded-2xl bg-white/[0.08] backdrop-blur-xl border border-white/20 shadow-2xl space-y-3.5">
                 
-                {/* Header inside teaser */}
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
                     <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping" />
@@ -422,7 +422,6 @@ const UIUXRevampStrategy = () => {
                   </span>
                 </div>
 
-                {/* Interactive Preview Frame */}
                 <div 
                   onClick={() => scrollToSection('deck-viewer')}
                   className="group relative cursor-pointer aspect-video rounded-xl overflow-hidden bg-purple-950/80 border border-white/20 shadow-inner"
@@ -441,7 +440,6 @@ const UIUXRevampStrategy = () => {
                     </div>
                   )}
 
-                  {/* Hover Overlay */}
                   <div className="absolute inset-0 bg-purple-950/70 opacity-0 group-hover:opacity-100 backdrop-blur-xs flex flex-col items-center justify-center gap-2 transition-all duration-300">
                     <div className="w-12 h-12 rounded-full bg-white text-purple-800 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
                       <BookOpen className="w-5 h-5 text-purple-700" />
@@ -451,13 +449,11 @@ const UIUXRevampStrategy = () => {
                     </span>
                   </div>
 
-                  {/* Corner Badge */}
                   <div className="absolute bottom-2 left-2 px-2.5 py-1 rounded-md bg-black/60 backdrop-blur-md text-[11px] font-mono text-white/90">
                     Slide 1: Executive Summary
                   </div>
                 </div>
 
-                {/* Quick Chapter Pill Jumps */}
                 <div className="space-y-1.5">
                   <div className="text-[11px] font-semibold text-purple-200 uppercase tracking-wider">
                     Direct Jump to Key Slides:
@@ -489,9 +485,9 @@ const UIUXRevampStrategy = () => {
                     </button>
                   </div>
                 </div>
-
               </div>
             </div>
+            */}
 
           </div>
 
@@ -833,7 +829,8 @@ const UIUXRevampStrategy = () => {
         )}
       </AnimatePresence>
 
-      {/* Case Study Section 1: The Field Reality (Natural Editorial Format) */}
+      {/*
+      Case Study Section 1: The Field Reality (Natural Editorial Format)
       <section className="py-16 md:py-20 border-b border-gray-200 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
           
@@ -849,7 +846,6 @@ const UIUXRevampStrategy = () => {
             </p>
           </div>
 
-          {/* Real Field Realities */}
           <div className="grid md:grid-cols-2 gap-6 pt-2">
             <div className="p-6 rounded-xl bg-gray-50 border border-gray-200 space-y-3">
               <div className="text-xs font-bold uppercase tracking-wider text-gray-500">
@@ -882,7 +878,6 @@ const UIUXRevampStrategy = () => {
             </div>
           </div>
 
-          {/* Core Insight Callout */}
           <div className="p-6 rounded-xl bg-gray-900 text-white space-y-2">
             <div className="text-xs font-mono text-purple-300 font-semibold uppercase tracking-wider">
               The Guiding Heuristic
@@ -894,7 +889,7 @@ const UIUXRevampStrategy = () => {
 
         </div>
       </section>
-
+      */}
 
       {/* Video Masterclass Section */}
       <section id="video-walkthrough" className="py-16 md:py-20 border-b border-gray-200 bg-white">
