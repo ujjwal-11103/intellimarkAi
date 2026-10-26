@@ -28,6 +28,7 @@ import UnveilingAI from './pages/blogs/UnveilingAI';
 import HomePage from './pages/HomePage';
 import IntelliPlanPrivacy from './pages/IntelliPlanPrivacy';
 import UIUXRevampStrategy from './pages/UIUXRevampStrategy';
+import IntellimarkQA from './pages/IntellimarkQA';
 
 function App() {
   useEffect(() => {
@@ -81,7 +82,10 @@ function App() {
           <Route path="/Unveiling-AI" element={<UnveilingAI />} />
 
           <Route path="/intelliplan_privacy" element={<IntelliPlanPrivacy />} />
-<Route path="/uiux-revamp-strategy" element={<UIUXRevampStrategy />} />
+          <Route path="/uiux-revamp-strategy" element={<UIUXRevampStrategy />} />
+          <Route path="/qa" element={<IntellimarkQA />} />
+          <Route path="/questions-and-answers" element={<IntellimarkQA />} />
+          <Route path="/intellimark-qa" element={<IntellimarkQA />} />
 
         </Routes>
         <Footer />

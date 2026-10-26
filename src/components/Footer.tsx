@@ -69,6 +69,14 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
+                    href="/qa"
+                    className="text-sm sm:text-base text-gray-300 hover:text-purple-400 transition-colors duration-200"
+                  >
+                    Questions & Answers
+                  </a>
+                </li>
+                <li>
+                  <a
                     href="/intelliplan_privacy"
                     className="text-sm sm:text-base text-gray-300 hover:text-purple-400 transition-colors duration-200"
                   >

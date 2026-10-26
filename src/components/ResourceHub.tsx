@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
-import { ArrowUpRight, BookOpen, FileText, TrendingUp, Users, Brain, Lightbulb, ChevronRight } from 'lucide-react';
+import { ArrowUpRight, BookOpen, FileText, TrendingUp, Users, Brain, Lightbulb, ChevronRight, HelpCircle } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 
 interface ResourceCard {
   id: string;
-  type: 'BLOG' | 'EBOOK' | 'CASE STUDY';
+  type: 'BLOG' | 'EBOOK' | 'CASE STUDY' | 'Q&A';
   title: string;
   description?: string;
   image: string;
   readTime?: string;
   category: string;
   featured?: boolean;
+  link?: string;
 }
 
 const ResourcesHub: React.FC = () => {
@@ -29,9 +30,20 @@ const ResourcesHub: React.FC = () => {
       case 'Case Studies':
         navigate('/case-studies');
         break;
+      case 'Q&A':
+        navigate('/qa');
+        break;
       default:
         navigate('/');
     }
+  };
+
+  const getResourceLink = (resource: ResourceCard) => {
+    if (resource.link) return resource.link;
+    if (resource.type === 'Q&A') return '/qa';
+    if (resource.type.toUpperCase() === 'CASE STUDY') return '/case-studies';
+    if (resource.type.toUpperCase() === 'BLOG') return '/blogs';
+    return '#';
   };
 
   const resources: ResourceCard[] = [
@@ -81,6 +93,16 @@ const ResourcesHub: React.FC = () => {
       image: 'https://images.pexels.com/photos/1933900/pexels-photo-1933900.jpeg',
       readTime: '15 min read',
       category: 'AI Technology'
+    },
+    {
+      id: '6',
+      type: 'Q&A',
+      title: 'AI in FMCG & Supply Chain: Questions & Answers Guide',
+      description: 'Comprehensive answers on SKU-level demand forecasting, trade promotions, store recommendation engines, beat planning, and RCA.',
+      image: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800',
+      readTime: '15 min read',
+      category: 'Knowledge Hub',
+      link: '/qa'
     }
   ];
 
@@ -88,8 +110,11 @@ const ResourcesHub: React.FC = () => {
     switch (type) {
       case 'BLOG':
         return <FileText className="w-4 h-4" />;
+      case 'CASE STUDY':
       case 'CASE STUDIES':
         return <TrendingUp className="w-4 h-4" />;
+      case 'Q&A':
+        return <HelpCircle className="w-4 h-4" />;
       default:
         return <FileText className="w-4 h-4" />;
     }
@@ -99,15 +124,18 @@ const ResourcesHub: React.FC = () => {
     switch (type) {
       case 'BLOG':
         return 'text-blue-600 bg-blue-50 border-blue-200';
+      case 'CASE STUDY':
       case 'cASE STUDIES':
         return 'text-emerald-600 bg-emerald-50 border-emerald-200';
+      case 'Q&A':
+        return 'text-purple-600 bg-purple-50 border-purple-200';
       default:
         return 'text-gray-600 bg-gray-50 border-gray-200';
     }
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div id="resources" className="min-h-screen bg-white">
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-6">
@@ -131,7 +159,7 @@ const ResourcesHub: React.FC = () => {
 
             {/* Filter Tabs */}
             <div className="flex flex-wrap justify-center gap-3 mb-16">
-              {['All Resources', 'Blogs', 'Case Studies'].map((filter) => (
+              {['All Resources', 'Blogs', 'Case Studies', 'Q&A'].map((filter) => (
                 <button
                   key={filter}
                   onClick={() => handleNavigation(filter)}
@@ -155,7 +183,7 @@ const ResourcesHub: React.FC = () => {
             {/* Featured Article */}
             <div className="lg:col-span-8">
               <a
-                href={resources[0].type.toUpperCase() === 'CASE STUDY' ? '/case-studies' : resources[0].type.toUpperCase() === 'BLOG' ? '/blogs' : '#'}
+                href={getResourceLink(resources[0])}
                 className="group relative h-[500px] rounded-3xl overflow-hidden cursor-pointer block"
                 onMouseEnter={() => setHoveredCard(resources[0].id)}
                 onMouseLeave={() => setHoveredCard(null)}
@@ -198,7 +226,7 @@ const ResourcesHub: React.FC = () => {
               {resources.slice(1, 3).map((resource) => (
                 <a
                   key={resource.id}
-                  href={resource.type === 'CASE STUDY' ? '/case-studies' : resource.type === 'BLOG' ? '/blogs' : '#'}
+                  href={getResourceLink(resource)}
                   className="group relative h-[235px] rounded-2xl overflow-hidden cursor-pointer block focus:outline-none focus:ring-2 focus:ring-blue-500 active:scale-95 transition-transform duration-150"
                   onMouseEnter={() => setHoveredCard(resource.id)}
                   onMouseLeave={() => setHoveredCard(null)}
@@ -233,11 +261,11 @@ const ResourcesHub: React.FC = () => {
           </div>
 
           {/* Bottom Row */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
             {resources.slice(3).map((resource) => (
               <a
                 key={resource.id}
-                href={resource.type === 'CASE STUDY' ? '/case-studies' : resource.type === 'BLOG' ? '/blogs' : '#'}
+                href={getResourceLink(resource)}
                 className="group relative h-[320px] rounded-2xl overflow-hidden cursor-pointer block focus:outline-none focus:ring-2 focus:ring-blue-500 active:scale-95 transition-transform duration-150"
                 onMouseEnter={() => setHoveredCard(resource.id)}
                 onMouseLeave={() => setHoveredCard(null)}

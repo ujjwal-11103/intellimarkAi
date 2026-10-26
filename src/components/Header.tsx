@@ -227,6 +227,7 @@ const Navbar = () => {
               </span>
             </Link>
             <Link to="/blogs" className="px-5 py-3 text-gray-700 hover:text-blue-600 font-medium transition-all rounded-xl hover:bg-gray-50/80">Blogs</Link>
+            <Link to="/qa" className="px-5 py-3 text-gray-700 hover:text-blue-600 font-medium transition-all rounded-xl hover:bg-gray-50/80">Q&A</Link>
             <Link to="/about" className="px-5 py-3 text-gray-700 hover:text-blue-600 font-medium transition-all rounded-xl hover:bg-gray-50/80">About</Link>
           </div>
 
@@ -291,6 +292,13 @@ const Navbar = () => {
                 onClick={closeMobileMenu}
               >
                 Blogs
+              </Link>
+              <Link
+                to="/qa"
+                className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50/80 rounded-xl"
+                onClick={closeMobileMenu}
+              >
+                Q&A
               </Link>
               <Link
                 to="/about"
