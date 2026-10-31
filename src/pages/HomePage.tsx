@@ -40,6 +40,10 @@ const HomePage = () => {
             "description": description,
             "address": {
                 "@type": "PostalAddress",
+                "streetAddress": "Tech Park, Outer Ring Road",
+                "addressLocality": "Bengaluru",
+                "addressRegion": "Karnataka",
+                "postalCode": "560103",
                 "addressCountry": "IN"
             },
             "contactPoint": {
