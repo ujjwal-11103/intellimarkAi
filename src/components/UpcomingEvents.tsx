@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Play, Calendar, MapPin } from 'lucide-react';
-import gartner from '../photos/Gartner.jpeg'
-import sandeepup from '../photos/Sandeep-upcoming events.jpeg'
 
 interface CarouselItem {
   id: number;
@@ -15,8 +13,8 @@ interface CarouselItem {
 }
 
 const items: CarouselItem[] = [
-    { id: 1, title: "Gartner List Inclusion", subtitle: "Global Industry Recognition", description: "Intellimark's Profitpulse made it to the prestigious list of Gartner's Recommended Products for Consumer Goods Company.", date: "March 15, 2025", location: "San Francisco, CA", image: gartner, category: "Recognition" },
-    { id: 2, title: "Welcome Sandeep Mathews.", subtitle: "RGM Legend joins the Intellimark Board", description: "We welcome the legend Sandeep Mathew to Intellimark's Advisory board. 18 years in RGM expertise is being used to evolve Intellimark products.", date: "March 22, 2025", location: "IntelliMark HQ - Virtual", image: sandeepup , category: "Inclusion" }
+    { id: 1, title: "Gartner List Inclusion", subtitle: "Global Industry Recognition", description: "Intellimark's Profitpulse made it to the prestigious list of Gartner's Recommended Products for Consumer Goods Company.", date: "March 15, 2025", location: "San Francisco, CA", image: "/photos/Gartner.jpeg", category: "Recognition" },
+    { id: 2, title: "Welcome Sandeep Mathews.", subtitle: "RGM Legend joins the Intellimark Board", description: "We welcome the legend Sandeep Mathew to Intellimark's Advisory board. 18 years in RGM expertise is being used to evolve Intellimark products.", date: "March 22, 2025", location: "IntelliMark HQ - Virtual", image: "/photos/Sandeep-upcoming events.jpeg" , category: "Inclusion" }
 ];
 
 const UpcomingEvents: React.FC = () => {

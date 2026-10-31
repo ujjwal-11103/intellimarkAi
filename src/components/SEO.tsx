@@ -16,7 +16,7 @@ export interface SEOProps {
 export const defaultSiteMetadata = {
   siteName: 'Intellimark AI',
   siteUrl: 'https://www.intellimark.ai',
-  defaultImage: 'https://www.intellimark.ai/src/images/favicon.png',
+  defaultImage: 'https://www.intellimark.ai/favicon.png',
   defaultDescription:
     'Intellimark AI provides enterprise revenue growth management, AI demand forecasting, and predictive recommendation systems for FMCG, retail, and CPG enterprises.',
 };

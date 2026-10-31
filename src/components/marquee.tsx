@@ -1,11 +1,10 @@
 import React from 'react';
-import anaplan from "../images/anaplan.png"
 
 const CompanyMarquee: React.FC = () => {
   const companies = [
     { name: 'AWS', logo: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg' },
     { name: 'Google', logo: 'https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg' },
-    { name: 'Anaplan', logo: anaplan },
+    { name: 'Anaplan', logo: '/images/anaplan.png' },
     { name: 'Blue Yonder', logo: 'https://vectorseek.com/wp-content/uploads/2023/08/Blue-Yonder-Logo-Vector.svg-.png' },
     { name: 'Nielsen', logo: 'https://upload.wikimedia.org/wikipedia/commons/8/82/Nielsen_logo.svg' },
     { name: 'Flipkart', logo: 'https://cdn.worldvectorlogo.com/logos/flipkart.svg' },

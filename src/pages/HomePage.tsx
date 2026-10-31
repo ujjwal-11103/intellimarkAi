@@ -36,7 +36,7 @@ const HomePage = () => {
             "name": "Intellimark AI",
             "alternateName": ["Intellimark Analytics", "Intellimark AI India"],
             "url": "https://www.intellimark.ai",
-            "logo": "https://www.intellimark.ai/src/images/favicon.png",
+            "logo": "https://www.intellimark.ai/favicon.png",
             "description": description,
             "address": {
                 "@type": "PostalAddress",

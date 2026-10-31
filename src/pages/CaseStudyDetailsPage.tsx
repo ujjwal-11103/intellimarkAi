@@ -67,7 +67,7 @@ const CaseStudyDetail: React.FC = () => {
         "@type": "Organization",
         "name": "Intellimark AI",
         "url": "https://www.intellimark.ai",
-        "logo": "https://www.intellimark.ai/src/images/favicon.png"
+        "logo": "https://www.intellimark.ai/favicon.png"
       }
     },
     {

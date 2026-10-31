@@ -23,7 +23,7 @@ const MarketingMixModeling = () => {
     "publisher": {
       "@type": "Organization",
       "name": "Intellimark AI",
-      "logo": "https://www.intellimark.ai/src/images/favicon.png"
+      "logo": "https://www.intellimark.ai/favicon.png"
     },
     "keywords": keywords
   };

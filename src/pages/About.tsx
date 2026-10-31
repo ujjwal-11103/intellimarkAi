@@ -11,13 +11,14 @@ import {
   Github,
   ArrowRight
 } from 'lucide-react';
-import rahul from "../photos/rahul.png";
-import sandeep from "../photos/Sandeep.jpeg";
-import parikshit from "../photos/Parikshit Nag.jpeg"
-import vishal from "../photos/Vishal.jpeg";
-import zaid from "../photos/Zaid.jpeg";
-import mainImage from "../photos/About us image.jpeg";
 import { Helmet } from 'react-helmet';
+
+const rahul = "/photos/rahul.png";
+const sandeep = "/photos/Sandeep.jpeg";
+const parikshit = "/photos/Parikshit Nag.jpeg";
+const vishal = "/photos/Vishal.jpeg";
+const zaid = "/photos/Zaid.jpeg";
+const mainImage = "/photos/About us image.jpeg";
 
 
 
