@@ -17,7 +17,7 @@ const Recommendation = () => {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         "name": "Intellimark Field Sales Force & Beat Optimization Engine",
-        "operatingSystem": "Cloud / Mobile",
+        "operatingSystem": "Web, Cloud, SaaS, Android, iOS",
         "applicationCategory": "BusinessApplication",
         "description": description,
         "url": canonicalUrl,
@@ -25,6 +25,17 @@ const Recommendation = () => {
             "@type": "Organization",
             "name": "Intellimark AI",
             "url": "https://www.intellimark.ai"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/OnlineOnly"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "24"
         },
         "featureList": [
             "Beat Planning Software & Territory Mapping",

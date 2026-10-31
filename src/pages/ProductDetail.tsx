@@ -26,7 +26,7 @@ const ProductDetail = () => {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": "Intellimark AI Revenue Growth Management (RGM) Platform",
-    "operatingSystem": "Cloud",
+    "operatingSystem": "Web, Cloud, SaaS",
     "applicationCategory": "BusinessApplication",
     "description": heroDescription,
     "url": canonicalUrl,
@@ -34,6 +34,17 @@ const ProductDetail = () => {
       "@type": "Organization",
       "name": "Intellimark AI",
       "url": "https://www.intellimark.ai"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/OnlineOnly"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "32"
     },
     "featureList": [
       "Revenue Growth Management for CPG",

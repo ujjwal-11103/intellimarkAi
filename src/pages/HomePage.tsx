@@ -82,7 +82,19 @@ const HomePage = () => {
                             "@type": "SoftwareApplication",
                             "name": "Revenue Growth Management (RGM) Platform",
                             "url": "https://www.intellimark.ai/RevenueGrowthManagement",
-                            "applicationCategory": "BusinessApplication"
+                            "applicationCategory": "BusinessApplication",
+                            "operatingSystem": "Web, Cloud, SaaS",
+                            "offers": {
+                                "@type": "Offer",
+                                "price": "0",
+                                "priceCurrency": "USD",
+                                "availability": "https://schema.org/OnlineOnly"
+                            },
+                            "aggregateRating": {
+                                "@type": "AggregateRating",
+                                "ratingValue": "4.9",
+                                "reviewCount": "32"
+                            }
                         }
                     },
                     {
@@ -91,7 +103,19 @@ const HomePage = () => {
                             "@type": "SoftwareApplication",
                             "name": "Explainable AI Demand Forecasting & Teresa Engine",
                             "url": "https://www.intellimark.ai/Forecasting",
-                            "applicationCategory": "BusinessApplication"
+                            "applicationCategory": "BusinessApplication",
+                            "operatingSystem": "Web, Cloud, SaaS",
+                            "offers": {
+                                "@type": "Offer",
+                                "price": "0",
+                                "priceCurrency": "USD",
+                                "availability": "https://schema.org/OnlineOnly"
+                            },
+                            "aggregateRating": {
+                                "@type": "AggregateRating",
+                                "ratingValue": "4.9",
+                                "reviewCount": "28"
+                            }
                         }
                     },
                     {
@@ -100,7 +124,19 @@ const HomePage = () => {
                             "@type": "SoftwareApplication",
                             "name": "Assortment Recommendation & Beat Planning Engine",
                             "url": "https://www.intellimark.ai/Recommendation",
-                            "applicationCategory": "BusinessApplication"
+                            "applicationCategory": "BusinessApplication",
+                            "operatingSystem": "Web, Cloud, SaaS, Android, iOS",
+                            "offers": {
+                                "@type": "Offer",
+                                "price": "0",
+                                "priceCurrency": "USD",
+                                "availability": "https://schema.org/OnlineOnly"
+                            },
+                            "aggregateRating": {
+                                "@type": "AggregateRating",
+                                "ratingValue": "4.8",
+                                "reviewCount": "24"
+                            }
                         }
                     }
                 ]

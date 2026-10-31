@@ -18,7 +18,7 @@ const Forecasting = () => {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         "name": "Intellimark Teresa - Explainable AI Forecasting Engine",
-        "operatingSystem": "Cloud",
+        "operatingSystem": "Web, Cloud, SaaS",
         "applicationCategory": "BusinessApplication",
         "description": description,
         "url": canonicalUrl,
@@ -26,6 +26,17 @@ const Forecasting = () => {
             "@type": "Organization",
             "name": "Intellimark AI",
             "url": "https://www.intellimark.ai"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/OnlineOnly"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "28"
         },
         "featureList": [
             "Explainable AI Forecasting (XAI)",
