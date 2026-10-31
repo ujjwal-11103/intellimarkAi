@@ -8,16 +8,7 @@ export default defineConfig({
     exclude: ['lucide-react'],
   },
   build: {
-    chunkSizeWarningLimit: 600,
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          'vendor-react': ['react', 'react-dom', 'react-router-dom', 'react-helmet'],
-          'vendor-motion': ['framer-motion'],
-          'vendor-lucide': ['lucide-react'],
-        },
-      },
-    },
+    chunkSizeWarningLimit: 800,
   },
   server: {
     headers: {
