@@ -14,7 +14,7 @@ import Contact from './pages/Contact';
 import CaseStudiesPage from './pages/CaseStudiesPage';
 import CaseStudyDetailsPage from './pages/CaseStudyDetailsPage';
 import ScrollToTop from './components/ScrollToTop';
-import { useEffect } from 'react';
+import { useEffect, lazy, Suspense } from 'react';
 import Forecasting from './pages/Forecasting';
 import Recommendation from './pages/Recommendation';
 import Blogs from './pages/Blogs';
@@ -27,8 +27,9 @@ import FutureOfAI from './pages/blogs/FutureOfAI';
 import UnveilingAI from './pages/blogs/UnveilingAI';
 import HomePage from './pages/HomePage';
 import IntelliPlanPrivacy from './pages/IntelliPlanPrivacy';
-import UIUXRevampStrategy from './pages/UIUXRevampStrategy';
 import IntellimarkQA from './pages/IntellimarkQA';
+
+const UIUXRevampStrategy = lazy(() => import('./pages/UIUXRevampStrategy'));
 
 function App() {
   useEffect(() => {
@@ -82,7 +83,14 @@ function App() {
           <Route path="/Unveiling-AI" element={<UnveilingAI />} />
 
           <Route path="/intelliplan_privacy" element={<IntelliPlanPrivacy />} />
-          <Route path="/uiux-revamp-strategy" element={<UIUXRevampStrategy />} />
+          <Route
+            path="/uiux-revamp-strategy"
+            element={
+              <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="w-8 h-8 border-4 border-purple-600 border-t-transparent rounded-full animate-spin" /></div>}>
+                <UIUXRevampStrategy />
+              </Suspense>
+            }
+          />
           <Route path="/qa" element={<IntellimarkQA />} />
           <Route path="/questions-and-answers" element={<IntellimarkQA />} />
           <Route path="/intellimark-qa" element={<IntellimarkQA />} />

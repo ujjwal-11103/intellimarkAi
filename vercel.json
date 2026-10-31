@@ -1,4 +1,17 @@
 {
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "intellimark.ai"
+        }
+      ],
+      "destination": "https://www.intellimark.ai/:path*",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",
@@ -7,15 +20,36 @@
   ],
   "headers": [
     {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Access-Control-Allow-Methods",
+          "value": "GET, OPTIONS"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
       "source": "/(.*)",
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://va.vercel-scripts.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://www.googletagmanager.com https://*.google-analytics.com https://images.pexels.com https://upload.wikimedia.org https://vectorseek.com https://cdn.worldvectorlogo.com https://i.ytimg.com https://img.youtube.com; font-src 'self' data:; connect-src 'self' https://vitals.vercel-insights.com https://www.google-analytics.com https://*.google-analytics.com; frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com; worker-src 'self' blob:; frame-ancestors 'none';"
+          "value": "default-src 'self' https://www.intellimark.ai https://intellimark.ai; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://va.vercel-scripts.com https://www.intellimark.ai https://intellimark.ai; style-src 'self' 'unsafe-inline' https://www.intellimark.ai https://intellimark.ai; img-src 'self' data: blob: https://www.googletagmanager.com https://*.google-analytics.com https://images.pexels.com https://upload.wikimedia.org https://vectorseek.com https://cdn.worldvectorlogo.com https://i.ytimg.com https://img.youtube.com https://www.intellimark.ai https://intellimark.ai; font-src 'self' data:; connect-src 'self' https://vitals.vercel-insights.com https://www.google-analytics.com https://*.google-analytics.com https://www.intellimark.ai https://intellimark.ai; frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com; worker-src 'self' blob:; frame-ancestors 'none';"
         },
         {
           "key": "Access-Control-Allow-Origin",
-          "value": "https://www.intellimark.ai"
+          "value": "*"
+        },
+        {
+          "key": "Access-Control-Allow-Methods",
+          "value": "GET, POST, OPTIONS"
         },
         {
           "key": "X-Frame-Options",
