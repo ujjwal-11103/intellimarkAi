@@ -8,16 +8,16 @@ import NowcastSystem from '../components/forecasting/NowcastSystem';
 import TeresaSystem from '../components/forecasting/TeresaSystem';
 
 const Forecasting = () => {
-    const title = "Advanced AI Demand Forecasting & Planning Platform | Intellimark AI";
+    const title = "Explainable AI Forecasting & Demand Forecasting for FMCG | Intellimark AI";
     const description =
-        "Unlock the power of AI-driven demand forecasting with Intellimark's Teresa and Nowcasting engines. Achieve up to 30% higher forecast accuracy, eliminate out-of-stocks, and optimize enterprise supply chain operations.";
+        "Achieve up to 30% higher forecast accuracy with Intellimark's explainable AI forecasting and real-time nowcasting engine. Built for CPG & FMCG enterprise sales forecasting in India and globally.";
     const canonicalUrl = "https://www.intellimark.ai/Forecasting";
-    const keywords = "AI demand forecasting, enterprise forecasting software, Teresa forecasting engine, nowcasting system, SKU level forecasting, supply chain planning, demand shaping, FMCG forecasting AI, trade promotion forecasting";
+    const keywords = "explainable AI forecasting, demand forecasting for FMCG, AI sales forecasting India, sales variance analysis, Teresa forecasting engine, nowcasting system, SKU level forecasting, supply chain planning, CPG analytics company India, AI analytics for consumer goods companies";
 
     const schemaData = {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
-        "name": "Intellimark AI Demand Forecasting & Planning System",
+        "name": "Intellimark Teresa - Explainable AI Forecasting Engine",
         "operatingSystem": "Cloud",
         "applicationCategory": "BusinessApplication",
         "description": description,
@@ -28,11 +28,11 @@ const Forecasting = () => {
             "url": "https://www.intellimark.ai"
         },
         "featureList": [
-            "Teresa Forecasting Engine",
-            "Real-time Nowcast System",
-            "Automated Feature Engineering",
-            "Granular SKU x Market Forecasting",
-            "Supply Chain Demand Shaping"
+            "Explainable AI Forecasting (XAI)",
+            "Real-time Nowcast System for FMCG",
+            "SKU x Market Demand Forecasting",
+            "Sales Variance Analysis & Attribution",
+            "Supply Chain Demand Shaping for Indian Festivals & Macro Signals"
         ]
     };
 

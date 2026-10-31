@@ -15,17 +15,17 @@ import { MLEngine } from '../components/explainable/MLEngine';
 import RGMStudyCard from '../components/explainable/RGMStudyCard';
 
 const ProductDetail = () => {
-  const title = "AI Revenue Growth Management (RGM) Platform | Intellimark AI";
+  const title = "Revenue Growth Management for CPG & RGM Software | Intellimark AI";
   const heroSubtitle = "Re-engineered with Artificial Intelligence";
   const heroDescription =
-    "Unlock revenue growth, profitability, and sales efficiency across price, promotions, media, and supply chains using Intellimark's explainable AI RGM platform.";
+    "Enterprise revenue growth management for CPG and RGM software. Optimize price elasticity, trade promotions, root cause analysis for sales decline, and sales variance analysis with explainable AI.";
   const canonicalUrl = "https://www.intellimark.ai/RevenueGrowthManagement";
-  const keywords = "revenue growth management, RGM AI platform, trade promotion optimization, price elasticity modeling, FMCG pricing strategy, pack architecture optimization";
+  const keywords = "revenue growth management for CPG, RGM software, root cause analysis for sales decline, RCA analytics for FMCG, why did secondary sales drop, sales variance analysis, price elasticity modeling, trade promotion optimization, CPG analytics company India, AI analytics for consumer goods companies";
 
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    "name": "Intellimark AI Revenue Growth Management Engine",
+    "name": "Intellimark AI Revenue Growth Management (RGM) Platform",
     "operatingSystem": "Cloud",
     "applicationCategory": "BusinessApplication",
     "description": heroDescription,
@@ -34,7 +34,15 @@ const ProductDetail = () => {
       "@type": "Organization",
       "name": "Intellimark AI",
       "url": "https://www.intellimark.ai"
-    }
+    },
+    "featureList": [
+      "Revenue Growth Management for CPG",
+      "RGM Scenario Simulation Software",
+      "Trade Promotion Optimization (TPO)",
+      "Price Elasticity & Pack Architecture Modeling",
+      "RCA Analytics for FMCG Sales Decline",
+      "Sales Variance Analysis & Secondary Sales Diagnostics"
+    ]
   };
 
   const stats = [

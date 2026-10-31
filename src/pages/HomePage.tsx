@@ -23,23 +23,88 @@ const HomePage = () => {
         return () => window.removeEventListener('keydown', handleKeyDown);
     }, []);
 
-    const title = "Intellimark AI | Revenue Growth Management & AI Demand Forecasting";
+    const title = "Intellimark AI | CPG Analytics Company India - AI Analytics for Consumer Goods Companies";
     const description =
-        "Intellimark AI empowers enterprise FMCG and retail leaders with explainable AI for revenue growth management (RGM), demand forecasting, and predictive recommendation systems.";
+        "Intellimark AI is an enterprise CPG analytics company in India providing explainable AI forecasting, revenue growth management (RGM software), beat planning software, and root cause analysis (RCA) for FMCG leaders.";
     const canonicalUrl = "https://www.intellimark.ai/";
-    const keywords = "revenue growth management, AI demand forecasting, trade promotion optimization, RGM AI, explainable AI, FMCG analytics, supply chain forecasting, retail AI";
+    const keywords = "Intellimark AI, CPG analytics company India, AI analytics for consumer goods companies, beat planning software, beat optimization for FMCG, route optimization for sales teams, field sales force optimization, next best action for sales reps, salesman beat plan India, root cause analysis for sales decline, RCA analytics for FMCG, why did secondary sales drop, sales variance analysis, revenue growth management for CPG, RGM software, explainable AI forecasting, demand forecasting for FMCG, AI sales forecasting India, marketing mix modelling for CPG, marketing investment optimization, retail growth analytics, performance marketing optimization";
 
     const schemaData = [
         {
             "@context": "https://schema.org",
             "@type": "Organization",
             "name": "Intellimark AI",
+            "alternateName": ["Intellimark Analytics", "Intellimark AI India"],
             "url": "https://www.intellimark.ai",
             "logo": "https://www.intellimark.ai/src/images/favicon.png",
             "description": description,
+            "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "IN"
+            },
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+91-9140929770",
+                "email": "rahul@intellimark.ai",
+                "contactType": "sales"
+            },
             "sameAs": [
-                "https://www.linkedin.com/company/intellimark-ai"
-            ]
+                "https://www.linkedin.com/company/intellimark-analytics/"
+            ],
+            "knowsAbout": [
+                "beat planning software",
+                "beat optimization for FMCG",
+                "route optimization for sales teams",
+                "field sales force optimization",
+                "next best action for sales reps",
+                "salesman beat plan India",
+                "root cause analysis for sales decline",
+                "RCA analytics for FMCG",
+                "why did secondary sales drop",
+                "sales variance analysis",
+                "revenue growth management for CPG",
+                "RGM software",
+                "explainable AI forecasting",
+                "demand forecasting for FMCG",
+                "AI sales forecasting India",
+                "marketing mix modelling for CPG",
+                "marketing investment optimization",
+                "retail growth analytics",
+                "performance marketing optimization"
+            ],
+            "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Intellimark Enterprise AI Analytics Platforms",
+                "itemListElement": [
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "SoftwareApplication",
+                            "name": "Revenue Growth Management (RGM) Platform",
+                            "url": "https://www.intellimark.ai/RevenueGrowthManagement",
+                            "applicationCategory": "BusinessApplication"
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "SoftwareApplication",
+                            "name": "Explainable AI Demand Forecasting & Teresa Engine",
+                            "url": "https://www.intellimark.ai/Forecasting",
+                            "applicationCategory": "BusinessApplication"
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "SoftwareApplication",
+                            "name": "Assortment Recommendation & Beat Planning Engine",
+                            "url": "https://www.intellimark.ai/Recommendation",
+                            "applicationCategory": "BusinessApplication"
+                        }
+                    }
+                ]
+            }
         },
         {
             "@context": "https://schema.org",

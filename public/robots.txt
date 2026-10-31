@@ -2,6 +2,31 @@
 User-agent: *
 Allow: /
 
+# Dedicated permissions for modern AI answer engines and crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
 # Disallow private or internal test endpoints
 Disallow: /intelliplan_privacy
 Disallow: /security-test.html
@@ -9,5 +34,6 @@ Disallow: /vapt_resolution_report.html
 Disallow: /live_site_screenshot.png
 Disallow: /security_test_screenshot.png
 
-# Sitemap location
+# Sitemaps and LLM Documentation
 Sitemap: https://www.intellimark.ai/sitemap.xml
+# LLM Knowledge Standard: https://www.intellimark.ai/llms.txt

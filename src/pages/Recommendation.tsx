@@ -7,11 +7,35 @@ import { PerformanceAnalysis } from '../components/recommendation/PerformanceAna
 import ReccStudyCard from '../components/recommendation/ReccStudyCard';
 
 const Recommendation = () => {
-    const title = "Intelligent AI Recommendation & Retail Analytics Platform | Intellimark AI";
+    const title = "Beat Planning Software & Retail Growth Analytics | Intellimark AI";
     const description =
-        "Transform retail execution and sales velocity with store-level AI recommendations, personalized promotions, upselling algorithms, and incentive scheme optimization.";
+        "AI beat planning software, route optimization for sales teams, and next best action for sales reps. Drive FMCG beat optimization and field sales force optimization across India.";
     const canonicalUrl = "https://www.intellimark.ai/Recommendation";
-    const keywords = "AI recommendation engine, store recommendation algorithm, retail incentive optimization, upselling and cross-selling AI, FMCG store recommendations";
+    const keywords = "beat planning software, beat optimization for FMCG, route optimization for sales teams, field sales force optimization, next best action for sales reps, salesman beat plan India, retail growth analytics, AI recommendation engine, store recommendation algorithm, CPG analytics company India";
+
+    const schemaData = {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Intellimark Field Sales Force & Beat Optimization Engine",
+        "operatingSystem": "Cloud / Mobile",
+        "applicationCategory": "BusinessApplication",
+        "description": description,
+        "url": canonicalUrl,
+        "provider": {
+            "@type": "Organization",
+            "name": "Intellimark AI",
+            "url": "https://www.intellimark.ai"
+        },
+        "featureList": [
+            "Beat Planning Software & Territory Mapping",
+            "Route Optimization for Sales Teams",
+            "Beat Optimization for FMCG Distribution in India",
+            "Next Best Action for Sales Reps (NBA)",
+            "Suggested Order Quantity (SOQ) Algorithm",
+            "Field Sales Force Optimization & Adherence Tracking",
+            "Retail Growth Analytics & Store Potential Scoring"
+        ]
+    };
 
     return (
         <div>
@@ -23,6 +47,7 @@ const Recommendation = () => {
                     canonicalUrl={canonicalUrl}
                     keywords={keywords}
                     ogType="website"
+                    schema={schemaData}
                 />
                 <HeroSection />
                 <ProcessFlow />

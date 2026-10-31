@@ -1,9 +1,43 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft, BarChart3, Shield, Zap } from "lucide-react";
+import SEO from "../../components/SEO";
 
 const MarketingMixModeling = () => {
+  const title = "Marketing Mix Modelling for CPG & Marketing Investment Optimization | Intellimark AI";
+  const description =
+    "Learn how marketing mix modelling for CPG unlocks marketing investment optimization, retail growth analytics, and performance marketing optimization in a cookie-less landscape.";
+  const canonicalUrl = "https://www.intellimark.ai/Marketing-Mix-Modeling";
+  const keywords = "marketing mix modelling for CPG, marketing investment optimization, retail growth analytics, performance marketing optimization, CPG analytics company India, AI analytics for consumer goods companies";
+
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Marketing Mix Modeling: Enhancing ROI through Data-Driven Insights",
+    "description": description,
+    "url": canonicalUrl,
+    "author": {
+      "@type": "Organization",
+      "name": "Intellimark AI",
+      "url": "https://www.intellimark.ai"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Intellimark AI",
+      "logo": "https://www.intellimark.ai/src/images/favicon.png"
+    },
+    "keywords": keywords
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      <SEO
+        title={title}
+        description={description}
+        canonicalUrl={canonicalUrl}
+        keywords={keywords}
+        ogType="article"
+        schema={schemaData}
+      />
       {/* Hero Section */}
       <div className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="absolute inset-0 bg-black/10"></div>

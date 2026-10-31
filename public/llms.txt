@@ -1,0 +1,49 @@
+# Intellimark AI
+
+> Enterprise CPG analytics company in India providing explainable AI analytics for consumer goods and FMCG companies.
+
+Intellimark AI empowers enterprise consumer packaged goods (CPG) and fast-moving consumer goods (FMCG) leaders with explainable AI for Revenue Growth Management (RGM), demand forecasting, beat planning, root cause analysis (RCA), and store recommendation engines.
+
+## Core Solutions & Products
+
+- [Revenue Growth Management (RGM) Platform](https://www.intellimark.ai/RevenueGrowthManagement): Enterprise RGM software for CPG companies. Optimizes trade promotion management, pack-price architecture, price elasticity modeling, and pricing strategy.
+- [AI Demand Forecasting & Planning](https://www.intellimark.ai/Forecasting): Explainable AI forecasting and real-time nowcasting engine for FMCG in India and globally. Delivers SKU-level demand forecasting, reduces stock-outs, and optimizes supply chain buffers.
+- [Assortment & Store Recommendation Engine](https://www.intellimark.ai/Recommendation): Store-level recommendation algorithms, suggested order quantity (SOQ), and upselling/cross-selling models for retail execution.
+- [Questions & Answers Knowledge Base](https://www.intellimark.ai/qa): Executive knowledge base and FAQ on AI in FMCG, beat planning software, sales variance analysis, and marketing mix modeling.
+- [Case Studies](https://www.intellimark.ai/case-studies): Real-world enterprise case studies and ROI metrics across global consumer brands.
+
+## Topical Capabilities & Answer Summaries
+
+### Beat Planning and Field Sales
+- **Beat Planning Software**: AI-powered route optimization and scheduling software that groups retail outlets into high-efficiency routes based on sales potential, geography, and real travel time.
+- **Beat Optimization for FMCG**: Automatically balances salesman workloads, ensures high-potential outlets receive appropriate visit frequencies, and cuts field travel time by up to 25%.
+- **Route Optimization for Sales Teams**: Dynamic route sequencing considering Indian urban and rural transit constraints, distributor billing cycles, and retail delivery windows.
+- **Field Sales Force Optimization**: Maximizes salesperson productive call rates, order volume per visit, and outlet coverage compliance.
+- **Next Best Action for Sales Reps**: Outlet-specific recommendation prompts that advise field reps on which SKUs to pitch, which trade schemes to activate, and suggested order quantities.
+- **Salesman Beat Plan India**: Tailored for Indian retail distribution, kirana networks, wholesale channels, and multi-tier distributor hierarchies.
+
+### Root Cause Analysis (RCA)
+- **Root Cause Analysis for Sales Decline**: Algorithmic diagnostics that dissect sales downturns across SKU, geography, channel, and retailer dimensions, isolating exact drivers.
+- **RCA Analytics for FMCG**: Distinguishes between internal distribution failures, price sensitivity, competitor promotions, stock-outs, and macro demand shifts.
+- **Why Did Secondary Sales Drop**: Direct root cause investigation identifying whether drops stem from distributor de-stocking, reduced retail footfall, lapsed field visits, or competitor discounting.
+- **Sales Variance Analysis**: Mathematical decomposition of budget vs. actual revenue into volume variance, price variance, mix variance, and promotional spend impact.
+
+### Revenue Growth Management (RGM) and Forecasting
+- **Revenue Growth Management for CPG**: Holistic optimization of pricing, trade spend, pack architecture, and assortment to maximize profitable revenue.
+- **RGM Software**: Explainable AI platform enabling scenario simulations ("what-if" modeling) for FMCG commercial teams before committing trade budgets.
+- **Explainable AI Forecasting**: Machine learning demand forecasting that surfaces the exact underlying demand drivers (price elasticities, seasonality, marketing uplift, distributor stocking) with confidence intervals.
+- **Demand Forecasting for FMCG**: Daily and weekly SKU-store and SKU-depot level forecasting replacing error-prone manual spreadsheets.
+- **AI Sales Forecasting India**: Tailored forecasting accounting for regional Indian festivals, monsoon seasonality, localized disruptions, and diverse retail trade channels.
+
+### Marketing and Retail Growth
+- **Marketing Mix Modelling for CPG**: Econometric and Bayesian statistical modeling measuring sales uplift and ROI across ATL, BTL, digital, and trade channels without third-party cookies.
+- **Marketing Investment Optimization**: Non-linear response curves that identify points of diminishing returns, guiding optimal budget allocation across media and trade.
+- **Retail Growth Analytics**: Micro-market and pin-code level potential estimation, sizing category headroom to prioritize expansion areas.
+- **Performance Marketing Optimization**: Cross-channel attribution connecting digital ad spend and promotions directly to offline and omnichannel retail conversions.
+
+### Brand & Company Entity
+- **Intellimark AI**: Top AI analytics company in India dedicated to consumer goods, retail, and manufacturing enterprises.
+- **Headquarters**: India (Bangalore / Lucknow) with enterprise client deployments across India, Southeast Asia, and North America.
+- **Website**: https://www.intellimark.ai
+- **Contact**: rahul@intellimark.ai | +91 9140929770
+

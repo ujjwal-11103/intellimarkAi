@@ -15,7 +15,8 @@ import {
   Calendar,
   HelpCircle,
   ArrowLeft,
-  X
+  X,
+  Target
 } from 'lucide-react';
 
 /* ==========================================================================
@@ -244,12 +245,84 @@ const DATA: QAGroup[] = [
             "x": "The nowcast sets the starting point for the forecast. As new data arrives during the period, the nowcast updates and the forecast for coming periods is adjusted. This keeps plans in step with what the market is actually doing."
           }
         ]
+      },
+      {
+        "q": "How does demand forecasting for FMCG and AI sales forecasting in India handle seasonality?",
+        "a": [
+          {
+            "t": "p",
+            "x": "Demand forecasting for FMCG uses multi-level machine learning models to predict SKU-level consumer demand across depots, distributors, and channels. In India, AI sales forecasting accounts for hyper-local festivals (Diwali, Eid, Puja), seasonal monsoons, agricultural harvest cycles, and localized distributor stocking patterns to reduce forecast errors by up to 30%."
+          },
+          {
+            "t": "h",
+            "x": "Key drivers in AI sales forecasting for India"
+          },
+          {
+            "t": "ul",
+            "x": [
+              {
+                "lead": "Dynamic festival calendars:",
+                "text": "capturing moving lunar and regional festival dates that alter consumer purchasing spikes year-on-year."
+              },
+              {
+                "lead": "Real-time nowcasting:",
+                "text": "sensing early distributor replenishment orders to spot stock-outs weeks before month-end."
+              },
+              {
+                "lead": "Hierarchical coherence:",
+                "text": "ensuring SKU x store forecasts mathematically reconcile with national brand and supply chain production targets."
+              },
+              {
+                "lead": "Explainable AI forecasting:",
+                "text": "providing commercial and S&OP planners with transparent feature importance for every predicted quantity."
+              }
+            ]
+          }
+        ]
       }
     ]
   },
   {
     "topic": "Trade promotion and pricing",
     "items": [
+      {
+        "q": "What is revenue growth management for CPG and how does RGM software work?",
+        "a": [
+          {
+            "t": "p",
+            "x": "Revenue growth management for CPG is the disciplined practice of maximizing revenue and gross margin by optimizing price points, trade promotion investments, pack architecture, and mix. RGM software uses machine learning and price elasticity modeling to simulate scenarios before execution, ensuring commercial teams fund profitable volume rather than giving away margin."
+          },
+          {
+            "t": "h",
+            "x": "Core pillars of enterprise RGM software"
+          },
+          {
+            "t": "ul",
+            "x": [
+              {
+                "lead": "Strategic pricing:",
+                "text": "simulating price elasticity and cross-brand switching across channels and pack sizes."
+              },
+              {
+                "lead": "Trade promotion optimization (TPO):",
+                "text": "evaluating true baseline vs incremental lift, eliminating unprofitable discount schemes."
+              },
+              {
+                "lead": "Price-pack architecture:",
+                "text": "identifying margin-accretive price ladders and bridge packs for diverse consumer segments."
+              },
+              {
+                "lead": "Commercial scenario planning:",
+                "text": "testing what-if revenue and margin impacts before signing annual trade terms."
+              }
+            ]
+          },
+          {
+            "t": "p",
+            "x": "Intellimark AI delivers an enterprise RGM software suite that re-engineers trade terms and pricing strategies with explainable AI for consumer goods companies."
+          }
+        ]
+      },
       {
         "q": "What is trade promotion optimization (TPO)?",
         "a": [
@@ -468,125 +541,100 @@ const DATA: QAGroup[] = [
     "topic": "Beat planning and field sales",
     "items": [
       {
-        "q": "How do you optimise beat plans for FMCG sales teams?",
+        "q": "What is beat planning software and how does it drive field sales force optimization?",
         "a": [
           {
             "t": "p",
-            "x": "To optimise a beat plan, group outlets into routes using their sales potential, visit frequency needs and location, then sequence the visits to cut travel time and balance the workload across salesmen. Outlets with higher potential get more frequent visits, and the plan is reviewed regularly as outlets and territories change."
-          },
-          {
-            "t": "p",
-            "x": "Classify outlets by current sales, growth potential and assortment gaps, then set a visit frequency for each class. A high-potential outlet may need weekly visits while a small, stable one needs fewer."
+            "x": "Beat planning software is an AI-powered field sales platform that designs and optimizes daily sales routes for FMCG field sales representatives. By combining retailer transaction history, store sales potential, and geo-spatial travel networks, it achieves field sales force optimization by maximizing productive calls, increasing order sizes, and cutting transit time."
           },
           {
             "t": "h",
-            "x": "Build balanced routes"
+            "x": "Key benefits of beat planning software"
           },
           {
             "t": "ul",
             "x": [
               {
-                "lead": "Geography and travel time:",
-                "text": "group nearby outlets so less time is spent on the road."
+                "lead": "Dynamic route sequencing:",
+                "text": "orders retail visits in the shortest real-world driving or walking order rather than straight-line estimates."
               },
               {
-                "lead": "Working hours and visit time:",
-                "text": "make sure each beat fits a working day."
+                "lead": "Workload balancing:",
+                "text": "ensures sales reps manage balanced outlet counts and revenue potential across urban and rural beats."
               },
               {
-                "lead": "Workload balance:",
-                "text": "avoid some salesmen carrying far more outlets or potential than others."
+                "lead": "Territory alignment:",
+                "text": "harmonizes salesman beats with local distributor coverage and delivery fulfillment schedules."
               },
               {
-                "lead": "Distributor coverage:",
-                "text": "align beats with the distributor’s delivery and billing cycle."
-              }
-            ]
-          },
-          {
-            "t": "p",
-            "x": "Track visit compliance, productive calls and sales per visit. Update the plan when outlets open or close, when territories change and when outlet behaviour shifts."
-          },
-          {
-            "t": "h",
-            "x": "Mistakes to avoid"
-          },
-          {
-            "t": "ul",
-            "x": [
-              {
-                "text": "Visiting every outlet equally often."
-              },
-              {
-                "text": "Keeping the same beats for years."
-              },
-              {
-                "text": "Planning on straight-line distance instead of real travel time."
+                "lead": "Adherence tracking:",
+                "text": "monitors actual field visits against planned beats to eliminate ghost calls and improve compliance."
               }
             ]
           }
         ]
       },
       {
-        "q": "What is Next Best Action in sales and how does it work?",
+        "q": "How does beat optimization for FMCG work with a salesman beat plan in India?",
         "a": [
           {
             "t": "p",
-            "x": "Next Best Action (NBA) in sales is a system that recommends the most valuable action for a salesperson to take at a given outlet or moment, such as which products to pitch, which scheme to explain or which outlet to visit first. It ranks the possible actions by expected value, using data about the outlet, the products and past results."
+            "x": "Beat optimization for FMCG in India structures salesman beat plans around outlet classification (Gold, Silver, Bronze), local market congestion, kirana operating hours, and distributor credit cycles. High-potential outlets are visited weekly, while smaller rural outlets receive bi-weekly or monthly visits, ensuring sales teams spend their working day where revenue headroom is highest."
           },
           {
             "t": "h",
-            "x": "How it works"
+            "x": "Tailoring a salesman beat plan in India"
           },
           {
             "t": "ul",
             "x": [
               {
-                "lead": "List the options:",
-                "text": "possible actions for the outlet, such as adding a product, raising a quantity or explaining a scheme."
+                "lead": "Kirana & wholesale separation:",
+                "text": "splitting morning wholesale market visits from afternoon residential neighborhood retail coverage."
               },
               {
-                "lead": "Estimate value:",
-                "text": "a model predicts how much each action is likely to add."
+                "lead": "Real transit networks:",
+                "text": "factoring in Indian urban traffic and semi-urban road infrastructure to avoid impossible schedules."
               },
               {
-                "lead": "Rank and filter:",
-                "text": "business rules, such as stock availability and priorities, are applied."
-              },
-              {
-                "lead": "Show the top few, with reasons:",
-                "text": "the salesman sees one to three actions and why they were chosen."
+                "lead": "Distributor billing alignment:",
+                "text": "timing order booking to match local distributor dispatch and credit clearing cycles."
               }
             ]
           },
           {
             "t": "p",
-            "x": "An outlet buys biscuits and tea regularly but does not stock a newly launched pack that similar outlets in the area sell well. The system suggests adding that pack, with a quantity and a relevant scheme, and shows the reason."
+            "x": "Intellimark AI’s beat optimization engine balances workload, cuts travel distance by up to 25%, and prevents common field execution mistakes."
+          }
+        ]
+      },
+      {
+        "q": "What is next best action for sales reps and how does route optimization for sales teams work?",
+        "a": [
+          {
+            "t": "p",
+            "x": "Next best action for sales reps is an intelligent recommendation engine in the field sales app that guides the salesman on exactly what to pitch at every outlet visit—including suggested order quantities (SOQ), high-margin cross-sells, and eligible trade schemes. Paired with route optimization for sales teams, reps follow the optimal physical path and pitch the most profitable products."
           },
           {
             "t": "h",
-            "x": "What it needs"
+            "x": "How Next Best Action works in the field"
           },
           {
             "t": "ul",
             "x": [
               {
-                "text": "Outlet-level transaction history."
+                "lead": "Pattern matching:",
+                "text": "identifying SKUs bought by lookalike outlets in the same pincode that this store has not yet ordered."
               },
               {
-                "text": "Product and scheme details."
+                "lead": "Suggested order quantities (SOQ):",
+                "text": "predicting run-out rates so the store doesn't face stock-outs before the next scheduled visit."
               },
               {
-                "text": "Visit records."
-              },
-              {
-                "text": "Feedback on which suggestions were accepted and what happened next."
+                "lead": "Targeted scheme prompts:",
+                "text": "highlighting the single most attractive discount or incentive scheme to maximize basket size."
               }
             ]
-          },
-          {
-            "t": "p",
-            "x": "Showing too many actions, giving no reasons and having no feedback loop are the usual reasons field teams ignore the recommendations."
           }
         ]
       }
@@ -596,56 +644,82 @@ const DATA: QAGroup[] = [
     "topic": "Root cause analysis (RCA)",
     "items": [
       {
-        "q": "Why did secondary sales drop and how do you find the cause?",
+        "q": "Why did secondary sales drop and how does root cause analysis for sales decline work?",
         "a": [
           {
             "t": "p",
-            "x": "To find why secondary sales dropped, break the decline down by product, region, channel and outlet, then test each possible driver in turn: distribution and availability, price, promotions, competitor activity, field execution and demand shifts. The cause is the factor that explains most of the drop once the others are accounted for."
+            "x": "When secondary sales drop, root cause analysis for sales decline systematically diagnoses whether the decline stems from distribution voids, out-of-stock SKUs at distributor points, price disparity vs competitors, delayed trade promotions, or lapsed salesman beat visits. Rather than manual guesswork, automated RCA isolates the single factor contributing the largest percentage of volume decline."
           },
           {
             "t": "h",
-            "x": "Step 1: Locate the drop"
+            "x": "Step 1: Dissect the drop across dimensions"
           },
           {
             "t": "p",
-            "x": "Find where the decline sits. Is it concentrated in a few SKUs, regions or channels, or spread evenly? Check whether fewer outlets are buying, or each outlet is buying less."
+            "x": "Isolate where the decline is concentrated: specific SKUs, brand packs, regions, wholesale vs modern trade, or retailer classes. Pinpoint whether fewer outlets bought (breadth) or outlets bought smaller quantities (depth)."
           },
           {
             "t": "h",
-            "x": "Step 2: Test the likely drivers"
+            "x": "Step 2: Attribute drivers with RCA analytics"
           },
           {
             "t": "ul",
             "x": [
               {
-                "lead": "Distribution and availability:",
-                "text": "outlets covered, stock-outs and delivery gaps."
+                "lead": "Distribution & stock-outs:",
+                "text": "measuring billing gaps, distributor de-stocking, and depot stock-outs."
               },
               {
-                "lead": "Price:",
-                "text": "your price compared with competitors, and any recent change."
+                "lead": "Pricing & competition:",
+                "text": "comparing retailer margins and recent price increases against aggressive competitor schemes."
               },
               {
-                "lead": "Promotions:",
-                "text": "fewer, smaller or later promotions than the same period last year."
+                "lead": "Trade promotions:",
+                "text": "evaluating whether fewer, delayed, or poorly funded schemes reduced retailer willingness to order."
               },
               {
-                "lead": "Field execution:",
-                "text": "changes in beat coverage, visit frequency or team strength."
-              },
-              {
-                "lead": "Market factors:",
-                "text": "seasonality, competitor launches and external events."
+                "lead": "Field sales execution:",
+                "text": "tracking drop-offs in beat compliance, productive calls, or sales representative churn."
               }
             ]
           },
           {
-            "t": "h",
-            "x": "Step 3: Quantify and act"
-          },
+            "t": "p",
+            "x": "Intellimark AI's RCA analytics automates this audit within hours instead of weeks, directing commercial leaders straight to the corrective action."
+          }
+        ]
+      },
+      {
+        "q": "What is RCA analytics for FMCG and how does sales variance analysis explain volume drops?",
+        "a": [
           {
             "t": "p",
-            "x": "Estimate how much of the decline each factor explains, then rank them by size and by how easily they can be fixed. Start with the largest fixable cause."
+            "x": "RCA analytics for FMCG couples machine learning diagnostics with sales variance analysis to mathematically decompose sales performance against target. Sales variance analysis separates the total variance into Volume Variance (units sold), Price Variance (realized unit realization), Product Mix Variance (skew toward lower-margin SKUs), and Trade Spend Variance (scheme payout over-expenditure)."
+          },
+          {
+            "t": "h",
+            "x": "Four components of sales variance analysis"
+          },
+          {
+            "t": "ul",
+            "x": [
+              {
+                "lead": "Volume variance:",
+                "text": "evaluates revenue lost purely due to lower unit sales compared to budget."
+              },
+              {
+                "lead": "Price variance:",
+                "text": "calculates financial impact from discounting, unauthorized trade deals, or price revisions."
+              },
+              {
+                "lead": "Mix variance:",
+                "text": "quantifies margin erosion when consumers or retailers switch to smaller or lower-margin packs."
+              },
+              {
+                "lead": "Channel variance:",
+                "text": "identifies margin dilution occurring when volume shifts between general trade, e-commerce, and modern trade."
+              }
+            ]
           }
         ]
       },
@@ -697,124 +771,122 @@ const DATA: QAGroup[] = [
     "topic": "Marketing and retail growth",
     "items": [
       {
-        "q": "What is marketing mix modelling and when do you need it?",
+        "q": "What is marketing mix modelling for CPG and how does it drive marketing investment optimization?",
         "a": [
           {
             "t": "p",
-            "x": "Marketing mix modelling (MMM) is a statistical method that estimates how much each marketing activity, such as TV, digital, trade and promotions, contributes to sales, after accounting for price, seasonality and distribution. Brands use it to decide where to move budget and what return to expect from the next rupee spent."
+            "x": "Marketing mix modelling for CPG is an econometric approach that measures the incremental sales uplift generated by each media channel (TV, YouTube, Meta, OOH, print, and trade spend) while controlling for baseline factors like price, seasonality, and distribution. It guides marketing investment optimization by charting diminishing marginal return curves so brands invest where the next marketing rupee delivers the highest return."
           },
           {
             "t": "h",
-            "x": "What MMM answers"
+            "x": "Strategic outputs of marketing investment optimization"
           },
           {
             "t": "ul",
             "x": [
               {
-                "text": "Which channels are driving sales and which are not."
+                "lead": "Channel contribution:",
+                "text": "identifying which marketing vehicles generate genuine baseline expansion versus temporary spikes."
               },
               {
-                "text": "What return each channel gives for its spend."
+                "lead": "Diminishing returns curves:",
+                "text": "pinpointing saturation thresholds where additional ad spend loses profitability."
               },
               {
-                "text": "Where moving budget would add the most."
+                "lead": "Budget reallocation simulator:",
+                "text": "simulating shifts between trade spend, performance marketing, and branding to maximize total ROI."
               },
               {
-                "text": "What the expected result of a new budget plan is."
-              }
-            ]
-          },
-          {
-            "t": "h",
-            "x": "When you need it"
-          },
-          {
-            "t": "ul",
-            "x": [
-              {
-                "text": "You spend across several channels and cannot tell which works."
-              },
-              {
-                "text": "Marketing budgets are large enough that a better split matters."
-              },
-              {
-                "text": "You need evidence to defend or change a budget."
-              },
-              {
-                "text": "User-level tracking is limited and you need a method that works with aggregate data."
+                "lead": "Cookie-less attribution:",
+                "text": "operating strictly on aggregated sales and spend data, making it immune to user tracking restrictions."
               }
             ]
           },
           {
             "t": "p",
-            "x": "Returns diminish as spend rises in a channel. A good model captures this, so it can show the point where more spending adds little and money is better used elsewhere. Intellimark’s Non-Linear Marketing Investment Planner is built around this idea."
-          },
-          {
-            "t": "p",
-            "x": "MMM needs enough history and enough variation in spend to learn from. It works best alongside controlled tests, and it should be refreshed regularly as the market changes."
+            "x": "Intellimark AI’s Non-Linear Marketing Investment Planner helps consumer brands dynamically rebalance multimillion-dollar budgets with high confidence."
           }
         ]
       },
       {
-        "q": "How do you grow sales in specific micro-markets or pin codes?",
+        "q": "What is retail growth analytics and how does it drive performance marketing optimization?",
         "a": [
           {
             "t": "p",
-            "x": "To grow sales in micro-markets, estimate the sales potential of each pin code or small area, compare it with current sales to find the biggest gaps, and then match distribution, visit frequency and marketing spend to those gaps. City or state averages hide where the real opportunity sits."
-          },
-          {
-            "t": "p",
-            "x": "Demand varies from one neighbourhood to the next. A region that looks healthy overall can contain areas with large untapped potential next to areas that are already saturated."
+            "x": "Retail growth analytics uses micro-geography demographic signals, category penetration indices, and distributor billing histories to calculate untapped market potential down to specific pin codes and neighborhoods. Connected to performance marketing optimization, it enables hyper-local digital campaigns that drive verified footfall and velocity into localized retail stores."
           },
           {
             "t": "h",
-            "x": "How to size local potential"
+            "x": "How to size local potential and headroom"
           },
           {
             "t": "ul",
             "x": [
               {
-                "lead": "Local demand signals:",
-                "text": "population, household and income patterns, and category consumption."
+                "lead": "Micro-market demand signals:",
+                "text": "population, household income distributions, and category consumption indices."
               },
               {
                 "lead": "Retail landscape:",
-                "text": "the number and type of outlets, and competitor presence."
+                "text": "total outlet universe density and competitor distribution footprint."
               },
               {
-                "lead": "Your own sales:",
-                "text": "current sales and coverage in the area."
-              },
-              {
-                "lead": "Headroom:",
-                "text": "the gap between potential and actual sales, which shows where to focus."
-              }
-            ]
-          },
-          {
-            "t": "h",
-            "x": "Turn the gaps into action"
-          },
-          {
-            "t": "ul",
-            "x": [
-              {
-                "text": "Add outlets or distributor coverage where potential is high and presence is low."
-              },
-              {
-                "text": "Raise visit frequency on beats in high-headroom areas."
-              },
-              {
-                "text": "Run local promotions and marketing where they will be most effective."
-              },
-              {
-                "text": "Adjust the product range to local demand."
+                "lead": "Headroom analysis:",
+                "text": "quantifying the gap between current brand sales and total category potential to prioritize field resources."
               }
             ]
           },
           {
             "t": "p",
-            "x": "Compare sales growth in focus areas with similar areas that were not targeted, so you know what the effort achieved. Intellimark’s Micro-Geography Retail Growth Engine supports this approach."
+            "x": "Intellimark’s Micro-Geography Retail Growth Engine enables CPG brands to target expansion where sales headroom is highest."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "topic": "Brand and company overview",
+    "items": [
+      {
+        "q": "What is Intellimark AI and how does it operate as a leading CPG analytics company in India?",
+        "a": [
+          {
+            "t": "p",
+            "x": "Intellimark AI is an enterprise CPG analytics company in India delivering advanced AI analytics for consumer goods companies globally. The platform powers revenue growth management (RGM software), explainable AI demand forecasting, salesman beat planning software, root cause analysis (RCA), and store assortment recommendation engines."
+          },
+          {
+            "t": "h",
+            "x": "Why consumer enterprises choose Intellimark AI"
+          },
+          {
+            "t": "ul",
+            "x": [
+              {
+                "lead": "Explainable AI (XAI):",
+                "text": "transparent models that explain exact demand and pricing drivers instead of untrusted black-box outputs."
+              },
+              {
+                "lead": "Built for CPG & FMCG complexity:",
+                "text": "purpose-built for multi-tier distribution networks, wholesale channels, modern trade, and Indian kirana retail."
+              },
+              {
+                "lead": "Enterprise-grade ROI:",
+                "text": "proven deployments delivering up to 30% forecast accuracy gains, 25% field transit reductions, and over $50M in unlocked revenue."
+              }
+            ]
+          },
+          {
+            "t": "p",
+            "x": "Intellimark AI is headquartered in India with client deployments across North America, Southeast Asia, and India."
+          }
+        ]
+      },
+      {
+        "q": "Why do consumer goods enterprises choose Intellimark AI for AI analytics?",
+        "a": [
+          {
+            "t": "p",
+            "x": "Consumer goods companies choose Intellimark AI because our models are explainable, actionable, and seamlessly integrated with enterprise ERPs (SAP, Oracle) and Sales Force Automation (SFA) apps. Commercial leaders use our interactive simulators to test price changes, trade schemes, and beat plans before committing capital."
           }
         ]
       }
@@ -851,6 +923,10 @@ const TOPIC_CONFIG: Record<string, { label: string; icon: React.ElementType }> =
   'Marketing and retail growth': {
     label: 'Marketing & Retail Growth',
     icon: Sparkles,
+  },
+  'Brand and company overview': {
+    label: 'About Intellimark AI',
+    icon: Target,
   },
 };
 
@@ -959,19 +1035,26 @@ export default function IntellimarkQA({ title = 'Questions and Answers' }: Intel
   return (
     <div className="min-h-screen bg-slate-50/60 pb-24 text-slate-800">
       <Helmet>
-        <title>Questions & Answers: AI in FMCG, Forecasting & Supply Chain | Intellimark AI</title>
+        <title>Questions & Answers: AI in FMCG, Beat Planning, RCA & Forecasting | Intellimark AI</title>
         <meta
           name="description"
-          content="Comprehensive executive Q&A on AI demand forecasting, SKU-level production planning, trade promotion optimization (TPO), suggested order quantities (SOQ), beat planning, and root cause analysis."
+          content="Authoritative executive Q&A on beat planning software, FMCG beat optimization, route optimization for sales teams, root cause analysis for sales decline, RGM software, explainable AI forecasting, and marketing mix modelling."
         />
         <meta
+          name="keywords"
+          content="beat planning software, beat optimization for FMCG, route optimization for sales teams, field sales force optimization, next best action for sales reps, salesman beat plan India, root cause analysis for sales decline, RCA analytics for FMCG, why did secondary sales drop, sales variance analysis, revenue growth management for CPG, RGM software, explainable AI forecasting, demand forecasting for FMCG, AI sales forecasting India, marketing mix modelling for CPG, marketing investment optimization, retail growth analytics, performance marketing optimization, Intellimark AI, CPG analytics company India, AI analytics for consumer goods companies"
+        />
+        <link rel="canonical" href="https://www.intellimark.ai/qa" />
+        <meta
           property="og:title"
-          content="Questions & Answers: AI in FMCG & Supply Chain - Intellimark AI"
+          content="Questions & Answers: AI in FMCG, Beat Planning, RCA & Forecasting | Intellimark AI"
         />
         <meta
           property="og:description"
-          content="Explore expert answers on AI-driven demand forecasting, trade spend optimization, beat planning, and revenue growth management."
+          content="Authoritative executive Q&A on beat planning software, FMCG beat optimization, root cause analysis for sales decline, RGM software, and explainable AI forecasting."
         />
+        <meta property="og:url" content="https://www.intellimark.ai/qa" />
+        <meta property="og:type" content="website" />
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
 

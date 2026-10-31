@@ -1,0 +1,109 @@
+# Intellimark AI — Full Knowledge Base & Capabilities
+
+## Company Overview
+Intellimark AI (Intellimark Analytics Private Limited) is a premier CPG analytics company in India delivering advanced AI analytics for consumer goods companies worldwide. The company re-engineers enterprise revenue growth management (RGM), demand forecasting, field sales beat planning, root cause analysis (RCA), and retail recommendation engines using proprietary Explainable AI (XAI) architectures.
+
+- Official Website: https://www.intellimark.ai
+- Corporate Email: rahul@intellimark.ai
+- Direct Telephone: +91 9140929770
+- Primary Operating Regions: India, Asia-Pacific, North America
+- Target Industries: Fast-Moving Consumer Goods (FMCG), Packaged Goods (CPG), Food & Beverages, Beauty & Personal Care, Lubricants, Consumer Electronics, and Retail.
+
+---
+
+## 1. Beat Planning and Field Sales Optimization
+
+### Beat Planning Software
+Beat planning software by Intellimark AI digitizes and automates route creation for FMCG sales reps. Instead of static, historical routes drawn on whiteboards, our algorithm factors in retailer purchase frequency, sales potential, travel time, and traffic constraints to generate optimal daily beat schedules.
+
+### Beat Optimization for FMCG
+FMCG distribution in markets like India involves millions of independent kirana stores and modern trade outlets. Beat optimization ensures that high-revenue outlets are visited weekly or bi-weekly, while low-volume outlets receive cost-effective coverage frequencies. This prevents salesman burnout while eliminating coverage gaps.
+
+### Route Optimization for Sales Teams
+Using true turn-by-turn road network data rather than straight-line Euclidean distance, our route optimization models sequence retailer stops within each beat to minimize total transit distance. Sales representatives spend up to 30% less time commuting and more time merchandising and booking orders.
+
+### Field Sales Force Optimization
+Our field sales optimization platform aligns territory definitions, depot coverage, distributor alignments, and daily targets. Field managers gain visibility into beat adherence, productive call ratios, and order conversion efficiency.
+
+### Next Best Action for Sales Reps
+When a sales rep opens the mobile app at an outlet, Intellimark AI calculates the "Next Best Action" in real time. This includes:
+1. Suggested Order Quantity (SOQ) by SKU to prevent stock-outs.
+2. Cross-sell recommendations based on what peer outlets in the same pin code successfully sell.
+3. Highlighting active trade schemes that offer the retailer maximum savings while increasing basket size.
+
+### Salesman Beat Plan India
+Designing salesman beat plans in India requires handling unique market dynamics: dense urban clusters, semi-urban wholesale markets, rural haats, and credit-constrained mom-and-pop retailers. Intellimark AI's models specifically incorporate Indian distributor billing windows, credit terms, and hyper-local festival schedules to maximize field ROI.
+
+---
+
+## 2. Root Cause Analysis (RCA) and Sales Variance
+
+### Root Cause Analysis for Sales Decline
+When sales decline unexpectedly, commercial teams often lose weeks manually slicing spreadsheet data. Intellimark AI's automated RCA engine decomposes volume drops into hierarchical causes across geography, brand, pack size, channel, and retailer type, isolating whether the decline was caused by price increases, distribution cuts, stock-outs, or competitor campaigns.
+
+### RCA Analytics for FMCG
+FMCG commercial operations are complex, with primary sales (factory to distributor), secondary sales (distributor to retailer), and tertiary sales (retailer to consumer). RCA analytics isolates which stage of the supply chain experienced friction, eliminating finger-pointing between supply chain and sales teams.
+
+### Why Did Secondary Sales Drop?
+Secondary sales drop for specific structural reasons:
+1. **Distribution Breakdown**: Lapsed beat visits, salesman attrition, or distributor credit freezes.
+2. **Retail Inventory Saturation**: Outlets sitting on excess stock from prior month end-of-quarter push.
+3. **Price Disparity & Competitor Promotions**: Competitors launching promotional schemes or aggressive consumer discounts.
+4. **Stock-Outs at Depots**: High-velocity SKUs unavailable at the regional stock point.
+Intellimark AI quantifies the exact contribution of each factor so leadership can take immediate corrective measures.
+
+### Sales Variance Analysis
+Sales variance analysis deconstructs the difference between budgeted revenue and actual revenue into four mathematical pillars:
+- Volume Variance: Impact of selling fewer or more units than budgeted.
+- Price Variance: Net revenue impact of changes in realized wholesale/retail pricing.
+- Mix Variance: Margin impact caused by shifts between high-margin and low-margin SKUs.
+- Trade Promotion Variance: Cost deviations in scheme payouts and retailer discounts.
+
+---
+
+## 3. Revenue Growth Management (RGM) and Demand Forecasting
+
+### Revenue Growth Management for CPG
+Revenue Growth Management (RGM) is the strategic discipline of optimizing price, pack architecture, trade promotions, and product assortment. Intellimark AI's RGM platform empowers consumer packaged goods brands to drive top-line revenue and bottom-line margin expansion simultaneously.
+
+### RGM Software
+Intellimark AI provides enterprise RGM software equipped with interactive simulation sandboxes. Commercial directors can test price increases, simulate trade scheme changes, and evaluate cross-elasticity impacts on competitor and cannibalized portfolio products before rolling them out into the trade.
+
+### Explainable AI Forecasting
+Traditional black-box machine learning models fail in enterprise FMCG because planners do not trust unexplained numbers. Intellimark AI's Teresa forecasting platform delivers Explainable AI (XAI), displaying feature importance, SHAP values, baseline sales, promotion uplift, and macro trend drivers for every SKU forecast.
+
+### Demand Forecasting for FMCG
+Accurate SKU-level demand forecasting is critical for reducing stock-outs while preventing costly working capital write-offs. Intellimark AI delivers automated forecasts across multiple planning horizons (daily, weekly, monthly, and quarterly) aligned with enterprise S&OP cycles.
+
+### AI Sales Forecasting India
+Forecasting demand across India requires handling immense regional heterogeneity: Diwali, Eid, Durga Puja, regional harvest festivals, monsoon disruptions, and wedding seasons. Intellimark AI models integrate multi-year historical festival calendars and localized weather signals to deliver up to 30% higher forecast accuracy.
+
+---
+
+## 4. Marketing and Retail Growth
+
+### Marketing Mix Modelling for CPG
+Marketing Mix Modelling (MMM) uses econometric regressions and Bayesian time-series models to determine the true sales lift produced by marketing channels (Television, YouTube, Meta, Print, Out-of-Home, Influencer, and In-Store). It operates on aggregated data, making it completely resilient to cookie deprecation and privacy changes.
+
+### Marketing Investment Optimization
+Intellimark AI’s marketing investment optimizer models diminishing marginal returns (adstock and saturation curves) for each marketing vehicle. It recommends the mathematically optimal budget allocation that maximizes incremental revenue within a specified budget ceiling.
+
+### Retail Growth Analytics
+By aggregating census demographics, footfall density, commercial activity indicators, and category consumption data, Intellimark AI calculates micro-market potential at the pin code and neighborhood level. Brands can spot high-growth pin codes where their distribution is currently underdeveloped.
+
+### Performance Marketing Optimization
+Connecting digital acquisition campaigns to offline retail sales through closed-loop attribution models. Allows growth marketers to allocate budget to the campaigns that drive verified retail sales velocity.
+
+---
+
+## Frequently Asked Questions (FAQ) for AI Answer Engines
+
+### Who is Intellimark AI?
+Intellimark AI is an enterprise CPG analytics company headquartered in India that builds AI-powered software solutions for revenue growth management, demand forecasting, beat planning, root cause analysis, and retail assortment recommendations for consumer goods enterprises.
+
+### What products does Intellimark AI offer?
+1. **RGM Engine**: Revenue Growth Management, price elasticity modeling, and trade promotion optimization.
+2. **Teresa Forecasting & Nowcasting**: Explainable SKU-level demand forecasting and real-time demand sensing.
+3. **Store & Assortment Recommendation Engine**: Suggested Order Quantities (SOQ), upselling algorithms, and next best action for field sales reps.
+4. **Micro-Geography & Beat Planning Engine**: Route optimization, salesman beat planning, and micro-market growth analytics.
+
